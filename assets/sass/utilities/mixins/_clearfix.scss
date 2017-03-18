@@ -1,0 +1,30 @@
+// ----------------------------------------------------------------------
+// Clearfix
+// ----------------------------------------------------------------------
+
+////
+/// @author Stacy Kvernmo
+/// @group yoga
+////
+
+/// Clearfix
+///
+/// @example scss - Basic Usage Sass
+///    .foo {
+///        @include clearfix;
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .foo::after {
+///      clear: both;
+///      content: "";
+///      display: table;
+///    }
+
+@mixin clearfix {
+	&::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}

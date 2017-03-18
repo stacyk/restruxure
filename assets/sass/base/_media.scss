@@ -1,0 +1,160 @@
+// --------------------------------------------------------------
+// Media
+// --------------------------------------------------------------
+
+// Page, Entry and Comment Content
+.page-content,
+.entry-content,
+.comment-content {
+	// WP smiley
+	img.wp-smiley {
+		@include margin-padding-reset;
+
+		border: none;
+	}
+}
+
+// --------------------------------------------------------------
+// Images
+// --------------------------------------------------------------
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+// --------------------------------------------------------------
+// Captions
+// --------------------------------------------------------------
+
+// Image captions
+.wp-caption {
+	margin: 0 0 1.5rem 0;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin: 0 auto;
+	}
+
+	// Add auto margins so image is centered
+	&.aligncenter {
+		margin: 0 auto 1.5rem auto;
+	}
+
+	// Add a margin right to left-aligned images with captions
+	&.alignleft {
+		margin-right: 1.5rem;
+	}
+
+	// Add a margin left to right-aligned images with captions
+	&.alignright {
+		margin-left: 1.5rem;
+	}
+
+	// Add top and bottom margin to caption text
+	.wp-caption-text {
+		margin: 0.75rem 0;
+	}
+}
+
+// Image caption text
+.wp-caption-text {
+	text-align: center;
+}
+
+// --------------------------------------------------------------
+// Galleries
+// --------------------------------------------------------------
+
+// Gallery
+.gallery {
+	margin: 0 0 1.5rem 0;
+}
+
+// Gallery items
+.gallery-item {
+	display: inline-block;
+	height: auto;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+
+	.gallery-columns-2 & {
+		max-width: 50%;
+	}
+
+	.gallery-columns-3 & {
+		max-width: 33.33%;
+	}
+
+	.gallery-columns-4 & {
+		max-width: 25%;
+	}
+
+	.gallery-columns-5 & {
+		max-width: 20%;
+	}
+
+	.gallery-columns-6 & {
+		max-width: 16.66%;
+	}
+
+	.gallery-columns-7 & {
+		max-width: 14.28%;
+	}
+
+	.gallery-columns-8 & {
+		max-width: 12.5%;
+	}
+
+	.gallery-columns-9 & {
+		max-width: 11.11%;
+	}
+}
+
+// Gallery caption
+.gallery-caption {
+	display: block;
+}
+
+// Fluid embed
+.fluid-embed {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+	position: relative;
+
+	embed,
+	object,
+	iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+// Center image background
+.image-as-background {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+// Video as background
+.video-as-background {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+// svg defs
+.svg-defs {
+	display: none;
+}

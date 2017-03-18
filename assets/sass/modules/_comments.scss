@@ -1,0 +1,68 @@
+//--------------------------------------------------------------
+// Comments
+//--------------------------------------------------------------
+
+// Comment title
+.comments-title {
+  font-size: 1.5rem;
+}
+
+// Comment list
+.comment-list {
+  list-style: none;
+  margin: 0;
+}
+
+// Comment meta
+.comment-meta {
+  margin: 0 0 0.875rem 0;
+}
+
+// Comments avatar
+.avatar {
+  float: left;
+  margin: 0 0.75rem 0 0;
+}
+
+// By post author
+.bypostauthor {
+  display: block;
+}
+
+// Comment Form
+.comment-form {
+  width: 100%;
+
+  input:not(.submit) {
+    width: 100%;
+
+    @include above(phone-landscape) {
+      max-width: 15.625rem;
+    }
+  }
+}
+
+// Default labels for comment form
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  label {
+    @include above(phone-landscape) {
+      width: 4.6875rem;
+    }
+  }
+}
+
+// Nested comments spacing from mobile to desktop
+.comment-list .children {
+  margin-left: 0;
+  padding-left: 1.25rem;
+
+  @include above(phone-landscape) {
+    padding-left: 2.1875rem;
+  }
+
+  @include above(tablet-portrait) {
+    padding-left: 3.75rem;
+  }
+}

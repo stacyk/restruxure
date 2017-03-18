@@ -1,0 +1,43 @@
+// ----------------------------------------------------------------------
+// Media Queries
+// ----------------------------------------------------------------------
+
+////
+/// @author Stacy Kvernmo
+/// @group yoga
+////
+
+/// Above Breakpoint
+/// @param {String} $max
+/// @param {String} $prop [width]
+///   | width | height |
+///
+/// @example scss - Basic Usage Sass
+///   .foo {
+///     @include above(breakpoint-name);
+///   }
+///
+/// @example scss - Basic Usage CSS Output
+///   .foo {
+///     @media
+///   }
+
+@mixin below($screen-size, $prop: 'width') {
+  @if map-has-key($breakpoints, $screen-size) {
+    @media (max-#{$prop}: map-get($breakpoints, $screen-size)) {
+      @content;
+    }
+  } @else {
+    @warn "'#{$screen-size}' has not been declared as a breakpoint.";
+  }
+}
+
+@mixin above($screen-size, $prop: 'width') {
+  @if map-has-key($breakpoints, $screen-size) {
+    @media (min-#{$prop}: map-get($breakpoints, $screen-size)) {
+      @content;
+    }
+  } @else {
+    @warn "'#{$screen-size}' has not been declared as a breakpoint.";
+  }
+}

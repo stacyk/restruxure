@@ -1,0 +1,59 @@
+//--------------------------------------------------------------
+// Site Content
+//--------------------------------------------------------------
+
+//--------------------------------------------------------------
+// Posts and Pages
+//--------------------------------------------------------------
+
+// Entry Title
+.entry-title {
+	font-size: 2.25rem;
+}
+
+// Sticy and Comments Link
+.sticky,
+.comments-link {
+	display: block;
+}
+
+// hentry
+.hentry {
+	margin: 0 0 1.5rem 0;
+}
+
+// Byline and update post date
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+// Byline for single and group
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+// Page content, entry content and entry summary
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5rem 0 0;
+}
+
+// Page links
+.page-links {
+	clear: both;
+	margin: 0 0 1.5rem 0;
+}
+
+// Edit link
+.edit-link {
+	margin: 0 1.5rem;
+}
+
+// Asides
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}

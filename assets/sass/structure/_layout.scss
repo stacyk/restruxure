@@ -1,0 +1,26 @@
+//--------------------------------------------------------------
+// Base Layout
+//--------------------------------------------------------------
+
+// Structure.
+.wrap {
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-header,
+.site-footer {
+}
+
+.site-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.primary {
+}
+
+.secondary {
+}
