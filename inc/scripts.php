@@ -19,18 +19,23 @@ function yoga_font_url() {
 	 * supported by the following, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$roboto = _x( 'on', 'Roboto font: on or off', 'yoga' );
-	$open_sans = _x( 'on', 'Open Sans font: on or off', 'yoga' );
+	$baloo_bhaina = _x( 'on', 'Baloo Bhaina font: on or off', 'yoga' );
+	$martel = _x( 'on', 'Martel font: on or off', 'yoga' );
+	$rasa = _x( 'on', 'Rasa font: on or off', 'yoga' );
 
-	if ( 'off' !== $roboto || 'off' !== $open_sans ) {
+	if ( 'off' !== $martel || 'off' !== $baloo_bhaina || 'off' !== $rasa ) {
 		$font_families = array();
 
-		if ( 'off' !== $roboto ) {
-			$font_families[] = 'Roboto:400,700';
+		if ( 'off' !== $baloo_bhaina ) {
+			$font_families[] = 'Baloo Bhaina';
 		}
 
-		if ( 'off' !== $open_sans ) {
-			$font_families[] = 'Open Sans:400,300,700';
+		if ( 'off' !== $martel ) {
+			$font_families[] = 'Martel:400,900';
+		}
+
+		if ( 'off' !== $rasa ) {
+			$font_families[] = 'Rasa:400,700,400i,700i';
 		}
 
 		$query_args = array(

@@ -27,6 +27,5 @@
 <?php echo wp_kses_post( yoga_get_mobile_navigation_menu() ); ?>
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
