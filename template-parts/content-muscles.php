@@ -25,33 +25,28 @@
 
   </header><!-- .entry-header -->
 
-
-<?php
-  $issues_related_muscles = get_posts(array(
-    'post_type' => 'post',
+  <?php
+  $muscles_used = get_posts(array(
+    'post_type' => 'pose',
     'meta_query' => array(
         array(
-            'key' => 'issues_related_muscles', // name of custom field
+            'key' => 'muscles_used', // name of custom field
             'value' => '"' . get_the_ID() . '"',
             'compare' => 'LIKE'
         )
     )
-));
-
-  if( $issues_related_muscles ): ?>
-  <h2>test</h2>
-
-  <?php foreach( $issues_related_muscles as $post ):
-
-    echo $post->post_title; ?>
-
-    <ul class="muscle-relation">
-	    <?php setup_postdata ($post); ?>
-		    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-    <?php wp_reset_postdata(); ?>
-    </ul>
-  <?php endforeach; ?>
-  <?php endif; ?>
+)); ?>
+						<?php if( $muscles_used ): ?>
+            hello
+							<ul>
+							<?php foreach( $muscles_used as $post ): ?>
+								<li>
+                Hello
+										<?php // echo get_the_title( $post->ID ); ?>
+								</li>
+							<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
 
   <div class="entry-content">
     <?php
