@@ -78,4 +78,4 @@ function yoga_bidirectional_acf_update_value( $value, $post_id, $field  ) {
   return $value;
 }
 
-add_filter('acf/update_value/name=muscles_used', 'yoga_bidirectional_acf_update_value', 10, 3);
+add_filter('acf/update_value/name=related_to_pose', 'yoga_bidirectional_acf_update_value', 10, 3);
