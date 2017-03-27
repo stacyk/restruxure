@@ -160,3 +160,8 @@ require get_template_directory() . '/inc/queries.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer/customizer.php';
+
+/**
+ * Posts to Posts relationship.
+ */
+require get_template_directory() . '/inc/post-relation.php';
