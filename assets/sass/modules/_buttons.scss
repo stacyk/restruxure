@@ -7,7 +7,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	appearance: none;
-	background-color: $color-button-background;
+	background-color: $color-btn;
 	border: none;
 	border-radius: 0;
 	border-width: 0;
@@ -21,12 +21,9 @@ input[type="submit"] {
 		height: 2.1875rem;
 	}
 
-	&:hover {
-		background-color: $color-button-background-hover;
-	}
-
+	&:hover,
 	&:active,
 	&:focus {
-		background-color: $color-button-background-hover;
+		background-color: $color-btn-hover;
 	}
 }

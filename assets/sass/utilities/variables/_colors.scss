@@ -13,25 +13,35 @@
 
 // COLORS
 
-// Primary palette
-$color-purple: hsl(200, 34%, 41%);
-$color-light-yellow: #fff9c0;
-$color-dark: hsl(230, 7%, 16%);
-$color-white: #fff;
+// Primary palette by name
 
-$color-primary: $color-purple;
+$purple: hsl(280, 25%, 35%);
+$purple-light:  hsl(284, 30%, 88%);
+$purple-dark: hsl(284, 44%, 18%);
+
+$blue: hsl(205, 37%, 46%);
+$blue-dark: hsl(211, 44%, 24%);
+$blue-light: hsl(200, 75%, 85%);
+
+$green: hsl(186, 33%, 42%);
+
+$orange: hsl(32, 95%, 65%);
+$salmon: hsl(9, 68%, 63%);
+$pink: hsl(331, 35%, 44%);
+$pink-dark:  hsl(327, 61%, 26%);
+
+$white:  hsl(0, 0%, 100%);
+
+
+
+
+$color-primary: $purple;
+$color-dark: $purple-dark;
+$color-background: $white;
 
 
 // Grayscale
-$color-gray: #808080;
-$color-mineshaft: #333;
-$color-dove-gray: #666;
-$color-gray-alt: #929292;
-$color-silver-chalice: #aaa;
-$color-silver: #ccc;
-$color-alto: #ddd;
-$color-gallery: #eee;
-$color-whitesmoke: #f1f1f1;
+$color-gray: hsl(0, 0%, 50%);
 
 // Social Media Colors
 $color-facebook: #3b5998;
@@ -66,16 +76,24 @@ $social-colors: (
 // ELEMENTS & SKINNING
 
 // General
-$color-background-body: $color-white;
 $color-text: $color-dark;
-$color-background-hr: $color-silver;
-$color-border-abbr: $color-dove-gray;
 
 // Accessibility
-$color-background-screen-reader: $color-whitesmoke;
+$color-background-screen-reader: $blue-light;
 $color-text-screen-reader: $color-primary;
 
 // Links
 $color-link: $color-primary;
 $color-link-visited: $color-link;
 $color-link-hover: darken($color-primary, 10%);
+
+// Forms
+$color-btn: $pink;
+$color-btn-hover: $pink-dark;
+$color-button-text: $white;
+
+// Inputs
+$color-border: $blue-light;
+$color-input-border: $blue-light;
+$color-input-focus-text: $color-text;
+$color-input-text: $color-gray;

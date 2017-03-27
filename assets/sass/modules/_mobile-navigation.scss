@@ -84,16 +84,12 @@
 
     // Only target top-level items
     > li:nth-child(-n+5) {
-      background-color: $color-white;
+      background-color: $color-background;
       border-top: 1px solid rgba($color-text, 0.1);
       flex-grow: 1;
       height: 4rem;
       text-align: center;
       transition: opacity 0.5s ease;
-
-      &:hover {
-        background-color: $color-gallery;
-      }
 
       > a {
         display: block;
@@ -158,7 +154,7 @@
       }
 
       a {
-        color: $color-white;
+        color: $color-background;
         padding: 0.75rem 1.25rem;
       }
     }
@@ -221,7 +217,7 @@
   }
 
   svg {
-    fill: $color-white;
+    fill: $color-background;
     transition: opacity 0.5s ease;
     width: 100%;
   }
@@ -285,7 +281,7 @@
     z-index: -1;
 
     a {
-      color: $color-white;
+      color: $color-background;
       font-size: 1rem;
       padding: 0.75rem 1.25rem;
       text-align: left;
@@ -391,7 +387,7 @@
       }
 
       li {
-        background-color: $color-white;
+        background-color: $color-background;
         border-top: 1px solid rgba($color-text, .1);
         display: inline-block;
         float: none;
@@ -405,7 +401,7 @@
         width: auto;
 
         &:hover {
-          background-color: $color-white;
+          background-color: $color-background;
         }
       }
     }

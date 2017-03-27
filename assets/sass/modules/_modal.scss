@@ -29,7 +29,7 @@
 	// The modal content container.
 	.modal-content {
 		background-clip: padding-box;
-		background-color: $color-white;
+		background-color: $color-background;
 		border-radius: rem(3);
 		box-shadow: 0 0 0.75rem rem(3) rgba($color-text, 0.5);
 		outline: 0;
@@ -47,9 +47,9 @@
 				// @include size(rem(30) rem(30));
 
 				background: $color-text;
-				border: 3px solid $color-white;
+				border: 3px solid $color-background;
 				border-radius: 50%;
-				color: $color-white;
+				color: $color-background;
 				cursor: pointer;
 				font-size: 2rem;
 				line-height: 0;
