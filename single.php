@@ -9,30 +9,44 @@
 
 get_header(); ?>
 
-	<div class="wrap">
-		<div class="primary content-area">
-			<main id="main" class="site-main" role="main">
+  <div class="wrap">
+    <div class="primary content-area">
+      <main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+      <?php
+      while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', get_post_format() );
+        if ( is_singular( 'pose' )) {
+          get_template_part( 'template-parts/content-pose', get_post_format() );
+        }
 
-				the_post_navigation();
+        elseif ( is_singular( 'muscles' )) {
+          get_template_part( 'template-parts/content-muscles', get_post_format() );
+        }
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+        elseif ( is_singular( 'issues' )) {
+          get_template_part( 'template-parts/content-issues', get_post_format() );
+        }
 
-			endwhile; // End of the loop.
-			?>
+        else {
+          get_template_part( 'template-parts/content', get_post_format() );
+        }
 
-			</main><!-- #main -->
-		</div><!-- .primary -->
+        the_post_navigation();
 
-		<?php get_sidebar(); ?>
+        // If comments are open or we have at least one comment, load up the comment template.
+        if ( comments_open() || get_comments_number() ) :
+          comments_template();
+        endif;
 
-	</div><!-- .wrap -->
+      endwhile; // End of the loop.
+      ?>
+
+      </main><!-- #main -->
+    </div><!-- .primary -->
+
+    <?php get_sidebar(); ?>
+
+  </div><!-- .wrap -->
 
 <?php get_footer(); ?>
