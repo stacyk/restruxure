@@ -25,20 +25,28 @@
     endif; ?>
   </header><!-- .entry-header -->
 
-
-  <?php $related_to_pose = get_field( 'related_to_pose' ); ?>
-
-  <?php if ( $related_to_pose ): ?>
-    <h3>Related Pose(s)</h3>
-    <ul class="pose-relation">
-      <?php foreach ( $related_to_pose as $post ):  ?>
-        <?php setup_postdata ($post); ?>
-          <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-        <?php endforeach; ?>
-      </ul>
-    <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
-
+  <?php
+  $poses = get_posts(array(
+    'post_type' => 'pose',
+    'meta_query' => array(
+        array(
+            'key' => 'related_to_pose', // name of custom field
+            'value' => '"' . get_the_ID() . '"',
+            'compare' => 'LIKE'
+        )
+    )
+)); ?>
+						<?php if( $related_to_pose ): ?>
+            <h1>related to post</h1>
+							<ul>
+							<?php foreach( $related_to_pose as $post ): ?>
+								<li>
+                For each li start
+                    <?php get_the_title( $post->ID ); ?>
+								</li>
+							<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
 
   <?php $issues_related_muscles = get_field( 'issues_related_muscles' ); ?>
 
