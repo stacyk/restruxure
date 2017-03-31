@@ -9,16 +9,37 @@
 
 p2p_register_connection_type( array(
     'name' => 'muscles_to_poses',
-    'from' => 'related_to_pose',
-    'to' => 'related_muscles',
+    'from' => 'poses',
+    'to' => 'muscles',
     'reciprocal' => true,
-    'title' => 'MusclestoPoses'
+    'title' => 'Muscles to Poses',
+    'admin_box' => array(
+        'show' => 'any',
+        'context' => 'side'
+    )
 ) );
 
 p2p_register_connection_type( array(
     'name' => 'issues_to_poses',
-    'from' => 'related_to_pose',
-    'to' => 'common_issues',
+    'from' => 'poses',
+    'to' => 'issues',
     'reciprocal' => true,
-    'title' => 'IssuestoPoses'
+    'title' => 'Issues to Poses',
+    'admin_box' => array(
+        'show' => 'any',
+        'context' => 'side'
+    )
 ) );
+
+p2p_register_connection_type( array(
+    'name' => 'muscles_to_issues',
+    'from' => 'issues',
+    'to' => 'muscles',
+    'reciprocal' => true,
+    'title' => 'Muscles to Issues',
+    'admin_box' => array(
+        'show' => 'any',
+        'context' => 'side'
+    )
+) );
+

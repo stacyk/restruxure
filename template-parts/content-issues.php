@@ -25,41 +25,55 @@
     endif; ?>
   </header><!-- .entry-header -->
 
+
   <?php
-  $poses = get_posts(array(
-    'post_type' => 'pose',
-    'meta_query' => array(
-        array(
-            'key' => 'related_to_pose', // name of custom field
-            'value' => '"' . get_the_ID() . '"',
-            'compare' => 'LIKE'
-        )
-    )
-)); ?>
-						<?php if( $related_to_pose ): ?>
-            <h1>related to post</h1>
-							<ul>
-							<?php foreach( $related_to_pose as $post ): ?>
-								<li>
-                For each li start
-                    <?php get_the_title( $post->ID ); ?>
-								</li>
-							<?php endforeach; ?>
-							</ul>
-						<?php endif; ?>
+    // Find connected pages
+    $connected = new WP_Query( array(
+      'connected_type' => 'issues_to_poses',
+      'connected_items' => get_queried_object(),
+      'nopaging' => true,
+    ) );
 
-  <?php $issues_related_muscles = get_field( 'issues_related_muscles' ); ?>
-
-  <?php if ( $issues_related_muscles ): ?>
-    <h3>Related Muscles</h3>
-    <ul class="muscle-relation">
-	    <?php foreach ( $issues_related_muscles as $post ):  ?>
-		  <?php setup_postdata ($post); ?>
-		    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-	    <?php endforeach; ?>
+    // Display connected pages
+    if ( $connected->have_posts() ) :
+    ?>
+    <h3>Issues related to this pose:</h3>
+    <ul>
+    <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+    <?php endwhile; ?>
     </ul>
-    <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
+
+    <?php
+    // Prevent weirdness
+    wp_reset_postdata();
+
+  endif; ?>
+
+
+  <?php
+    // Find connected pages
+    $connected = new WP_Query( array(
+      'connected_type' => 'muscles_to_issues',
+      'connected_items' => get_queried_object(),
+      'nopaging' => true,
+    ) );
+
+    // Display connected pages
+    if ( $connected->have_posts() ) :
+    ?>
+    <h3>Muscles used in this pose:</h3>
+    <ul>
+    <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+      <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+    <?php endwhile; ?>
+    </ul>
+
+    <?php
+    // Prevent weirdness
+    wp_reset_postdata();
+
+  endif; ?>
 
 
   <div class="entry-content">

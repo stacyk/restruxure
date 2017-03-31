@@ -16,8 +16,8 @@ get_header(); ?>
       <?php
       while ( have_posts() ) : the_post();
 
-        if ( is_singular( 'pose' )) {
-          get_template_part( 'template-parts/content-pose', get_post_format() );
+        if ( is_singular( 'poses' )) {
+          get_template_part( 'template-parts/content-poses', get_post_format() );
         }
 
         elseif ( is_singular( 'muscles' )) {

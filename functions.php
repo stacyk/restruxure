@@ -142,9 +142,9 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/scripts.php';
 
 /**
- * Load custom ACF features.
+ * Custom Post Types
  */
-require get_template_directory() . '/inc/acf.php';
+require get_template_directory() . '/inc/post-types.php';
 
 /**
  * Load custom filters and hooks.
