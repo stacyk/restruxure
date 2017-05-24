@@ -380,3 +380,21 @@ function yoga_get_social_network_links() {
 	<?php
 	return ob_get_clean();
 }
+
+
+/**
+ * Display hero markup if needed
+ *
+ * @return hero markup
+ */
+function yoga_get_hero() {
+	?>
+	<section class="hero-area image-as-background" style="background-image: url('<?php echo yoga_get_post_image_uri( 'large' ); ?>');" aria-labelledby="hero-title" aria-describedby="hero-description">
+		<div class="hero-content">
+			<h2 class="hero-title">Hero Title</h2>
+			<p class="hero-description">This is the description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si longus, levis; An eum discere ea mavis, quae cum plane perdidiceriti nihil sciat?</p>
+			<!--<a href="#" class="hero-button" title="Click to see more">Click Me</a>-->
+		</div>
+	</section>
+<?php }
+

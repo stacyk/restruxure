@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div class="wrap">
+	<div class="wrap bp-wrap">
 		<div class="primary content-area">
 			<main id="main" class="site-main" role="main">
 
