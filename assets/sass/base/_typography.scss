@@ -24,6 +24,28 @@ a {
   text-decoration: none;
 }
 
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	clear: both;
+// 	line-height: 1.2;
+// 	margin: 0 0 0.5rem;
+// 	padding: 1.5rem 0 0;
+// }
+
+// h1:first-child,
+// h2:first-child,
+// h3:first-child,
+// h4:first-child,
+// h5:first-child,
+// h6:first-child {
+// 	padding-top: 0;
+// }
+
+
 h1,
 .h1 {
   @include fluid-type(37.5rem, 80rem, $h1-min, $h1-max);

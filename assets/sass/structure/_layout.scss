@@ -4,9 +4,17 @@
 
 // Structure.
 .wrap {
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+  &:not(.bp-wrap) {
+    @supports (display: grid) {
+      display: grid;
+      grid-gap: 5rem;
+      grid-template-columns: minmax(300px, 3fr) minmax(200px, 2fr);
+      width: 90%;
+    }
   }
 }
 
@@ -14,10 +22,9 @@
 .site-footer {
 }
 
-.entry-content > *:not(img):not(video):not(table):not(iframe[src*="codepen"]) {
+.entry-content > *:not(img):not(video):not(table):not(iframe) {
   margin-left: auto;
   margin-right: auto;
-  max-width: $phone-landscape;
 }
 
 .primary {

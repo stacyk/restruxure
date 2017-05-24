@@ -196,7 +196,7 @@ function yoga_get_placeholder_unsplash( $args = array() ) {
 	}
 
 	// Text that will be utilized by screen readers.
-	$alt = apply_filters( 'yoga_placeholder_image_alt', __( 'WebDevStudios Placeholder Image', 'yoga' ) );
+	$alt = apply_filters( 'yoga_placeholder_image_alt', __( 'Placeholder Image', 'yoga' ) );
 
 	return "<img src='$url' width='{$args['width']}' height='{$args['height']}' alt='$alt' />";
 }
