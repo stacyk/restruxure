@@ -10,18 +10,25 @@
 get_header(); ?>
 
 	<div class="wrap">
+
 		<div class="primary content-area">
 			<main id="main" class="site-main facetwp-template" role="main">
 
 			<?php
 			if ( have_posts() ) : ?>
-
 				<header class="page-header">
 					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_title( '<h2 class="page-title">', '</h2>' );
 						the_archive_description( '<div class="archive-description">', '</div>' );
 					?>
 				</header><!-- .page-header -->
+
+				<!-- Display Filters -->
+				<div class="filter-archive">
+					<h4>Narrow by pose catego
+					ry:</h4>
+					<?php echo facetwp_display( 'facet', 'categories' ); ?>
+				</div>
 
 				<?php
 				/* Start the Loop */
@@ -46,9 +53,6 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
-
-		<?php get_sidebar(); ?>
-
 	</div><!-- .wrap -->
 
 <?php get_footer(); ?>
