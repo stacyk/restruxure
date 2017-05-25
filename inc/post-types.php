@@ -35,11 +35,12 @@ function yoga_register_my_cpts() {
 		"hierarchical" => false,
 		"rewrite" => array( "slug" => "poses", "with_front" => true ),
 		"query_var" => true,
-		"supports" => array( "title", "editor", "thumbnail" ),
-		"taxonomies" => array( "category", "post_tag" ),
+		"supports" => array( "title", "editor", "thumbnail", "excerpt", "custom-fields", "page-attributes", "post-formats" ),
+		"taxonomies" => array( "category", "pose-category" ),
 	);
 
 	register_post_type( "poses", $args );
+
 
 	/**
 	 * Post Type: Muscles.
@@ -105,3 +106,4 @@ function yoga_register_my_cpts() {
 }
 
 add_action( 'init', 'yoga_register_my_cpts' );
+
