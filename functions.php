@@ -96,7 +96,7 @@ function yoga_widgets_init() {
 	// Define sidebars.
 	$sidebars = array(
 		'sidebar-1'  => esc_html__( 'Sidebar 1', 'yoga' ),
-		// 'sidebar-2'  => esc_html__( 'Sidebar 2', 'yoga' ),
+		'sidebar-archive'  => esc_html__( 'Sidebar Archive', 'yoga' ),
 		// 'sidebar-3'  => esc_html__( 'Sidebar 3', 'yoga' ),
 	);
 
