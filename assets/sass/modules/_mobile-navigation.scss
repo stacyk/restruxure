@@ -19,7 +19,7 @@
   width: 0;
 
   // Don't show this puppy above tablet-landscape
-  @include above(tablet-landscape) {
+  @include above(bp-large) {
     display: none;
   }
 
@@ -98,7 +98,6 @@
         line-height: 1.2;
 
         span {
-          @include vertical-align(middle);
           display: block;
         }
       }
@@ -366,8 +365,6 @@
         text-align: center;
 
         span {
-          @include vertical-align(middle);
-
           display: block;
         }
       }

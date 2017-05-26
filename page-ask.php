@@ -12,7 +12,6 @@
  * @package yoga
  */
 
-acf_form_head();
 get_header();
 ?>
 
@@ -25,27 +24,13 @@ get_header();
 
 				get_template_part( 'template-parts/content', 'page' );
 
-
-				the_field('ask-title');
-				the_field('ask-question');
-				acf_form(array(
-					'post_id'		=> 'new_post',
-					'post_title'	=> true,
-					'post_content'	=> true,
-					'new_post'		=> array(
-						'post_type'		=> 'issues',
-						'post_status'		=> 'publish'
-					),
-					'submit_value'		=> 'Submit your issue'
-				));
-
 				endwhile; // End of the loop.
 				?>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
 
-		<?php get_sidebar(); ?>
+		<?php // get_sidebar(); ?>
 
 	</div><!-- .wrap -->
 

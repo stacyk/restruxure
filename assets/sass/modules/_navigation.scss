@@ -19,14 +19,13 @@ a {
 
 // Default menu (active after a fresh WordPress install)
 .menu {
-  @include list-reset;
 
   li {
     margin: 0 0.75rem 0 0;
   }
 
   ul {
-    @include list-reset;
+    list-style: none;
   }
 
   &.menu-horizontal {
@@ -127,7 +126,7 @@ a {
   ul {
     display: none;
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       display: block;
     }
   }
@@ -136,7 +135,7 @@ a {
     display: block;
   }
 
-  @include above(tablet-landscape) {
+  @include above(bp-large) {
     display: block;
   }
 }
@@ -145,7 +144,7 @@ a {
 .menu-toggle {
   display: block;
 
-  @include above(phone-landscape) {
+  @include above(bp-small) {
     display: none;
   }
 }

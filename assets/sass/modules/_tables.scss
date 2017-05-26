@@ -12,7 +12,7 @@ table {
   thead {
     display: none;
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       display: table-row-group;
     }
   }
@@ -21,13 +21,13 @@ table {
   td {
     padding: 0.75rem;
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       display: table-cell;
     }
   }
 
   th {
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       display: table-cell;
     }
   }
@@ -36,7 +36,7 @@ table {
     display: block;
     margin-bottom: 0.75rem;
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       display: table-row;
       margin-bottom: 0;
     }
@@ -58,7 +58,7 @@ table {
     }
   }
 
-  @include above(phone-landscape) {
+  @include above(bp-small) {
     border: 1px solid $color-border;
   }
 }

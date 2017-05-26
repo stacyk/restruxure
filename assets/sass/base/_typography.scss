@@ -48,38 +48,38 @@ a {
 
 h1,
 .h1 {
-  @include fluid-type(37.5rem, 80rem, $h1-min, $h1-max);
   font-family: $font-headlines;
+  font-size: calc(2rem + 0.25vw);
 }
 
 h2,
 .h2 {
-  @include fluid-type(37.5rem, 80rem, $h2-min, $h2-max);
   font-family: $font-headlines;
+  font-size: calc(1.8rem + 0.25vw);
 }
 
 h3,
 .h3 {
-  @include fluid-type(37.5rem, 80rem, $h3-min, $h3-max);
   font-family: $font-headlines;
+  font-size: calc(1.6rem + 0.25vw);
 }
 
 h4,
 .h4 {
-  @include fluid-type(37.5rem, 80rem, $h4-min, $h4-max);
   font-family: $font-headlines;
+  font-size: calc(1.6rem + 0.25vw);
 }
 
 h5,
 .h5 {
-  @include fluid-type(37.5rem, 80rem, $h5-min, $h5-max);
   font-family: $font-headlines;
+  font-size: calc(1.4rem + 0.25vw);
 }
 
 h6,
 .h6 {
-  @include fluid-type(37.5rem, 80rem, $h6-min, $h6-max);
   font-family: $font-headlines;
+  font-size: calc(1.2rem + 0.25vw);
 }
 
 
@@ -88,6 +88,7 @@ h6,
 //--------------------------------------------------------------
 
 p {
+  font-size: calc(1rem + 0.25vw);
   margin: 0 0 1.5rem 0;
 }
 

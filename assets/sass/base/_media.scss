@@ -8,9 +8,9 @@
 .comment-content {
 	// WP smiley
 	img.wp-smiley {
-		@include margin-padding-reset;
-
 		border: none;
+		margin: 0;
+		padding: 0;
 	}
 }
 

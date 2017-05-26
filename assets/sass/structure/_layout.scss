@@ -6,15 +6,16 @@
 .wrap {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  width: 100%;
 
   &:not(.bp-wrap) {
-    @supports (display: grid) {
-      display: grid;
-      grid-gap: 5rem;
-      grid-template-columns: minmax(300px, 3fr) minmax(200px, 2fr);
-      width: 90%;
-    }
+    // @supports (display: grid) {
+    //   display: grid;
+    //   grid-gap: 3rem;
+    //   grid-template-columns: minmax(300px, 1fr);
+    // }
   }
 }
 

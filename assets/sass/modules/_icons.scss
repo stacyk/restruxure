@@ -4,8 +4,7 @@
 
 // Social icons <ul>
 .social-icons {
-	@include clearfix;
-	@include list-reset;
+	list-style: none;
 
 	// Each icon <li>
 	.social-icon {

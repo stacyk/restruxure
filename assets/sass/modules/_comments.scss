@@ -36,7 +36,7 @@
   input:not(.submit) {
     width: 97%;
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       max-width: 15.625rem;
     }
   }
@@ -47,7 +47,7 @@
 .comment-form-email,
 .comment-form-url {
   label {
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       width: 4.6875rem;
     }
   }
@@ -58,7 +58,7 @@
   margin-left: 0;
   padding-left: 1.25rem;
 
-  @include above(phone-landscape) {
+  @include above(bp-small) {
     padding-left: 2.1875rem;
   }
 

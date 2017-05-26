@@ -5,20 +5,15 @@
 /// Media Query Breakpoints
 /// @group yoga
 $breakpoints: (
-  large-desktop: 100rem,
-  desktop: 85rem,
-  tablet-landscape: 64rem,
+  bp-large: 64rem,
   wp-admin-bar: 48.9375rem,
   tablet-portrait: 48rem,
-  phone-landscape: 40rem,
-  phone-portrait: 22.5rem,
+  bp-small: 40rem,
 );
 
 
-$large-desktop: 100rem;
-$desktop: 80rem;
-$tablet-landscape: 64rem;
+
+$bp-large: 64rem;
 $wp-admin-bar: 48.9375rem;
 $tablet-portrait: 48rem;
-$phone-landscape: 40rem;
-$phone-portrait: 22.5rem;
+$bp-small: 40rem;

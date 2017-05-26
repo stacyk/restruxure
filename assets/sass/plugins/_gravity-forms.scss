@@ -93,7 +93,7 @@ $gf-input-padding: $padding-input;
     padding: $gf-input-padding;
     width: 100%;
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       width: 49%;
     }
   }
@@ -138,7 +138,7 @@ $gf-input-padding: $padding-input;
   margin-left: 0;
   width: 100% !important; // overrides GF !important
 
-  @include above(phone-landscape) {
+  @include above(bp-small) {
     width: 49% !important;
   }
 }
@@ -213,7 +213,7 @@ $gf-input-padding: $padding-input;
     padding: $gf-input-padding;
     width: 100%;
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       width: 49%;
     }
   }
@@ -247,19 +247,19 @@ $gf-input-padding: $padding-input;
     input[type="password"],
     input[type="file"] {
 
-      @include above(phone-landscape) {
+      @include above(bp-small) {
         width: 100%;
       }
     }
 
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       width: 49%;
     }
   }
 
   // Target just left column on two-column row
   .gf_left_half {
-    @include above(phone-landscape) {
+    @include above(bp-small) {
       margin-right: 2%;
     }
   }
