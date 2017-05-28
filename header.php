@@ -26,7 +26,16 @@
   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'yoga' ); ?></a>
 
   <header class="site-header">
-    <div class="wrap">
+
+      <nav id="site-navigation" class="main-navigation">
+        <?php
+          wp_nav_menu( array(
+            'theme_location' => 'primary',
+            'menu_id'        => 'primary-menu',
+            'menu_class'     => 'menu dropdown',
+          ) );
+        ?>
+      </nav><!-- #site-navigation -->
 
       <div class="site-branding">
         <?php if ( is_front_page() && is_home() ) : ?>
@@ -41,18 +50,10 @@
         <?php endif; ?>
       </div><!-- .site-branding -->
 
-      <nav id="site-navigation" class="main-navigation">
-        <?php
-          wp_nav_menu( array(
-            'theme_location' => 'primary',
-            'menu_id'        => 'primary-menu',
-            'menu_class'     => 'menu dropdown',
-          ) );
-        ?>
-      </nav><!-- #site-navigation -->
+      <!-- Search Form -->
+      <?php get_search_form(); ?>
 
-    </div><!-- .wrap -->
   </header><!-- .site-header -->
 
   <div id="content" class="site-content">
-    <?php get_search_form(); ?>
+

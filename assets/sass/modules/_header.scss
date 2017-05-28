@@ -2,14 +2,37 @@
 // Header
 //--------------------------------------------------------------
 
+.site-header {
+	background-image: linear-gradient(90deg, $purple-dark 0%, $pink-dark 20%, $pink 50%, $pink-dark 80%, $purple-dark 100%);
+	padding-bottom: $gutter;
+
+	a {
+		&:link,
+		&:visited {
+			color: $color-background;
+		}
+	}
+}
+
+.site-branding {
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+}
+
 // Site Title
 .site-title {
-	font-size: 2rem;
-	margin: 0;
+	color: $color-background;
+	font-size: 3.0rem;
+	line-height: 1;
+	margin: 0 auto;
 }
 
 // Site Description
 .site-description {
-	font-size: 1.5rem;
-	margin: 0;
+	color: $color-background;
+	font-feature-settings: "liga", "swsh", "ss04", "salt";
+	font-family: $font-special;
+	font-size: 1rem;
+	font-weight: 300;
+	margin: 0 auto;
 }

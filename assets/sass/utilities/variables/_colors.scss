@@ -31,14 +31,8 @@ $pink: hsl(331, 35%, 44%);
 $pink-dark:  hsl(327, 61%, 26%);
 
 $white:  hsl(0, 0%, 100%);
-
-
-
-
-$color-primary: $purple;
-$color-dark: $purple-dark;
-$color-background: $white;
-
+$gray: hsl(281, 9%, 35%);
+$gray-light: lighten($gray, 50%);
 
 // Grayscale
 $color-gray: hsl(0, 0%, 50%);
@@ -76,16 +70,29 @@ $social-colors: (
 // ELEMENTS & SKINNING
 
 // General
-$color-text: $color-dark;
+$color-text: desaturate($purple, 16%);
+
+$color-primary: $purple;
+$color-dark: $purple-dark;
+$color-background: $white;
+$color-background-light: lighten($color-text, 20%);
+
+// States
+$color-voted-best: saturate(lighten($green, 50%), 20%);
+$solved: $pink-dark;
+$color-voted-best: lighten($blue-light, 10%);
+
+
 
 // Accessibility
 $color-background-screen-reader: $blue-light;
 $color-text-screen-reader: $color-primary;
 
 // Links
-$color-link: $color-primary;
-$color-link-visited: $color-link;
-$color-link-hover: darken($color-primary, 10%);
+$color-link: $pink;
+$color-link-visited: $pink;
+$color-link-hover: $pink-dark;
+$color-link-active: lighten($blue-light, 10%);
 
 // Forms
 $color-btn: $pink;
@@ -93,7 +100,8 @@ $color-btn-hover: $pink-dark;
 $color-button-text: $white;
 
 // Inputs
-$color-border: $blue-light;
-$color-input-border: $blue-light;
-$color-input-focus-text: $color-text;
+$color-border: $gray-light;
+$color-input-border: $gray-light;
+$color-input-focus-border: lighten($green, 10%);
 $color-input-text: $color-gray;
+$color-input-focus-text: $color-text;

@@ -51,7 +51,14 @@
 
 // Edit link
 .edit-link {
-	margin: 0 1.5rem;
+	background-color: $gray-light;
+	font-size: $type-meta;
+	margin: $shim 0;
+	padding: $shim-half $shim;
+
+	a {
+		color: $color-text;
+	}
 }
 
 // Asides

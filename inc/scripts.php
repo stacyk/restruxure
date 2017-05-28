@@ -19,15 +19,16 @@ function yoga_font_url() {
 	 * supported by the following, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$baloo_bhaina = _x( 'on', 'Baloo Bhaina font: on or off', 'yoga' );
+
+	$catamaran = _x( 'on', 'Catamaran font: on or off', 'yoga' );
 	$martel = _x( 'on', 'Martel font: on or off', 'yoga' );
 	$rasa = _x( 'on', 'Rasa font: on or off', 'yoga' );
 
-	if ( 'off' !== $martel || 'off' !== $baloo_bhaina || 'off' !== $rasa ) {
+	if ( 'off' !== $martel || 'off' !== $catamaran || 'off' !== $rasa ) {
 		$font_families = array();
 
-		if ( 'off' !== $baloo_bhaina ) {
-			$font_families[] = 'Baloo Bhaina';
+		if ( 'off' !== $catamaran ) {
+			$font_families[] = 'Catamaran:300,400,700';
 		}
 
 		if ( 'off' !== $martel ) {
@@ -74,6 +75,7 @@ function yoga_scripts() {
 	wp_enqueue_style( 'yoga-google-font' );
 	wp_enqueue_style( 'yoga-style', get_stylesheet_directory_uri() . '/style' . $suffix . '.css', array(), $version );
 
+
 	// Enqueue scripts.
 	wp_enqueue_script( 'yoga-scripts', get_template_directory_uri() . '/assets/scripts/project' . $suffix . '.js', array( 'jquery' ), $version, true );
 
@@ -86,6 +88,18 @@ function yoga_scripts() {
 	wp_enqueue_script( 'yoga-mobile-nav', get_template_directory_uri() . '/assets/scripts/mobile-nav-menu' . $suffix . '.js', array( 'jquery' ), $version, true );
 }
 add_action( 'wp_enqueue_scripts', 'yoga_scripts' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function yoga_remove_plugin_styles() {
+	// Dequeue styles.
+	wp_dequeue_style( 'anspress-main' );
+	wp_dequeue_style( 'anspress-main-css' );
+	wp_dequeue_style( 'ap-overrides' );
+	wp_dequeue_style( 'ap_assets_css' );
+}
+add_action( 'wp_dequeue_scripts', 'yoga_remove_plugin_styles', 9999 );
 
 /**
  * Add SVG definitions to footer.

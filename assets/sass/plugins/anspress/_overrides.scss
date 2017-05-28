@@ -1,0 +1,60 @@
+.ap-questions {
+  @include pad(negative);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.ap-questions-item {
+  flex: 1 1 33%;
+  margin-bottom: 0;
+  padding: $shim;
+
+  //background-color: $pink;
+}
+
+// List items
+.ap-ul-inline {
+  display: flex;
+
+  a {
+    color: $color-text;
+    display: block;
+    padding: $inline-nav-pad;
+  }
+
+  .active a {
+    border: 1px solid $color-link-active;
+    background-color: $color-link-active;
+  }
+}
+
+.ap-answers-tab {
+  border-bottom: 1px solid $gray-light;
+}
+
+.ap-user-reputation {
+  background-color: $color-link;
+  border-radius: 1rem;
+  color: $color-background;
+  margin-left: $shim-quarter;
+  margin-right: $shim-quarter;
+  padding: 0.125rem $shim-half;
+
+  &:hover,
+  &:focus {
+    background-color: $color-link-hover;
+    color: $color-background;
+  }
+}
+
+.ap-display-meta-item {
+  &.views {
+    display: none;
+  }
+}

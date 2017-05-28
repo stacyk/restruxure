@@ -1,7 +1,7 @@
 //--------------------------------------------------------------
 // Typography
 //--------------------------------------------------------------
-$font-special: "Baloo Bhaina", sans-serif;
+$font-special: "Catamaran", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $font-headlines: Martel, Georgia, serif;
 $font-main: Rasa, Georgia, serif;
 $font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -9,3 +9,21 @@ $font-pre: "Courier 10 Pitch", Courier, monospace;
 
 $line-height-body: 1.5;
 $line-height-pre: $line-height-body;
+
+$type-root: 1.25rem;
+$type-root-base: 1.25;
+$type-root-unit: rem;
+$h4base: 1.25 * 0.6;
+
+$type-meta: $type-root - 0.375rem;
+$type-xsmall: $type-root - 0.325rem;
+$type-small: $type-root - 0.25rem;
+$type-medium: $type-root + 0.25rem;
+$type-h1: calc((#{$type-root} * 2) + 0.25vw);
+$type-h2: calc((#{$type-root} * 1.8) + 0.25vw);
+$type-h3: calc((#{$type-root} * 1.6) + 0.25vw);
+$type-h4: calc(#{$h4base}rem + 0.25vw);
+
+
+
+$size-question-title: $type-root * 1.35;

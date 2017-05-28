@@ -25,7 +25,7 @@ input[type="search"]::-ms-clear {
 
 input[type="search"] {
 	-webkit-appearance: textfield; // Addresses appearance set to searchfield in S5, Chrome
-	box-sizing: content-box;
+	box-sizing: border-box;
 
 	// Corrects inner padding displayed oddly in S5, Chrome on OSX
 	&::-webkit-search-decoration {
@@ -65,13 +65,50 @@ textarea {
 	padding: $padding-input;
 
 	&:focus {
-		color: $color-input-focus-text;
+		color: $color-text;
+		border-color: $color-input-focus-border;
+		outline: 0;
 	}
+}
+
+.ap-form-fields-in {
+	color: $color-input-text !important;
+
+	body#tinymce.mce-content-body {
+		color: $color-input-text !important;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	width: 100%;
 }
 
 textarea {
 	height: auto;
 	overflow: auto; // Removes default vertical scrollbar in IE6/7/8/9
 	vertical-align: top; // Improves readability and alignment in all browsers
-	width: 97%;
+	//	width: 97%;
+}
+
+label {
+  display: block;
+  font-size: $type-xsmall;
+  font-weight: bold;
+  margin-bottom: $shim-half;
+}
+
+input {
+	margin-bottom: $shim;
+}
+
+
+
+//// Custom - Move to new partial
+.ap-upload {
+  font-size: $type-meta;
 }

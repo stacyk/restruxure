@@ -17,41 +17,22 @@ a {
   }
 }
 
-// Default menu (active after a fresh WordPress install)
-.menu {
-
-  li {
-    margin: 0 0.75rem 0 0;
-  }
-
+nav {
   ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
+}
 
-  &.menu-horizontal {
-
-    li {
-      display: inline-block;
-    }
-  }
-
-  &.menu-vertical {
-
-    li {
-      margin: 0;
-    }
-
-    a {
-      border-bottom: 1px solid $color-border;
-      padding: 0.75rem;
-    }
-  }
+// Default menu (active after a fresh WordPress install)
+.menu {
+  display: flex;
 
   &.dropdown {
 
     // Sub-menu
     ul {
-      box-shadow: 0 3px 3px rgba($color-text, 0.2);
       float: left;
       left: -999rem;
       position: absolute;
@@ -106,6 +87,7 @@ a {
   // Menu hyperlinks
   a {
     display: block;
+    padding: $shim-half $gutter;
     text-decoration: none;
   }
 
@@ -117,32 +99,34 @@ a {
 
 // Main navigation (after creating a menu in the dashboard)
 .main-navigation {
-  clear: both;
   display: none;
-  float: left;
-  width: 100%;
 
+  div {
+    display: flex;
+
+  }
   // Menu area
   ul {
     display: none;
 
     @include above(bp-small) {
-      display: block;
+      display: flex;
+      justify-content: center;
     }
   }
 
   &.toggled ul {
-    display: block;
+    display: flex;
   }
 
   @include above(bp-large) {
-    display: block;
+    display: flex;
   }
 }
 
 // Small menu
 .menu-toggle {
-  display: block;
+  display: flex;
 
   @include above(bp-small) {
     display: none;

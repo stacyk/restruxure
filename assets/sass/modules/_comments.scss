@@ -3,25 +3,36 @@
 //--------------------------------------------------------------
 
 // Comment title
-.comments-title {
-  font-size: 1.5rem;
-}
+// .comments-title {
+//   font-size: 1.5rem;
+// }
 
 // Comment list
-.comment-list {
-  list-style: none;
-  margin: 0;
-}
+// .comment-list {
+//   list-style: none;
+//   margin: 0;
+// }
 
 // Comment meta
-.comment-meta {
-  margin: 0 0 0.875rem 0;
-}
+// .comment-meta {
+//   margin: 0 0 0.875rem 0;
+// }
 
 // Comments avatar
 .avatar {
+  border-radius: 50px;
   float: left;
-  margin: 0 0.75rem 0 0;
+  margin-right: $shim;
+  margin-bottom: $shim;
+}
+
+.ap-avatar {
+  float: left;
+  width: 50px;
+  height: 50px;
+  -webkit-shape-outside: circle(50px);
+  shape-outside: circle(50px);
+  shape-margin: 1rem;
 }
 
 // By post author
@@ -30,39 +41,39 @@
 }
 
 // Comment Form
-.comment-form {
-  width: 100%;
+// .comment-form {
+//   width: 100%;
 
-  input:not(.submit) {
-    width: 97%;
+//   input:not(.submit) {
+//     width: 97%;
 
-    @include above(bp-small) {
-      max-width: 15.625rem;
-    }
-  }
-}
+//     @include above(bp-small) {
+//       max-width: 15.625rem;
+//     }
+//   }
+// }
 
 // Default labels for comment form
-.comment-form-author,
-.comment-form-email,
-.comment-form-url {
-  label {
-    @include above(bp-small) {
-      width: 4.6875rem;
-    }
-  }
-}
+// .comment-form-author,
+// .comment-form-email,
+// .comment-form-url {
+//   label {
+//     @include above(bp-small) {
+//       width: 4.6875rem;
+//     }
+//   }
+// }
 
 // Nested comments spacing from mobile to desktop
-.comment-list .children {
-  margin-left: 0;
-  padding-left: 1.25rem;
+// .comment-list .children {
+//   margin-left: 0;
+//   padding-left: 1.25rem;
 
-  @include above(bp-small) {
-    padding-left: 2.1875rem;
-  }
+//   @include above(bp-small) {
+//     padding-left: 2.1875rem;
+//   }
 
-  @include above(tablet-portrait) {
-    padding-left: 3.75rem;
-  }
-}
+//   @include above(tablet-portrait) {
+//     padding-left: 3.75rem;
+//   }
+// }

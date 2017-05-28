@@ -1,0 +1,272 @@
+//
+// Question lists style
+// --------------------------------------------------
+#anspress {
+  .ap-questions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &-item {
+      padding: $shim;
+
+      &.status-private_post {
+        background: #f4f6f8;
+      }
+
+      &.status-moderate {
+        background: #fff8e1;
+      }
+
+      &.hentry {
+        margin: 0;
+        border-top: none;
+      }
+
+      &.status-trash {
+        background: #fff6f7;
+      }
+    }
+
+    &-history {
+      margin-top: 5px;
+    }
+
+    .ap-avatar {
+      margin-right: 20px;
+
+      a {
+        display: block;
+      }
+    }
+
+    &-title {
+      display: block;
+      font-size: $size-question-title;
+      font-weight: 600;
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+
+    &-count {
+      display: flex;
+      text-transform: lowercase;
+      font-size: 12px;
+      margin-left: 15px;
+      color: #777;
+
+      span {
+        font-size: $type-small;
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        padding: 6px 0;
+        margin-bottom: 1px;
+      }
+
+      &.ap-questions-acount {
+        border-color: $main-color;
+      }
+    }
+
+    .ap-display-meta-item {
+      font-size: $type-xsmall;
+      color: $meta-color;
+      margin-right: 15px;
+
+      i:before {
+        font-size: $type-xsmall;
+      }
+    }
+
+    .ap-post-type {
+      display: inline;
+      font-size: $type-meta;
+      margin: 0;
+      padding: 0 6px;
+    }
+
+    .ap-post-status {
+      background: #ffd54f;
+      font-size: $type-meta;
+      font-weight: 400;
+      margin-right: 5px;
+      padding: 2px 5px;
+
+      &.private_post {
+        background: #78909c;
+        color: $color-background;
+      }
+
+      &.trash {
+        background: #ef5350;
+        color: $color-background;
+      }
+    }
+
+    .featured-question {
+      background: #f5fdff;
+    }
+  }
+
+  .ap-list-counts {
+    display: inline-flex;
+  }
+
+  .ap-display-meta-item {
+    i {
+      font-style: normal;
+    }
+
+    [class^="apicon-"]::before,
+    [class*=" apicon-"]::before {
+      margin-right: 5px;
+    }
+  }
+
+  .ap-list-head {
+    padding: 15px 15px 5px 15px;
+    border: solid 1px #ddd;
+    margin-bottom: 10px;
+
+    .ap-btn-ask {
+      background: $main-color;
+      border-radius: 2px;
+      color: $color-background;
+      float: right;
+      font-size: $type-xsmall;
+      font-weight: bold;
+      height: 36px;
+      margin-left: 15px;
+      padding: 7px 20px;
+      text-decoration: none;
+
+      &:visited {
+        color: $color-background;
+      }
+    }
+
+    .ap-filters {
+      margin-top: 15px;
+    }
+  }
+
+  .ap-filter {
+    &s .ap-dropdown {
+      margin-right: 15px;
+      float: left;
+      display: block;
+
+      &-menu {
+        min-width: 140px;
+      }
+    }
+
+    &-toggle {
+      color: $main-color;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: $type-small;
+      padding: 0;
+      display: block;
+    }
+
+    &-active {
+      font-weight: normal;
+      color: $light-color;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      display: block;
+      padding: 4px;
+      font-size: $type-xsmall;
+
+      i {
+        color: $color-background;
+        border-radius: 2px;
+        margin-right: 10px;
+        background: #eee;
+        height: 16px;
+        display: block;
+        float: left;
+        padding: 1px;
+        font-size: 10px;
+        width: 16px;
+        text-align: center;
+        line-height: 16px;
+
+        &[class^="apicon-"]:before,
+        [class*=" apicon-"]:before {
+          visibility: hidden;
+        }
+      }
+    }
+
+    li {
+      padding: 0 5px;
+    }
+
+    input[type="checkbox"]:checked + .apicon-check,
+    input[type="radio"]:checked + .apicon-check {
+      background: $main-color;
+
+      &[class^="apicon-"]:before,
+      [class*=" apicon-"]:before {
+        visibility: visible;
+      }
+    }
+
+    &-search {
+      padding: 7px 10px;
+      border-bottom: solid 1px #ddd;
+      border-radius: 2px 2px 0 0;
+      margin-bottom: 5px;
+      margin-top: -4px;
+      background: #f7f7f7;
+    }
+  }
+
+  #ap-filter-reset {
+    background: none;
+    border: none;
+    padding: 3px;
+    color: #888;
+    display: block;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    i {
+      display: block;
+      float: left;
+      font-size: $type-xsmall;
+      margin-right: 4px;
+    }
+  }
+
+  .ap-pagging-warning {
+    background: #fff8e1;
+    text-align: center;
+    font-size: $type-meta;
+    border: 1px solid #ffe082;
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 15px;
+  }
+}
+
+.ap-droptogg {
+  float: right;
+  background: #eee;
+  border: none;
+  color: #777;
+  margin-right: 8px;
+  padding: 4px 8px;
+  display: none;
+}

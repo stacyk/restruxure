@@ -1,0 +1,105 @@
+.ap-reputation {
+  &s {
+    border: none;
+    border-spacing: 0;
+
+    td {
+      border-width: 0 0 1px 0;
+      border-color: #eee;
+      border-style: solid;
+      padding: 10px 5px;
+      vertical-align: top;
+
+      &.col-icon {
+        width: 50px;
+        color: #b5b5b5;
+
+        i {
+          font-size: 18px;
+          background: #9e9e9e;
+          width: 35px;
+          display: block;
+          height: 35px;
+          padding: 5px;
+          text-align: center;
+          border-radius: 50%;
+          color: $color-background;
+
+          &.answer {
+            background: $main-color;
+          }
+
+          &.ask {
+            background: #f44336;
+          }
+
+          &.comment {
+            background: #673ab7;
+          }
+
+          &.select_answer {
+            background: $color-voted-best;
+          }
+
+          &.best_answer {
+            background: #00bcd4;
+          }
+
+          &.received_vote_up {
+            background: #ab47bc;
+          }
+
+          &.received_vote_down {
+            background: #ff9800;
+          }
+
+          &.given_vote_down {
+            background: #8d6e63;
+          }
+
+          &.given_vote_up {
+            background: #ec407a;
+          }
+        }
+      }
+
+      &.col-points {
+        text-align: right;
+        width: 55px;
+
+        span {
+          background: $yellow-color;
+          color: $color-background;
+          width: 40px;
+          display: block;
+          float: right;
+          text-align: center;
+          border-radius: 2px;
+          padding: 2px;
+        }
+      }
+
+      &.col-date {
+        width: 100px;
+        font-size: $type-xsmall;
+      }
+    }
+  }
+
+  &-ref {
+    margin-top: 5px;
+    display: block;
+    margin-top: 5px;
+    font-size: $type-xsmall;
+    color: #777;
+
+    strong {
+      display: block;
+      color: #444;
+    }
+  }
+
+  &-activity {
+    font-weight: bold;
+  }
+}
