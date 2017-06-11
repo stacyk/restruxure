@@ -1,7 +1,6 @@
-
-.mce-toolbar-grp {
+div.mce-toolbar-grp {
   background: none;
-  border-bottom: 2px solid blue; //#eee;
+  border-bottom: 1px solid $color-border-light; //#eee;
   padding: 4px;
 }
 
@@ -50,13 +49,22 @@ div.mce-panel {
 
 // Upload image area
 
-.mce-container-body.mce-stack-layout {
-  //border-bottom: 1px solid rgba(204, 204, 204, 0.65);
+.ap-editor {
+  border: 1px solid $color-border-light;
 }
 
 .ap-field-ap_upload.ap-form-fields {
   display: block;
   background-color: $color-background-light;
-  border-bottom: 1px solid $color-border;
-  padding: .5rem;
+  border-color: $color-border-light;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  padding: $shim-half;
+}
+
+
+#mceu_26 {
+  body#tinymce.mce-content-body.description.post-type-page.post-status-publish.page-template-page-ask.locale-en-us.mceContentBody.webkit.wp-editor.wp-autoresize.html5-captions {
+    color: $color-text !important;
+  }
 }

@@ -95,3 +95,61 @@ nav {
     width: 50%;
   }
 }
+
+
+/* Effect 13: three circles */
+.main-navigation {
+  a {
+    position: relative;
+	  transition: color 0.3s;
+
+    &::before {
+      color: transparent;
+      content: '•';
+      font-size: $type-meta;
+      left: 50%;
+      pointer-events: none;
+      position: absolute;
+      text-shadow: 0 0 transparent;
+      top: 70%;
+      transition: text-shadow 0.3s, color 0.3s;
+      transform: translateX(-50%);
+    }
+
+    &:hover::before,
+    &:focus::before {
+      color: #fff;
+      text-shadow: 16px 0 #fff, -16px 0 #fff;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-inverted-nav-hover;
+    }
+  }
+
+  .current-menu-item {
+    a {
+      &::before {
+        color: $color-inverted-nav;
+        text-shadow: 10px 0 $color-inverted-nav, -10px 0 $color-inverted-nav;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        color: #fff;
+        font-size: $type-meta;
+        text-shadow: 16px 0 #fff, -16px 0 #fff;
+      }
+    }
+  }
+}
+
+
+// .main-navigation a {
+//   background-image: linear-gradient(to right, #AA076B 0%, #61045F 51%, #AA076B 100%);
+
+//   &:hover {
+//     background-position: right center;
+//   }
+// }

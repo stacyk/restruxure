@@ -92,6 +92,40 @@ function yoga_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'yoga_scripts' );
 
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function yoga_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+		$GLOBALS['editor_styles'] = array(get_stylesheet_directory_uri() . 'editor_style.css');
+}
+add_action( 'admin_init', 'yoga_add_editor_styles' );
+
+
+
+add_filter( 'comment_form_defaults', 'yoga_comment_form_defaults' );
+function yoga_comment_form_defaults( $args ) {
+    if ( is_user_logged_in() ) {
+        $mce_plugins = 'inlinepopups, wordpress, wplink, wpdialogs';
+    } else {
+        $mce_plugins = 'fullscreen, wordpress';
+    }
+    add_filter( 'wp_default_editor', create_function('', 'return "tinymce";') );
+    ob_start();
+    wp_editor( '', 'comment', array(
+        'media_buttons' => false,
+        'teeny' => true,
+        'textarea_rows' => '7',
+        'tinymce' => array(
+            'plugins' => $mce_plugins,
+            'content_css' => get_stylesheet_directory_uri() . '/editor-styles.css'
+        )
+    ) );
+    $args['comment_field'] = ob_get_clean();
+    return $args;
+}
+
 /**
  * Enqueue scripts and styles.
  */

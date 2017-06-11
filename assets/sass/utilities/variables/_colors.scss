@@ -26,8 +26,10 @@ $blue-light: hsl(200, 75%, 85%);
 $green: hsl(186, 33%, 42%);
 $green-dark: hsl(169, 60%, 27%);
 $orange: hsl(32, 95%, 65%);
+$salmon-light: hsl(9, 100%, 87%);
 $salmon: hsl(9, 68%, 63%);
 $salmon-dark: hsl(2, 30%, 51%);
+
 $pink: hsl(331, 35%, 44%);
 $pink-dark:  hsl(327, 61%, 26%);
 
@@ -100,6 +102,10 @@ $color-link-hover: hsl(182, 58%, 33%); // accessible green hover
 
  //$pink-dark;
 $color-link-active: lighten($blue-light, 10%);
+
+// Nav
+$color-inverted-nav: lighten($blue-light, 10%);
+$color-inverted-nav-hover: $color-background;
 
 // Forms
 $color-btn: $color-link;

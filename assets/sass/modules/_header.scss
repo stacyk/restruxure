@@ -11,7 +11,13 @@
 	a {
 		&:link,
 		&:visited {
-			color: $color-background;
+			color: $color-inverted-nav;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color-inverted-nav-hover;
 		}
 	}
 }
@@ -49,7 +55,6 @@
 // Site Description
 .site-description {
 	color: $color-background;
-	font-feature-settings: "liga", "swsh", "ss04", "salt";
 	font-family: $font-sans;
 	font-size: 1rem;
 	font-weight: 300;
