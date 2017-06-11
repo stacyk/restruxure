@@ -3,19 +3,12 @@
 //--------------------------------------------------------------
 
 
-$nunito: 'Nunito';
-$jaldi: 'Jaldi';
-$alegreya_sans: 'Alegreya Sans';
-$quattrocento_sans: 'Quattrocento Sans';
-$ek_mukta: 'Ek Mukta';
-$montserrat_alternates: 'Montserrat Alternates';
-
-
-$font-sans: 'Nunito';
-$font-special: $quattrocento_sans, $montserrat_alternates, $font-sans, "Catamaran", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-sans: 'Nunito', sans-serif;
+$font-special: $font-sans, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 $font-headlines: Martel, Georgia, serif;
 $font-main: Rasa, Georgia, serif;
+
 $font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font-pre: "Courier 10 Pitch", Courier, monospace;
 
