@@ -10,7 +10,24 @@
   margin-right: auto;
 
   @include above('bp-small') {
-    width: 50vw;
+    margin: 0;
+    width: auto;
+  }
+
+  .home & {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include above('bp-small') {
+      width: auto;
+    }
+
+    @include above('bp-large') {
+      margin-bottom: $gutter;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50vw;
+    }
   }
 }
 
@@ -19,20 +36,38 @@
   margin: 0;
 	padding: $shim-half $shim;
 
+  .home & {
+    font-size: $type-h1;
+    padding: 1rem;
+  }
+
   .site-header & {
     background-color: hsla(320, 40%, 70%, .2);
     border-color: hsla(320, 20%, 90%, .3);
     color: $gray-light;
 
     &:focus {
+      background-color: rgba($green, 0.5);
       color: $color-background;
     }
   }
 }
 
+.site-header {
+  input {
+    &::placeholder {
+      color: $gray-light;
+    }
+
+    &:focus::placeholder {
+      color: $color-background;
+    }
+  }
+}
 
 .search-submit {
   flex: 0 0 auto;
+  border-radius: 0;
 }
 
 button[type="submit"] {

@@ -23,6 +23,7 @@ const sassLint = require( 'gulp-sass-lint' );
 const sort = require( 'gulp-sort' );
 const sourcemaps = require( 'gulp-sourcemaps' );
 const spritesmith = require( 'gulp.spritesmith' );
+const stylefmt = require('gulp-stylefmt');
 const svgmin = require( 'gulp-svgmin' );
 const svgstore = require( 'gulp-svgstore' );
 const uglify = require( 'gulp-uglify' );
@@ -64,6 +65,7 @@ function handleErrors () {
 gulp.task( 'clean:styles', () =>
 	del( [ 'style.css', 'style.min.css' ] )
 );
+
 
 /**
  * Compile Sass and run stylesheet through PostCSS.
@@ -278,6 +280,14 @@ gulp.task( 'wp-pot', [ 'clean:pot' ], () =>
 		} ) )
 		.pipe( gulp.dest( 'languages/yoga.pot' ) )
 );
+
+
+
+// gulp.task('stylefmt', function () {
+//   return gulp.src( 'assets/sass/*.scss', paths.css )
+//     .pipe(stylefmt())
+//     .pipe(gulp.dest(''));
+// });
 
 /**
  * Sass linting.

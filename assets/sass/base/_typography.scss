@@ -2,16 +2,13 @@
 // Typography
 //--------------------------------------------------------------
 
-body {
-  font-size: calc(0.95rem + 0.125vw);
-}
-
 body,
 button,
 input,
 select,
 textarea {
   color: $color-text;
+  font-size: $type-body;
   font-family: $font-main;
   line-height: $line-height-body;
 }
@@ -50,24 +47,32 @@ h1,
 .h1 {
   font-family: $font-headlines;
   font-size: $type-h1;
+//  font-family: "bookmania", Verdana;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures, contextual;
+  font-variant-swashes: swashes;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
+  font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
 }
 
 h2,
 .h2 {
   font-family: $font-headlines;
-  font-size: calc(1.8rem + 0.25vw);
+  font-size: $type-h2;
 }
 
 h3,
 .h3 {
   font-family: $font-headlines;
-  font-size: calc(1.6rem + 0.25vw);
+  font-size: $type-h3;
 }
 
 h4,
 .h4 {
   font-family: $font-headlines;
-  font-size: calc(1.6rem + 0.25vw);
+  font-size: $type-h4;
 }
 
 h5,
@@ -88,7 +93,7 @@ h6,
 //--------------------------------------------------------------
 
 p {
-  font-size: calc(1rem + 0.25vw);
+  font-size: $type-body;
   margin: 0 0 1.5rem 0;
 }
 

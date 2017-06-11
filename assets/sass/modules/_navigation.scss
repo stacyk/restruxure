@@ -29,71 +29,12 @@ nav {
 .menu {
   display: flex;
 
-  &.dropdown {
-
-    // Sub-menu
-    ul {
-      float: left;
-      left: -999rem;
-      position: absolute;
-      width: 2rem;
-      z-index: 99999;
-
-      // Sub-sub menu
-      ul {
-        left: -999em;
-        top: 0;
-      }
-
-      // Sub-menu items
-      li {
-        &:hover > ul,
-        &.focus > ul {
-          left: 100%;
-        }
-      }
-
-      // Sub-menu links
-      a {
-        width: 10rem;
-      }
-
-      &:hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
-      }
-    }
-
-    // Display sub-menu on hover
-    li:hover > ul,
-    .focus > ul {
-      left: auto;
-    }
-
-    // Menu items
-    li {
-      float: left;
-      position: relative;
-
-      &:hover > a,
-      &.focus > a {
-      }
-    }
-  }
-
   // Menu hyperlinks
   a {
-    display: block;
-    padding: $shim-half $gutter;
+    display: flex;
+    font-family: $font-sans;
+    padding: $shim-half $shim;
     text-decoration: none;
-  }
-
-  // Current items
-  .current_page_item a,
-  .current-menu-item a {
   }
 }
 
@@ -119,7 +60,7 @@ nav {
     display: flex;
   }
 
-  @include above(bp-large) {
+  @include above(bp-small) {
     display: flex;
   }
 }

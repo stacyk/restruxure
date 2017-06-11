@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .wrap {
   @include pad;
   margin-left: auto;
@@ -17,9 +21,14 @@ body {
 .site-header {
   @include pad;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+
+  @include above(bp-small) {
+    justify-content: space-between;
+  }
 }
 
 .site-footer {

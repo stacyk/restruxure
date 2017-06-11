@@ -21,18 +21,12 @@
 // Comments avatar
 .avatar {
   border-radius: 50px;
-  float: left;
-  margin-right: $shim;
-  margin-bottom: $shim;
 }
 
 .ap-avatar {
-  float: left;
+  grid-row: 1 / -1;
   width: 50px;
   height: 50px;
-  -webkit-shape-outside: circle(50px);
-  shape-outside: circle(50px);
-  shape-margin: 1rem;
 }
 
 // By post author

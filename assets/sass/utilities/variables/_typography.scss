@@ -1,7 +1,19 @@
 //--------------------------------------------------------------
 // Typography
 //--------------------------------------------------------------
-$font-special: "Catamaran", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+
+$nunito: 'Nunito';
+$jaldi: 'Jaldi';
+$alegreya_sans: 'Alegreya Sans';
+$quattrocento_sans: 'Quattrocento Sans';
+$ek_mukta: 'Ek Mukta';
+$montserrat_alternates: 'Montserrat Alternates';
+
+
+$font-sans: 'Nunito';
+$font-special: $quattrocento_sans, $montserrat_alternates, $font-sans, "Catamaran", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
 $font-headlines: Martel, Georgia, serif;
 $font-main: Rasa, Georgia, serif;
 $font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -13,17 +25,21 @@ $line-height-pre: $line-height-body;
 $type-root: 1.25rem;
 $type-root-base: 1.25;
 $type-root-unit: rem;
-$h4base: 1.25 * 0.6;
+$h1base: 1.25 * 1.8;
+$h2base: 1.25 * 1.5;
+$h3base: 1.25 * 1.2;
+$h4base: 1.25 * 0.9;
+
+$type-body: calc(0.95rem + 0.125vw);
 
 $type-meta: $type-root - 0.375rem;
 $type-xsmall: $type-root - 0.325rem;
 $type-small: $type-root - 0.25rem;
 $type-medium: $type-root + 0.25rem;
-$type-h1: calc((#{$type-root} * 2) + 0.25vw);
-$type-h2: calc((#{$type-root} * 1.8) + 0.25vw);
-$type-h3: calc((#{$type-root} * 1.6) + 0.25vw);
-$type-h4: calc(#{$h4base}rem + 0.25vw);
-
+$type-h1: calc(#{$h4base}rem + 0.325vw);
+$type-h2: calc(#{$h4base}rem + 0.325vw);
+$type-h3: calc(#{$h4base}rem + 0.325vw);
+$type-h4: calc(#{$h4base}rem + 0.325vw);
 
 
 $size-question-title: $type-root * 1.35;

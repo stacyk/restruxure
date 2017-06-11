@@ -96,10 +96,12 @@ textarea {
 }
 
 label {
+	color: $color-text-light;
   display: block;
-  font-size: $type-xsmall;
-  font-weight: bold;
-  margin-bottom: $shim-half;
+	font-family: $font-special;
+  font-size: $type-meta;
+	font-weight: 700;
+  margin-bottom: $shim-quarter;
 }
 
 input {

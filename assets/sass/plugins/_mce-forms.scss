@@ -1,0 +1,62 @@
+
+.mce-toolbar-grp {
+  background: none;
+  border-bottom: 2px solid blue; //#eee;
+  padding: 4px;
+}
+
+.mce-edit-area {
+  padding: 0 10px;
+  background: tomato; //#fcfcfc;
+}
+
+div.mce-panel {
+  background: none;
+}
+
+.mce-path {
+  padding: 0 5px 5px;
+}
+
+.mce-edit-area iframe {
+  margin-bottom: 0;
+}
+
+.mce-toolbar {
+  .mce-ico {
+    color: $color-text;
+  }
+
+  .mce-btn-group {
+    .mce-btn {
+      button {
+        border-radius: 0;
+      }
+
+      &:hover {
+        border-color: $color-border !important;
+      }
+    }
+  }
+
+  .mce-ico {
+    color: $color-text;
+  }
+}
+
+//.qt-dfw
+
+
+
+// Upload image area
+
+.mce-container-body.mce-stack-layout {
+  //border-bottom: 1px solid rgba(204, 204, 204, 0.65);
+}
+
+.ap-field-ap_upload.ap-form-fields {
+  display: block;
+  background-color: $color-background-light;
+  border-bottom: 1px solid $color-border;
+  padding: .5rem;
+}

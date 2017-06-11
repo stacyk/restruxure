@@ -34,7 +34,9 @@
     "gulp-wp-pot": "~2",
     "gulp.spritesmith": "~3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-stylefmt": "^1.1.0"
+  },
   "scripts": {
     "test": "echo \"No test specified\""
   },

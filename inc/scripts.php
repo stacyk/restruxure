@@ -20,12 +20,51 @@ function yoga_font_url() {
 	 * into your own language.
 	 */
 
+	$nunito = _x( 'on', 'Nunito font: on or off', 'yoga' );
+	$jaldi = _x( 'on', 'Jaldi font: on or off', 'yoga' );
+	$alegreya_sans = _x( 'on', 'Alegreya Sans font: on or off', 'yoga' );
+	$quattrocento_sans = _x( 'on', 'Quattrocento Sans font: on or off', 'yoga' );
+	$ek_mukta = _x( 'on', 'Ek Mukta font: on or off', 'yoga' );
+	$montserrat_alternates = _x( 'on', 'Montserrat Alternates font: on or off', 'yoga' );
 	$catamaran = _x( 'on', 'Catamaran font: on or off', 'yoga' );
 	$martel = _x( 'on', 'Martel font: on or off', 'yoga' );
 	$rasa = _x( 'on', 'Rasa font: on or off', 'yoga' );
 
-	if ( 'off' !== $martel || 'off' !== $catamaran || 'off' !== $rasa ) {
+	if ( 'off' !== $nunito ||
+			 'off' !== $jaldi ||
+			 'off' !== $alegreya_sans ||
+			 'off' !== $quattrocento_sans ||
+			 'off' !== $ek_mukta ||
+			 'off' !== $montserrat_alternates ||
+			 'off' !== $martel ||
+			 'off' !== $catamaran ||
+			 'off' !== $rasa ) {
 		$font_families = array();
+
+
+		if ( 'off' !== $nunito ) {
+			$font_families[] = 'Nunito:300,400,900';
+		}
+
+		if ( 'off' !== $jaldi ) {
+			$font_families[] = 'Jaldi:400,700';
+		}
+
+		if ( 'off' !== $alegreya_sans ) {
+			$font_families[] = 'Alegreya+Sans:300,400,700,900';
+		}
+
+		if ( 'off' !== $ek_mukta ) {
+			$font_families[] = 'Ek+Mukta:300';
+		}
+
+		if ( 'off' !== $montserrat_alternates ) {
+			$font_families[] = 'Montserrat+Alternates:200,300,400';
+		}
+
+		if ( 'off' !== $quattrocento_sans ) {
+			$font_families[] = 'Quattrocento+Sans:400,700';
+		}
 
 		if ( 'off' !== $catamaran ) {
 			$font_families[] = 'Catamaran:300,400,700';

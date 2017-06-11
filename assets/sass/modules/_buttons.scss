@@ -6,14 +6,12 @@
 	appearance: none;
 	background-color: $color-btn;
 	border: none;
-	border-radius: $border-radius;
 	border-width: 0;
 	color: $color-button-text;
 	font-family: $font-special; //$font-special;
 	font-size: $type-xsmall;
 	font-weight: 300;
 	letter-spacing: 0.05rem;
-	margin: $shim 0;
 	padding: $shim-half $shim;
 	text-transform: uppercase;
 
@@ -29,14 +27,19 @@
 
 button[type="reset"],
 button[type="submit"] {
-	&:not(.ap-actions-handle), {
+	&:not(.ap-actions-handle) {
 		@include btn;
 	}
+}
+
+button {
+	border-radius: $border-radius;
 }
 
 .mce-btn {
 	button {
 		background-color: initial;
-		margin: 0;
+		//margin: 0;
 	}
 }
+

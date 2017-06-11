@@ -4,18 +4,76 @@
   display: flex;
   flex-wrap: wrap;
 
-  display: grid;
-  grid-gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 1px;
+  }
+
+  @include above(bp-small) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 
+// Amount of steps to iterate through color mix
+//$steps: 7;
+
+// Mix colors to go from $color-1 ro @color-2 with 9 total steps
+// @for $i from 0 to $steps {
+// 	.ap-questions-item:nth-of-type(#{$i + 1}) {
+// 		background-color: (#{$color});
+// 	}
+// }
+
+$bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink, $salmon-dark;
+
+@for $i from 1 to length($bg-colors) + 1 {
+
+    // $c will gets overridden with every
+    // iteration of the loop!
+    $c: nth($bg-colors, $i);
+
+    .ap-questions-item:nth-of-type(#{$i}) {
+      background-color: $c;
+    }
+  }
+
 .ap-questions-item {
-  flex: 1 1 33%;
+  flex: 1 0 100%;
   margin-bottom: 0;
   padding: $shim;
 
-  //background-color: $pink;
+  @include above(bp-small) {
+    flex: 1 1 33%;
+  }
+
+  a {
+    color: $color-background;
+  }
+}
+
+.ap-questions-summery {
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto 1fr;
+  }
+
+  .ap-display-question-meta {
+    grid-column-start: 2;
+  }
+}
+
+.ap-questions-vcount {
+  display: none;
+}
+
+// Titles
+.ap-questions-title {
+  font-family: $font-main;
+  font-size: $type-h4;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 // List items
@@ -53,8 +111,58 @@
   }
 }
 
+
+// Hiding certain meta info for now instead of editing template files
 .ap-display-meta-item {
-  &.views {
+  &.views,
+  &.active {
     display: none;
   }
+}
+
+.ap-post-history {
+  display: none;
+}
+
+// Question Search Form
+.ap-search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ap-search-inner {
+  flex: 1 0 auto;
+  margin: 0;
+  order: 1;
+}
+
+.ap-search-input {
+  margin: 0;
+}
+
+.ap-search-btn {
+  flex: 0 0 auto;
+  order: 2;
+}
+
+button[type="submit"] {
+  .ap-search-btn {
+    margin: 0;
+  }
+}
+
+// Answer Submit Form
+.ap-btn-submit {
+  margin: $shim 0;
+}
+
+// Order by filters on view questions page
+.ap-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Don't show the button instead of editing ap_list_filters template tag
+#ap-filter-reset {
+  display: none;
 }

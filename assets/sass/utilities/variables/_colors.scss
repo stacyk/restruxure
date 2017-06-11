@@ -24,15 +24,17 @@ $blue-dark: hsl(211, 44%, 24%);
 $blue-light: hsl(200, 75%, 85%);
 
 $green: hsl(186, 33%, 42%);
-
+$green-dark: hsl(169, 60%, 27%);
 $orange: hsl(32, 95%, 65%);
 $salmon: hsl(9, 68%, 63%);
+$salmon-dark: hsl(2, 30%, 51%);
 $pink: hsl(331, 35%, 44%);
 $pink-dark:  hsl(327, 61%, 26%);
 
 $white:  hsl(0, 0%, 100%);
 $gray: hsl(281, 9%, 35%);
 $gray-light: lighten($gray, 50%);
+
 
 // Grayscale
 $color-gray: hsl(0, 0%, 50%);
@@ -71,11 +73,13 @@ $social-colors: (
 
 // General
 $color-text: desaturate($purple, 16%);
+$color-text-light: lighten($color-text, 10%);
 
 $color-primary: $purple;
 $color-dark: $purple-dark;
 $color-background: $white;
-$color-background-light: lighten($color-text, 20%);
+$color-background-dark: lighten($color-text, 20%);
+$color-background-light: hsl(0, 0%, 97%);
 
 // States
 $color-voted-best: saturate(lighten($green, 50%), 20%);
@@ -91,16 +95,20 @@ $color-text-screen-reader: $color-primary;
 // Links
 $color-link: $pink;
 $color-link-visited: $pink;
-$color-link-hover: $pink-dark;
+$color-link-hover: hsl(182, 58%, 33%); // accessible green hover
+//hsl(182, 58%, 42%);
+
+ //$pink-dark;
 $color-link-active: lighten($blue-light, 10%);
 
 // Forms
-$color-btn: $pink;
-$color-btn-hover: $pink-dark;
+$color-btn: $color-link;
+$color-btn-hover: $color-link-hover;
 $color-button-text: $white;
 
 // Inputs
 $color-border: $gray-light;
+$color-border-light: #ececec;
 $color-input-border: $gray-light;
 $color-input-focus-border: lighten($green, 10%);
 $color-input-text: $color-gray;

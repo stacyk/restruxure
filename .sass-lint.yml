@@ -15,24 +15,30 @@ files:
   ignore:
     - 'sass/vendor/**/*.scss'
     - 'sass/tests/**/*.scss'
-    - 'bourbon/app/**/*.scss'
-    - 'bourbon-neat/app/**/*.scss'
 
 # Rule Configuration
 rules:
  # Extends
-  placeholder-in-extend: 0
+  extends-before-declarations: 2
+  extends-before-mixins: 2
+  placeholder-in-extend: 1
 
   # Mixins
   mixins-before-declarations:
-    - 1
-    -
-      exclude: ['above'] # except @include above();
-      exclude: ['below'] # except @include above();
+    - 2
+    - exclude:
+      - above
+      - below
+      - between
+      - before
+      - after
+      - wrap-content
+      - has-errors
+      - circle-state
 
   # Line Spacing
   empty-line-between-blocks:
-    - 1
+    - 2
     -
       allow-single-line-rulesets: false
 
@@ -43,14 +49,14 @@ rules:
       allow-rgba: true
   no-debug: 0
   no-ids: 0
-  no-mergeable-selectors: 0
+  no-mergeable-selectors: 1
   no-qualifying-elements:
     - 1
     -
       allow-element-with-attribute: true
       allow-element-with-class: false
       allow-element-with-id: false
-  no-vendor-prefixes: 0
+  no-vendor-prefixes: 1
   no-warn: 0
 
   # Nesting
@@ -131,10 +137,10 @@ rules:
         - 2
 
   # Inner Spacing
-  space-between-parens: 0
+  space-between-parens: 1
 
   # Final Items
-  final-newline: 0
+  final-newline: 1
 
   no-misspelled-properties:
     - 1

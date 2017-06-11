@@ -172,56 +172,6 @@
   border: solid 2px #eee;
 }
 
-.mce-toolbar-grp {
-  background: none;
-  padding: 4px;
-}
-
-.mce-edit-area {
-  padding: 0 10px;
-  background: #fcfcfc;
-}
-
-div.mce-panel {
-  background: none;
-}
-
-.mce-path {
-  display: none;
-}
-
-.mce-edit-area iframe {
-  margin-bottom: 0;
-}
-
-.mce-toolbar .mce-ico {
-  color: #868383;
-}
-
-.mce-toolbar .mce-btn button {
-  padding: 0 3px;
-  border-right: solid 1px #ececec;
-  border-radius: 0;
-  padding-right: 10px;
-
-  &:hover {
-    background: none;
-  }
-}
-
-.mce-toolbar .mce-btn-group .mce-btn:hover {
-  border-color: transparent;
-  background: none;
-  box-shadow: none;
-
-  .mce-ico {
-    color: #333;
-  }
-}
-
-div.mce-toolbar-grp {
-  border-bottom: 2px solid #eee;
-}
 
 .ap-avatar-upload-form {
   .ap-upload-o {
