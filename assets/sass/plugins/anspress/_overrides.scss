@@ -29,14 +29,19 @@ $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink,
 
 @for $i from 1 to length($bg-colors) + 1 {
 
-    // $c will gets overridden with every
-    // iteration of the loop!
-    $c: nth($bg-colors, $i);
+  // $c will gets overridden with every
+  // iteration of the loop!
+  $c: nth($bg-colors, $i);
 
-    .ap-questions-item:nth-of-type(#{$i}) {
-      background-color: $c;
+  .ap-questions-item:nth-of-type(#{$i}n+1) {
+    background-color: $c;
+
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(to bottom, $c 0, saturate(darken($c, 5%), 5%) 100%);
     }
   }
+}
 
 .ap-questions-item {
   flex: 1 0 100%;
@@ -82,7 +87,6 @@ $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink,
 
   a {
     color: $color-text;
-    display: block;
     padding: $inline-nav-pad;
   }
 
@@ -98,11 +102,11 @@ $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink,
 
 .ap-user-reputation {
   background-color: $color-link;
-  border-radius: 1rem;
+  border-radius: $shim;
   color: $color-background;
   margin-left: $shim-quarter;
   margin-right: $shim-quarter;
-  padding: 0.125rem $shim-half;
+  padding: $shim-quarter $shim-half;
 
   &:hover,
   &:focus {
@@ -157,12 +161,8 @@ button[type="submit"] {
 }
 
 // Order by filters on view questions page
-.ap-filter {
+.ap-filters {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
 }
 
-// Don't show the button instead of editing ap_list_filters template tag
-#ap-filter-reset {
-  display: none;
-}

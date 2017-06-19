@@ -21,7 +21,7 @@ function yoga_pre_save_post( $post_id ) {
 
     // Create a new post
     $post = array(
-        'post_status'  => 'publised' ,
+        'post_status'  => 'published' ,
         'post_title'  => 'A title, maybe a $_POST variable' ,
         'post_type'  => 'post',
     );

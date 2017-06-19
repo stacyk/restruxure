@@ -42,8 +42,13 @@
 
 	svg {
 		fill: $color-background;
-		max-height: 41px;
-		max-width: 300px;
+		max-height: 29px;
+    max-width: 210px;
+
+		.home & {
+			max-height: 41px;
+			max-width: 300px;
+		}
 	}
 }
 

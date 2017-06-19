@@ -2,68 +2,66 @@
 // Buttons style
 // --------------------------------------------------
 
-#anspress {
-  .ap-dropdown {
-    position: relative;
-    display: inline-block;
+.ap-dropdown {
+  position: relative;
+  display: inline-block;
 
-    &.open .ap-dropdown-menu {
+  &.open .ap-dropdown-menu {
+    display: block;
+  }
+}
+
+.ap-dropdown-menu {
+  background-color: $color-background;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  box-shadow: $shim-quarter $shim-quarter $shim-half $shadow-dark;
+  display: none;
+  left: 0;
+  list-style: none;
+  margin-top: $shim-quarter;
+  min-width: 140px;
+  padding: $shim-quarter;
+  position: absolute;
+  top: initial;
+  z-index: 999;
+
+  li {
+    display: block;
+    white-space: nowrap;
+    min-width: 100px;
+    margin: 0;
+
+    &:hover {
+      background-color: $color-background-light;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
       display: block;
+      padding: $shim-quarter $shim-half;
     }
+  }
+}
 
-    &-menu {
-      position: absolute;
-      top: initial;
-      border: 1px solid #ccc;
-      border-radius: $border-radius;
-      left: 0;
-      list-style: none;
-      padding: 4px 0;
-      display: none;
-      background-color: white;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.175);
-      margin-top: 4px;
-      z-index: 999;
+.ap-dropdown-header {
+  font-size: $type-xsmall;
+  padding: $shim-half $shim;
 
-      li {
-        display: block;
-        white-space: nowrap;
-        min-width: 100px;
-        margin: 0;
+  &:before {
+    content: '';
+    display: block;
+    border-bottom: 1px solid $color-border-light;
+    margin-bottom: $shim-half;
+  }
+}
 
-        &:hover {
-          background-color: #f5f5f5;
-          cursor: pointer;
-        }
+li.sub {
+  padding-left: $shim-half;
 
-        a {
-          text-decoration: none;
-          display: block;
-          padding: 4px 10px;
-        }
-      }
-
-      li.ap-dropdown-header {
-        font-size: $type-xsmall;
-        padding: 5px 10px !important;
-
-        &:before {
-          content: '';
-          display: block;
-          border-bottom: solid 1px #eee;
-          margin-bottom: 5px;
-        }
-      }
-
-      li.sub {
-        padding-left: 5px;
-        font-size: 90%;
-
-        a.active {
-          background: none;
-          font-weight: bold;
-        }
-      }
-    }
+  a.active {
+    background: none;
+    font-weight: 700;
   }
 }

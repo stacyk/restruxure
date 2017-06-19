@@ -2,7 +2,7 @@
 // Form and editor styles
 // --------------------------------------------------
 #anspress {
-  @include pad;
+ // @include pad;
 
   .ap-form-control {
     border: 1px solid #ddd;
@@ -52,14 +52,13 @@
     }
 
     p {
-      color: $light-color;
       font-size: $type-small;
       margin-bottom: 0;
     }
   }
 
   .ap-field-description.have-error + .ap-field-ap_upload .ap-upload-anchor {
-    border-color: $error-color !important;
+    border-color: $color-youtube !important;
   }
 
   .ap-form-fields {
@@ -67,19 +66,19 @@
     margin-bottom: 15px;
 
     &.have-error {
-      border-color: $error-color !important;
+      border-color: $color-youtube !important;
 
       .ap-form-control {
-        border-color: $error-color !important;
+        border-color: $color-youtube !important;
       }
 
       &.ap-field-description .ap-form-fields-in {
-        border-color: $error-color !important;
+        border-color: $color-youtube !important;
       }
     }
 
     .error {
-      background: $error-color;
+      background: $color-youtube;
       margin-bottom: 20px;
       display: table;
       padding: 2px 6px;
@@ -151,7 +150,7 @@
     width: 15px;
 
     &:hover {
-      background: $blue-color;
+      background: blue;
       cursor: pointer;
     }
   }
@@ -225,12 +224,12 @@
   }
 
   .ap-upload-link {
-    color: $link-color;
+    color: $color-link;
     position: relative;
   }
 
   .ap-upload-remote-link {
-    color: $link-color;
+    color: $color-link;
     cursor: pointer;
   }
 
@@ -448,7 +447,7 @@
     }
 
     .apicon-stop {
-      color: $error-color;
+      color: $color-youtube;
     }
   }
 

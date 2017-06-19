@@ -82,7 +82,7 @@ add_action( 'after_setup_theme', 'yoga_setup' );
  * @global int $content_width
  */
 function yoga_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'yoga_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'yoga_content_width', 740 );
 }
 add_action( 'after_setup_theme', 'yoga_content_width', 0 );
 

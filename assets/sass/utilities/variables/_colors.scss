@@ -21,7 +21,7 @@ $purple-dark: hsl(284, 44%, 18%);
 
 $blue: hsl(205, 37%, 46%);
 $blue-dark: hsl(211, 44%, 24%);
-$blue-light: hsl(200, 75%, 85%);
+$blue-light: hsl(200, 75%, 95%);
 
 $green: hsl(186, 33%, 42%);
 $green-dark: hsl(169, 60%, 27%);
@@ -86,7 +86,7 @@ $color-background-light: hsl(0, 0%, 97%);
 // States
 $color-voted-best: saturate(lighten($green, 50%), 20%);
 $solved: $pink-dark;
-$color-voted-best: lighten($blue-light, 10%);
+$color-voted-best: $blue-light;
 
 
 
@@ -101,14 +101,14 @@ $color-link-hover: hsl(182, 58%, 33%); // accessible green hover
 //hsl(182, 58%, 42%);
 
  //$pink-dark;
-$color-link-active: lighten($blue-light, 10%);
+$color-link-active: $blue-light;
 
 // Nav
-$color-inverted-nav: lighten($blue-light, 10%);
+$color-inverted-nav: $blue-light;
 $color-inverted-nav-hover: $color-background;
 
 // Forms
-$color-btn: $color-link;
+$color-btn: $pink-dark;
 $color-btn-hover: $color-link-hover;
 $color-button-text: $white;
 
@@ -119,3 +119,11 @@ $color-input-border: $gray-light;
 $color-input-focus-border: lighten($green, 10%);
 $color-input-text: $color-gray;
 $color-input-focus-text: $color-text;
+
+// Shadows
+$shadow-dark: hsla(281, 9%, 15%, 0.3);
+
+
+// Status
+$moderation: lighten($orange, 30%);
+$color-needs-action-inverted: hsl(45, 80%, 50%);

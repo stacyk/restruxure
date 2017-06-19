@@ -1,272 +1,250 @@
 //
 // Question lists style
 // --------------------------------------------------
-#anspress {
-  .ap-questions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
-    &-item {
-      padding: $shim;
+.ap-questions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
-      &.status-private_post {
-        background: #f4f6f8;
-      }
+.ap-questions-item {
+  padding: $shim;
+}
 
-      &.status-moderate {
-        background: #fff8e1;
-      }
+.status-private_post {
+  background-color: #f4f6f8;
+}
 
-      &.hentry {
-        margin: 0;
-        border-top: none;
-      }
+.status-moderate {
+  background-color: $moderation;
+}
 
-      &.status-trash {
-        background: #fff6f7;
-      }
-    }
+//   &.hentry {
+//     margin: 0;
+//     border-top: none;
+//   }
 
-    &-history {
-      margin-top: 5px;
-    }
+.status-trash {
+  background-color: $orange;
+}
 
-    .ap-avatar {
-      margin-right: 20px;
 
-      a {
-        display: block;
-      }
-    }
+  // &-history {
+  //   margin-top: 5px;
+  // }
 
-    &-title {
-      display: block;
-      font-size: $size-question-title;
-      font-weight: 600;
-      margin-bottom: 5px;
-      margin-top: 0;
-    }
+.ap-questions-count {
+  display: flex;
+  font-family: $font-sans;
+  font-size: $type-meta;
 
-    &-count {
-      display: flex;
-      text-transform: lowercase;
-      font-size: 12px;
-      margin-left: 15px;
-      color: #777;
+  span {
+    padding: 0 $shim-quarter;
+  }
+}
 
-      span {
-        font-size: $type-small;
-        display: block;
-        text-align: center;
-        font-weight: 600;
-        padding: 6px 0;
-        margin-bottom: 1px;
-      }
+.ap-questions-acount {
+  border-color: $color-border;
+}
 
-      &.ap-questions-acount {
-        border-color: $main-color;
-      }
-    }
+.ap-display-meta-item {
+  font-size: $type-xsmall;
+  color: $color-text-light;
 
-    .ap-display-meta-item {
-      font-size: $type-xsmall;
-      color: $meta-color;
-      margin-right: 15px;
+  i:before {
+    font-size: $type-xsmall;
+  }
+}
 
-      i:before {
-        font-size: $type-xsmall;
-      }
-    }
+  // .ap-post-type {
+  //   display: inline;
+  //   font-size: $type-meta;
+  //   margin: 0;
+  //   padding: 0 6px;
+  // }
 
-    .ap-post-type {
-      display: inline;
-      font-size: $type-meta;
-      margin: 0;
-      padding: 0 6px;
-    }
+.ap-post-status {
+  background-color: $color-needs-action-inverted;
+  border-radius: $shim;
+  color: #000;
+  font-family: $font-sans;
+  font-size: $type-meta;
+  line-height: 1;
+  margin-right: $shim-quarter;
+  padding: $shim-quarter $shim-half;
 
-    .ap-post-status {
-      background: #ffd54f;
-      font-size: $type-meta;
-      font-weight: 400;
-      margin-right: 5px;
-      padding: 2px 5px;
-
-      &.private_post {
-        background: #78909c;
-        color: $color-background;
-      }
-
-      &.trash {
-        background: #ef5350;
-        color: $color-background;
-      }
-    }
-
-    .featured-question {
-      background: #f5fdff;
-    }
+  &.private_post {
+    background-color: $salmon;
+    color: $color-background;
   }
 
-  .ap-list-counts {
-    display: inline-flex;
+  &.trash {
+    background-color: #ef5350;
+    color: $color-background;
   }
 
-  .ap-display-meta-item {
-    i {
-      font-style: normal;
-    }
+  .featured-question {
+    background-color: $pink-dark;
+  }
+}
 
-    [class^="apicon-"]::before,
-    [class*=" apicon-"]::before {
-      margin-right: 5px;
+// .ap-list-counts {
+//   display: inline-flex;
+// }
+
+.ap-display-meta-item {
+  [class^="apicon-"]::before,
+  [class*=" apicon-"]::before {
+    margin-right: $shim-quarter;
+  }
+}
+
+.ap-filter-toggle {
+  color: $color-text;
+  font-family: $font-sans;
+  font-size: $type-small;
+  padding: 0;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text;
+
+    .ap-filter-active {
+      color: $color-link-hover;
     }
   }
+}
 
-  .ap-list-head {
-    padding: 15px 15px 5px 15px;
-    border: solid 1px #ddd;
-    margin-bottom: 10px;
+.ap-filter-active {
+  color: $color-link;
+  font-weight: 700;
+}
 
-    .ap-btn-ask {
-      background: $main-color;
-      border-radius: 2px;
-      color: $color-background;
-      float: right;
-      font-size: $type-xsmall;
-      font-weight: bold;
-      height: 36px;
-      margin-left: 15px;
-      padding: 7px 20px;
-      text-decoration: none;
+.ap-filter {
+  margin-right: $gutter;
 
-      &:visited {
-        color: $color-background;
-      }
-    }
-
-    .ap-filters {
-      margin-top: 15px;
-    }
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
   }
 
-  .ap-filter {
-    &s .ap-dropdown {
-      margin-right: 15px;
-      float: left;
-      display: block;
-
-      &-menu {
-        min-width: 140px;
-      }
-    }
-
-    &-toggle {
-      color: $main-color;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: $type-small;
-      padding: 0;
-      display: block;
-    }
-
-    &-active {
-      font-weight: normal;
-      color: $light-color;
-    }
-
-    input[type="checkbox"],
-    input[type="radio"] {
-      display: none;
-    }
-
+  .active {
     label {
-      display: block;
-      padding: 4px;
-      font-size: $type-xsmall;
+      color: $color-link;
 
-      i {
-        color: $color-background;
-        border-radius: 2px;
-        margin-right: 10px;
-        background: #eee;
-        height: 16px;
-        display: block;
-        float: left;
-        padding: 1px;
-        font-size: 10px;
-        width: 16px;
-        text-align: center;
-        line-height: 16px;
+      &:focus,
+      &:hover {
+        color: $color-link-hover;
 
-        &[class^="apicon-"]:before,
-        [class*=" apicon-"]:before {
-          visibility: hidden;
+        i {
+          background-color: $color-link-hover;
         }
       }
     }
+  }
 
-    li {
-      padding: 0 5px;
-    }
+  label {
+    align-items: center;
+    display: flex;
+    font-size: $type-xsmall;
+    padding: $shim-quarter;
+    transition: color $ttime, background-color $ttime;
 
-    input[type="checkbox"]:checked + .apicon-check,
-    input[type="radio"]:checked + .apicon-check {
-      background: $main-color;
+    &:focus,
+    &:hover {
+      background-color: $blue-light;
+      color: $color-link-hover;
+      cursor: pointer;
 
-      &[class^="apicon-"]:before,
-      [class*=" apicon-"]:before {
-        visibility: visible;
+      i,
+      input[type="checkbox"]:checked + .apicon-check,
+      input[type="radio"]:checked + .apicon-check {
+        background-color: $color-link-hover;
       }
     }
 
-    &-search {
-      padding: 7px 10px;
-      border-bottom: solid 1px #ddd;
-      border-radius: 2px 2px 0 0;
-      margin-bottom: 5px;
-      margin-top: -4px;
-      background: #f7f7f7;
-    }
-  }
-
-  #ap-filter-reset {
-    background: none;
-    border: none;
-    padding: 3px;
-    color: #888;
-    display: block;
-
-    &:focus,
-    &:active {
-      outline: none;
-    }
-
     i {
-      display: block;
-      float: left;
-      font-size: $type-xsmall;
-      margin-right: 4px;
+      background: $color-input-border;
+      border-radius: 2px;
+      color: $color-background;
+      height: $shim;
+      line-height: $shim;
+      margin-right: $shim-half;
+      padding: 1px;
+      width: $shim;
+      transition: color $ttime, background-color $ttime;
+
+      &[class^="apicon-"]:before,
+      [class*=" apicon-"]:before {
+        visibility: hidden;
+      }
     }
   }
 
-  .ap-pagging-warning {
-    background: #fff8e1;
-    text-align: center;
-    font-size: $type-meta;
-    border: 1px solid #ffe082;
-    padding: 5px;
-    border-radius: 2px;
-    margin-top: 15px;
+  li {
+    padding: 0 $shim-quarter;
+  }
+
+  input[type="checkbox"]:checked + .apicon-check,
+  input[type="radio"]:checked + .apicon-check {
+    background: $color-link;
+
+    &[class^="apicon-"]:before,
+    [class*=" apicon-"]:before {
+      visibility: visible;
+    }
+  }
+
+  // &-search {
+  //   padding: 7px 10px;
+  //   border-bottom: solid 1px #ddd;
+  //   border-radius: 2px 2px 0 0;
+  //   margin-bottom: 5px;
+  //   margin-top: -$shim-quarter;
+  //   background: #f7f7f7;
+  // }
+}
+
+#ap-filter-reset {
+  background: none;
+  border: none;
+  color: $color-text-light;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    color: $color-link-hover;
+  }
+
+  i {
+    display: block;
+    float: left;
+    font-size: $type-xsmall;
+    margin-right: $shim-quarter;
   }
 }
 
+// .ap-pagging-warning {
+//   background: #fff8e1;
+//   text-align: center;
+//   font-size: $type-meta;
+//   border: 1px solid #ffe082;
+//   padding: 5px;
+//   border-radius: 2px;
+//   margin-top: 15px;
+// }
+
+
+
+// cancel toggle button
 .ap-droptogg {
-  float: right;
-  background: #eee;
+  background: transparent;
   border: none;
-  color: #777;
-  margin-right: 8px;
-  padding: 4px 8px;
+  color: $gray;
   display: none;
+  margin-right: $shim-half;
+  padding: $shim-half;
 }
+

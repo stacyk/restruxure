@@ -79,6 +79,10 @@ function yoga_scripts() {
 	wp_enqueue_style( 'yoga-style', get_stylesheet_directory_uri() . '/style' . $suffix . '.css', array(), $version );
 
 
+	// Dequeue anspress plugin styles.
+	wp_dequeue_style( 'anspress-main' );
+	wp_deregister_style( 'anspress-main' );
+
 	// Enqueue scripts.
 	wp_enqueue_script( 'yoga-scripts', get_template_directory_uri() . '/assets/scripts/project' . $suffix . '.js', array( 'jquery' ), $version, true );
 
@@ -104,39 +108,38 @@ add_action( 'admin_init', 'yoga_add_editor_styles' );
 
 
 
-add_filter( 'comment_form_defaults', 'yoga_comment_form_defaults' );
-function yoga_comment_form_defaults( $args ) {
-    if ( is_user_logged_in() ) {
-        $mce_plugins = 'inlinepopups, wordpress, wplink, wpdialogs';
-    } else {
-        $mce_plugins = 'fullscreen, wordpress';
-    }
-    add_filter( 'wp_default_editor', create_function('', 'return "tinymce";') );
-    ob_start();
-    wp_editor( '', 'comment', array(
-        'media_buttons' => false,
-        'teeny' => true,
-        'textarea_rows' => '7',
-        'tinymce' => array(
-            'plugins' => $mce_plugins,
-            'content_css' => get_stylesheet_directory_uri() . '/editor-styles.css'
-        )
-    ) );
-    $args['comment_field'] = ob_get_clean();
-    return $args;
-}
+// add_filter( 'comment_form_defaults', 'yoga_comment_form_defaults' );
+// function yoga_comment_form_defaults( $args ) {
+//     if ( is_user_logged_in() ) {
+//         $mce_plugins = 'inlinepopups, wordpress, wplink, wpdialogs';
+//     } else {
+//         $mce_plugins = 'fullscreen, wordpress';
+//     }
+//     add_filter( 'wp_default_editor', create_function('', 'return "tinymce";') );
+//     ob_start();
+//     wp_editor( '', 'comment', array(
+//         'media_buttons' => false,
+//         'teeny' => true,
+//         'textarea_rows' => '7',
+//         'tinymce' => array(
+//             'plugins' => $mce_plugins,
+//             'content_css' => get_stylesheet_directory_uri() . '/editor-styles.css'
+//         )
+//     ) );
+//     $args['comment_field'] = ob_get_clean();
+//     return $args;
+// }
 
 /**
  * Enqueue scripts and styles.
  */
-function yoga_remove_plugin_styles() {
-	// Dequeue styles.
-	wp_dequeue_style( 'anspress-main' );
-	wp_dequeue_style( 'anspress-main-css' );
-	wp_dequeue_style( 'ap-overrides' );
-	wp_dequeue_style( 'ap_assets_css' );
-}
-add_action( 'wp_dequeue_scripts', 'yoga_remove_plugin_styles', 9999 );
+// function yoga_remove_plugin_styles() {
+// 	// Dequeue styles.
+// 	wp_dequeue_style( 'anspress-main' );
+// 	wp_deregister_style( 'anspress-main' );
+// }
+// add_action( 'wp_enqueue_scripts', 'yoga_remove_plugin_styles', 20 );
+
 
 /**
  * Add SVG definitions to footer.
