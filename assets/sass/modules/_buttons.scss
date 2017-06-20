@@ -27,15 +27,21 @@
 // button,
 // button[type="button"],
 
-button[type="reset"],
-button[type="submit"] {
-	&:not(.ap-actions-handle) {
-		@include btn;
-	}
+// button[type="reset"],
+// button[type="submit"] {
+
+// 		@include btn;
+// 	}
+// }
+
+button:not(.ap-actions-handle) {
+	@include btn;
+	border-width: 0;
+	border-radius: $border-radius;
 }
 
-button {
-	border-radius: $border-radius;
+.ap-actions-handle {
+	background: transparent;
 }
 
 .mce-btn {
