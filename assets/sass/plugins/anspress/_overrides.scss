@@ -10,7 +10,7 @@
   }
 
   @include above(bp-small) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -25,23 +25,23 @@
 // 	}
 // }
 
-$bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink, $salmon-dark;
+// $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink, $salmon-dark;
 
-@for $i from 1 to length($bg-colors) + 1 {
+//@for $i from 1 to length($bg-colors) + 1 {
 
   // $c will gets overridden with every
   // iteration of the loop!
-  $c: nth($bg-colors, $i);
+  //$c: nth($bg-colors, $i);
 
-  .ap-questions-item:nth-of-type(#{$i}n+1) {
-    background-color: $c;
+  //.ap-questions-item:nth-of-type(#{$i}n+1) {
+    //background-color: $c;
 
-    &:hover,
-    &:focus {
-      background-image: linear-gradient(to bottom, $c 0, saturate(darken($c, 5%), 5%) 100%);
-    }
-  }
-}
+    //&:hover,
+    //&:focus {
+      //background-image: linear-gradient(to bottom, $c 0, saturate(darken($c, 5%), 5%) 100%);
+//    }
+//  }
+//}
 
 .ap-questions-item {
   flex: 1 0 100%;
@@ -49,11 +49,11 @@ $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink,
   padding: $shim;
 
   @include above(bp-small) {
-    flex: 1 1 33%;
+    flex: 1 1 50%;
   }
 
   a {
-    color: $color-background;
+    //color: $color-background;
   }
 }
 
@@ -103,10 +103,14 @@ $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink,
 .ap-user-reputation {
   background-color: $color-link;
   border-radius: $shim;
-  color: $color-background;
   margin-left: $shim-quarter;
   margin-right: $shim-quarter;
   padding: $shim-quarter $shim-half;
+
+  &:link,
+  &:visited {
+    color: $color-background;
+  }
 
   &:hover,
   &:focus {
@@ -117,21 +121,22 @@ $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink,
 
 
 // Hiding certain meta info for now instead of editing template files
-.ap-display-meta-item {
-  &.views,
-  &.active {
-    display: none;
-  }
-}
+// .ap-display-meta-item {
+//   &.views,
+//   &.active {
+//     display: none;
+//   }
+// }
 
-.ap-post-history {
-  display: none;
-}
+// .ap-post-history {
+//   display: none;
+// }
 
 // Question Search Form
 .ap-search-form {
   display: flex;
   justify-content: space-between;
+  margin-bottom: $shim;
 }
 
 .ap-search-inner {

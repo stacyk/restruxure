@@ -3,8 +3,9 @@
 //--------------------------------------------------------------
 
 // General Spacing
-$gutter: 3rem;
 $shim: 1rem;
+$gutter: $shim * 3;
+$shim-double: $shim * 2;
 $shim-half: $shim / 2;
 $shim-quarter: $shim / 4;
 

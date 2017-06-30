@@ -1,6 +1,6 @@
-div.mce-toolbar-grp {
+.mce-toolbar-grp {
   background: none;
-  border-bottom: 1px solid $color-border-light; //#eee;
+  border-bottom: 1px solid $color-border;
   padding: 4px;
 }
 
@@ -50,13 +50,13 @@ div.mce-panel {
 // Upload image area
 
 .ap-editor {
-  border: 1px solid $color-border-light;
+  border: 1px solid $color-border;
 }
 
 .ap-field-ap_upload.ap-form-fields {
   display: block;
   background-color: $color-background-light;
-  border-color: $color-border-light;
+  border-color: $color-border;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   padding: $shim-half;

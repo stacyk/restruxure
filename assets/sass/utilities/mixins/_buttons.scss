@@ -1,0 +1,26 @@
+// ----------------------------------------------------------------------
+// Media Queries
+// ----------------------------------------------------------------------
+
+////
+/// @author Stacy Kvernmo
+/// @group yoga
+////
+
+/// Flexible Padding
+/// @param {String} $pad-small
+/// @param {String} $pad-large
+/// @example scss - Basic Usage Sass
+///   .foo {
+///     @include pad($pad-small: null, $pad-large: null);
+///   }
+@mixin pad($positive: null) {
+
+  @if $positive == null {
+    padding-left: calc(#{$shim} + 2.5vw);
+    padding-right: calc(#{$shim} + 2.5vw);
+  } @else {
+    margin-left: calc(-#{$shim} + -2.5vw);
+    margin-right: calc(-#{$shim} + -2.5vw);
+  }
+}

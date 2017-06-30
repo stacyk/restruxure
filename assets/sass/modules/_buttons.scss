@@ -40,9 +40,39 @@ button:not(.ap-actions-handle) {
 	border-radius: $border-radius;
 }
 
-.ap-actions-handle {
-	background: transparent;
+@mixin btn-link {
+  color: $color-link;
+	font-family: $font-sans;
+	font-size: $type-small;
+	font-weight: 700;
+
+  &:hover {
+    color: $color-link-hover;
+  }
 }
+
+
+
+.ap-actions-handle {
+	align-items: center;
+  background-color: $color-link;
+  border-radius: 1rem;
+	border-width: 0;
+  color: $color-background;;
+  display: flex;
+	padding: $shim-half;
+	transition: border-radius 0.1s ease-in-out;
+
+	&:hover {
+		background-color: $color-link-hover;
+	}
+
+	&.loaded {
+		border-radius: 0;
+	}
+}
+
+
 
 .mce-btn {
 	button {

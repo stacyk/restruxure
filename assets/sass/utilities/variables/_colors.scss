@@ -41,36 +41,6 @@ $gray-light: lighten($gray, 50%);
 // Grayscale
 $color-gray: hsl(0, 0%, 50%);
 
-// Social Media Colors
-$color-facebook: #3b5998;
-$color-googleplus: #dd4b39;
-$color-instagram: #517fa4;
-$color-linkedin: #007bb6;
-$color-pinterest: #cb2027;
-$color-rss: #f90;
-$color-twitter: #00aced;
-$color-youtube: #b00;
-
-// $social-colors() map
-$social-colors: (
-	facebook: $color-facebook,
-	facebook-square: $color-facebook,
-	googleplus: $color-googleplus,
-	googleplus-square: $color-googleplus,
-	instagram: $color-instagram,
-	instagram-square: $color-instagram,
-	linkedin: $color-linkedin,
-	linkedin-square: $color-linkedin,
-	pinterest: $color-pinterest,
-	pinterest-square: $color-pinterest,
-	rss: $color-rss,
-	rss-square: $color-rss,
-	twitter: $color-twitter,
-	twitter-square: $color-twitter,
-	youtube: $color-youtube,
-	youtube-square: $color-youtube,
-);
-
 // ELEMENTS & SKINNING
 
 // General
@@ -87,6 +57,7 @@ $color-background-light: hsl(0, 0%, 97%);
 $color-voted-best: saturate(lighten($green, 50%), 20%);
 $solved: $pink-dark;
 $color-voted-best: $blue-light;
+$error: hsl(359, 78%, 65%);
 
 
 
@@ -127,3 +98,34 @@ $shadow-dark: hsla(281, 9%, 15%, 0.3);
 // Status
 $moderation: lighten($orange, 30%);
 $color-needs-action-inverted: hsl(45, 80%, 50%);
+
+
+// Social Media Colors
+$color-facebook: #3b5998;
+$color-googleplus: #dd4b39;
+$color-instagram: #517fa4;
+$color-linkedin: #007bb6;
+$color-pinterest: #cb2027;
+$color-rss: #f90;
+$color-twitter: #00aced;
+$color-youtube: #b00;
+
+// $social-colors() map
+$social-colors: (
+	facebook: $color-facebook,
+	facebook-square: $color-facebook,
+	googleplus: $color-googleplus,
+	googleplus-square: $color-googleplus,
+	instagram: $color-instagram,
+	instagram-square: $color-instagram,
+	linkedin: $color-linkedin,
+	linkedin-square: $color-linkedin,
+	pinterest: $color-pinterest,
+	pinterest-square: $color-pinterest,
+	rss: $color-rss,
+	rss-square: $color-rss,
+	twitter: $color-twitter,
+	twitter-square: $color-twitter,
+	youtube: $color-youtube,
+	youtube-square: $color-youtube,
+);

@@ -21,7 +21,6 @@
   list-style: none;
   margin-top: $shim-quarter;
   min-width: 140px;
-  padding: $shim-quarter;
   position: absolute;
   top: initial;
   z-index: 999;
@@ -42,18 +41,27 @@
       display: block;
       padding: $shim-quarter $shim-half;
     }
+
+    &.ap-dropdown-header {
+      margin-bottom: $shim-quarter;
+    }
   }
 }
 
 .ap-dropdown-header {
-  font-size: $type-xsmall;
-  padding: $shim-half $shim;
+  background-color: $color-background-light;
+  font-size: $type-small;
+  padding: 0 $shim-half;
+
+  &:hover {
+    background-color: $color-background-light;
+  }
 
   &:before {
     content: '';
     display: block;
-    border-bottom: 1px solid $color-border-light;
-    margin-bottom: $shim-half;
+    border-bottom: 1px solid $color-border;
+    margin: 0 ($shim-half * -1);
   }
 }
 

@@ -1,95 +1,97 @@
 //
 // Question page style
 // --------------------------------------------------
-.ap-content {
-  position: relative;
-}
+// .ap-content {
+//   position: relative;
+// }
 
-.ap-cell {
-  font-size: $type-xsmall;
-}
+// .ap-cell {
+//   font-size: $type-xsmall;
+// }
 
-.best-answer .ap-q-metas {
-  background-color: $color-voted-best;
-}
+// .best-answer .ap-q-metas {
+//   background-color: $color-voted-best;
+// }
 
+// .ap-cell-inner {
+//   .status-trash & {
+//     border-color: #ef9a9a;
+//   }
 
-.ap-cell-inner {
-  .status-trash & {
-    border-color: #ef9a9a;
-  }
+//   .status-private_post & {
+//     border-color: #9e9e9e;
+//   }
 
-  .status-private_post & {
-    border-color: #9e9e9e;
-  }
+//   .status-moderate & {
+//     border-color: #ffcc80;
+//   }
+// }
 
-  .status-moderate & {
-    border-color: #ffcc80;
-  }
-}
+// .ap-content > .ap-avatar {
+//   position: absolute;
+// }
 
-.ap-content > .ap-avatar {
-  position: absolute;
-}
-
-.ap-q-head {
-  margin-bottom: $gutter;
-}
+// .ap-q-head {
+//   margin-bottom: $gutter;
+// }
 
 @mixin meta-row {
   align-items: center;
   display: flex;
   font-size: $type-meta;
   max-height: $avatar-height;
-  padding: $shim $shim;
+  padding: $shim;
 }
 
 .ap-q-metas {
   @include meta-row;
   border-bottom: solid 1px rgba(0, 0, 0, .1);
   background-color: $color-background-light;
+  margin-bottom: $shim;
+  margin-left: $shim-double;
+  padding-left: $shim-double;
 
-  > .ap-post-history {
-    margin-left: 10px;
-    padding-left: 15px;
-    border-left: solid 1px #ccc;
-  }
+  // > .ap-post-history {
+  //   margin-left: 10px;
+  //   padding-left: 15px;
+  //   border-left: solid 1px #ccc;
+  // }
 
-  .ap-posted {
-    font-weight: normal;
-  }
+  // .ap-posted {
+  //   font-weight: normal;
+  // }
 }
 
-.ap-q-content {
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
+// .ap-q-content {
+//   p:last-child {
+//     margin-bottom: 0;
+//   }
+// }
 
-.ap-q-inner {
-  padding: $shim;
-}
+// .ap-q-inner {
+//   padding: $shim;
+// }
 
 .ap-question-meta {
-  margin-bottom: $shim;
+  align-items: center;
+  display: flex;
+  margin-bottom: $shim-quarter;
 
   > .ap-display-meta-item {
-    display: table;
-    float: left;
     margin-right: $shim;
 
     &:last-child {
       margin-right: 0;
     }
 
-    &:before {
-      display: none;
-    }
+    // &:before {
+    //   display: none;
+    // }
 
     i {
       margin-right: 4px;
       vertical-align: middle;
-      color: $light-color;
+      //color: $light-color;
     }
 
     > span {
@@ -99,8 +101,16 @@
 
   .question-tags a,
   .question-categories a {
-    &:last-child {
-      margin-right: 0;
+    @include btn-link;
+    color: $color-link;
+  	font-family: $font-sans;
+    font-size: $type-meta;
+    font-weight: 400;
+    padding-left: $shim-quarter;
+    padding-right: $shim-quarter;
+
+    &:hover {
+      color: $color-link-hover;
     }
   }
 
@@ -119,7 +129,7 @@
 
   .solved {
     margin-right: $gutter;
-    background-color: $main-color;
+    //background-color: $main-color;
 
     i {
       margin-right: 0;
@@ -162,7 +172,7 @@
         padding: 0 $shim-quarter;
         color: $color-background;
         border-radius: $border-radius;
-        background-color: $blue;
+        //background-color: $blue;
       }
     }
   }
@@ -253,15 +263,15 @@
     text-decoration: none;
     color: $color-background;
     border-radius: 10px;
-    background: $blue-color;
+    //background: $blue-color;
 
     .tax-count {
       font-style: normal;
     }
 
     &:hover {
-      color: $default-color;
-      border-color: $main-color;
+      //color: $default-color;
+      //border-color: $main-color;
     }
   }
 
@@ -347,19 +357,15 @@
 .ap-participants-list {
   display: block;
   margin: 0 -5px -5px;
+}
 
-  .ap-avatar {
-    display: block;
-    float: left;
-    margin-right: 0;
-    margin-bottom: 10px;
-    padding: 5px;
-  }
+.ap-avatar {
+  position: absolute;
 }
 
 .ap-single-vote {
   @include meta-row;
-  position: absolute;
+  //position: absolute;
 }
 
 .ap-question-info {
@@ -478,10 +484,10 @@ post-message {
       margin: -1px;
       padding: 6px 10px;
       color: $color-background;
-      background: $main-color;
+      //background: $main-color;
 
       &:hover {
-        background: lighten($main-color, 10%);
+        //background: lighten($main-color, 10%);
       }
     }
 
@@ -515,7 +521,7 @@ post-message {
 .ap-all-answers {
   display: table;
   text-align: center;
-  border: solid 1px $yellow-color;
+  //border: solid 1px $yellow-color;
   text-decoration: none;
   border-radius: 3px;
   font-size: $type-small;
