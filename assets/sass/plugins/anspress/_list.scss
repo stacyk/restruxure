@@ -56,11 +56,24 @@
 }
 
 .ap-display-meta-item {
-  font-size: $type-xsmall;
+  align-items: stretch;
   color: $color-text-light;
+  display: flex;
+  font-family: $font-sans;
 
-  i:before {
-    font-size: $type-xsmall;
+  i {
+    align-items: center;
+    display: flex;
+    font-style: normal;
+
+    &:before {
+      font-size: $type-xsmall;
+    }
+  }
+
+  [class^="apicon-"]::before,
+  [class*=" apicon-"]::before {
+    margin-right: $shim-quarter;
   }
 }
 
@@ -100,12 +113,6 @@
 //   display: inline-flex;
 // }
 
-.ap-display-meta-item {
-  [class^="apicon-"]::before,
-  [class*=" apicon-"]::before {
-    margin-right: $shim-quarter;
-  }
-}
 
 .ap-filter-toggle {
   color: $color-text;

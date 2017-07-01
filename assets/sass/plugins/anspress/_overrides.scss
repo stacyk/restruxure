@@ -87,6 +87,7 @@
 
   a {
     color: $color-text;
+    font-family: $font-sans;
     padding: $inline-nav-pad;
   }
 
@@ -94,10 +95,6 @@
     border: 1px solid $color-link-active;
     background-color: $color-link-active;
   }
-}
-
-.ap-answers-tab {
-  border-bottom: 1px solid $gray-light;
 }
 
 .ap-user-reputation {

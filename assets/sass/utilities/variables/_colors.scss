@@ -54,9 +54,11 @@ $color-background-dark: lighten($color-text, 20%);
 $color-background-light: hsl(0, 0%, 97%);
 
 // States
-$color-voted-best: saturate(lighten($green, 50%), 20%);
-$solved: $pink-dark;
-$color-voted-best: $blue-light;
+//$color-voted-best: saturate(lighten($green, 50%), 20%);
+$solved: $salmon-dark;
+$featured: $green;
+//$color-voted-best: $blue-light;
+$color-voted-best: $blue;
 $error: hsl(359, 78%, 65%);
 
 

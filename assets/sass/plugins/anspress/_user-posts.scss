@@ -45,7 +45,7 @@
 
       &.positive,
       &.answer-selected {
-        background: lighten($main-color, 5%);
+        background: lighten($solved, 5%);
         color: $color-background;
 
         i {

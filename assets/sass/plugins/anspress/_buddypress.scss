@@ -58,17 +58,17 @@
         text-decoration: none;
       }
 
-      .apicon-thumb-up,
-      .apicon-answer {
-        &:before {
-          margin-right: 2px;
-        }
-      }
+      // .apicon-thumb-up,
+      // .apicon-answer {
+      //   &:before {
+      //     margin-right: 2px;
+      //   }
+      // }
     }
 
     &-selected,
     .solved {
-      color: $main-color;
+      color: $solved;
     }
 
     &-published {
