@@ -24,7 +24,7 @@ get_header(); ?>
           get_template_part( 'template-parts/content-muscles', get_post_format() );
         }
 
-        elseif ( is_singular( 'issues' )) {
+        elseif ( is_singular( 'question' )) {
           get_template_part( 'template-parts/content-issues', get_post_format() );
         }
 
@@ -35,9 +35,9 @@ get_header(); ?>
         the_post_navigation();
 
         // If comments are open or we have at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) :
-          comments_template();
-        endif;
+        // if ( comments_open() || get_comments_number() ) :
+        //   comments_template();
+        // endif;
 
       endwhile; // End of the loop.
       ?>

@@ -62,7 +62,7 @@
     <?php
     // Find connected pages
     $connected = new WP_Query( array(
-      'connected_type' => 'muscles_to_issues',
+      'connected_type' => 'muscles_to_question',
       'connected_items' => get_queried_object(),
       'nopaging' => true,
     ) );
@@ -70,7 +70,7 @@
     // Display connected pages
     if ( $connected->have_posts() ) :
     ?>
-    <h3>Issues related to this pose:</h3>
+    <h3>question related to this pose:</h3>
     <ul>
     <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -80,9 +80,7 @@
     <?php
     // Prevent weirdness
     wp_reset_postdata();
-
     endif; ?>
-
 
   </div><!-- .entry-content -->
 
