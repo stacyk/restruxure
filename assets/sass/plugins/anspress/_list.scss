@@ -3,19 +3,26 @@
 // --------------------------------------------------
 
 .ap-questions {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  //display: grid;
+  //grid-template-columns: repeat(2, 1fr);
 //  grid-template-rows: repeat(auto-fill, minmax(10px, 500px));
-  grid-auto-flow: dense;
+  //grid-auto-flow: dense;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ap-list-head {
+  margin-bottom: $gutter;
 }
 
 .ap-questions-item {
-  padding: $shim;
+  display: flex;
+  flex: 1 1 100%;
+
 
   &.featured-question {
-    background: white;
-    grid-column: 2;
-    grid-row-end: span 3;
+    // grid-column: 2;
+    // grid-row-end: span 3;
   }
 }
 
@@ -116,6 +123,7 @@
 
 .ap-filter-toggle {
   color: $color-text;
+
   font-family: $font-sans;
   font-size: $type-small;
   padding: 0;
@@ -213,15 +221,18 @@
       visibility: visible;
     }
   }
+}
 
-  // &-search {
-  //   padding: 7px 10px;
-  //   border-bottom: solid 1px #ddd;
-  //   border-radius: 2px 2px 0 0;
-  //   margin-bottom: 5px;
-  //   margin-top: -$shim-quarter;
-  //   background: #f7f7f7;
-  // }
+
+.ap-filter-search {
+  padding: $shim-quarter;
+  border-bottom: solid 1px $color-border;
+  border-radius: $border-radius;
+  margin-bottom: $shim-quarter;
+
+  input {
+    margin-bottom: 0;
+  }
 }
 
 #ap-filter-reset {
