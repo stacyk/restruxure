@@ -1,190 +1,188 @@
-#anspress {
-  .ap-noti {
-    border: solid 1px #eee;
-    border-radius: 2px;
 
-    &-item {
-      border-bottom: solid 1px #eee;
-      padding: 10px 15px;
-    }
+.ap-noti {
+  border: solid 1px $color-border;
+  border-radius: $border-radius;
+}
 
-    &-icon {
-      float: left;
-      width: 40px;
-      height: 40px;
-      background: #eee;
-      padding: 8px;
-      text-align: center;
-      font-size: 18px;
-      border-radius: 2px;
-    }
+.ap-noti-item {
+  border-bottom: solid 1px $color-border;
+  padding: 10px 15px;
+}
 
-    &-avatar {
-      float: left;
+.ap-noti-icon {
+  background: $color-border;
+  border-radius: $border-radius;
+  float: left;
+  font-size: 18px;
+  height: 40px;
+  padding: 8px;
+  text-align: center;
+  width: 40px;
+}
 
-      .avatar {
-        border-radius: 2px;
-      }
-    }
+.ap-noti-avatar {
+  float: left;
 
-    &-rep {
-      background: $yellow-color;
-      float: left;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      padding: 9px 0;
-      font-weight: bold;
-      color: $color-background;
-      border-radius: 50%;
-    }
-
-    &-inner {
-      color: #333;
-      display: block;
-      margin-left: 60px;
-    }
-
-    &-date {
-      display: block;
-      font-size: $type-xsmall;
-      color: #777;
-    }
-
-    &-sub {
-      margin-bottom: 15px;
-
-      a {
-        margin-right: 10px;
-        border-right: solid 1px #ccc;
-        padding-right: 10px;
-
-        &:last-child {
-          border-right: none;
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  .ap-btn-markall-read {
-    float: right;
-    margin-right: 0;
+  .avatar {
+    border-radius: $border-radius;
   }
 }
 
+.ap-noti-rep {
+  align-items: center;
+  background: $orange;
+  border-radius: $shim;
+  color: $color-background;
+  display: flex;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  float: left;
+  width: 40px;
+}
+
+.ap-noti-inner {
+  color: #333;
+  display: block;
+  margin-left: 60px;
+}
+
+.ap-noti-date {
+  display: block;
+  font-size: $type-xsmall;
+  color: #777;
+}
+
+.ap-noti-sub {
+  margin-bottom: 15px;
+
+  a {
+    margin-right: 10px;
+    border-right: solid 1px #ccc;
+    padding-right: 10px;
+
+    &:last-child {
+      border-right: none;
+      margin-right: 0;
+    }
+  }
+}
+
+
+.ap-btn-markall-read {
+  float: right;
+  margin-right: 0;
+}
+
 #noti-dp {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  min-height: 50px;
   background: $color-background;
-  border: solid 2px #d2d1d1;
+  border: solid 2px $color-border;
+  font-family: $font-sans;
   font-size: $type-small;
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
   overflow: hidden;
   box-shadow: 0 1px 14px rgba(0, 0, 0, 0.2);
   z-index: 9999;
+}
 
-  .ap-btn-markall-read {
-    float: right;
-    background: none;
-    border: none;
-    font-weight: normal;
-    padding: 0;
+.ap-btn-markall-read {
+  float: right;
+  background: none;
+  border: none;
+  font-weight: normal;
+  padding: 0;
+}
+
+.noti-item {
+  border-bottom: solid 1px $color-border;
+  padding: 8px 10px;
+  text-align: left;
+
+  &.unseen {
+    background: #f5f5f5;
   }
+}
 
-  .noti-item {
-    padding: 8px 10px;
-    border-bottom: solid 1px #e8e8e8;
-    text-align: left;
+.avatar {
+  border-radius: $avatar-height;
+}
 
-    &.unseen {
-      background: #f5f5f5;
-    }
+.ap-noti-unseen {
+  background: $orange;
+  color: $color-background;
+  padding: 1px 3px;
+  font-weight: normal;
+  font-style: normal;
+  border-radius: $border-radius;
+}
+
+.ap-noti-icon,
+.ap-noti-avatar,
+.ap-noti-rep {
+  background: $color-border-light;
+  float: left;
+  height: 35px;
+  width: 35px;
+}
+
+.ap-noti-rep {
+  background: #f4ac20;
+  border-radius: $shim;
+  color: $color-background;
+  display: block;
+  font-size: $type-small;
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  width: 35px;
+
+  &.negative {
+    background: #ef5350;
   }
+}
 
-  .avatar {
-    border-radius: 3px;
-  }
+.ap-noti-icon {
+  border-radius: $border-radius;
+  color: $color-text-light;
+  font-size: 17px;
+  line-height: 38px;
+  text-align: center;
+}
 
-  .ap-noti {
-    &-unseen {
-      background: $yellow-color;
-      color: $color-background;
-      padding: 1px 3px;
-      font-weight: normal;
-      font-style: normal;
-      border-radius: 2px;
-    }
+.ap-noti-inner {
+  margin-left: 50px;
+  display: table;
+  font-size: $type-xsmall;
+  line-height: 1.4;
+  color: #333;
+  text-decoration: none;
+}
 
-    &-icon,
-    &-avatar,
-    &-rep {
-      background: #eee;
-      float: left;
-      height: 35px;
-      width: 35px;
-    }
+.ap-noti-date {
+  color: $color-text;
+  display: block;
+  font-size: $type-meta;
+  margin-top: 2px;
+}
 
-    &-rep {
-      color: $color-background;
-      text-align: center;
-      border-radius: 50%;
-      background: #f4ac20;
-      width: 35px;
-      height: 35px;
-      display: block;
-      line-height: 35px;
-      font-size: 16px;
-      font-weight: bold;
+.ap-noti-head {
+  background-color: $color-background;
+  border-bottom: solid 1px $color-border;
+  font-size: $type-meta;
+  font-weight: bold;
+  padding: $shim-half;
+  height: $shim;
+  line-height: $shim;
+}
 
-      &.negative {
-        background: #ef5350;
-      }
-    }
-
-    &-icon {
-      text-align: center;
-      border-radius: 3px;
-      line-height: 38px;
-      font-size: 17px;
-      color: #aaa;
-    }
-
-    &-inner {
-      margin-left: 50px;
-      display: table;
-      font-size: $type-xsmall;
-      line-height: 1.4;
-      color: #333;
-      text-decoration: none;
-    }
-
-    &-date {
-      display: block;
-      color: #888;
-      font-size: $type-meta;
-      margin-top: 2px;
-    }
-
-    &-head {
-      background: $color-background;
-      border-bottom: solid 1px #ddd;
-      font-size: $type-meta;
-      font-weight: bold;
-      padding: 10px;
-      height: 16px;
-      line-height: 16px;
-    }
-  }
-
-  .scroll-wrap {
-    max-height: 300px;
-    overflow-y: auto;
-    //margin-right: -18px;
-  }
+.scroll-wrap {
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 i.noti-count {
@@ -199,5 +197,5 @@ i.noti-count {
   text-align: center;
   height: 20px;
   line-height: 20px;
-  border-radius: 2px;
+  border-radius: $border-radius;
 }
