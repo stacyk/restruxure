@@ -1,44 +1,38 @@
 //
 // Users styles
 // --------------------------------------------------
-#anspress {
-  .ap-user {
-    &-bio {
-      margin-bottom: 15px;
-      border-top: solid 1px #ddd;
-      padding: 20px 0;
-      min-height: 122px;
-    }
 
-    &-avatar {
-      margin-right: 20px;
-    }
+.ap-user-bio {
+  margin-bottom: $shim;
+  min-height: 122px;
+  padding: $shim 0;
+}
 
-    &-name {
-      font-size: 22px;
-      font-weight: 600;
+.ap-user-avatar {
+  margin-right: 20px;
+}
 
-      .ap-user-reputation {
-        font-size: $type-small;
-        padding: 3px 7px;
-        margin-left: 10px;
-        vertical-align: middle;
-      }
-    }
+.ap-user-name {
+  font-size: 22px;
+  font-weight: 600;
 
-
-
-
+  .ap-user-reputation {
+    font-size: $type-small;
+    padding: 3px 7px;
+    margin-left: 10px;
+    vertical-align: middle;
   }
 }
 
-.ap-user-reputation {
-  margin-left: 5px;
-  background: #ffc107;
-  padding: 1px 4px;
-  font-size: $type-meta;
-  border-radius: 2px;
-  font-weight: bold;
-  margin-right: 5px;
-  vertical-align: text-bottom;
-}
+
+
+// .ap-user-reputation {
+//   margin-left: $shim-quarter;
+//   background: #ffc107;
+//   padding: 1px 4px;
+//   font-size: $type-meta;
+//   border-radius: 2px;
+//   font-weight: bold;
+//   margin-right: $shim-quarter;
+//   vertical-align: text-bottom;
+// }
