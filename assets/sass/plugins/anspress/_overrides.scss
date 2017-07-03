@@ -14,35 +14,6 @@
   }
 }
 
-
-// Amount of steps to iterate through color mix
-//$steps: 7;
-
-// Mix colors to go from $color-1 ro @color-2 with 9 total steps
-// @for $i from 0 to $steps {
-// 	.ap-questions-item:nth-of-type(#{$i + 1}) {
-// 		background-color: (#{$color});
-// 	}
-// }
-
-// $bg-colors: $blue, $blue-dark, $purple-dark, $purple, $green, $pink-dark, $pink, $salmon-dark;
-
-//@for $i from 1 to length($bg-colors) + 1 {
-
-  // $c will gets overridden with every
-  // iteration of the loop!
-  //$c: nth($bg-colors, $i);
-
-  //.ap-questions-item:nth-of-type(#{$i}n+1) {
-    //background-color: $c;
-
-    //&:hover,
-    //&:focus {
-      //background-image: linear-gradient(to bottom, $c 0, saturate(darken($c, 5%), 5%) 100%);
-//    }
-//  }
-//}
-
 .ap-questions-item {
   flex: 1 0 100%;
   margin-bottom: 0;
@@ -52,8 +23,6 @@
     flex: 1 1 50%;
   }
 
-  a {
-    //color: $color-background;
   }
 }
 
