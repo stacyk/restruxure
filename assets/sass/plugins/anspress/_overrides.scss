@@ -22,12 +22,21 @@
 }
 
 .ap-questions-summery {
+  display: block;
+
   @supports (display: grid) {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: auto 1fr;
   }
 
+  .ap-avatar {
+    float: left;
+    margin-bottom: $shim-half;
+    margin-right: $shim;
+  }
+
+  .ap-questions-title,
   .ap-display-question-meta {
     grid-column-start: 2;
   }
@@ -65,18 +74,6 @@
 }
 
 
-// Hiding certain meta info for now instead of editing template files
-// .ap-display-meta-item {
-//   &.views,
-//   &.active {
-//     display: none;
-//   }
-// }
-
-// .ap-post-history {
-//   display: none;
-// }
-
 // Question Search Form
 .ap-search-form {
   display: flex;
@@ -97,10 +94,8 @@
 .ap-search-btn {
   flex: 0 0 auto;
   order: 2;
-}
 
-button[type="submit"] {
-  .ap-search-btn {
+  button[type="submit"] & {
     margin: 0;
   }
 }

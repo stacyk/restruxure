@@ -63,18 +63,6 @@
   @include above(bp-small) {
   }
 
-	> .ap-display-meta-item {
-		margin-right: $shim;
-
-		&:last-child {
-			margin-right: 0;
-		}
-
-		i {
-			margin-right: $shim-quarter;
-		}
-	}
-
 	.question-tags a,
 	.question-categories a {
 		padding-left: $shim-quarter;
@@ -223,7 +211,8 @@
 }
 
 #ap-answers-c {
-	margin-top: 30px;
+	margin-bottom: $gutter;
+	margin-top: $gutter;
 }
 
 .ap-participants-list {
@@ -271,11 +260,6 @@
 		list-style: none;
 	}
 }
-
-#answer_form {
-	padding: $shim-half;
-}
-
 
 post-message {
 	align-items: center;

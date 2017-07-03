@@ -26,6 +26,11 @@
   }
 }
 
+.question-excerpt {
+  max-height: 100px;
+  overflow: hidden;
+}
+
 .status-private_post {
   background-color: $error;
 }
@@ -54,7 +59,7 @@
   font-size: $type-meta;
 
   span {
-    padding: 0 $shim-quarter;
+    padding: 0 $shim-quarter 0 0;
   }
 }
 
@@ -67,20 +72,21 @@
   color: $color-text-light;
   display: flex;
   font-family: $font-sans;
+  margin-right: $shim;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   i {
     align-items: center;
     display: flex;
     font-style: normal;
+    margin-right: $shim-quarter;
 
     &:before {
       font-size: $type-xsmall;
     }
-  }
-
-  [class^="apicon-"]::before,
-  [class*=" apicon-"]::before {
-    margin-right: $shim-quarter;
   }
 }
 
