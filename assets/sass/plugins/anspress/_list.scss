@@ -229,12 +229,14 @@
 
 
 .ap-filter-search {
-  padding: $shim-quarter;
   border-bottom: solid 1px $color-border;
   border-radius: $border-radius;
   margin-bottom: $shim-quarter;
+  padding: $shim-quarter;
 
   input {
+    font-family: $font-sans;
+    font-size: $type-xsmall;
     margin-bottom: 0;
   }
 }
