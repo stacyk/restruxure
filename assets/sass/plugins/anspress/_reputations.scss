@@ -1,105 +1,112 @@
-.ap-reputation {
-  &s {
-    border: none;
-    border-spacing: 0;
 
-    td {
-      border-width: 0 0 1px 0;
-      border-color: #eee;
-      border-style: solid;
-      padding: 10px 5px;
-      vertical-align: top;
+.ap-reputations {
+  border: none;
+  border-spacing: 0;
 
-      &.col-icon {
-        width: 50px;
-        color: #b5b5b5;
+  td {
+    border-width: 0 0 1px 0;
+    border-color: $color-border;
+    border-style: solid;
+    vertical-align: top;
 
-        i {
-          font-size: 18px;
-          background: #9e9e9e;
-          width: 35px;
-          display: block;
-          height: 35px;
-          padding: 5px;
-          text-align: center;
-          border-radius: 50%;
-          color: $color-background;
+    p:last-of-type {
+      margin-bottom: 0;
+    }
 
-          &.answer {
-            background: $solved;
-          }
+    &.col-icon {
+      width: 50px;
+      color: $color-text-light;
 
-          &.ask {
-            background: #f44336;
-          }
+      i {
+        align-items: center;
+        background: $color-text-light;
+        border-radius: $shim;
+        color: $color-background;
+        display: flex;
+        font-size: $shim;
+        height: 35px;
+        justify-content: center;
+        text-align: center;
+        width: 35px;
 
-          &.comment {
-            background: #673ab7;
-          }
+        &.answer {
+          background-color: $solved;
+        }
 
-          &.select_answer {
-            background: $color-voted-best;
-          }
+        &.ask {
+          background-color: #f44336;
+        }
 
-          &.best_answer {
-            background: #00bcd4;
-          }
+        &.comment {
+          background-color: #673ab7;
+        }
 
-          &.received_vote_up {
-            background: #ab47bc;
-          }
+        &.select_answer {
+          background-color: $color-voted-best;
+        }
 
-          &.received_vote_down {
-            background: #ff9800;
-          }
+        &.best_answer {
+          background-color: #00bcd4;
+        }
 
-          &.given_vote_down {
-            background: #8d6e63;
-          }
+        &.received_vote_up {
+          background-color: #ab47bc;
+        }
 
-          &.given_vote_up {
-            background: #ec407a;
-          }
+        &.received_vote_down {
+          background-color: #ff9800;
+        }
+
+        &.given_vote_down {
+          background-color: #8d6e63;
+        }
+
+        &.given_vote_up {
+          background-color: #ec407a;
         }
       }
+    }
 
-      &.col-points {
-        text-align: right;
-        width: 55px;
+    &.col-points {
+      text-align: right;
+      width: 55px;
 
-        span {
-          background: $yellow-color;
-          color: $color-background;
-          width: 40px;
-          display: block;
-          float: right;
-          text-align: center;
-          border-radius: 2px;
-          padding: 2px;
-        }
-      }
-
-      &.col-date {
-        width: 100px;
-        font-size: $type-xsmall;
+      span {
+        font-family: $font-sans;
+        font-size: $type-meta;
       }
     }
   }
+}
 
-  &-ref {
-    margin-top: 5px;
+.ap-reputation-ref {
+  color: $color-text;
+  display: block;
+  font-size: $type-xsmall;
+  margin-top: 5px;
+
+  strong {
+    color: $color-link;
     display: block;
-    margin-top: 5px;
-    font-size: $type-xsmall;
-    color: #777;
+    font-family: $font-headlines;
+    font-size: $type-small;
+  }
 
+  &:hover,
+  &:focus {
     strong {
-      display: block;
-      color: #444;
+      color: $color-link-hover;
     }
   }
+}
 
-  &-activity {
-    font-weight: bold;
-  }
+.ap-reputation-activity {
+  font-family: $font-sans;
+  font-size: $type-small;
+}
+
+.ap-reputation-date {
+  font-family: $font-sans;
+  font-size: $type-meta;
+  min-width: 160px;
 }
