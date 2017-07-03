@@ -81,22 +81,6 @@
   line-height: 1.2;
 }
 
-// List items
-.ap-ul-inline {
-  display: flex;
-
-  a {
-    color: $color-text;
-    font-family: $font-sans;
-    padding: $inline-nav-pad;
-  }
-
-  .active a {
-    border: 1px solid $color-link-active;
-    background-color: $color-link-active;
-  }
-}
-
 .ap-user-reputation {
   background-color: $color-link;
   border-radius: $shim;

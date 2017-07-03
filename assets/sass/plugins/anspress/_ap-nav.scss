@@ -1,0 +1,89 @@
+//
+// Nav styles
+// --------------------------------------------------
+
+
+.ap-answers-tab,
+.ap-tab-nav {
+  border-bottom: solid 1px $color-border;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-left: 10px;
+
+  li {
+    font-family: $font-sans;
+    font-size: $type-small;
+    margin-bottom: -1px;
+    margin-left: 0;
+    margin-right: 10px;
+
+    &.active {
+      background-color: $color-background;
+      border-style: solid;
+      border-width: 1px 1px 1px 1px;
+      border-color: $color-border $color-border $color-background $color-border;
+      border-radius: $border-radius $border-radius 0 0;
+      margin-bottom: -1px;
+
+      a {
+        color: $color-text;
+        font-weight: 700;
+      }
+    }
+
+    a {
+      align-items: center;
+      border: solid 1px transparent;
+      display: flex;
+  		font-size: $type-xsmall;
+      padding: $shim-half $shim;
+
+      i {
+        font-size: $type-small;
+        line-height: 1;
+        margin-right: $shim-quarter;
+      }
+
+      span {
+        align-items: center;
+        background: $color-border-light;
+        border-radius: $shim;
+        display: flex;
+        font-size: $type-meta;
+        line-height: 1;
+        justify-content: center;
+        margin-left: $shim-quarter;
+        padding: $shim-quarter $shim-half;
+      }
+    }
+  }
+}
+
+//   li.active {
+//     background-color: $color-background;
+//     border-style: solid;
+//     border-width: 1px 1px 1px 1px;
+//     border-color: $color-border $color-border $color-background $color-border;
+//     border-radius: $border-radius $border-radius 0 0;
+//     margin-bottom: -1px;
+//   }
+// }
+
+// .ap-tab-nav {
+//   li.active {
+//     background-color: $color-background;
+//     border-style: solid;
+//     border-width: 1px 1px 1px 1px;
+//     border-color: $color-border $color-border $color-background $color-border;
+//     border-radius: $border-radius $border-radius 0 0;
+//     margin-bottom: -1px;
+//   }
+// }
+
+
+.ap-answers-tab {
+  border-bottom: 0;
+}
