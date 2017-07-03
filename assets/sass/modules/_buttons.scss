@@ -56,7 +56,7 @@ button:not(.ap-actions-handle) {
 .ap-actions-handle {
 	align-items: center;
   background-color: $color-link;
-  border-radius: 1rem;
+  border-radius: $shim;
 	border-width: 0;
   color: $color-background;;
   display: flex;
@@ -67,7 +67,7 @@ button:not(.ap-actions-handle) {
 		background-color: $color-link-hover;
 	}
 
-	&.loaded {
+	.open & {
 		border-radius: 0;
 	}
 }
