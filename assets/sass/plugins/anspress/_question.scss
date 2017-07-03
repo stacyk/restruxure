@@ -114,33 +114,6 @@
 	white-space: nowrap;
 }
 
-.ap-actions {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-
-	li {
-		margin: 0;
-		padding: 0;
-
-		&.active a {
-			background-color: $color-link-active;
-		}
-
-		a {
-			font-size: $type-meta;
-			padding: $shim-quarter $shim;
-
-			b {
-				border-radius: $border-radius;
-				color: $color-background;
-				float: right;
-				padding: 0 $shim-quarter;
-			}
-		}
-	}
-}
-
 .ap-actions-footer {
 	input {
 		display: inline-block;
