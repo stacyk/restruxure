@@ -124,7 +124,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $color-text;
+    color: $color-link-hover;
 
     .ap-filter-active {
       color: $color-link-hover;
@@ -146,8 +146,10 @@
   }
 
   .active {
+    color: $color-link;
+
     label {
-      color: $color-link;
+      color: $color-text;
 
       &:focus,
       &:hover {
