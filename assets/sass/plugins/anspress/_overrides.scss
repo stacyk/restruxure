@@ -1,28 +1,23 @@
-.ap-questions {
-  @include pad(negative);
 
+.ap-question-lr {
   display: flex;
-  flex-wrap: wrap;
 
-  @supports (display: grid) {
-    display: grid;
-    grid-gap: 1px;
-  }
-
-  @include above(bp-small) {
-    grid-template-columns: repeat(2, 1fr);
+  @include below(bp-medium) {
+    flex-direction: column;
   }
 }
 
-.ap-questions-item {
-  flex: 1 0 100%;
-  margin-bottom: 0;
-  padding: $shim;
-
-  @include above(bp-small) {
-    flex: 1 1 50%;
+.ap-question-right {
+  @include above(bp-medium) {
+    flex: 0 1 auto;
+    margin-left: $gutter;
+    min-width: 20%;
   }
+}
 
+.ap-q-left {
+  @include above(bp-medium) {
+    flex: 3 1 auto;
   }
 }
 
