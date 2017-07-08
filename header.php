@@ -54,7 +54,10 @@
     </div><!-- .site-branding -->
 
     <!-- Search Form -->
-    <?php get_search_form(); ?>
+    <?php if ( is_front_page() ) : ?>
+      <?php get_search_form(); ?>
+    <?php endif; ?>
+
   </header><!-- .site-header -->
 
   <div id="content" class="site-content">
