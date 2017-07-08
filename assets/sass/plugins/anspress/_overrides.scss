@@ -1,4 +1,13 @@
-.ap-row,
+.ap-row {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include above(bp-medium) {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
 .ap-question-lr {
   display: flex;
 
@@ -9,37 +18,39 @@
 
 .ap-question-right {
   @include above(bp-medium) {
-    flex: 0 1 auto;
     margin-left: $gutter;
-    min-width: 20%;
   }
 }
 
 .ap-q-left {
   @include above(bp-medium) {
-    flex: 3 1 auto;
+    flex: 1 1 auto;
   }
 }
 
-.ap-questions-summery {
-  display: block;
 
-  @supports (display: grid) {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: auto 1fr;
-  }
+.ap-questions-head {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 50px 1fr;
+}
+
+.questions-title-area {
+  margin-bottom: $shim;
+}
+
+.ap-questions-summery {
+  display: flex;
+  flex-direction: column;
 
   .ap-avatar {
-    float: left;
     margin-bottom: $shim-half;
     margin-right: $shim;
   }
+}
 
-  .ap-questions-title,
-  .ap-display-question-meta {
-    grid-column-start: 2;
-  }
+.wp-post-image {
+  margin-bottom: $shim;
 }
 
 .ap-questions-vcount {

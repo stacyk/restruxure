@@ -64,7 +64,7 @@ function yoga_scripts() {
 	/**
 	 * If we are debugging the site, use a unique version every page load so as to ensure no cache issues.
 	 */
-	$version = '0.0.1';
+	$version = '0.0.2';
 
 	/**
 	 * Should we load minified files?
@@ -100,11 +100,11 @@ add_action( 'wp_enqueue_scripts', 'yoga_scripts' );
 /**
  * Registers an editor stylesheet for the theme.
  */
-function yoga_add_editor_styles() {
-    add_editor_style( 'editor-style.css' );
-		$GLOBALS['editor_styles'] = array(get_stylesheet_directory_uri() . 'editor_style.css');
-}
-add_action( 'admin_init', 'yoga_add_editor_styles' );
+// function yoga_add_editor_styles() {
+//     add_editor_style( 'editor-style.css' );
+// 		$GLOBALS['editor_styles'] = array(get_stylesheet_directory_uri() . 'editor_style.css');
+// }
+// add_action( 'admin_init', 'yoga_add_editor_styles' );
 
 
 

@@ -11,12 +11,15 @@
 	margin-left: $avatar-height / 2;
 }
 
+.ap-questions-inner {
+	display: flex;
+}
+
 // .best-answer .ap-q-metas {
 //   background-color: $color-voted-best;
 // }
 
 .ap-cell-inner {
-  margin-left: $shim;
 
   .status-trash & {
     border-color: #ef9a9a;
@@ -30,8 +33,6 @@
     border-color: #ffcc80;
   }
 }
-
-
 
 .ap-q-metas {
 	align-items: center;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Post to Post relations
  *
@@ -7,8 +8,8 @@
  * @package yoga
  */
 
-p2p_register_connection_type(
-    array(
+function yoga_connection_types() {
+    p2p_register_connection_type( array(
         'name' => 'muscles_to_poses',
         'from' => 'poses',
         'to' => 'muscles',
@@ -18,32 +19,33 @@ p2p_register_connection_type(
             'show' => 'any',
             'context' => 'side'
         )
-    )
-);
+    ));
 
-p2p_register_connection_type(
-    array(
-        'name' => 'question_to_poses',
+    p2p_register_connection_type(
+        array(
+            'name' => 'question_to_poses',
+            'from' => 'question',
+            'to' => 'poses',
+            'reciprocal' => true,
+            'title' => 'Question to Poses',
+            'admin_box' => array(
+                'show' => 'any',
+                'context' => 'side'
+            )
+        )
+    );
+
+    p2p_register_connection_type( array(
+        'name' => 'question_to_muscles',
         'from' => 'question',
-        'to' => 'poses',
+        'to' => 'muscles',
         'reciprocal' => true,
-        'title' => 'Question to Poses',
+        'title' => 'Question to Muscles',
         'admin_box' => array(
             'show' => 'any',
             'context' => 'side'
         )
-    )
-);
+    ) );
+}
 
-p2p_register_connection_type( array(
-    'name' => 'question_to_muscles',
-    'from' => 'question',
-    'to' => 'muscles',
-    'reciprocal' => true,
-    'title' => 'Question to Muscles',
-    'admin_box' => array(
-        'show' => 'any',
-        'context' => 'side'
-    )
-) );
-
+add_action( 'p2p_init', 'yoga_connection_types' );

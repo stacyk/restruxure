@@ -6,6 +6,7 @@
  *
  * @package yoga
  */
+add_action( 'init', 'yoga_register_my_cpts' );
 
 function yoga_register_my_cpts() {
 
@@ -70,10 +71,9 @@ function yoga_register_my_cpts() {
 		"query_var" => true,
 		"supports" => array( "title", "editor", "thumbnail" ),
 	);
-
 	register_post_type( "muscles", $args );
 }
-add_action( 'init', 'yoga_register_my_cpts' );
+
 
 // 	/**
 // 	 * Post Type: Issues.
@@ -106,6 +106,3 @@ add_action( 'init', 'yoga_register_my_cpts' );
 
 // 	register_post_type( "issues", $args );
 // }
-
-
-

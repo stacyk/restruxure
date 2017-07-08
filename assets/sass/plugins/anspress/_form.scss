@@ -388,14 +388,6 @@ label > input[type="checkbox"] {
     background-color: $error;
   }
 
-  .apicon-trashcan {
-    float: right;
-    color: #333;
-    border: solid 1px #ffc3bf;
-    padding: 0 8px;
-    border-radius: 2px;
-  }
-
   .insert-to-post {
     display: none;
     border: solid 1px #ddd;
@@ -435,6 +427,12 @@ label > input[type="checkbox"] {
   }
 }
 
+
+.apicon-trashcan {
+  float: right;
+  color: $error;
+  padding: $shim-quarter;
+}
 
 
 .ap-upload {

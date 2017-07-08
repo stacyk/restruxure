@@ -29,7 +29,7 @@
   <?php
     // Find connected pages
     $connected = new WP_Query( array(
-      'connected_type' => 'issues_to_poses',
+      'connected_type' => 'question_to_poses',
       'connected_items' => get_queried_object(),
       'nopaging' => true,
     ) );
@@ -54,7 +54,7 @@
   <?php
     // Find connected pages
     $connected = new WP_Query( array(
-      'connected_type' => 'muscles_to_issues',
+      'connected_type' => 'muscles_to_question',
       'connected_items' => get_queried_object(),
       'nopaging' => true,
     ) );

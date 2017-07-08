@@ -67,7 +67,7 @@
     <?php
     // Find connected pages
     $connected = new WP_Query( array(
-      'connected_type' => 'issues_to_poses',
+      'connected_type' => 'question_to_poses',
       'connected_items' => get_queried_object(),
       'nopaging' => true,
     ) );
@@ -75,7 +75,7 @@
     // Display connected pages
     if ( $connected->have_posts() ) :
     ?>
-    <h3>Issues related to this pose:</h3>
+    <h3>Questions related to this pose:</h3>
     <ul>
     <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>

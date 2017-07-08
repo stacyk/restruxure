@@ -116,6 +116,22 @@ function yoga_widgets_init() {
 }
 add_action( 'widgets_init', 'yoga_widgets_init' );
 
+
+function yoga_featured_q_images() {
+	add_post_type_support( 'question', 'thumbnail' );
+}
+add_action('init', 'yoga_featured_q_images');
+
+
+// add_filter('ap_question_cpt_args', 'yoga_ap_cpt_args');
+// add_filter('ap_answer_cpt_args', 'yoga_ap_cpt_args');
+// function yoga_ap_cpt_args($args) {
+// 	$args['exclude_from_search'] = false;
+
+// 	return $args;
+// }
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -165,3 +181,5 @@ require get_template_directory() . '/inc/customizer/customizer.php';
  * Posts to Posts relationship.
  */
 require get_template_directory() . '/inc/post-relation.php';
+
+
