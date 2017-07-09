@@ -15,6 +15,12 @@
 	display: flex;
 }
 
+.ap-questions-item {
+	border-bottom: 1px solid $color-border-light;
+	margin-bottom: $shim-double;
+	//padding-bottom: $shim;
+}
+
 // .best-answer .ap-q-metas {
 //   background-color: $color-voted-best;
 // }

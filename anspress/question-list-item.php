@@ -61,7 +61,7 @@ $clearfix_class = array( 'ap-questions-item clearfix' );
 					the_post_thumbnail();
 				endif; ?>
 
-				<div class="<questions></questions>-excerpt">
+				<div class="questions-excerpt">
 					<?php the_excerpt(); ?>
 				</div>
 			</div>

@@ -120,7 +120,7 @@ add_action( 'save_post',     'yoga_category_transient_flusher' );
  * Customize "Read More" string on <!-- more --> with the_content();
  */
 function yoga_content_more_link() {
-	return ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'yoga' ) . '...</a>';
+	return '<a class="more-link" href="' . get_permalink() . '">&hellip;' . esc_html__( 'Read More', 'yoga' ) . '</a>';
 }
 add_filter( 'the_content_more_link', 'yoga_content_more_link' );
 
@@ -128,9 +128,17 @@ add_filter( 'the_content_more_link', 'yoga_content_more_link' );
  * Customize the [...] on the_excerpt();
  *
  * @param string $more The current $more string.
- * @return string Replace with "Read More..."
+ * @return string Replace with "... Read More"
  */
 function yoga_excerpt_more( $more ) {
-	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', 'yoga' ) );
+
+	return sprintf( '<a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( '&hellip; Read more', 'yoga' ) );
 }
 add_filter( 'excerpt_more', 'yoga_excerpt_more' );
+
+
+//
+function yoga_excerpt_length( $length ) {
+	return 36;
+}
+add_filter( 'excerpt_length', 'yoga_excerpt_length', 999 );

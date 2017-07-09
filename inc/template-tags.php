@@ -168,26 +168,7 @@ function yoga_get_the_title( $args = array() ) {
 	return wp_trim_words( get_the_title( get_the_ID() ), $args['length'], $args['more'] );
 }
 
-/**
- * Limit the excerpt length.
- *
- * @param array $args Parameters include length and more.
- * @return string The shortened excerpt.
- */
-function yoga_get_the_excerpt( $args = array() ) {
 
-	// Set defaults.
-	$defaults = array(
-		'length' => 20,
-		'more'   => '...',
-	);
-
-	// Parse args.
-	$args = wp_parse_args( $args, $defaults );
-
-	// Trim the excerpt.
-	return wp_trim_words( get_the_excerpt(), absint( $args['length'] ), esc_html( $args['more'] ) );
-}
 
 /**
  * Echo an image, no matter what.
@@ -381,23 +362,6 @@ function yoga_get_social_network_links() {
 	return ob_get_clean();
 }
 
-
-/**
- * Display hero markup if needed
- *
- * @return hero markup
- */
-function yoga_get_hero() {
-	?>
-	<section class="hero-area image-as-background" style="background-image: url('<?php echo yoga_get_post_image_uri( 'large' ); ?>');" aria-labelledby="hero-title" aria-describedby="hero-description">
-		<div class="hero-content">
-			<h2 class="hero-title">Hero Title</h2>
-			<p class="hero-description">This is the description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si longus, levis; An eum discere ea mavis, quae cum plane perdidiceriti nihil sciat?</p>
-			<!--<a href="#" class="hero-button" title="Click to see more">Click Me</a>-->
-		</div>
-	</section>
-
-<?php }
 
 /**
  * Filter archive title?

@@ -29,9 +29,9 @@ $type-meta: $type-root - 0.425rem;
 $type-xsmall: $type-root - 0.325rem;
 $type-small: $type-root - 0.25rem;
 $type-medium: $type-root + 0.25rem;
-$type-h1: calc(#{$h4base}rem + 0.325vw);
-$type-h2: calc(#{$h4base}rem + 0.325vw);
-$type-h3: calc(#{$h4base}rem + 0.325vw);
+$type-h1: calc(#{$h1base}rem + 0.325vw);
+$type-h2: calc(#{$h2base}rem + 0.325vw);
+$type-h3: calc(#{$h3base}rem + 0.325vw);
 $type-h4: calc(#{$h4base}rem + 0.325vw);
 
 
