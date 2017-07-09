@@ -29,6 +29,7 @@
   .ap-filters {
     order: 2;
   }
+
 }
 
 .ap-questions-item {
@@ -55,19 +56,9 @@
   background-color: $moderation;
 }
 
-//   &.hentry {
-//     margin: 0;
-//     border-top: none;
-//   }
-
 .status-trash {
   background-color: $orange;
 }
-
-
-  // &-history {
-  //   margin-top: 5px;
-  // }
 
 .ap-questions-count {
   display: flex;
@@ -106,13 +97,6 @@
   }
 }
 
-  // .ap-post-type {
-  //   display: inline;
-  //   font-size: $type-meta;
-  //   margin: 0;
-  //   padding: 0 6px;
-  // }
-
 .ap-post-status {
   background-color: $color-needs-action-inverted;
   border-radius: $shim;
@@ -141,11 +125,6 @@
 .ap-subscribers-count {
   display: none;
 }
-
-// .ap-list-counts {
-//   display: inline-flex;
-// }
-
 
 .ap-filter-toggle {
   color: $color-text;
