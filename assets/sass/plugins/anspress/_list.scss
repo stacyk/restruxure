@@ -12,7 +12,23 @@
 }
 
 .ap-list-head {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: $gutter;
+
+  .pull-right {
+    order: 3;
+    margin: 0 0 0 auto;
+  }
+
+  .ap-search-form {
+    order: 1;
+    width: 100%;
+  }
+
+  .ap-filters {
+    order: 2;
+  }
 }
 
 .ap-questions-item {
