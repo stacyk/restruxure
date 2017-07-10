@@ -40,12 +40,6 @@
 		margin: 0 auto;
 		position: relative;
 	}
-
-	.home & {
-		flex-basis: 100%;
-		margin: $gutter auto;
-		position: relative;
-	}
 }
 
 // Site Title
@@ -60,11 +54,6 @@
 		fill: $color-background;
 		max-height: 29px;
     max-width: 210px;
-
-		.home & {
-			max-height: 41px;
-			max-width: 300px;
-		}
 	}
 }
 

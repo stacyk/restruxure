@@ -13,34 +13,12 @@
     margin: 0;
     width: auto;
   }
-
-  .home & {
-    box-shadow: $shim-quarter $shim-quarter $shim-half $shadow-dark;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include above('bp-small') {
-      width: auto;
-    }
-
-    @include above('bp-large') {
-      margin-bottom: $gutter;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50vw;
-    }
-  }
 }
 
 .search-field {
   flex: 1 1 auto;
   margin: 0;
 	padding: $shim-half $shim;
-
-  .home & {
-    font-size: $type-h4;
-    padding: $shim;
-  }
 
   .site-header & {
     background-color: hsla(320, 40%, 70%, .2);
