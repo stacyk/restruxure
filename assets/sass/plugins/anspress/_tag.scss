@@ -83,28 +83,17 @@
 }
 
 .ap-taxo-detail {
-  background: none repeat scroll 0 0 #f8f8f8;
-  -webkit-border-radius: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 5px;
-  -moz-background-clip: padding;
+  background-color: #f8f8f8;
   border-radius: 5px;
   background-clip: padding-box;
-  margin-bottom: 25px;
-  padding: $shim 20px;
+  margin-bottom: $gutter;
+  padding: $shim $gutter;
 
   .ap-tax-item-count {
-    background: #11a7db;
-    color: #ffffff;
+    color: $purple-dark;
     float: right;
-    font-size: 17px;
-    padding: 5px $shim-half;
-    -webkit-border-radius: 2px;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 2px;
-    -moz-background-clip: padding;
-    border-radius: 2px;
-    background-clip: padding-box;
+    font-size: $shim;
+    font-weight: bold;
   }
 
   .ap-taxo-description {

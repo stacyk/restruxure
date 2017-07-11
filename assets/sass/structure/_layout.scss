@@ -34,6 +34,10 @@ body {
 .site-footer {
   @include pad;
   display: flex;
+
+  @include below(bp-small) {
+    padding-bottom: $gutter;
+  }
 }
 
 .entry-content > *:not(img):not(video):not(table):not(iframe) {
