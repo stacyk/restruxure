@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+// Login
+//-------------------------------------------------------------*/
+
+
+body.login { 
+  background-color: #fff;
+}
+body.login div#login {}
+body.login div#login h1 {}
+
+body.login div#login h1 a { 
+  background-image: url("http://restruxure.com/wp-content/themes/yoga/assets/images/svg-icons/logo.svg");
+  background-size: 240px 100px;
+  text-decoration: none;
+  height: 100px;
+  witdth: 240px;
+}
+
+body.login div#login form#loginform {}
+body.login div#login form#loginform p {}
+body.login div#login form#loginform p label {}
+body.login div#login form#loginform input {}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.submit {}
+body.login div#login form#loginform p.submit input#wp-submit {}
+body.login div#login p#nav {}
+body.login div#login p#nav a {}
+body.login div#login p#backtoblog {}
+body.login div#login p#backtoblog a {}
+
+
+.wp-social-login-widget {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.wp-social-login-provider-list {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wp-social-login-provider-list a {
+  border-radius: 2px;
+  color: white;
+  margin: 1rem .5rem;
+  padding: 0.25rem 1rem;
+}
+
+.wp-social-login-provider-list a:visited {
+  color: white;
+}
+
+.wp-social-login-provider-list img {
+  display: none;
+}
+
+.wp-social-login-provider-twitter {
+  background-color: #00aced;
+}
+
+.wp-social-login-provider-twitter:hover {
+  background-color: #0087ba;
+}
+
+.wp-social-login-provider-google {
+  background-color: #dd4b39;
+}
+
+.wp-social-login-provider-google:hover {
+  background-color: #c23321;
+}
+
+.wp-social-login-provider-facebook {
+  background-color: #3b5998;
+}
+
+.wp-social-login-provider-facebook:hover {
+  background-color: #2d4373;
+}
+
+
+body.login div#login form#loginform p.submit input#wp-submit {
+  appearance: none;
+  background: #6b1a46;
+  border: none;
+  border-width: 0;
+  box-shadow: 0;
+  color: white;
+  font-size: 0.925rem;
+  font-weight: 300;
+  height: auto;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  transition: all 300ms;
+  border-width: 0;
+  border-radius: 2px;
+  transform: translateY(0);
+  text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover,
+body.login div#login form#loginform p.submit input#wp-submit:active,
+body.login div#login form#loginform p.submit input#wp-submit:focus {
+  background: #48878e;
+  background-image: linear-gradient(to bottom, #48878e 0, #37676d 100%);
+}
