@@ -26,10 +26,3 @@ Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 @import "views/index";
 @import "widgets/index";
 
-
-// Move to partial
-.apsl-login-networks {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}

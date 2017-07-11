@@ -1,35 +1,42 @@
 .ap-similar-questions {
-  border: 1px solid #e7e7e7;
+  border: 1px solid $color-border-light;
   border-radius: 2px;
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: $shim;
   max-height: 200px;
   overflow-x: auto;
 
   .ap-sqitem {
-    border-bottom: 1px solid #eee;
-    color: #5e5e5e;
-    display: block;
-    margin: 0 10px;
-    padding: 10px 5px;
+    border-bottom: 1px solid $color-border-light;
+    color: $color-link;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: $shim-half $shim;
 
     &:last-child {
       border-bottom: none;
     }
 
     &:hover {
-      background: #fcfcfc;
+      background-color: $color-border-light;
+      color: $color-link-hover;
     }
   }
 
   .acount {
-    float: right;
+    order: 2;
   }
 
   .ap-title {
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
     font-size: $type-small;
+    font-weight: bold;
+    order: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
