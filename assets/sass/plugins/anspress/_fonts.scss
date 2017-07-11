@@ -77,8 +77,8 @@ $apicon-board: "\e938";
 
 @font-face {
   font-family: 'anspress';
-  src: url('# {$icomoon-font-path}/anspress.eot?8lwej9');
-  src: url('# {$icomoon-font-path}/anspress.eot?8lwej9#iefix') format('embedded-opentype'), url('# {$icomoon-font-path}/anspress.ttf?8lwej9') format('truetype'), url('# {$icomoon-font-path}/anspress.woff?8lwej9') format('woff'), url('# {$icomoon-font-path}/anspress.svg?8lwej9#anspress') format('svg');
+  src: url('#{$icomoon-font-path}/anspress.eot?8lwej9');
+  src: url('#{$icomoon-font-path}/anspress.eot?8lwej9#iefix') format('embedded-opentype'), url('#{$icomoon-font-path}/anspress.ttf?8lwej9') format('truetype'), url('#{$icomoon-font-path}/anspress.woff?8lwej9') format('woff'), url('#{$icomoon-font-path}/anspress.svg?8lwej9#anspress') format('svg');
   font-weight: normal;
   font-style: normal;
 }
