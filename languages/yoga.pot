@@ -223,11 +223,7 @@ msgstr ""
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: inc/template-tags.php:312
-msgid "Close menu"
-msgstr ""
-
-#: inc/template-tags.php:353, inc/template-tags.php:354
+#: inc/template-tags.php:352, inc/template-tags.php:353
 msgid "Link to %s"
 msgstr ""
 
