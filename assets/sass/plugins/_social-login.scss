@@ -16,8 +16,14 @@
 }
 
 .wp-social-login-provider-list a {
+  color: $color-background;
+  font-family: $font-sans;
   margin: $shim;
   padding: $shim-quarter $shim;
+
+  &:visited {
+    color: $color-background;
+  }
 }
 
 .wp-social-login-provider-list img {
@@ -28,7 +34,6 @@
 
 .wp-social-login-provider-twitter {
   background-color: $color-twitter;
-  color: $color-background;
 
   &:hover {
     background-color: darken($color-twitter, 10%);
@@ -37,7 +42,6 @@
 
 .wp-social-login-provider-google {
   background-color: $color-googleplus;
-  color: $color-background;
 
   &:hover {
     background-color: darken($color-googleplus, 10%);
@@ -46,7 +50,6 @@
 
 .wp-social-login-provider-facebook {
   background-color: $color-facebook;
-  color: $color-background;
 
   &:hover {
     background-color: darken($color-facebook, 10%);
