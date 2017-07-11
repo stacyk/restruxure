@@ -2,8 +2,54 @@
 // ------------
 
 
-.apsl-login-networks {
+.wp-social-login-widget {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
+
+.wp-social-login-connect-with {}
+
+.wp-social-login-provider-list {
+  align-items: center;
+  display: flex;
+}
+
+.wp-social-login-provider-list a {
+  margin: $shim;
+  padding: $shim-quarter $shim;
+}
+
+.wp-social-login-provider-list img {
+  display: none;
+}
+
+.wsl_connect_with_provider {}
+
+.wp-social-login-provider-twitter {
+  background-color: $color-twitter;
+  color: $color-background;
+
+  &:hover {
+    background-color: darken($color-twitter, 10%);
+  }
+}
+
+.wp-social-login-provider-google {
+  background-color: $color-googleplus;
+  color: $color-background;
+
+  &:hover {
+    background-color: darken($color-googleplus, 10%);
+  }
+}
+
+.wp-social-login-provider-facebook {
+  background-color: $color-facebook;
+  color: $color-background;
+
+  &:hover {
+    background-color: darken($color-facebook, 10%);
+  }
+}
+
