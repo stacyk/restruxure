@@ -39,7 +39,7 @@
 }
 
 .ap-q-metas {
-	align-items: center;
+	align-items: baseline;
 	border-bottom: solid 1px $color-border;
 	display: flex;
 	flex-wrap: wrap;
@@ -50,12 +50,19 @@
 	padding: $shim 0;
 
 	> .ap-posted {
-		border-left: solid 1px $color-border;
-		border-right: solid 1px $color-border;
-		margin-left: $shim;
-		margin-right: $shim;
-		padding-left: $shim;
-		padding-right: $shim;
+		margin-left: $shim-half;
+		margin-right: $shim-half;
+		padding-left: $shim-half;
+		padding-right: $shim-half;
+		
+		@include above(bp-small) {
+			border-left: solid 1px $color-border;
+			border-right: solid 1px $color-border;
+			margin-left: $shim;
+			margin-right: $shim;
+			padding-left: $shim;
+			padding-right: $shim;
+		}
 	}
 }
 

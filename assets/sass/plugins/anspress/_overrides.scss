@@ -67,11 +67,17 @@
 }
 
 .ap-user-reputation {
+  align-items: center;
   background-color: $color-link;
   border-radius: $shim;
+  display: flex;
+  justify-content: center;
+  margin-bottom: $shim-half;
   margin-left: $shim-quarter;
   margin-right: $shim-quarter;
-  padding: $shim-quarter $shim-half;
+  padding: 4px $shim-half 2px;
+  min-height: 30px;
+  min-width: 30px;
 
   &:link,
   &:visited {
