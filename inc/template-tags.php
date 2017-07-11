@@ -309,7 +309,6 @@ function yoga_get_mobile_navigation_menu() {
 	?>
 
 	<nav id="mobile-menu" class="mobile-nav-menu">
-		<!--<button class="close-mobile-menu"><span class="screen-reader-text"><?php echo esc_html_e( 'Close menu', 'yoga' ); ?></span><?php echo yoga_get_svg( array( 'icon' => 'close' ) ); // WPCS: XSS ok. ?></button>-->
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => $mobile_menu,
