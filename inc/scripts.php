@@ -64,7 +64,7 @@ function yoga_scripts() {
 	/**
 	 * If we are debugging the site, use a unique version every page load so as to ensure no cache issues.
 	 */
-	$version = '0.0.1';
+	$version = '0.0.2';
 
 	/**
 	 * Should we load minified files?
@@ -112,3 +112,10 @@ function yoga_include_svg_icons() {
 	}
 }
 add_action( 'wp_footer', 'yoga_include_svg_icons', 9999 );
+
+
+// Custom login page styles
+function my_login_stylesheet() {
+  wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/css/style_login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );

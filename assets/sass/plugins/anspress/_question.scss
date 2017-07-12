@@ -9,6 +9,10 @@
 .ap-cell {
 	flex: 1 1 auto;
 	margin-left: $avatar-height / 2;
+
+	.ap-page-ask & {
+		margin-left: 0;
+	}
 }
 
 .ap-questions-inner {
@@ -18,15 +22,9 @@
 .ap-questions-item {
 	border-bottom: 1px solid $color-border-light;
 	margin-bottom: $shim-double;
-	//padding-bottom: $shim;
 }
 
-// .best-answer .ap-q-metas {
-//   background-color: $color-voted-best;
-// }
-
 .ap-cell-inner {
-
   .status-trash & {
     border-color: #ef9a9a;
   }
@@ -41,20 +39,30 @@
 }
 
 .ap-q-metas {
-	align-items: center;
+	align-items: baseline;
 	border-bottom: solid 1px $color-border;
 	display: flex;
+	flex-wrap: wrap;
 	font-family: $font-sans;
 	font-size: $type-meta;
 	margin-bottom: $shim;
-	max-height: $avatar-height;
+	//max-height: $avatar-height;
 	padding: $shim 0;
 
-	> .ap-post-history,
 	> .ap-posted {
-		margin-left: $shim;
-		padding-left: $shim;
-		border-left: solid 1px $color-border;
+		margin-left: $shim-half;
+		margin-right: $shim-half;
+		padding-left: $shim-half;
+		padding-right: $shim-half;
+		
+		@include above(bp-small) {
+			border-left: solid 1px $color-border;
+			border-right: solid 1px $color-border;
+			margin-left: $shim;
+			margin-right: $shim;
+			padding-left: $shim;
+			padding-right: $shim;
+		}
 	}
 }
 
@@ -155,23 +163,8 @@
 
 .ap-post-tags {
 	li a {
-		// display: table;
-		// font-size: $type-xsmall;
-		// font-weight: bold;
-		// margin-bottom: 10px;
-		// padding: 2px 10px;
-		// text-decoration: none;
-		// color: $color-background;
-		// border-radius: 10px;
-		//background: $blue-color;
-
 		.tax-count {
 			font-style: normal;
-		}
-
-		&:hover {
-			//color: $default-color;
-			//border-color: $main-color;
 		}
 	}
 

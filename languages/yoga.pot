@@ -56,12 +56,28 @@ msgstr ""
 msgid "Sidebar 1"
 msgstr ""
 
+#: functions.php:99
+msgid "Sidebar Archive"
+msgstr ""
+
 #: functions.php:108
 msgid "Widget area for %s"
 msgstr ""
 
 #: header.php:26
 msgid "Skip to content"
+msgstr ""
+
+#: header.php:42, header.php:45
+msgid "Restruxure"
+msgstr ""
+
+#: page-home.php:2
+msgid "home"
+msgstr ""
+
+#: page-narrow.php:2
+msgid "Narrow content"
 msgstr ""
 
 #: search.php:20
@@ -97,25 +113,50 @@ msgstr ""
 msgid "Please provide a valid hex color value for text_color"
 msgstr ""
 
-#: inc/extras.php:128, inc/extras.php:199
+#: inc/extras.php:128
 msgid "WebDevStudios Placeholder Image"
+msgstr ""
+
+#: inc/extras.php:199
+msgid "Placeholder Image"
 msgstr ""
 
 #: inc/hooks.php:123
 msgid "Read More"
 msgstr ""
 
-#: inc/hooks.php:134
-msgid "Read more..."
+#: inc/hooks.php:135
+msgid "&hellip; Read more"
 msgstr ""
 
-#: inc/scripts.php:22
-msgctxt "Roboto font: on or off"
-msgid "on"
+#: inc/post-types.php:18, inc/post-types.php:23
+msgid "Poses"
+msgstr ""
+
+#: inc/post-types.php:19
+msgid "Pose"
+msgstr ""
+
+#: inc/post-types.php:51, inc/post-types.php:56
+msgid "Muscles"
+msgstr ""
+
+#: inc/post-types.php:52
+msgid "Muscle"
 msgstr ""
 
 #: inc/scripts.php:23
-msgctxt "Open Sans font: on or off"
+msgctxt "Nunito font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/scripts.php:24
+msgctxt "Martel font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/scripts.php:25
+msgctxt "Rasa font: on or off"
 msgid "on"
 msgstr ""
 
@@ -129,6 +170,7 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
+#. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:50, inc/template-tags.php:56
 msgid ", "
 msgstr ""
@@ -153,7 +195,7 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:71, template-parts/content-page.php:34
+#: inc/template-tags.php:71, template-parts/content-page.php:38
 msgid "Edit %s"
 msgstr ""
 
@@ -165,28 +207,32 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: inc/template-tags.php:291
+#: inc/template-tags.php:272
 msgid "Share This"
 msgstr ""
 
-#: inc/template-tags.php:295, inc/template-tags.php:296
+#: inc/template-tags.php:276, inc/template-tags.php:277
 msgid "Share on Twitter"
 msgstr ""
 
-#: inc/template-tags.php:301, inc/template-tags.php:302
+#: inc/template-tags.php:282, inc/template-tags.php:283
 msgid "Share on Facebook"
 msgstr ""
 
-#: inc/template-tags.php:307, inc/template-tags.php:308
+#: inc/template-tags.php:288, inc/template-tags.php:289
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: inc/template-tags.php:331
-msgid "Close menu"
+#: inc/template-tags.php:352, inc/template-tags.php:353
+msgid "Link to %s"
 msgstr ""
 
-#: inc/template-tags.php:372, inc/template-tags.php:373
-msgid "Link to %s"
+#: template-parts/content-issues.php:83, template-parts/content-muscles.php:32, template-parts/content-poses.php:38, template-parts/content.php:32
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content-issues.php:88, template-parts/content-page.php:26, template-parts/content.php:37
+msgid "Pages:"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -203,14 +249,6 @@ msgstr ""
 
 #: template-parts/content-none.php:31
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:22, template-parts/content.php:37
-msgid "Pages:"
-msgstr ""
-
-#: template-parts/content.php:32
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/customizer/panels.php:18

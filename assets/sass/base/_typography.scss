@@ -21,40 +21,11 @@ a {
   text-decoration: none;
 }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-// 	clear: both;
-// 	line-height: 1.2;
-// 	margin: 0 0 0.5rem;
-// 	padding: 1.5rem 0 0;
-// }
-
-// h1:first-child,
-// h2:first-child,
-// h3:first-child,
-// h4:first-child,
-// h5:first-child,
-// h6:first-child {
-// 	padding-top: 0;
-// }
-
 
 h1,
 .h1 {
   font-family: $font-headlines;
   font-size: $type-h1;
-//  font-family: "bookmania", Verdana;
-  font-kerning: normal;
-  font-variant-ligatures: common-ligatures, contextual;
-  font-variant-swashes: swashes;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
-  font-feature-settings: "kern", "liga", "clig", "calt", "swsh";
 }
 
 h2,
