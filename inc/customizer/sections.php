@@ -20,6 +20,16 @@ function yoga_customize_sections( $wp_customize ) {
 		)
 	);
 
+	// Register social network section.
+	$wp_customize->add_section(
+		'yoga_social_links_section',
+		array(
+			'title'    => esc_html__( 'Social Networks', 'yoga' ),
+			'priority' => 50,
+			'panel'    => 'site-options',
+		)
+	);
+
 	// Register a footer section.
 	$wp_customize->add_section(
 		'yoga_footer_section',

@@ -61,6 +61,7 @@ function yoga_live_preview_support( $wp_customize ) {
 		'blogdescription',
 		'header_textcolor',
 		'background_image',
+		'social_icons',
 		'yoga_copyright_text',
 	);
 
