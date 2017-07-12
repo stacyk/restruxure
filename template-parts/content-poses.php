@@ -11,11 +11,6 @@
 
 <article <?php post_class(); ?>>
   <header class="entry-header">
-
-	<section class="hero-area image-as-background" style="background-image: url('<?php echo yoga_get_post_image_uri( 'large' ); ?>');" aria-labelledby="hero-title" aria-describedby="hero-description">
-	</section>
-
-
     <?php if ( is_single() ) :
       the_title( '<h1 class="entry-title">', '</h1>' );
     else :
