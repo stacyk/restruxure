@@ -25,8 +25,7 @@ get_header(); ?>
 
 				<!-- Display Filters -->
 				<div class="filter-archive">
-					<h4>Narrow by pose catego
-					ry:</h4>
+					<h4>Narrow by pose category:</h4>
 					<?php echo facetwp_display( 'facet', 'categories' ); ?>
 				</div>
 
