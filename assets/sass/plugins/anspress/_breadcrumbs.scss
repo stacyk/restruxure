@@ -1,17 +1,17 @@
 //
-// Buttons style
+// Breadcrumbs
 // --------------------------------------------------
 
-#anspress .ap-breadcrumbs {
+.ap-breadcrumbs {
   list-style: none;
   padding: 0;
-  margin: 0 0 15px;
+  margin: 0 0 $shim;
 
   > li {
     display: inline-block;
     margin-bottom: 0;
     margin-left: 0;
-    margin-right: 5px;
+    margin-right: $shim-quarter;
 
     i {
       color: #aaa;
@@ -21,10 +21,6 @@
 
     .apicon-home {
       margin: 0;
-    }
-
-    a {
-      color: $link-color;
     }
   }
 }
