@@ -7,10 +7,20 @@
 //--------------------------------------------------------------
 
 // Entry Title
-.entry-title {
+@mixin pagetitle {
 	font-family: $font-headlines;
-	font-size: calc(2.25rem + 0.25vw);
+	font-size: $type-h1;//calc(2.25rem + 0.25vw);
 	line-height: 1.3;
+}
+
+@mixin subtitle {
+	font-family: $font-headlines;
+	font-size: $type-h2;
+	line-height: 1.3;
+}
+
+.entry-title {
+	@include pagetitle;
 }
 
 // Sticy and Comments Link
