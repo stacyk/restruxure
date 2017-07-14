@@ -1,17 +1,16 @@
 //
 // widget styles
 // --------------------------------------------------
-#anspress .ap-widget-title {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 5px;
+.ap-widget-title {
+  font-size: $shim;
+  margin-bottom: $shim-quarter;
   margin-top: 0;
 }
 
-#anspress .ap-user-widget {
-  border: 1px solid #eee;
+.ap-user-widget {
+  border: 1px solid $color-border-light;
   border-radius: 4px;
-  padding: 5px;
+  padding: $shim-quarter;
 
   .ap-user-cover {
     display: block;
@@ -22,7 +21,7 @@
 
   .ap-user-cover-img {
     background-position: center center;
-    border-radius: 3px;
+    border-radius: $border-radius;
   }
 
   .ap-user-head .ap-user-avatar {
@@ -30,13 +29,13 @@
   }
 
   .ap-user-head .ap-user-name {
-    font-size: 16px;
-    margin-top: 5px;
+    font-size: $shim;
+    margin-top: $shim-quarter;
   }
 
   .ap-user-head {
     border-bottom: medium none;
-    margin-bottom: 10px;
+    margin-bottom: $shim-half;
   }
 
   .ap-user-widget-links {
@@ -51,23 +50,23 @@
     }
 
     a {
-      border-top: 1px solid #f8f8f8;
+      border-top: 1px solid $color-border-light;
       display: block;
       font-size: $type-small;
-      padding: 10px 15px;
+      padding: $shim-half $shim;
 
       &:before {
-        margin-right: 10px;
+        margin-right: $shim-half;
       }
 
       .counter {
         background: none repeat scroll 0 0 #ff3737;
         border-radius: 2px;
         color: $color-background;
-        font-size: 10px;
-        margin-left: 5px;
+        font-size: $shim-half;
+        margin-left: $shim-quarter;
         padding: 1px 2px;
-        width: 13px;
+        width: 3px;
         display: inline-block;
         text-align: center;
       }
@@ -75,51 +74,52 @@
   }
 }
 
-.widget .ap-stats-widget,
-.ap-widget-pos .ap-stats-widget {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: solid 1px #ddd;
-  border-radius: 3px;
-
-  li {
-    border-bottom: 1px solid #eee;
-    font-size: $type-xsmall;
-    list-style: outside none none;
+.widget,
+.ap-widget-pos {
+  .ap-stats-widget {
+    padding: 0;
     margin: 0;
-    padding: 15px;
+    list-style: none;
+    border: solid 1px $color-border-light;
+    border-radius: $border-radius;
 
-    .stat-value {
-      color: #888;
-      float: right;
-    }
-
-    .stat-label {
+    li {
+      border-bottom: 1px solid $color-border-light;
       font-size: $type-xsmall;
-      font-weight: 600;
-    }
+      list-style: outside none none;
+      margin: 0;
+      padding: $shim;
 
-    .stat-label:before {
-      color: #888;
-      display: inline-block;
-      width: 25px;
-    }
+      .stat-value {
+        color: $color-text-light;
+        float: right;
+      }
 
-    &:last-child {
-      border-bottom: none;
+      .stat-label {
+        font-size: $type-xsmall;
+        font-weight: 600;
+
+        &:before {
+          color: $color-text-light;
+          display: inline-block;
+          width: 25px;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 }
 
-.widget .ap-question-subscribers,
-.ap-widget-pos .ap-question-subscribers {
-  &-inner {
+.widget,
+.ap-widget-pos {
+  .ap-question-subscribers-inner {
     margin: -5px;
   }
 
   a {
-    margin: 5px;
     display: inline-block;
 
     > img {
@@ -130,18 +130,18 @@
 }
 
 .ap-widget-pos {
-  margin-bottom: 25px;
+  margin-bottom: $gutter;
 
   .ap-rq-widget {
     .ap-rq-post {
-      border-bottom: 1px solid #f7f7f7;
-      color: #888;
+      border-bottom: 1px solid $color-border-light;
+      color: $color-text-light;
       display: block;
       margin-bottom: 0;
-      padding: 10px 0;
+      padding: $shim-half 0;
 
       a {
-        margin-bottom: 5px;
+        margin-bottom: $shim-quarter;
         display: block;
       }
     }
@@ -149,21 +149,21 @@
 
   .ap-questions-widget {
     .ap-question-item {
-      border-bottom: 1px solid #f8f8f8;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
+      border-bottom: 1px solid $color-border-light;
+      margin-bottom: $shim-half;
+      padding-bottom: $shim-half;
     }
 
     .ap-question-title {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: $shim-quarter;
     }
   }
 
   .ap-followers-widget {
     border: 1px solid #eee;
     border-radius: 2px;
-    padding: 10px;
+    padding: $shim-half;
 
     ul {
       margin: -5px -5px 0;
@@ -175,7 +175,7 @@
 
       a {
         display: block;
-        padding: 5px;
+        padding: $shim-quarter;
       }
     }
 
@@ -196,8 +196,8 @@
   &-summary {
     border: 2px solid #eee;
     border-radius: 2px;
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: $shim;
+    padding: $shim-half;
     text-align: center;
   }
 
@@ -205,7 +205,7 @@
     border-radius: 50%;
     box-shadow: none;
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto $shim-half;
   }
 
   &-name {
@@ -214,15 +214,15 @@
   }
 
   &-status {
-    color: #888;
+    color: $color-text-light;
     font-size: $type-xsmall;
-    margin-top: 5px;
+    margin-top: $shim-quarter;
 
     > span {
       display: inline-block;
       font-weight: bold;
       margin-bottom: 2px;
-      padding: 0 4px;
+      padding: 0 4px ;
       white-space: nowrap;
     }
   }
