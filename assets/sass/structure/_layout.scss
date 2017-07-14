@@ -5,42 +5,66 @@
 // Structure.
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.wrap {
-  @include pad;
-  margin-left: auto;
-  margin-right: auto;
+@mixin wrap {
+	@include pad;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: flex-start;
+	min-height: 97vh;
 }
 
 .site-header {
-  @include pad;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+	@include pad;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+  flex: 0 0 auto;
 
-  @include above(bp-small) {
-    justify-content: space-between;
-  }
+	@include above(bp-small) {
+		justify-content: space-between;
+	}
+}
+
+.site-content {
+  @include wrap;
+  align-items: stretch;
+  display: flex;
+  flex: 1 0 auto;
+	height: 100%;
+	width: 100%;
+}
+
+.content-area {
+	width: 100%;
 }
 
 .site-footer {
-  @include pad;
+	@include pad;
   display: flex;
+  flex: 0 0 auto;
 
-  @include below(bp-small) {
-    padding-bottom: $gutter;
-  }
+	@include below(bp-small) {
+		padding-bottom: $gutter;
+	}
 }
 
 .entry-content > *:not(img):not(video):not(table):not(iframe) {
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
