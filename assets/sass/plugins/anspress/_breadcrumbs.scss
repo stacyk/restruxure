@@ -3,19 +3,20 @@
 // --------------------------------------------------
 
 .ap-breadcrumbs {
+  align-content: center;
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0 0 $shim;
 
   > li {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-left: 0;
     margin-right: $shim-quarter;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     i {
-      color: #aaa;
-      display: block;
+      color: $color-text-light;
       font-size: 10px;
     }
 
