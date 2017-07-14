@@ -3,36 +3,34 @@
 // --------------------------------------------------
 
 .ap-user-bio {
+  display: flex;
   margin-bottom: $shim;
   min-height: 122px;
   padding: $shim 0;
 }
 
+$avatar-large: $avatar-height * 1.5;
+
 .ap-user-avatar {
-  margin-right: 20px;
+  border-radius: $avatar-large;
+  display: flex;
+	flex: 0 0 auto;
+	height: $avatar-large;
+  margin-right: $shim;
+  width: $avatar-large;
 }
 
 .ap-user-name {
-  font-size: 22px;
-  font-weight: 600;
+  align-content: baseline;
+  display: flex;
+  font-size: $type-h3;
 
   .ap-user-reputation {
+    border-radius: $avatar-height;
     font-size: $type-small;
-    padding: 3px 7px;
-    margin-left: 10px;
-    vertical-align: middle;
+    margin-bottom: $shim-half;
+    min-height: 38px;
+    min-width: 38px;
+    padding: 0 $shim-half;
   }
 }
-
-
-
-// .ap-user-reputation {
-//   margin-left: $shim-quarter;
-//   background: #ffc107;
-//   padding: 1px 4px;
-//   font-size: $type-meta;
-//   border-radius: 2px;
-//   font-weight: bold;
-//   margin-right: $shim-quarter;
-//   vertical-align: text-bottom;
-// }
