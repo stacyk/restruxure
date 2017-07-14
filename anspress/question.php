@@ -82,12 +82,12 @@
 							<div class="ap-post-footer clearfix">								
 								<?php ap_post_actions_buttons() ?>
 								<?php do_action( 'ap_post_footer' ); ?>
-								<?php echo ap_comment_btn_html(); ?>
+								<?php //echo ap_comment_btn_html(); ?>
 							</div>
 						</div>
 
 						<!-- End ap-content-inner -->
-						<?php ap_the_comments(); ?>
+						<?php //ap_the_comments(); ?>
 					</div>
 				</div>
 			</div>
