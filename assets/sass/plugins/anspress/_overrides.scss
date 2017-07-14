@@ -3,18 +3,15 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  @include above(bp-medium) {
-    grid-template-columns: 3fr 1fr;
-  }
-}
-
-.ap-question-lr {
-  display: flex;
-
   @include below(bp-medium) {
     flex-direction: column;
   }
+
+  @include above(bp-medium) {
+    grid-template-columns: minmax(300px, 1000px) minmax(0, 300px);
+  }
 }
+
 
 .ap-question-right {
   @include above(bp-medium) {
@@ -27,7 +24,6 @@
     flex: 1 1 auto;
   }
 }
-
 
 .ap-questions-head {
   display: grid;
@@ -55,15 +51,6 @@
 
 .ap-questions-vcount {
   display: none;
-}
-
-// Titles
-.entry-title,
-.ap-questions-title {
-  font-family: $font-main;
-  font-size: $type-h3;
-  font-weight: 300;
-  line-height: 1.2;
 }
 
 .ap-user-reputation {
