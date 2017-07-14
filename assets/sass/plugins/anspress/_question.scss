@@ -38,6 +38,11 @@
   }
 }
 
+
+.ap-questions-title {
+	@include subtitle;
+}
+
 .ap-q-metas {
 	align-items: baseline;
 	border-bottom: solid 1px $color-border;
@@ -54,7 +59,7 @@
 		margin-right: $shim-half;
 		padding-left: $shim-half;
 		padding-right: $shim-half;
-		
+
 		@include above(bp-small) {
 			border-left: solid 1px $color-border;
 			border-right: solid 1px $color-border;
@@ -63,6 +68,13 @@
 			padding-left: $shim;
 			padding-right: $shim;
 		}
+	}
+}
+
+.ap-display-meta-item {
+	&.active,
+	&.views {
+		display: none;
 	}
 }
 
@@ -137,6 +149,10 @@
 		margin-bottom: -20px;
 		text-transform: uppercase;
 	}
+}
+
+.ap-attachments {
+  display: none;
 }
 
 .ap-post-footer {
@@ -244,16 +260,6 @@
 }
 
 .ap-question-info {
-	.ap-widget-title {
-		display: block;
-		font-size: $type-meta;
-		margin: 0 0 5px;
-		padding: 0 0 8px;
-		text-transform: uppercase;
-		color: #333;
-		border-bottom: 1px solid $color-border;
-	}
-
 	.question-tags {
 		margin: 0;
 		padding: 0;
