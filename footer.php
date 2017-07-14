@@ -14,14 +14,10 @@
 	</div><!-- #content -->
 
 	<footer class="site-footer">
-		<div class="wrap">
-
-			<div class="site-info">
-				<?php echo yoga_get_social_network_links(); ?>
-				<?php echo wp_kses_post( yoga_get_copyright_text() ); ?>
-			</div>
-
-		</div><!-- .wrap -->
+		<div class="site-info">
+			<?php echo yoga_get_social_network_links(); ?>
+			<?php echo wp_kses_post( yoga_get_copyright_text() ); ?>
+		</div>
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 

@@ -15,7 +15,6 @@
 get_header();
 ?>
 
-	<div class="wrap">
 		<div class="primary content-area">
 			<main id="main" class="site-main facetwp-template" role="main">
 
@@ -32,6 +31,5 @@ get_header();
 
 		<?php get_sidebar(); ?>
 
-	</div><!-- .wrap -->
 
 <?php get_footer(); ?>
