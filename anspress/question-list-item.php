@@ -23,10 +23,9 @@ $clearfix_class = array( 'ap-questions-item clearfix' );
 					<a href="<?php echo ap_user_link(); ?>">
 						<?php ap_author_avatar( ap_opt( 'avatar_size_list' ) ); ?>
 					</a>
-				</div>
+				</div><!-- end ap-avatar -->
 
 				<div class="questions-title-area">
-
 					<a class="ap-questions-hyperlink ap-questions-title" itemprop="url" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
 						<span itemprop="title">
 							<?php ap_question_status(); ?>
@@ -34,28 +33,23 @@ $clearfix_class = array( 'ap-questions-item clearfix' );
 						</span>
 					</a>
 
-					<div class="ap-display-question-meta">
-						<?php //echo ap_question_metas(); ?>
-
+					<div class="ap-list-metas">
 						<div class="ap-list-counts">
-							<!-- Votes count -->
-							<?php if ( ! ap_opt( 'disable_voting_on_question' ) ) : ?>
-								<!--<span class="ap-questions-count ap-questions-vcount">
-									<span><?php ap_votes_net(); ?></span>
-									<?php _e( 'Votes', 'anspress-question-answer' ); ?>
-								</span>-->
-							<?php endif; ?>
-
 							<!-- Answer Count -->
 							<div class="ap-questions-count ap-questions-acount">
 								<span><?php ap_answers_count(); ?></span>
 								<?php _e( 'Answers', 'anspress-question-answer' ); ?>
 							</div>
-
 						</div><!-- end ap-list-counts -->
-					</div><!-- end ap-display-question-meta -->
-				</div>
-			</div>
+
+						<!-- <span class="ap-asked-by">
+							<?php echo '<span class="meta">Asked by</span> '; ?>
+							<?php echo ap_user_display_name( [ 'html' => true ] ); ?>
+						</span> -->
+					</div><!-- end ap-q-metas -->
+				</div><!-- end questions-title-area -->
+			</div><!-- end ap-questions-head -->
+
 			<div class="ap-questions-content">
 				<?php if (has_post_thumbnail()) :
 					the_post_thumbnail();
@@ -63,8 +57,8 @@ $clearfix_class = array( 'ap-questions-item clearfix' );
 
 				<div class="questions-excerpt">
 					<?php the_excerpt(); ?>
-				</div>
-			</div>
+				</div><!-- end ap-questions-excerpt -->
+			</div><!-- end ap-questions-content -->
 		</div><!-- end ap-questions-summery -->
 	</div><!-- end ap-questions-inner -->
 </div><!-- list item -->

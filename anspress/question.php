@@ -13,12 +13,11 @@
 
 	<div class="ap-question-lr ap-row" itemtype="https://schema.org/Question" itemscope="">
 		<div class="ap-q-left <?php echo (is_active_sidebar( 'ap-qsidebar' ) ) ? 'ap-col-8' : 'ap-col-12'; ?>">
-			<div class="ap-question-meta clearfix">
-				<?php echo ap_question_metas(); // xss ok. ?>
-			</div>
+
 
 			<div id="post-<?php the_ID(); ?>" ap="question" ap-id="<?php the_ID(); ?>" <?php post_class() ?>>
 				<div id="question" role="main" class="ap-content">
+					<?php echo ap_post_status_badge( ); // xss okay.	?>
 					<div class="ap-single-vote"><?php ap_vote_btn(); ?></div>
 					<?php
 						/**
@@ -46,11 +45,11 @@
 												__( 'Posted %s', 'anspress-question-answer' ),
 												ap_human_time( ap_get_time( get_the_ID(), 'U' ) )
 											)
-										);
-									?>
+										); ?>
 								</a>
-								<?php ap_recent_post_activity(); ?>
-								<?php echo ap_post_status_badge( ); // xss okay.	?>
+
+								<?php echo ap_question_metas(); // xss ok. ?>
+								<?php //ap_recent_post_activity(); ?>
 							</div>
 
 							<!-- Start ap-content-inner -->
@@ -79,7 +78,7 @@
 
 							</div>
 
-							<div class="ap-post-footer clearfix">								
+							<div class="ap-post-footer clearfix">
 								<?php ap_post_actions_buttons() ?>
 								<?php do_action( 'ap_post_footer' ); ?>
 								<?php //echo ap_comment_btn_html(); ?>
