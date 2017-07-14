@@ -50,6 +50,16 @@
   }
 }
 
+.ap-asked-by {
+  display: flex;
+}
+
+.ap-display-question-meta {
+  align-items: center;
+  display: flex;
+
+}
+
 .question-excerpt,
 .questions-excerpt {
   max-height: 100px;
