@@ -25,16 +25,18 @@ body {
 	height: 100%;
 	justify-content: flex-start;
 	min-height: 97vh;
+	min-height: 100%;
 }
 
 .site-header {
 	@include pad;
 	display: flex;
+	flex: 0 0 auto;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	position: relative;
 	text-align: center;
-  flex: 0 0 auto;
 
 	@include above(bp-small) {
 		justify-content: space-between;
@@ -45,7 +47,8 @@ body {
   @include wrap;
   align-items: stretch;
   display: flex;
-  flex: 1 0 auto;
+	flex: 1 0 auto;
+	flex: 1 0 100%;
 	height: 100%;
 	width: 100%;
 }

@@ -1,37 +1,36 @@
-#anspress {
-  .best-answer .ap-bpsingle,
-  .answer-selected .ap-bpsingle {
-    border-color: #cce4c8;
-  }
+.best-answer .ap-bpsingle,
+.answer-selected .ap-bpsingle {
+  border-color: $solved;
+}
 
   .ap-bpsingle {
-    border-radius: 2px;
-    margin-bottom: 30px;
-    border: solid 1px #ddd;
+    border: solid 1px $color-border;
+    border-radius: $border-radius;
+    margin-bottom: $gutter;
 
     &-title {
-      padding: 5px 10px;
+      padding: $shim-quarter $shim-half;
       font-size: $type-small;
-      border-bottom: solid 1px #eee;
-      margin-bottom: 10px;
+      border-bottom: solid 1px $color-border;
+      margin-bottom: $shim-half;
 
       > a {
         text-decoration: none;
         font-weight: bold;
-        color: #333;
+        color: $color-text;
       }
     }
 
     &-acount {
-      margin-left: 10px;
-      border-left: solid 1px #ddd;
-      padding-left: 10px;
+      margin-left: $shim-half;
+      border-left: solid 1px $color-border;
+      padding-left: $shim-half;
       font-size: $type-small;
       text-decoration: none;
     }
 
     &-content {
-      padding: 0 10px;
+      padding: 0 $shim-half;
       position: relative;
 
       p {
@@ -45,13 +44,13 @@
 
     &-meta {
       font-size: $type-xsmall;
-      color: #888;
-      border-top: solid 1px #eee;
-      padding: 5px 10px;
-      margin-top: 10px;
+      color: $color-text-light;
+      border-top: solid 1px $color-border;
+      padding: $shim-quarter $shim-half;
+      margin-top: $shim-half;
 
       > * {
-        margin-right: 10px;
+        margin-right: $shim-half;
       }
 
       a {
@@ -72,31 +71,31 @@
     }
 
     &-published {
-      color: #888;
+      color: $color-text-light;
       text-decoration: none;
       font-size: $type-small;
     }
 
     .apicon-answer:before {
-      margin-right: 5px;
+      margin-right: $shim-quarter;
     }
   }
 
   .ap-view-question {
-    background: $main-color;
+    background-color: $color-link;
     font-size: $type-xsmall;
     color: $color-background;
-    padding: 2px 6px;
-    border-radius: 1px;
+    padding: 2px $shim-quarter;
+    border-radius: $border-radius;
     text-decoration: none;
-    margin-top: 8px;
+    margin-top: $shim-half;
     display: table;
   }
 
   .ap-bp-head {
-    border-bottom: solid 1px #ddd;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
+    border-bottom: solid 1px $color-border;
+    margin-bottom: $gutter;
+    padding-bottom: $shim-half;
 
     h1 {
       margin: 0;
@@ -105,21 +104,21 @@
 
     .ap-answers-tab {
       float: right;
-      border-radius: 3px;
+      border-radius: $border-radius;
 
       li {
         margin: 0;
 
         a {
           display: block;
-          padding: 5px 12px;
+          padding: $shim-quarter $shim;
           text-decoration: none;
           font-size: $type-small;
         }
 
         &.active {
           a {
-            background: #eee;
+            background: $color-background-light;
           }
         }
       }
@@ -135,11 +134,38 @@
     margin: 0 auto;
     font-size: $type-xsmall;
   }
-}
+
 
 .ap-user-meta-reputation {
-  background: $yellow-color;
+  background-color: $color-link;
+  border-radius: $border-radius;
   font-size: $type-xsmall;
-  padding: 3px 10px;
-  border-radius: 2px;
+  padding: 3px $shim-half;
+}
+
+
+
+#buddypress .avatar {
+border-radius: 150px;
+}
+
+
+#buddypress .question {
+	margin-bottom: 2.5rem;
+}
+
+#buddypress .ap-filters {
+	margin-bottom: 1.5rem;
+}
+
+.ap-bpsingle-meta {
+	display: flex;
+
+}
+
+.ap-bpsingle-acount,
+.ap-bpsingle-published,
+.ap-bpsingle-meta span {
+	font-size: 13px;
+  margin-right: .5rem;
 }
