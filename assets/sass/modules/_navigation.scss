@@ -154,7 +154,7 @@ nav {
   }
 }
 
-.logged-out {
+body:not(.logged-in) {
   .logout-link {
     display: none;
   }
