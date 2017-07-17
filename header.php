@@ -51,7 +51,16 @@
       <?php endif; ?>
     </div><!-- .site-branding -->
 
-    <button id="sidebar-toggle-button" class="sidebar-menu">Profile</button>
+    <button id="sidebar-toggle-button" class="sidebar-menu">
+
+      <?php if ( is_user_logged_in()) :
+        $current_user = wp_get_current_user();
+        echo $current_user->display_name;
+       else :
+        echo 'menu';
+      endif; ?>
+
+    </button>
 
 </header><!-- .site-header -->
 

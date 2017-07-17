@@ -6,16 +6,16 @@
 
 .ap-noti-item {
   border-bottom: solid 1px $color-border;
-  padding: 10px 15px;
+  padding: $shim-half $shim;
 }
 
 .ap-noti-icon {
   background: $color-border;
   border-radius: $border-radius;
   float: left;
-  font-size: 18px;
+  font-size: $shim;
   height: 40px;
-  padding: 8px;
+  padding: $shim-half;
   text-align: center;
   width: 40px;
 }
@@ -42,7 +42,7 @@
 }
 
 .ap-noti-inner {
-  color: #333;
+  color: $color-text;
   display: block;
   margin-left: 60px;
 }
@@ -50,16 +50,16 @@
 .ap-noti-date {
   display: block;
   font-size: $type-xsmall;
-  color: #777;
+  color: $color-text-light;
 }
 
 .ap-noti-sub {
-  margin-bottom: 15px;
+  margin-bottom: $shim;
 
   a {
-    margin-right: 10px;
-    border-right: solid 1px #ccc;
-    padding-right: 10px;
+    margin-right: $shim-half;
+    border-right: solid 1px $color-border;
+    padding-right: $shim-half;
 
     &:last-child {
       border-right: none;
@@ -99,7 +99,7 @@
 
 .noti-item {
   border-bottom: solid 1px $color-border;
-  padding: 8px 10px;
+  padding: $shim-half;
   text-align: left;
 
   &.unseen {
@@ -113,24 +113,24 @@
 
 .ap-noti-unseen {
   background: $orange;
-  color: $color-background;
-  padding: 1px 3px;
-  font-weight: normal;
-  font-style: normal;
   border-radius: $border-radius;
+  color: $color-background;
+  font-style: normal;
+  font-weight: normal;
+  padding: 1px 3px;
 }
 
 .ap-noti-icon,
 .ap-noti-avatar,
 .ap-noti-rep {
-  background: $color-border-light;
+  background-color: $color-border-light;
   float: left;
   height: 35px;
   width: 35px;
 }
 
 .ap-noti-rep {
-  background: #f4ac20;
+  background-color: #f4ac20;
   border-radius: $shim;
   color: $color-background;
   display: block;
@@ -149,7 +149,7 @@
 .ap-noti-icon {
   border-radius: $border-radius;
   color: $color-text-light;
-  font-size: 17px;
+  font-size: $shim;
   line-height: 38px;
   text-align: center;
 }
@@ -159,7 +159,7 @@
   display: table;
   font-size: $type-xsmall;
   line-height: 1.4;
-  color: #333;
+  color: $color-text;
   text-decoration: none;
 }
 
@@ -176,7 +176,6 @@
   font-size: $type-meta;
   font-weight: bold;
   padding: $shim-half;
-  height: $shim;
   line-height: $shim;
 }
 
@@ -187,11 +186,11 @@
 
 i.noti-count {
   font-style: normal;
-  background: #f44336;
+  background: $salmon;
   color: $color-background;
-  width: 10px;
+  width: $shim-half;
   display: inline-block;
-  margin-left: 4px;
+  margin-left: $shim-quarter;
   padding: 2px;
   width: 20px;
   text-align: center;
