@@ -1,14 +1,14 @@
 .ap-row {
   display: flex;
-  display: grid;
-  grid-template-columns: 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr;
 
   @include below(bp-medium) {
     flex-direction: column;
   }
 
   @include above(bp-medium) {
-    grid-template-columns: minmax(300px, 1000px) minmax(0, 300px);
+    //grid-template-columns: minmax(300px, 1000px) minmax(0, 300px);
   }
 }
 
