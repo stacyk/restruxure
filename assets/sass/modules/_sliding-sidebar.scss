@@ -13,17 +13,17 @@
 		font-size: $type-h4;
 	}
 
-	a {
-		//display: block;
-		//color: $color-background;
-		//font-family: $font-sans;
-		//font-size: $type-xsmall;
-		//font-weight: 300;
-	}
-
 	ul {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+.menu-sidebar-container {
+	a {
+		justify-content: center;
 	}
 }
 
@@ -76,7 +76,7 @@ $sidebar-width-large: 200px;
 .sidebar-right {
 	right: $sidebar-width-small * -1;
 
-	@include above(wp-admin-bar) {
+	@include above(bp-small) {
 		right: $sidebar-width-large * -1;
 	}
 }
@@ -98,7 +98,7 @@ $sidebar-width-large: 200px;
 		width: calc(100% - #{$sidebar-width-small});
 	}
 
-	@include above(wp-admin-bar) {
+	@include above(bp-small) {
 		.site-content {
 			width: calc(100% - #{$sidebar-width-large});
 		}
