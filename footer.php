@@ -15,14 +15,16 @@
 
 
 	<div id="sidebar-sliding-panel" class="sidebar sidebar-vertical sidebar-right" aria-expanded="false">
-		<h3>Profile</h3>
-		<a class="avatar-sidebar" href="<?php echo ap_user_link(); ?>">
-			<?php ap_author_avatar( ap_opt( 'avatar_size_list' ) ); ?>
-		</a>
-		<span class="name-sidebar">
-			<?php echo ap_user_display_name( [ 'html' => true ] ); ?>
-		</span>
-		<?php dynamic_sidebar( 'sidebar-menu' ); ?>
+		<?php if ( is_user_logged_in()) : ?>
+			<h3>Profile</h3>
+			<a class="avatar-sidebar" href="<?php ap_profile_link(); ?>"<?php ap_hover_card_attr(); ?>>
+				<?php ap_author_avatar( ap_opt('avatar_size_qquestion') ); ?>
+			</a>
+			<span class="name-sidebar">
+				<?php echo ap_user_display_name( [ 'html' => true ] ); ?>
+			</span>
+		<?php endif; ?>
+			<?php dynamic_sidebar( 'sidebar-menu' ); ?>
 	</div>
 
 
