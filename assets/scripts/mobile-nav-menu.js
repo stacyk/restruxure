@@ -20,7 +20,9 @@ window.wdsMobileNav = {};
 			'window': $( window ),
 			'body': $( 'body' ),
 			'mobileNavMenuContainer': $( '.mobile-nav-menu' ),
-			'menuItemCount': $( '.mobile-nav-menu .mobile-nav > li' ).length
+			'menuItemCount': $( '.mobile-nav-menu .mobile-nav > li' ).length,
+			'sidebarNavMenuContainer': $( '#toggle-sidebar' ),
+			'sidebar': $( '#sliding-sidebar' )
 		};
 	};
 
@@ -43,6 +45,7 @@ window.wdsMobileNav = {};
 		// Hide the menu when the close button is clicked
 		app.$c.body.on( 'click', '.close-mobile-menu', app.hideMoreItems );
 	};
+
 
 	// Do we meet the requirements?
 	app.meetsRequirements = function () {

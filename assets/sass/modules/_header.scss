@@ -30,16 +30,19 @@
 .site-branding {
 	padding-left: $shim;
 	padding-right: $shim;
-	left: 50%;
-	right: auto;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
 
 	@include below(bp-small) {
 		flex-basis: 100%;
 		margin: 0 auto;
 		position: relative;
+	}
+
+	@include above(bp-small) {
+		left: 50%;
+		position: absolute;
+		right: auto;
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -48,7 +51,7 @@
 	color: $color-background;
 	font-family: $font-main;
 	font-size: 3rem;
-	line-height: 1;
+	line-height: 33px;
 	margin: 0 auto;
 
 	svg {
@@ -70,4 +73,29 @@
 	font-size: 1rem;
 	font-weight: 300;
 	margin: 0 auto;
+}
+
+.sidebar-menu {
+	-webkit-font-smoothing: antialiased;
+
+	&.active {
+		background-color: $color-link-hover;
+		border-radius: $border-radius;
+	}
+
+	.sidebar-push-toleft & {
+		background-color: $color-link-hover;
+		position: fixed;
+		right: calc(1rem + 2.5vw);
+	}
+
+	@include below(bp-small) {
+		position: absolute;
+		right: $shim;
+		top: $shim;
+
+		.sidebar-push-toleft & {
+			position: fixed;
+		}
+	}
 }

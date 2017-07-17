@@ -47,8 +47,7 @@ body {
   @include wrap;
   align-items: stretch;
   display: flex;
-	flex: 1 0 auto;
-	flex: 1 0 100%;
+	flex: 0 0 auto;
 	height: 100%;
 	width: 100%;
 }

@@ -45,15 +45,16 @@
 					<span class="screen-reader-text"><?php esc_html_e( 'Restruxure', 'yoga' ); ?></span></a></p>
       <?php endif; ?>
 
-
-        <?php $description = get_bloginfo( 'description', 'display' ); ?>
-        <?php if ( $description || is_customize_preview() ) : ?>
-          <p class="site-description"><?php echo $description; // WPCS: xss ok. ?></p>
-        <?php endif; ?>
-
+      <?php $description = get_bloginfo( 'description', 'display' ); ?>
+      <?php if ( $description || is_customize_preview() ) : ?>
+        <p class="site-description"><?php echo $description; // WPCS: xss ok. ?></p>
+      <?php endif; ?>
     </div><!-- .site-branding -->
 
-  </header><!-- .site-header -->
+    <button id="sidebar-toggle-button" class="sidebar-menu">Profile</button>
+
+</header><!-- .site-header -->
+
 
   <div id="content" class="site-content">
 

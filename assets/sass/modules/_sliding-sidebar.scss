@@ -1,0 +1,114 @@
+//--------------------------------------------------------------
+// Sliding Sidebar
+//--------------------------------------------------------------
+
+/* General styles for all sidebars */
+.sidebar {
+	//background: $purple;
+	padding: $shim;
+
+	h3 {
+		//background: $purple-dark;
+		color: $purple-dark; //$color-background;
+		font-size: $type-h4;
+	}
+
+	a {
+		//display: block;
+		//color: $color-background;
+		//font-family: $font-sans;
+		//font-size: $type-xsmall;
+		//font-weight: 300;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.avatar-sidebar {
+	display: block;
+	text-align: center;
+}
+
+.name-sidebar {
+	align-items:baseline;
+	border-bottom: solid 1px $color-border-light;
+	display: flex;
+	justify-content: center;
+	margin-bottom: $shim;
+	padding-bottom: $shim;
+}
+
+/* Orientation-dependent styles for the content of the sidebar */
+$admin-bar: 32px;
+$admin-bar-mobile: 46px;
+$header-height: 104px;
+$sidebar-width-small: 140px;
+$sidebar-width-large: 200px;
+
+
+.sidebar-vertical {
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	top: $header-height;
+	width: $sidebar-width-small;
+	z-index: 1000;
+
+	@include above(bp-small) {
+		width: $sidebar-width-large;
+	}
+
+	.admin-bar & {
+		top: $admin-bar-mobile + $header-height;
+
+		@include above(wp-admin-bar) {
+			top: $admin-bar + $header-height;
+		}
+	}
+}
+
+
+/* Vertical sidebar that slides from the left or right */
+
+.sidebar-right {
+	right: $sidebar-width-small * -1;
+
+	@include above(wp-admin-bar) {
+		right: $sidebar-width-large * -1;
+	}
+}
+
+.sidebar-right.sidebar-open {
+	right: 0;
+}
+
+.sidebar-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+
+.sidebar-push-toleft {
+	.site-content {
+		margin-left: 0;
+		width: calc(100% - #{$sidebar-width-small});
+	}
+
+	@include above(wp-admin-bar) {
+		.site-content {
+			width: calc(100% - #{$sidebar-width-large});
+		}
+	}
+}
+
+/* Transitions */
+
+.sidebar,
+.sidebar-push {
+	transition: all 0.3s ease;
+}
+
