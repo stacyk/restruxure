@@ -2,10 +2,13 @@
 // Login
 //-------------------------------------------------------------*/
 
+@import "utilities/variables/index";
+@import "utilities/mixins/index";
 
 body.login {
-  background-color: #fff;
+  background-color: $color-background;
 }
+
 body.login div#login {}
 body.login div#login h1 {}
 
@@ -17,16 +20,6 @@ body.login div#login h1 a {
   text-decoration: none;
 }
 
-body.login div#login form#loginform {}
-body.login div#login form#loginform p {}
-body.login div#login form#loginform p label {}
-body.login div#login form#loginform input {}
-body.login div#login form#loginform input#user_login {}
-body.login div#login form#loginform input#user_pass {}
-body.login div#login form#loginform p.forgetmenot {}
-body.login div#login form#loginform p.forgetmenot input#rememberme {}
-body.login div#login form#loginform p.submit {}
-body.login div#login form#loginform p.submit input#wp-submit {}
 body.login div#login p#nav {
   display: flex;
 	justify-content: space-around;
@@ -34,18 +27,13 @@ body.login div#login p#nav {
 
 body.login div#login p#backtoblog a,
 body.login div#login p#nav a {
-  color: hsl(327, 61%, 26%);
+  color: $color-link;
+  font-size: $type-xsmall;
+
+  &:hover {
+    color: $color-link-hover;
+  }
 }
-
-
-body.login div#login p#backtoblog a,
-body.login div#login p#nav a:hover {
-  color: hsl(182, 58%, 33%);
-}
-
-body.login div#login p#backtoblog {}
-
-
 
 .wp-social-login-widget {
   align-items: center;
@@ -56,21 +44,20 @@ body.login div#login p#backtoblog {}
 .wp-social-login-provider-list {
   align-items: center;
   display: flex;
-}
 
-.wp-social-login-provider-list a {
-  border-radius: 2px;
-  color: #fff;
-  margin: 1rem .5rem;
-  padding: 0.25rem 1rem;
-}
+  a {
+    border-radius: $border-radius;
+    color: $color-background;
+    margin: $shim $shim-half;
 
-.wp-social-login-provider-list a:visited {
-  color: #fff;
-}
+    &:visited {
+      color: $color-background;
+    }
+  }
 
-.wp-social-login-provider-list img {
-  display: none;
+  img {
+    display: none;
+  }
 }
 
 .wp-social-login-provider-twitter {
@@ -98,28 +85,49 @@ body.login div#login p#backtoblog {}
 }
 
 
-body.login div#login form#loginform p.submit input#wp-submit {
+body.login div#login form#loginform p.submit input#wp-submit,
+body.login .button-primary {
   appearance: none;
-  background-color: #6b1a46;
+  background: $color-link;
   border: none;
   border-width: 0;
-  box-shadow: 0;
-  color: #fff;
-  font-size: 0.925rem;
+  box-shadow: 0 0 0 0 transparent;
+  color: $color-background;
+  font-size: $type-small;
   font-weight: 300;
   height: auto;
-  padding: 0.25rem 1rem;
+  padding: $shim-quarter $shim;
   text-transform: uppercase;
   transition: all 300ms;
   border-width: 0;
-  border-radius: 2px;
+  border-radius: $border-radius;
   transform: translateY(0);
   text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $green;
+    background-image: linear-gradient($green 0%, $color-link-hover 100%);
+  }
 }
 
-body.login div#login form#loginform p.submit input#wp-submit:hover,
-body.login div#login form#loginform p.submit input#wp-submit:active,
-body.login div#login form#loginform p.submit input#wp-submit:focus {
-  background: #48878e;
-  background-image: linear-gradient(to bottom, #48878e 0, #37676d 100%);
+
+// body.login div#login form#loginform {}
+// body.login div#login form#loginform p {}
+// body.login div#login form#loginform p label {}
+// body.login div#login form#loginform input {}
+// body.login div#login form#loginform input#user_login {}
+// body.login div#login form#loginform input#user_pass {}
+// body.login div#login form#loginform p.forgetmenot {}
+// body.login div#login form#loginform p.forgetmenot input#rememberme {}
+// body.login div#login form#loginform p.submit {}
+// body.login div#login form#loginform p.submit input#wp-submit {}
+// body.login div#login p#backtoblog {}
+
+.login {
+  .message,
+  #login_error {
+    border-left-color: $pink;
+  }
 }

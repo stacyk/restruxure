@@ -97,8 +97,6 @@ function yoga_widgets_init() {
 	$sidebars = array(
 		'sidebar-1'  => esc_html__( 'Sidebar 1', 'yoga' ),
 		'sidebar-menu'  => esc_html__( 'Sidebar Menu', 'yoga' ),
-		// 'sidebar-archive'  => esc_html__( 'Sidebar Archive', 'yoga' ),
-		// 'sidebar-3'  => esc_html__( 'Sidebar 3', 'yoga' ),
 	);
 
 	// Loop through each sidebar and register.
@@ -132,6 +130,11 @@ add_action('init', 'yoga_featured_q_images');
 // 	return $args;
 // }
 
+
+/**
+ * Custom Login Page.
+ */
+require get_template_directory() . '/inc/login.php';
 
 /**
  * Implement the Custom Header feature.
