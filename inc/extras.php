@@ -129,3 +129,9 @@ function yoga_get_placeholder_image( $args = array() ) {
 
 	return "<img src='$url' width='$width' height='$height' alt='$alt' />";
 }
+
+
+function yoga_hide_admin_bar($content) {
+	return ( current_user_can( 'administrator' ) ) ? $content : false;
+}
+add_filter( 'show_admin_bar' , 'yoga_hide_admin_bar');
