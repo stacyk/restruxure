@@ -52,4 +52,40 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- .primary -->
 
+
+ <?php
+//if ( get_query_var('paged') ) $paged = get_query_var('paged');
+//if ( get_query_var('page') ) $paged = get_query_var('page');
+
+
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+$args = array(
+	'post_type' => 'question',
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'question_category',
+			'field'    => 'slug',
+			'terms'    => $term->slug,
+		),
+	),
+);
+
+$query = new WP_Query( $args );
+
+
+if ( $query->have_posts() ) : ?>
+	<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+		<div class="entry">
+			<h2 class="title">
+				<?php the_title(); ?>
+			</h2>
+			<?php the_excerpt(); ?>
+		</div>
+	<?php endwhile; wp_reset_postdata(); ?>
+	<!-- show pagination here -->
+<?php else : ?>
+	<!-- show 404 error here -->
+<?php endif; ?>
+
+
 <?php get_footer(); ?>
