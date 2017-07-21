@@ -5,6 +5,10 @@
 .widget {
 	margin: 0 0 1rem;
 
+	p:last-child {
+		margin-bottom: 0;
+	}
+
 	// Make sure select elements fit in widgets.
 	select {
 		max-width: 100%;

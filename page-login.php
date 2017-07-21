@@ -9,10 +9,11 @@ get_header(); ?>
 
 	<div class="primary content-area">
 		<main id="main" class="site-main" role="main">
-			<div id="login-register-password">
+			<div id="login-register-password" class="custom-login-content">
 
 			<?php
-				if ( ! is_user_logged_in() ) { // Display WordPress login form:
+				if ( ! is_user_logged_in() ) {
+				// Display WordPress login form:
 				$args = array(
 					'redirect' => home_url(),
 					'form_id' => 'loginform-custom',
@@ -22,11 +23,11 @@ get_header(); ?>
 					'label_log_in' => __( 'Log In' ),
 					'remember' => true
 				);
+					echo '<h2>Log in to ask or answer questions</h2>';
 					wp_login_form( $args );
 				} else { // If logged in:
 				?>
 					<div class="sidebox">
-						<h3>Welcome, <?php echo $user_identity; ?></h3>
 						<div class="usericon">
 							<?php global $userdata; wp_get_current_user(); echo get_avatar($userdata->ID, 60); ?>
 						</div>

@@ -48,6 +48,8 @@ if ( ! function_exists( 'yoga_setup' ) ) :
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary Menu', 'yoga' ),
 			'mobile'  => esc_html__( 'Optional Mobile Menu', 'yoga' ),
+			'usermeta'  => esc_html__( 'User Profile Menu', 'yoga' ),
+			'utility'  => esc_html__( 'Utility Menu', 'yoga' ),
 		) );
 
 		/**

@@ -12,3 +12,12 @@
 	text-align: center;
 }
 
+.custom-login-content {
+	margin: auto;
+	max-width: $content-column;
+	padding: $gutter;
+
+	.button-primary {
+		@include btn;
+	}
+}

@@ -56,6 +56,7 @@ function yoga_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'yoga_body_classes' );
 
+
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images
@@ -83,6 +84,7 @@ function yoga_content_image_sizes_attr( $sizes, $size ) {
 }
 add_filter( 'wp_calculate_image_sizes', 'yoga_content_image_sizes_attr', 10 , 2 );
 
+
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for post thumbnails
@@ -103,6 +105,7 @@ function yoga_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 }
 add_filter( 'wp_get_attachment_image_attributes', 'yoga_post_thumbnail_sizes_attr', 10 , 3 );
 
+
 /**
  * Flush out the transients used in yoga_categorized_blog.
  */
@@ -116,6 +119,7 @@ function yoga_category_transient_flusher() {
 add_action( 'delete_category', 'yoga_category_transient_flusher' );
 add_action( 'save_post',     'yoga_category_transient_flusher' );
 
+
 /**
  * Customize "Read More" string on <!-- more --> with the_content();
  */
@@ -123,6 +127,7 @@ function yoga_content_more_link() {
 	return '<a class="more-link" href="' . get_permalink() . '">&hellip;' . esc_html__( 'Read More', 'yoga' ) . '</a>';
 }
 add_filter( 'the_content_more_link', 'yoga_content_more_link' );
+
 
 /**
  * Customize the [...] on the_excerpt();
@@ -137,7 +142,10 @@ function yoga_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'yoga_excerpt_more' );
 
 
-//
+/**
+ * Customize the length of the_excerpt();
+ *
+ */
 function yoga_excerpt_length( $length ) {
 	return 36;
 }

@@ -22,11 +22,13 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+
+
 			<!-- Display Filters -->
-			<div class="filter-archive">
+			<!-- <div class="filter-archive">
 				<h4>Narrow by pose category:</h4>
-				<?php echo facetwp_display( 'facet', 'categories' ); ?>
-			</div>
+				<?php //echo facetwp_display( 'facet', 'categories' ); ?>
+			</div> -->
 
 			<?php
 			/* Start the Loop */
@@ -49,43 +51,46 @@ get_header(); ?>
 
 		endif; ?>
 
+
+
+
+		<?php
+			if ( get_query_var('paged') ) $paged = get_query_var('paged');
+			if ( get_query_var('page') ) $paged = get_query_var('page');
+
+
+		$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+		$args = array(
+			'post_type' => 'question',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'question_category',
+					'field'    => 'slug',
+					'terms'    => $term->slug,
+				),
+			),
+		);
+
+		$query = new WP_Query( $args );
+
+
+		if ( $query->have_posts() ) : ?>
+			<div class="related-questions">
+			<h2 class="section-title">Related Questions</h2>
+			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<article <?php post_class(); ?>>
+					<h3 class="related-title">
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</h3>
+					<?php the_excerpt(); ?>
+				</article>
+			<?php endwhile; wp_reset_postdata(); ?>
+			<!-- show pagination here -->
+		</div>
+		<?php endif; ?>
+
+
 		</main><!-- #main -->
 	</div><!-- .primary -->
-
-
- <?php
-//if ( get_query_var('paged') ) $paged = get_query_var('paged');
-//if ( get_query_var('page') ) $paged = get_query_var('page');
-
-
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-$args = array(
-	'post_type' => 'question',
-	'tax_query' => array(
-		array(
-			'taxonomy' => 'question_category',
-			'field'    => 'slug',
-			'terms'    => $term->slug,
-		),
-	),
-);
-
-$query = new WP_Query( $args );
-
-
-if ( $query->have_posts() ) : ?>
-	<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-		<div class="entry">
-			<h2 class="title">
-				<?php the_title(); ?>
-			</h2>
-			<?php the_excerpt(); ?>
-		</div>
-	<?php endwhile; wp_reset_postdata(); ?>
-	<!-- show pagination here -->
-<?php else : ?>
-	<!-- show 404 error here -->
-<?php endif; ?>
-
 
 <?php get_footer(); ?>

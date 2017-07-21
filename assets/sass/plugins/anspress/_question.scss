@@ -44,7 +44,7 @@
 }
 
 .ap-q-metas {
-	align-items: baseline;
+	align-items: center;
 	border-bottom: solid 1px $color-border;
 	display: flex;
 	flex-wrap: wrap;
@@ -76,6 +76,19 @@
 	&.views {
 		display: none;
 	}
+
+	&.featured {
+		margin-left: auto;
+		order: 10;
+	}
+
+}
+
+.question-categories,
+.question-tags {
+	a {
+		margin-right: $shim;
+	}
 }
 
 .ap-question-meta {
@@ -87,13 +100,12 @@
 	font-weight: 400;
 	margin-bottom: $shim;
 
-  @include above(bp-small) {
-  }
-
-	.question-tags a,
-	.question-categories a {
-		padding-left: $shim-quarter;
-		padding-right: $shim-quarter;
+	.question-tags,
+	.question-categories {
+		a {
+			padding-left: $shim-quarter;
+			padding-right: $shim-quarter;
+		}
 	}
 
 	.featured,

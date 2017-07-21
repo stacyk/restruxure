@@ -23,6 +23,12 @@
 	@include pagetitle;
 }
 
+.related-title {
+	@include subtitle;
+	font-weight: 300;
+	margin-bottom: $shim-half;
+}
+
 // Sticy and Comments Link
 .sticky,
 .comments-link {

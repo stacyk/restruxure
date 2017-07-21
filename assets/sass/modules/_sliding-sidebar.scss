@@ -7,17 +7,18 @@
 	//background: $purple;
 	padding: $shim;
 
-	h3 {
-		//background: $purple-dark;
-		color: $purple-dark; //$color-background;
-		font-size: $type-h4;
-	}
-
 	ul {
+		align-items: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		width: 100%;
+	}
+
+	.widget {
+		border-bottom: solid 1px $color-border-light;
+		margin-bottom: $shim;
+		padding-bottom: $shim;
 	}
 }
 
@@ -32,13 +33,30 @@
 	text-align: center;
 }
 
-.name-sidebar {
-	align-items:baseline;
-	border-bottom: solid 1px $color-border-light;
+.profile-preview {
+	align-items: center;
 	display: flex;
-	justify-content: center;
-	margin-bottom: $shim;
-	padding-bottom: $shim;
+	flex-direction: column;
+
+	.avatar {
+		height: $avatar-height * 1.5;
+		margin-bottom: $shim;
+		text-align: center;
+		width: $avatar-height * 1.5;
+	}
+}
+
+.profile-text {
+	align-items: baseline;
+	color: $purple-dark; //$color-background;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+
+.profile-name {
+	color: $purple;
+	flex: 1 1 100%;
+	font-size: $type-h3;
 }
 
 /* Orientation-dependent styles for the content of the sidebar */

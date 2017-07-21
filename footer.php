@@ -15,16 +15,41 @@
 
 
 	<div id="sidebar-sliding-panel" class="sidebar sidebar-vertical sidebar-right" aria-expanded="false">
-		<?php if ( is_user_logged_in()) : ?>
-			<h3>Profile</h3>
-			<a class="avatar-sidebar" href="<?php ap_profile_link(); ?>"<?php ap_hover_card_attr(); ?>>
-				<?php ap_author_avatar( ap_opt('avatar_size_qquestion') ); ?>
-			</a>
-			<span class="name-sidebar">
-				<?php echo ap_user_display_name( [ 'html' => true ] ); ?>
-			</span>
+
+		<?php	if ( is_user_logged_in() ) : ?>
+			<?php $current_user = wp_get_current_user(); ?>
+			<div class="profile-preview widget">
+				<img class="avatar" src="<?php echo esc_url( get_avatar_url( $current_user->ID ) ); ?>" />
+				<p class="profile-text">You are logged in as <span class="profile-name"> <?php echo $current_user->user_login; ?> </span></p>
+			</div>
 		<?php endif; ?>
-			<?php dynamic_sidebar( 'sidebar-menu' ); ?>
+
+		<div class="secondary-menu widget">
+			<?php
+        wp_nav_menu( array(
+          'theme_location' => 'utility',
+          'menu_id'        => 'utility-menu',
+        ) );
+			?>
+		</div>
+
+		<div class="secondary-menu widget">
+			<?php
+        wp_nav_menu( array(
+          'theme_location' => 'usermeta',
+          'menu_id'        => 'usermeta-menu',
+        ) );
+			?>
+		</div>
+
+
+		<?php
+			if ( ! is_active_sidebar( 'sidebar-menu' ) ) {
+				return;
+			}
+		?>
+
+		<?php dynamic_sidebar( 'sidebar-menu' ); ?>
 	</div>
 
 
