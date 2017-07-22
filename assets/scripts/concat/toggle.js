@@ -14,4 +14,5 @@ showRightPush.onclick = function() {
 	classie.toggle( this, 'active' );
 	classie.toggle( body, 'sidebar-push-toleft' );
 	classie.toggle( sidebarRight, 'sidebar-open' );
+	classie.remove( body, 'sidebar-push-toleft-large')
 };

@@ -77,23 +77,26 @@
 
 .sidebar-menu {
 	-webkit-font-smoothing: antialiased;
+}
 
-	&.active {
+button.sidebar-menu {
+	background-color: transparent;
+	background-image: none;
+	border-radius: $border-radius;
+	position: fixed;
+	transform: translateX(50%);
+
+
+	&:hover {
 		background-color: $color-link-hover;
-		border-radius: $border-radius;
+	}
+
+	@include above(bp-small) {
+		right: 100px;
 	}
 
 	@include below(bp-small) {
 		position: absolute;
 		right: $shim;
-	}
-
-	.sidebar-push-toleft & {
-		background-color: $color-link-hover;
-		position: fixed;
-
-		@include above(bp-small) {
-			right: calc(1rem + 2.5vw);
-		}
 	}
 }

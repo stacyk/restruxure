@@ -125,6 +125,15 @@ $sidebar-width-large: 200px;
 	left: 0;
 }
 
+.sidebar-push-toleft-large {
+	.sidebar-right {
+		@include above('bp-large') {
+			right: 0
+		}
+	}
+}
+
+.sidebar-push-toleft-large,
 .sidebar-push-toleft {
 	.site-content {
 		margin-left: 0;

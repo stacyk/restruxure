@@ -49,6 +49,10 @@ function yoga_body_classes( $classes ) {
 	}
 	// @codingStandardsIgnoreEnd
 
+
+	$classes[] = 'sidebar-push-toleft';
+
+
 	// Adds "no-js" class. If JS is enabled, this will be replaced (by javascript) to "js".
 	$classes[] = 'no-js';
 
