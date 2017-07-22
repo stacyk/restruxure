@@ -24,13 +24,35 @@ $avatar-large: $avatar-height * 1.5;
   align-content: baseline;
   display: flex;
   font-size: $type-h3;
+  margin-bottom: $shim-half;
 
   .ap-user-reputation {
-    border-radius: $avatar-height;
-    font-size: $type-small;
-    margin-bottom: $shim-half;
+    font-size: $type-medium;
     min-height: 38px;
     min-width: 38px;
-    padding: 0 $shim-half;
+  }
+}
+
+.ap-user-reputation {
+  align-items: center;
+  background-color: $color-link;
+  border-radius: $avatar-height;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  padding: $shim-half $shim-half .4rem;
+  margin-left: $shim-quarter;
+  margin-right: $shim-quarter;
+  min-width: $shim-double;
+
+  &:link,
+  &:visited {
+    color: $color-background;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-link-hover;
+    color: $color-background;
   }
 }

@@ -2,6 +2,8 @@
 // Sliding Sidebar
 //--------------------------------------------------------------
 
+
+
 /* General styles for all sidebars */
 .sidebar {
 	//background: $purple;
@@ -14,18 +16,22 @@
 		justify-content: center;
 		width: 100%;
 	}
-
-	.widget {
-		border-bottom: solid 1px $color-border-light;
-		margin-bottom: $shim;
-		padding-bottom: $shim;
-	}
 }
 
 .menu-sidebar-container {
+	display: flex;
+	font-size: $type-xsmall;
+	margin: 0;
+	padding: 0;
+
 	a {
 		justify-content: center;
 	}
+}
+
+.menu-sidebar {
+	margin: 0 0 40px;
+	padding: 0;
 }
 
 .avatar-sidebar {

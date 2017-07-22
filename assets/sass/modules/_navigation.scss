@@ -145,8 +145,6 @@ nav {
   }
 }
 
-
-
 .logged-in {
   .login-link,
   .register-link {
@@ -167,3 +165,7 @@ body:not(.logged-in) {
 //     background-position: right center;
 //   }
 // }
+
+.anspress-menu-notifications a {
+	display: flex;
+}

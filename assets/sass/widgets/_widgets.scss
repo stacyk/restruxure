@@ -13,6 +13,12 @@
 	select {
 		max-width: 100%;
 	}
+
+	.sidebar & {
+		border-bottom: solid 1px $color-border-light;
+		margin-bottom: $shim;
+		padding-bottom: $shim;
+	}
 }
 
 // Search widget

@@ -53,31 +53,6 @@
   display: none;
 }
 
-.ap-user-reputation {
-  align-items: center;
-  background-color: $color-link;
-  border-radius: $shim;
-  display: flex;
-  justify-content: center;
-  margin-left: $shim-quarter;
-  margin-right: $shim-quarter;
-  padding: 4px $shim-half 2px;
-  min-height: 30px;
-  min-width: 30px;
-
-  &:link,
-  &:visited {
-    color: $color-background;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $color-link-hover;
-    color: $color-background;
-  }
-}
-
-
 // Question Search Form
 .ap-search-form {
   display: flex;
