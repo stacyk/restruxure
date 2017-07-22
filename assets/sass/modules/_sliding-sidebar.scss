@@ -125,15 +125,19 @@ $sidebar-width-large: 200px;
 	left: 0;
 }
 
-.sidebar-push-toleft-large {
-	.sidebar-right {
-		@include above('bp-large') {
-			right: 0
-		}
-	}
-}
+// .sidebar-push-toleft-initial {
+// 	@include below('bp-small') {
+// 		.sidebar-right {
+// 			right: $sidebar-width-small * -1;
+// 		}
 
-.sidebar-push-toleft-large,
+// 		.site-content {
+// 			margin-left: 0;
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
 .sidebar-push-toleft {
 	.site-content {
 		margin-left: 0;

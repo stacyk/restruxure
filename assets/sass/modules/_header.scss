@@ -84,7 +84,6 @@ button.sidebar-menu {
 	background-image: none;
 	border-radius: $border-radius;
 	position: fixed;
-	transform: translateX(50%);
 
 
 	&:hover {
@@ -93,6 +92,7 @@ button.sidebar-menu {
 
 	@include above(bp-small) {
 		right: 100px;
+		transform: translateX(50%);
 	}
 
 	@include below(bp-small) {
