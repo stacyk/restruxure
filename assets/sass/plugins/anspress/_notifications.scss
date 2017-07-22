@@ -190,6 +190,8 @@ i.noti-count {
   border-radius: $border-radius;
   color: $color-background;
   display: flex;
+  font-size: $type-meta;
+  font-style: normal;
   height: $shim;
 	justify-content: center;
   line-height: 1;

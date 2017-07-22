@@ -15,9 +15,3 @@ showRightPush.onclick = function() {
 	classie.toggle( body, 'sidebar-push-toleft' );
 	classie.toggle( sidebarRight, 'sidebar-open' );
 };
-
-	// hideRightPush.onclick = function() {
-	// 	classie.toggle( this, 'inactive' );
-	// 	classie.toggle( body, 'sidebar-nopush' );
-	// 	classie.toggle( sidebarRight, 'sidebar-closed' );
-	// };

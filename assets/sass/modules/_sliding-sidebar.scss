@@ -6,7 +6,7 @@
 
 /* General styles for all sidebars */
 .sidebar {
-	//background: $purple;
+	background-color: $color-background;
 	padding: $shim;
 
 	ul {
@@ -68,8 +68,9 @@
 /* Orientation-dependent styles for the content of the sidebar */
 $admin-bar: 32px;
 $admin-bar-mobile: 46px;
-$header-height: 104px;
-$sidebar-width-small: 140px;
+$header-height: 75px;
+$header-height-large: 104px;
+$sidebar-width-small: 50%;
 $sidebar-width-large: 200px;
 
 
@@ -77,19 +78,28 @@ $sidebar-width-large: 200px;
 	height: 100%;
 	position: fixed;
 	text-align: center;
-	top: $header-height;
-	width: $sidebar-width-small;
 	z-index: 1000;
 
+	@include below(bp-small) {
+		box-shadow: 0 7px 5px $shadow-dark;
+		top: $header-height;
+		width: $sidebar-width-small;
+	}
+
 	@include above(bp-small) {
+		top: $header-height-large;
 		width: $sidebar-width-large;
 	}
 
 	.admin-bar & {
 		top: $admin-bar-mobile + $header-height;
 
+		@include above(bp-small) {
+			top: $admin-bar-mobile + $header-height-large;
+		}
+
 		@include above(wp-admin-bar) {
-			top: $admin-bar + $header-height;
+			top: $admin-bar + $header-height-large;
 		}
 	}
 }
@@ -115,15 +125,12 @@ $sidebar-width-large: 200px;
 	left: 0;
 }
 
-
 .sidebar-push-toleft {
 	.site-content {
 		margin-left: 0;
-		width: calc(100% - #{$sidebar-width-small});
-	}
+		width: 100%;
 
-	@include above(bp-small) {
-		.site-content {
+		@include above(bp-small) {
 			width: calc(100% - #{$sidebar-width-large});
 		}
 	}
