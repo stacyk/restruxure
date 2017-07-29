@@ -22,7 +22,17 @@
 				<img class="avatar" src="<?php echo esc_url( get_avatar_url( $current_user->ID ) ); ?>" />
 				<p class="profile-text">You are logged in as <span class="profile-name"> <?php echo $current_user->user_login; ?> </span></p>
 			</div>
-		<?php endif; ?>
+
+			<div class="secondary-menu widget">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'usermeta',
+						'menu_id'        => 'usermeta-menu',
+					) );
+				?>
+			</div>
+
+		<?php else : ?>
 
 		<div class="secondary-menu widget">
 			<?php
@@ -33,15 +43,7 @@
 			?>
 		</div>
 
-		<div class="secondary-menu widget">
-			<?php
-        wp_nav_menu( array(
-          'theme_location' => 'usermeta',
-          'menu_id'        => 'usermeta-menu',
-        ) );
-			?>
-		</div>
-
+		<?php endif; ?>
 
 		<?php
 			if ( ! is_active_sidebar( 'sidebar-menu' ) ) {

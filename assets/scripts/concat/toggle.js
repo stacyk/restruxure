@@ -11,7 +11,7 @@ var sidebarRight = document.getElementById( 'sidebar-sliding-panel' ),
 
 
 showRightPush.onclick = function() {
-	classie.toggle( this, 'active' );
+	classie.toggle( this, 'closed' );
 	classie.toggle( body, 'sidebar-push-toleft' );
 	classie.toggle( sidebarRight, 'sidebar-open' );
 	classie.remove( sidebarRight, 'sidebar-open-initial' );

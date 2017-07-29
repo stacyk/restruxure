@@ -16,13 +16,14 @@
 // Primary palette by name
 
 $purple: hsl(280, 25%, 35%);
-$purple-light:  hsl(284, 30%, 88%);
+$purple-light:  hsl(284, 27%, 75%);
 $purple-dark: hsl(284, 44%, 18%);
 
 $blue: hsl(205, 37%, 46%);
 $blue-dark: hsl(211, 44%, 24%);
 $blue-light: hsl(200, 75%, 95%);
 
+$green-light: hsl(186, 40%, 62%);
 $green: hsl(186, 33%, 42%);
 $green-dark: hsl(169, 60%, 27%);
 $orange: hsl(32, 95%, 65%);
@@ -30,6 +31,7 @@ $salmon-light: hsl(9, 100%, 87%);
 $salmon: hsl(9, 68%, 63%);
 $salmon-dark: hsl(2, 30%, 51%);
 
+$pink-light: hsl(351, 75%, 75%);
 $pink: hsl(331, 35%, 44%);
 $pink-dark:  hsl(327, 61%, 26%);
 
@@ -52,6 +54,7 @@ $color-dark: $purple-dark;
 $color-background: $white;
 $color-background-dark: lighten($color-text, 20%);
 $color-background-light: hsl(0, 0%, 97%);
+$sidebar-bg: hsl(284, 24%, 18%);
 
 // States
 //$color-voted-best: saturate(lighten($green, 50%), 20%);

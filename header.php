@@ -52,7 +52,7 @@
     </div><!-- .site-branding -->
 
     <button id="sidebar-toggle-button" class="sidebar-menu">
-      more
+      <?php echo yoga_get_svg( array( 'icon' => 'chevron-left', 'title' => 'menu') ); // WPCS: XSS ok. ?>
     </button>
 
 </header><!-- .site-header -->

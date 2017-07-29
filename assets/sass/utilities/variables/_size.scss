@@ -8,6 +8,7 @@ $gutter: $shim * 3;
 $shim-double: $shim * 2;
 $shim-half: $shim / 2;
 $shim-quarter: $shim / 4;
+$spacer: $gutter * 2;
 
 // Element SPecific
 $border-radius: 2px;
@@ -23,3 +24,12 @@ $inline-nav-pad: $shim-half $shim;
 
 // Narrow Content Widths
 $content-column: 53rem;
+
+
+/* Orientation-dependent styles for the content of the sidebar */
+$admin-bar: 32px;
+$admin-bar-mobile: 46px;
+$header-height: 75px;
+$header-height-large: 104px;
+$sidebar-width-large: 250px;
+$sidebar-width-large-negative: $sidebar-width-large * -1;

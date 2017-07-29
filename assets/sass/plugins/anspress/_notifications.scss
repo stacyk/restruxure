@@ -1,201 +1,199 @@
-
 .ap-noti {
-  border: solid 1px $color-border;
-  border-radius: $border-radius;
+	border: solid 1px $color-border;
+	border-radius: $border-radius;
 }
 
 .ap-noti-item {
-  border-bottom: solid 1px $color-border;
-  padding: $shim-half $shim;
+	border-bottom: solid 1px $color-border;
+	padding: $shim-half $shim;
 }
 
 .ap-noti-icon {
-  background: $color-border;
-  border-radius: $border-radius;
-  float: left;
-  font-size: $shim;
-  height: 40px;
-  padding: $shim-half;
-  text-align: center;
-  width: 40px;
+	background: $color-border;
+	border-radius: $border-radius;
+	float: left;
+	font-size: $shim;
+	height: 40px;
+	padding: $shim-half;
+	text-align: center;
+	width: 40px;
 }
 
 .ap-noti-avatar {
-  float: left;
+	float: left;
 
-  .avatar {
-    border-radius: $border-radius;
-  }
+	.avatar {
+		border-radius: $border-radius;
+	}
 }
 
 .ap-noti-rep {
-  align-items: center;
-  background: $orange;
-  border-radius: $shim;
-  color: $color-background;
-  display: flex;
-  font-weight: bold;
-  height: 40px;
-  justify-content: center;
-  float: left;
-  width: 40px;
+	align-items: center;
+	background: $orange;
+	border-radius: $shim;
+	color: $color-background;
+	display: flex;
+	font-weight: bold;
+	height: 40px;
+	justify-content: center;
+	float: left;
+	width: 40px;
 }
 
 .ap-noti-inner {
-  color: $color-text;
-  display: block;
-  margin-left: 60px;
+	color: $color-text;
+	display: block;
+	margin-left: 60px;
 }
 
 .ap-noti-date {
-  display: block;
-  font-size: $type-xsmall;
-  color: $color-text-light;
+	display: block;
+	font-size: $type-xsmall;
+	color: $color-text-light;
 }
 
 .ap-noti-sub {
-  margin-bottom: $shim;
+	margin-bottom: $shim;
 
-  a {
-    margin-right: $shim-half;
-    border-right: solid 1px $color-border;
-    padding-right: $shim-half;
+	a {
+		margin-right: $shim-half;
+		border-right: solid 1px $color-border;
+		padding-right: $shim-half;
 
-    &:last-child {
-      border-right: none;
-      margin-right: 0;
-    }
-  }
+		&:last-child {
+			border-right: none;
+			margin-right: 0;
+		}
+	}
 }
 
-
 .ap-btn-markall-read {
-  float: right;
-  margin-right: 0;
+	float: right;
+	margin-right: 0;
 }
 
 #noti-dp {
-  background: $color-background;
-  border: solid 2px $color-border;
-  font-family: $font-sans;
-  font-size: $type-small;
-  min-height: 50px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 300px;
-  overflow: hidden;
-  box-shadow: 0 1px 14px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
+	background: $color-background;
+	border: solid 2px $color-border;
+	font-family: $font-sans;
+	font-size: $type-small;
+	min-height: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 300px;
+	overflow: hidden;
+	box-shadow: 0 1px 14px rgba(0, 0, 0, 0.2);
+	z-index: 9999;
 }
 
 .ap-btn-markall-read {
-  float: right;
-  background: none;
-  border: none;
-  font-weight: normal;
-  padding: 0;
+	float: right;
+	background: none;
+	border: none;
+	font-weight: normal;
+	padding: 0;
 }
 
 .noti-item {
-  border-bottom: solid 1px $color-border;
-  padding: $shim-half;
-  text-align: left;
+	border-bottom: solid 1px $color-border;
+	padding: $shim-half;
+	text-align: left;
 
-  &.unseen {
-    background: #f5f5f5;
-  }
+	&.unseen {
+		background: #f5f5f5;
+	}
 }
 
 .avatar {
-  border-radius: $avatar-height;
+	border-radius: $avatar-height;
 }
 
 .ap-noti-unseen {
-  background: $orange;
-  border-radius: $border-radius;
-  color: $color-background;
-  font-style: normal;
-  font-weight: normal;
-  padding: 1px 3px;
+	background: $orange;
+	border-radius: $border-radius;
+	color: $color-background;
+	font-style: normal;
+	font-weight: normal;
+	padding: 1px 3px;
 }
 
 .ap-noti-icon,
 .ap-noti-avatar,
 .ap-noti-rep {
-  background-color: $color-border-light;
-  float: left;
-  height: 35px;
-  width: 35px;
+	background-color: $color-border-light;
+	float: left;
+	height: 35px;
+	width: 35px;
 }
 
 .ap-noti-rep {
-  background-color: #f4ac20;
-  border-radius: $shim;
-  color: $color-background;
-  display: block;
-  font-size: $type-small;
-  font-weight: bold;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  width: 35px;
+	background-color: #f4ac20;
+	border-radius: $shim;
+	color: $color-background;
+	display: block;
+	font-size: $type-small;
+	font-weight: bold;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	width: 35px;
 
-  &.negative {
-    background: #ef5350;
-  }
+	&.negative {
+		background: #ef5350;
+	}
 }
 
 .ap-noti-icon {
-  border-radius: $border-radius;
-  color: $color-text-light;
-  font-size: $shim;
-  line-height: 38px;
-  text-align: center;
+	border-radius: $border-radius;
+	color: $color-text-light;
+	font-size: $shim;
+	line-height: 38px;
+	text-align: center;
 }
 
 .ap-noti-inner {
-  margin-left: 50px;
-  display: table;
-  font-size: $type-xsmall;
-  line-height: 1.4;
-  color: $color-text;
-  text-decoration: none;
+	margin-left: 50px;
+	display: table;
+	font-size: $type-xsmall;
+	line-height: 1.4;
+	color: $color-text;
+	text-decoration: none;
 }
 
 .ap-noti-date {
-  color: $color-text;
-  display: block;
-  font-size: $type-meta;
-  margin-top: 2px;
+	color: $color-text;
+	display: block;
+	font-size: $type-meta;
+	margin-top: 2px;
 }
 
 .ap-noti-head {
-  background-color: $color-background;
-  border-bottom: solid 1px $color-border;
-  font-size: $type-meta;
-  font-weight: bold;
-  padding: $shim-half;
-  line-height: $shim;
+	background-color: $color-background;
+	border-bottom: solid 1px $color-border;
+	font-size: $type-meta;
+	font-weight: bold;
+	padding: $shim-half;
+	line-height: $shim;
 }
 
 .scroll-wrap {
-  max-height: 300px;
-  overflow-y: auto;
+	max-height: 300px;
+	overflow-y: auto;
 }
 
 i.noti-count {
-  align-items: center;
-  background-color: $color-link-hover;
-  border-radius: $border-radius;
-  color: $color-background;
-  display: flex;
-  font-size: $type-meta;
-  font-style: normal;
-  height: $shim;
+	align-items: center;
+	background-color: $green-light;
+	border-radius: $border-radius;
+	color: $color-background;
+	display: flex;
+	font-size: $type-meta;
+	font-style: normal;
+	height: $shim;
 	justify-content: center;
-  line-height: 1;
-  margin-left: $shim-quarter;
-  padding: 0;
-  width: $shim;
+	line-height: 1;
+	margin-left: $shim-quarter;
+	padding: 0;
+	width: $shim;
 }

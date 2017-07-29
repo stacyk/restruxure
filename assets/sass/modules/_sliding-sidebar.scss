@@ -6,7 +6,6 @@
 
 /* General styles for all sidebars */
 .sidebar {
-	background-color: $color-background;
 	padding: $shim;
 
 	ul {
@@ -30,7 +29,7 @@
 }
 
 .menu-sidebar {
-	margin: 0 0 40px;
+	margin: 0 0 $gutter;
 	padding: 0;
 }
 
@@ -43,8 +42,10 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	padding-top: $gutter;
 
 	.avatar {
+		border: 5px solid $white;
 		height: $avatar-height * 1.5;
 		margin-bottom: $shim;
 		text-align: center;
@@ -53,53 +54,38 @@
 }
 
 .profile-text {
-	align-items: baseline;
-	color: $purple-dark; //$color-background;
+	align-items: center;
+	color: $color-background;
+	display: flex;
+	flex-direction: column;
 	line-height: 1.2;
 	margin-bottom: 0;
 }
 
 .profile-name {
-	color: $purple;
+	color: $purple-light;
 	flex: 1 1 100%;
 	font-size: $type-h3;
 }
 
-/* Orientation-dependent styles for the content of the sidebar */
-$admin-bar: 32px;
-$admin-bar-mobile: 46px;
-$header-height: 75px;
-$header-height-large: 104px;
-$sidebar-width-small: 50%;
-$sidebar-width-large: 200px;
-
-
 .sidebar-vertical {
+	background-color: $sidebar-bg;
+	color: $white;
+	display: flex;
+	flex-direction: column;
 	height: 100%;
 	position: fixed;
 	text-align: center;
-	z-index: 1000;
+	top: 0;
+	width: $sidebar-width-large;
+	z-index: 1;
 
-	@include below(bp-small) {
-		box-shadow: 0 7px 5px $shadow-dark;
-		top: $header-height;
-		width: $sidebar-width-small;
-	}
+	a {
+		color: $pink-light;
 
-	@include above(bp-small) {
-		top: $header-height-large;
-		width: $sidebar-width-large;
-	}
-
-	.admin-bar & {
-		top: $admin-bar-mobile + $header-height;
-
-		@include above(bp-small) {
-			top: $admin-bar-mobile + $header-height-large;
-		}
-
-		@include above(wp-admin-bar) {
-			top: $admin-bar + $header-height-large;
+		&:hover,
+		&:focus {
+			color: $green-light;
 		}
 	}
 }
@@ -108,11 +94,7 @@ $sidebar-width-large: 200px;
 /* Vertical sidebar that slides from the left or right */
 
 .sidebar-right {
-	right: $sidebar-width-small * -1;
-
-	@include above(bp-small) {
-		right: $sidebar-width-large * -1;
-	}
+	right: $sidebar-width-large-negative;
 }
 
 .sidebar-right.sidebar-open {
@@ -124,19 +106,6 @@ $sidebar-width-large: 200px;
 	position: relative;
 	left: 0;
 }
-
-// .sidebar-push-toleft-initial {
-// 	@include below('bp-small') {
-// 		.sidebar-right {
-// 			right: $sidebar-width-small * -1;
-// 		}
-
-// 		.site-content {
-// 			margin-left: 0;
-// 			width: 100%;
-// 		}
-// 	}
-// }
 
 .sidebar-push-toleft {
 	.site-content {
