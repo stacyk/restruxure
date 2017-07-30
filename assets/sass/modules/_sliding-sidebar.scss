@@ -17,7 +17,7 @@
 	}
 
 
-	.logged-out & .secondary-menu:first-of-type {
+	.logged-out & > .secondary-menu:first-child {
 		padding-top: $gutter;
 	}
 }
