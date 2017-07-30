@@ -2,6 +2,22 @@
 // Nav styles
 // --------------------------------------------------
 
+@mixin noti-circle() {
+	background-color: $color-link-hover;
+	border-radius: 2px;
+  color: $white;
+  display: inline-block;
+	font-family: $font-sans;
+	font-size: $type-meta;
+	font-style: normal;
+	font-weight: bold;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin-left: $shim-quarter;
+  text-align: center;
+  width: 1.2rem;
+}
+
 .ap-answers-tab,
 .ap-tab-nav {
   border-bottom: solid 1px $color-border;
@@ -11,7 +27,6 @@
   margin: 0;
   margin-bottom: $gutter;
   padding: 0;
-  padding-left: $shim-half;
 
   li {
     font-family: $font-sans;
@@ -43,7 +58,7 @@
 
       @include above(bp-large) {
         padding-left: $shim;
-        padding-left: $shim;
+        padding-right: $shim;
       }
 
       i {
@@ -53,15 +68,7 @@
       }
 
       span {
-        align-items: center;
-        background: $color-border-light;
-        border-radius: $shim;
-        display: flex;
-        font-size: $type-meta;
-        line-height: 1;
-        justify-content: center;
-        margin-left: $shim-quarter;
-        padding: $shim-quarter $shim-half;
+        @include noti-circle();
       }
     }
   }

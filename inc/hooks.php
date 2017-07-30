@@ -47,6 +47,18 @@ function yoga_body_classes( $classes ) {
 	if ( wp_is_mobile() ) {
 		$classes[] = 'mobile';
 	}
+
+
+	// Test to see if user is logged out
+  if (! ( is_user_logged_in() ) ) {
+		$classes[] = 'logged-out';
+  }
+
+		// Test to see if user is logged in
+  if ( is_user_logged_in() ) {
+		$classes[] = 'logged-in';
+  }
+
 	// @codingStandardsIgnoreEnd
 
 
@@ -154,3 +166,46 @@ function yoga_excerpt_length( $length ) {
 	return 36;
 }
 add_filter( 'excerpt_length', 'yoga_excerpt_length', 999 );
+
+
+/**
+ * Adds custom field in ask form.
+ * @param  array 	$args    Ask form arguments.
+ * @param  boolean 	$editing Is form is being edited.
+ * @return array
+ */
+function yoga_custom_ask_fields($args){
+	$args['fields'][] =
+		array(
+			'name'  => 'yoga_title_field_info',
+			'type'  => 'custom', // this can be, text, textarea, checkbox, hidden or custom
+			'html' => '<p class="form-help">The title is displayed in a prominent way and allows people to easily scan questions on any question list view.</p>', // If type is custom then html can be passed.
+			'order' => 3, // Order of field
+		);
+	$args['fields'][] =
+		array(
+			'name'  => 'yoga_description_field_info',
+			'type'  => 'custom', // this can be, text, textarea, checkbox, hidden or custom
+			'html' => '<p class="form-help">The description is optional and can be used to add additional information, images, links and videos.</p>', // If type is custom then html can be passed.
+			'order' => 6, // Order of field
+		);
+	$args['fields'][] =
+		array(
+			'name'  => 'yoga_category_field_info',
+			'type'  => 'custom', // this can be, text, textarea, checkbox, hidden or custom
+			'html' => '<p class="form-help">If your question does not fit well into our pre-defined categories, then choose "Other". A category is required.</p>', // If type is custom then html can be passed.
+			'order' => 5, // Order of field
+		);
+	$args['fields'][] =
+		array(
+			'name'  => 'yoga_tags_field_info',
+			'type'  => 'custom', // this can be, text, textarea, checkbox, hidden or custom
+			'html' => '<p class="form-help">Tags help find related content. When a question is tagged, people can select the tag name displayed on the question page in order to find similar questions. A tag can be the name of a yoga pose, or anything else relevant to your question. Tags are optional.</p>', // If type is custom then html can be passed.
+			'order' => 10, // Order of field
+		);
+	return $args;
+}
+add_filter('ap_ask_form_fields', 'yoga_custom_ask_fields');
+
+
+

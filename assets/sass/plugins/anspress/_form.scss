@@ -48,7 +48,15 @@ label > input[type="checkbox"] {
 
 .ap-form-fields {
   position: relative;
-  margin-bottom: $shim;
+  margin-bottom: $gutter;
+
+  &.ap-field-yoga_title_field_info,
+  &.ap-field-yoga_category_field_info,
+  &.ap-field-yoga_description_field_info,
+  &.ap-field-yoga_tags_field_info {
+    margin-bottom: 0;
+  }
+
 
   &.have-error {
     border-color: $error;
@@ -147,14 +155,6 @@ label > input[type="checkbox"] {
 //   padding: 5px 10px;
 // }
 
-// #answer_form .ap-field-description {
-//   border: solid 2px #eee;
-//   border-radius: 4px 4px 0 0;
-// }
-
-// #ask_form .ap-field-description .ap-form-fields-in {
-//   border: solid 2px #eee;
-// }
 
 
 // .ap-avatar-upload-form {
@@ -231,7 +231,7 @@ label > input[type="checkbox"] {
 
 //   .ap-upload-link-rc {
 //     background: none repeat scroll 0 0 #fcfcfc;
-//     border-radius: 2px;
+//     border-radius: $border-radius;
 //     display: none;
 //     left: 0;
 //     padding: 3px;
@@ -250,7 +250,7 @@ label > input[type="checkbox"] {
 //     }
 
 //     > a {
-//       border-radius: 2px;
+//       border-radius: $border-radius;
 //       height: 28px;
 //       padding: 2px;
 //       text-align: center;
@@ -377,31 +377,31 @@ label > input[type="checkbox"] {
 // }
 
 .ap-upload-item {
-  background: #ffffff;
-  margin-bottom: 10px;
-  padding: 10px 10px;
-  position: relative;
+  background-color: $color-background;
   font-size: $type-xsmall;
-  border: solid 1px #ddd;
+  margin-bottom: $shim;
+  padding: $shim;
+  position: relative;
+  //border: solid 1px $color-border-light;
 
   &.failed .ap-progress {
     background-color: $error;
   }
 
   .insert-to-post {
+    border-radius: $border-radius;
+    //border: solid 1px $color-border-light;
+    color: $color-text;
     display: none;
-    border: solid 1px #ddd;
-    color: #666;
-    padding: 2px 5px;
-    border-radius: 2px;
-    margin-left: 8px;
+    margin-left: $shim-half;
+    padding: 2px $shim-quarter;
   }
 
   .apicon-check,
   .apicon-stop {
-    margin-right: 8px;
     color: #81c784;
     display: none;
+    margin-right: 8px;
   }
 
   &.done {
@@ -437,15 +437,15 @@ label > input[type="checkbox"] {
 
 .ap-upload {
   .ap-progress {
-    width: 0;
-    height: 3px;
     background: #81c784;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
+    border-radius: $border-radius;
     bottom: -2px;
-    z-index: 0;
+    height: 3px;
+    left: 0;
+    position: absolute;
     transition: 0.5s 0.1s all;
+    width: 0;
+    z-index: 0;
   }
 }
 
@@ -476,4 +476,15 @@ label > input[type="checkbox"] {
 
 .ap-upload {
   font-size: $type-meta;
+}
+
+#category {
+  + .ap-field-desc {
+    display: none;
+  }
+}
+
+.form-help {
+  color: $color-text-light;
+  margin-bottom: 0;
 }

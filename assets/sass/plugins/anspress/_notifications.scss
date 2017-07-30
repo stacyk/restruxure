@@ -9,7 +9,7 @@
 }
 
 .ap-noti-icon {
-	background: $color-border;
+	background-color: $color-border;
 	border-radius: $border-radius;
 	float: left;
 	font-size: $shim;
@@ -29,7 +29,7 @@
 
 .ap-noti-rep {
 	align-items: center;
-	background: $orange;
+	background-color: $color-link-hover;
 	border-radius: $shim;
 	color: $color-background;
 	display: flex;
@@ -73,7 +73,7 @@
 }
 
 #noti-dp {
-	background: $color-background;
+	background-color: $color-background;
 	border: solid 2px $color-border;
 	font-family: $font-sans;
 	font-size: $type-small;
@@ -101,7 +101,7 @@
 	text-align: left;
 
 	&.unseen {
-		background: #f5f5f5;
+		background: $blue-light;
 	}
 }
 
@@ -110,12 +110,7 @@
 }
 
 .ap-noti-unseen {
-	background: $orange;
-	border-radius: $border-radius;
-	color: $color-background;
-	font-style: normal;
-	font-weight: normal;
-	padding: 1px 3px;
+	@include noti-circle();
 }
 
 .ap-noti-icon,
@@ -128,7 +123,7 @@
 }
 
 .ap-noti-rep {
-	background-color: #f4ac20;
+	background-color: $color-link;
 	border-radius: $shim;
 	color: $color-background;
 	display: block;
@@ -182,18 +177,8 @@
 	overflow-y: auto;
 }
 
+
+// sidebar menu notification icon totle
 i.noti-count {
-	align-items: center;
-	background-color: $green-light;
-	border-radius: $border-radius;
-	color: $color-background;
-	display: flex;
-	font-size: $type-meta;
-	font-style: normal;
-	height: $shim;
-	justify-content: center;
-	line-height: 1;
-	margin-left: $shim-quarter;
-	padding: 0;
-	width: $shim;
+	@include noti-circle();
 }
