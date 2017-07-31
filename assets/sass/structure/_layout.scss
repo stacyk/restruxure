@@ -39,7 +39,7 @@ body {
 	text-align: center;
 
 	@include above(bp-small) {
-		justify-content: space-between;
+		justify-content: flex-start;
 	}
 }
 

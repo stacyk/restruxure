@@ -1,171 +1,178 @@
-.best-answer .ap-bpsingle,
-.answer-selected .ap-bpsingle {
-  border-color: $solved;
-}
+// .best-answer .ap-bpsingle,
+// .answer-selected .ap-bpsingle {
+//   border-color: $solved;
+// }
 
-  .ap-bpsingle {
-    border: solid 1px $color-border;
-    border-radius: $border-radius;
-    margin-bottom: $gutter;
+//   .ap-bpsingle {
+//     border: solid 1px $color-border;
+//     border-radius: $border-radius;
+//     margin-bottom: $gutter;
 
-    &-title {
-      padding: $shim-quarter $shim-half;
-      font-size: $type-small;
-      border-bottom: solid 1px $color-border;
-      margin-bottom: $shim-half;
+//     &-title {
+//       padding: $shim-quarter $shim-half;
+//       font-size: $type-small;
+//       border-bottom: solid 1px $color-border;
+//       margin-bottom: $shim-half;
 
-      > a {
-        text-decoration: none;
-        font-weight: bold;
-        color: $color-text;
-      }
-    }
+//       > a {
+//         text-decoration: none;
+//         font-weight: bold;
+//         color: $color-text;
+//       }
+//     }
 
-    &-acount {
-      margin-left: $shim-half;
-      border-left: solid 1px $color-border;
-      padding-left: $shim-half;
-      font-size: $type-small;
-      text-decoration: none;
-    }
+//     &-acount {
+//       margin-left: $shim-half;
+//       border-left: solid 1px $color-border;
+//       padding-left: $shim-half;
+//       font-size: $type-small;
+//       text-decoration: none;
+//     }
 
-    &-content {
-      padding: 0 $shim-half;
-      position: relative;
+//     &-content {
+//       padding: 0 $shim-half;
+//       position: relative;
 
-      p {
-        margin-bottom: 0;
-      }
+//       p {
+//         margin-bottom: 0;
+//       }
 
-      .ap-avatar {
-        margin-top: 4px;
-      }
-    }
+//       .ap-avatar {
+//         margin-top: 4px;
+//       }
+//     }
 
-    &-meta {
-      font-size: $type-xsmall;
-      color: $color-text-light;
-      border-top: solid 1px $color-border;
-      padding: $shim-quarter $shim-half;
-      margin-top: $shim-half;
+//     &-meta {
+//       font-size: $type-xsmall;
+//       color: $color-text-light;
+//       border-top: solid 1px $color-border;
+//       padding: $shim-quarter $shim-half;
+//       margin-top: $shim-half;
 
-      > * {
-        margin-right: $shim-half;
-      }
+//       > * {
+//         margin-right: $shim-half;
+//       }
 
-      a {
-        text-decoration: none;
-      }
+//       a {
+//         text-decoration: none;
+//       }
 
-      // .apicon-thumb-up,
-      // .apicon-answer {
-      //   &:before {
-      //     margin-right: 2px;
-      //   }
-      // }
-    }
+//       // .apicon-thumb-up,
+//       // .apicon-answer {
+//       //   &:before {
+//       //     margin-right: 2px;
+//       //   }
+//       // }
+//     }
 
-    &-selected,
-    .solved {
-      color: $solved;
-    }
+//     &-selected,
+//     .solved {
+//       color: $solved;
+//     }
 
-    &-published {
-      color: $color-text-light;
-      text-decoration: none;
-      font-size: $type-small;
-    }
+//     &-published {
+//       color: $color-text-light;
+//       text-decoration: none;
+//       font-size: $type-small;
+//     }
 
-    .apicon-answer:before {
-      margin-right: $shim-quarter;
-    }
-  }
+//     .apicon-answer:before {
+//       margin-right: $shim-quarter;
+//     }
+//   }
 
-  .ap-view-question {
-    background-color: $color-link;
-    font-size: $type-xsmall;
-    color: $color-background;
-    padding: 2px $shim-quarter;
-    border-radius: $border-radius;
-    text-decoration: none;
-    margin-top: $shim-half;
-    display: table;
-  }
+//   .ap-view-question {
+//     background-color: $color-link;
+//     font-size: $type-xsmall;
+//     color: $color-background;
+//     padding: 2px $shim-quarter;
+//     border-radius: $border-radius;
+//     text-decoration: none;
+//     margin-top: $shim-half;
+//     display: table;
+//   }
 
-  .ap-bp-head {
-    border-bottom: solid 1px $color-border;
-    margin-bottom: $gutter;
-    padding-bottom: $shim-half;
+//   .ap-bp-head {
+//     border-bottom: solid 1px $color-border;
+//     margin-bottom: $gutter;
+//     padding-bottom: $shim-half;
 
-    h1 {
-      margin: 0;
-      float: left;
-    }
+//     h1 {
+//       margin: 0;
+//       float: left;
+//     }
 
-    .ap-answers-tab {
-      float: right;
-      border-radius: $border-radius;
+//     .ap-answers-tab {
+//       float: right;
+//       border-radius: $border-radius;
 
-      li {
-        margin: 0;
+//       li {
+//         margin: 0;
 
-        a {
-          display: block;
-          padding: $shim-quarter $shim;
-          text-decoration: none;
-          font-size: $type-small;
-        }
+//         a {
+//           display: block;
+//           padding: $shim-quarter $shim;
+//           text-decoration: none;
+//           font-size: $type-small;
+//         }
 
-        &.active {
-          a {
-            background: $color-background-light;
-          }
-        }
-      }
-    }
+//         &.active {
+//           a {
+//             background: $color-background-light;
+//           }
+//         }
+//       }
+//     }
 
-    .ap-filters {
-      float: right;
-    }
-  }
+//     .ap-filters {
+//       float: right;
+//     }
+//   }
 
-  .ap-bp-loadmore {
-    display: table;
-    margin: 0 auto;
-    font-size: $type-xsmall;
-  }
-
-
-.ap-user-meta-reputation {
-  background-color: $color-link;
-  border-radius: $border-radius;
-  font-size: $type-xsmall;
-  padding: 3px $shim-half;
-}
+//   .ap-bp-loadmore {
+//     display: table;
+//     margin: 0 auto;
+//     font-size: $type-xsmall;
+//   }
 
 
+// .ap-user-meta-reputation {
+//   background-color: $color-link;
+//   border-radius: $border-radius;
+//   font-size: $type-xsmall;
+//   padding: 3px $shim-half;
+// }
 
-#buddypress .avatar {
-border-radius: 150px;
-}
 
 
-#buddypress .question {
-	margin-bottom: 2.5rem;
-}
+// #buddypress .avatar {
+// border-radius: 150px;
+// }
 
-#buddypress .ap-filters {
-	margin-bottom: 1.5rem;
-}
+
+// #buddypress .question {
+// 	margin-bottom: 2.5rem;
+// }
+
+// #buddypress .ap-filters {
+// 	margin-bottom: 1.5rem;
+// }
 
 .ap-bpsingle-meta {
-	display: flex;
+  display: flex;
 
+  span {
+    margin-right: $shim;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
-.ap-bpsingle-acount,
-.ap-bpsingle-published,
-.ap-bpsingle-meta span {
-	font-size: 13px;
-  margin-right: .5rem;
-}
+// .ap-bpsingle-acount,
+// .ap-bpsingle-published,
+// .ap-bpsingle-meta span {
+// 	font-size: 13px;
+//   margin-right: .5rem;
+// }

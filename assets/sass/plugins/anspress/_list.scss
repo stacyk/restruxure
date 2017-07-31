@@ -47,11 +47,6 @@
 .ap-questions-item {
   display: flex;
   flex: 1 1 100%;
-
-  &.featured-question {
-    // grid-column: 2;
-    // grid-row-end: span 3;
-  }
 }
 
 .ap-asked-by {
@@ -103,6 +98,27 @@
   font-family: $font-sans;
   margin-right: $shim;
 
+  &.subscribe {
+    color: $color-background;
+    margin-left: auto;
+
+    a {
+      background-color: $purple;
+      border-radius: $border-radius;
+      padding: $shim-quarter $shim-half;
+
+      &:link,
+      &:visited {
+        color: $color-background;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $color-link-hover;
+      }
+    }
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -137,10 +153,6 @@
   &.trash {
     background-color: #ef5350;
     color: $color-background;
-  }
-
-  .featured-question {
-    background-color: $pink-dark;
   }
 }
 

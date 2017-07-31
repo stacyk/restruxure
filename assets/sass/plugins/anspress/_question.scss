@@ -74,15 +74,10 @@
 
 .ap-display-meta-item {
 	&.active,
-	&.views {
+	&.views,
+	&.featured {
 		display: none;
 	}
-
-	&.featured {
-		margin-left: auto;
-		order: 10;
-	}
-
 }
 
 .question-categories,
@@ -116,9 +111,6 @@
 		padding: $shim-quarter $shim;
 	}
 
-	.featured {
-		background-color: $featured;
-	}
 
 	.solved {
 		background-color: $color-voted-best;
@@ -280,11 +272,11 @@
 	}
 }
 
-post-message {
-	align-items: center;
-	display: flex;
-	margin-left: auto;
-}
+// post-message {
+// 	align-items: center;
+// 	display: flex;
+// 	margin-left: auto;
+// }
 
 .ap-pmsg {
 	position: relative;

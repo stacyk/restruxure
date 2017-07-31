@@ -83,11 +83,10 @@
 }
 
 .ap-taxo-detail {
-  background-color: #f8f8f8;
+  background-color: $color-background-light;
   border-radius: 5px;
-  background-clip: padding-box;
-  margin-bottom: $gutter;
-  padding: $shim $gutter;
+  margin-bottom: $shim-double;
+  padding: $shim $shim-double;
 
   .ap-tax-item-count {
     color: $purple-dark;
@@ -192,7 +191,7 @@
     padding: 0;
 
     button {
-      background: #f8f8f8 none repeat scroll 0 0;
+      background: $color-background-light none repeat scroll 0 0;
       border: 2px solid #ddd;
       color: #333333;
 
