@@ -44,8 +44,8 @@ nav {
 
   div {
     display: flex;
-
   }
+
   // Menu area
   ul {
     display: none;
@@ -118,8 +118,8 @@ nav {
 
     &:hover::before,
     &:focus::before {
-      color: #fff;
-      text-shadow: 16px 0 #fff, -16px 0 #fff;
+      color: $color-background;
+      text-shadow: 16px 0 $color-background, -16px 0 $color-background;
     }
 
     &:hover,
@@ -137,9 +137,9 @@ nav {
 
       &:hover::before,
       &:focus::before {
-        color: #fff;
+        color: $color-background;
         font-size: $type-meta;
-        text-shadow: 16px 0 #fff, -16px 0 #fff;
+        text-shadow: 16px 0 $color-background, -16px 0 $color-background;
       }
     }
   }
