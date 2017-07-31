@@ -52,8 +52,6 @@
 		?>
 
 		<?php dynamic_sidebar( 'sidebar-menu' ); ?>
-
-		<a href="<?php echo get_edit_user_link(); ?>">Edit Profile (beta)</a>
 	</div>
 
 
