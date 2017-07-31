@@ -34,28 +34,18 @@ label > input[type="checkbox"] {
   }
 }
 
-.ap-field-description {
-  + .ap-field-ap_upload {
-    margin-top: $shim * -1;
-  }
-
-  // &.have-error {
-  //   & + .ap-field-ap_upload .ap-upload-anchor {
-  //     border-color: $error;
-  //   }
-  // }
-}
-
 .ap-form-fields {
   position: relative;
-  margin-bottom: $gutter;
+  // margin-bottom: $gutter;
 
-  &.ap-field-yoga_title_field_info,
-  &.ap-field-yoga_category_field_info,
-  &.ap-field-yoga_description_field_info,
-  &.ap-field-yoga_tags_field_info {
-    margin-bottom: 0;
-  }
+  // &.ap-field-ap_upload,
+  // &.ap-field-description,
+  // &.ap-field-yoga_title_field_info,
+  // &.ap-field-yoga_category_field_info,
+  // &.ap-field-yoga_description_field_info,
+  // &.ap-field-yoga_tags_field_info {
+  //   margin-bottom: 0;
+  // }
 
 
   &.have-error {
@@ -487,4 +477,9 @@ label > input[type="checkbox"] {
 .form-help {
   color: $color-text-light;
   margin-bottom: 0;
+  margin-top: $shim-double;
+
+  .ap-field-yoga_title_field_info & {
+    margin-top: 0;
+  }
 }

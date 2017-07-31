@@ -77,6 +77,10 @@ textarea {
 	body#tinymce.mce-content-body {
 		color: $color-input-text !important;
 	}
+
+	.wp-editor-container {
+		border: 0;
+	}
 }
 
 input[type="text"],
@@ -106,8 +110,12 @@ label {
   display: block;
 	font-family: $font-sans;
 	font-size: $type-meta;
-	font-weight: 700;
   margin-bottom: $shim-quarter;
+
+	&.ap-form-label {
+		font-size: $type-small;
+		font-weight: 700;
+	}
 }
 
 input {
