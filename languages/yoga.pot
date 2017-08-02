@@ -13,11 +13,11 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:18
+#: 404.php:17
 msgid "Sorry, this page doesn't exist."
 msgstr ""
 
-#: 404.php:23
+#: 404.php:22
 msgid "It seems we can’t find what you’re looking for. Perhaps searching can help."
 msgstr ""
 
@@ -52,15 +52,23 @@ msgstr ""
 msgid "Optional Mobile Menu"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:51
+msgid "User Profile Menu"
+msgstr ""
+
+#: functions.php:52
+msgid "Utility Menu"
+msgstr ""
+
+#: functions.php:100
 msgid "Sidebar 1"
 msgstr ""
 
-#: functions.php:99
-msgid "Sidebar Archive"
+#: functions.php:101
+msgid "Sidebar Menu"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:109
 msgid "Widget area for %s"
 msgstr ""
 
@@ -76,11 +84,15 @@ msgstr ""
 msgid "home"
 msgstr ""
 
+#: page-login.php:2, page-register.php:2
+msgid "login page"
+msgstr ""
+
 #: page-narrow.php:2
 msgid "Narrow content"
 msgstr ""
 
-#: search.php:20
+#: search.php:19
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -97,11 +109,11 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: inc/extras.php:109, inc/extras.php:174
+#: inc/extras.php:109
 msgid "Width must be an integer"
 msgstr ""
 
-#: inc/extras.php:113, inc/extras.php:178
+#: inc/extras.php:113
 msgid "Height must be an integer"
 msgstr ""
 
@@ -117,32 +129,208 @@ msgstr ""
 msgid "WebDevStudios Placeholder Image"
 msgstr ""
 
-#: inc/extras.php:199
-msgid "Placeholder Image"
-msgstr ""
-
-#: inc/hooks.php:123
+#: inc/hooks.php:143
 msgid "Read More"
 msgstr ""
 
-#: inc/hooks.php:135
+#: inc/hooks.php:156
 msgid "&hellip; Read more"
 msgstr ""
 
-#: inc/post-types.php:18, inc/post-types.php:23
+#: inc/post-types.php:20
+msgctxt "Post Type General Name"
 msgid "Poses"
 msgstr ""
 
-#: inc/post-types.php:19
+#: inc/post-types.php:21
+msgctxt "Post Type Singular Name"
 msgid "Pose"
 msgstr ""
 
-#: inc/post-types.php:51, inc/post-types.php:56
+#: inc/post-types.php:22
+msgid "Poses"
+msgstr ""
+
+#: inc/post-types.php:23, inc/post-types.php:53
+msgid "Pose"
+msgstr ""
+
+#: inc/post-types.php:24
+msgid "Pose Archives"
+msgstr ""
+
+#: inc/post-types.php:25, inc/post-types.php:117
+msgid "Parent Item:"
+msgstr ""
+
+#: inc/post-types.php:26
+msgid "All Poses"
+msgstr ""
+
+#: inc/post-types.php:27
+msgid "Add New Pose"
+msgstr ""
+
+#: inc/post-types.php:28
+msgid "Add New"
+msgstr ""
+
+#: inc/post-types.php:29
+msgid "New Pose"
+msgstr ""
+
+#: inc/post-types.php:30
+msgid "Edit Pose"
+msgstr ""
+
+#: inc/post-types.php:31
+msgid "Update Pose"
+msgstr ""
+
+#: inc/post-types.php:32
+msgid "View Pose"
+msgstr ""
+
+#: inc/post-types.php:33
+msgid "View Poses"
+msgstr ""
+
+#: inc/post-types.php:34
+msgid "Search Poses"
+msgstr ""
+
+#: inc/post-types.php:35
+msgid "Not found"
+msgstr ""
+
+#: inc/post-types.php:36
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/post-types.php:37
+msgid "Featured Image"
+msgstr ""
+
+#: inc/post-types.php:38
+msgid "Set featured image"
+msgstr ""
+
+#: inc/post-types.php:39
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/post-types.php:40
+msgid "Use as featured image"
+msgstr ""
+
+#: inc/post-types.php:41
+msgid "Insert into pose"
+msgstr ""
+
+#: inc/post-types.php:42
+msgid "Uploaded to this pose"
+msgstr ""
+
+#: inc/post-types.php:43
+msgid "Pose list"
+msgstr ""
+
+#: inc/post-types.php:44
+msgid "Pose list navigation"
+msgstr ""
+
+#: inc/post-types.php:45
+msgid "Filter pose list"
+msgstr ""
+
+#: inc/post-types.php:54
+msgid "Pose Library"
+msgstr ""
+
+#: inc/post-types.php:81, inc/post-types.php:86
 msgid "Muscles"
 msgstr ""
 
-#: inc/post-types.php:52
+#: inc/post-types.php:82
 msgid "Muscle"
+msgstr ""
+
+#: inc/post-types.php:112
+msgctxt "Taxonomy General Name"
+msgid "Pose Categories"
+msgstr ""
+
+#: inc/post-types.php:113
+msgctxt "Taxonomy Singular Name"
+msgid "Pose Category"
+msgstr ""
+
+#: inc/post-types.php:114
+msgid "Pose Categories"
+msgstr ""
+
+#: inc/post-types.php:115
+msgid "All Items"
+msgstr ""
+
+#: inc/post-types.php:116
+msgid "Parent Item"
+msgstr ""
+
+#: inc/post-types.php:118
+msgid "New Pose Category"
+msgstr ""
+
+#: inc/post-types.php:119
+msgid "Add New Pose Category"
+msgstr ""
+
+#: inc/post-types.php:120
+msgid "Edit Pose Category"
+msgstr ""
+
+#: inc/post-types.php:121
+msgid "Update Pose Category"
+msgstr ""
+
+#: inc/post-types.php:122
+msgid "View Pose Category"
+msgstr ""
+
+#: inc/post-types.php:123
+msgid "Separate Pose Categories with commas"
+msgstr ""
+
+#: inc/post-types.php:124
+msgid "Add or remove Pose Category"
+msgstr ""
+
+#: inc/post-types.php:125
+msgid "Choose from the most used"
+msgstr ""
+
+#: inc/post-types.php:126
+msgid "Popular Pose Categories"
+msgstr ""
+
+#: inc/post-types.php:127
+msgid "Search Pose Categories"
+msgstr ""
+
+#: inc/post-types.php:128
+msgid "Not Found"
+msgstr ""
+
+#: inc/post-types.php:129
+msgid "No Pose Categories"
+msgstr ""
+
+#: inc/post-types.php:130
+msgid "Pose Category list"
+msgstr ""
+
+#: inc/post-types.php:131
+msgid "Pose Category list navigation"
 msgstr ""
 
 #: inc/scripts.php:23
@@ -183,51 +371,39 @@ msgstr ""
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:64
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:64
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:64
-msgid "% Comments"
-msgstr ""
-
-#: inc/template-tags.php:71, template-parts/content-page.php:38
+#: inc/template-tags.php:65, template-parts/content-page.php:38
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:96
+#: inc/template-tags.php:90
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: inc/template-tags.php:101
+#: inc/template-tags.php:95
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: inc/template-tags.php:272
+#: inc/template-tags.php:266
 msgid "Share This"
 msgstr ""
 
-#: inc/template-tags.php:276, inc/template-tags.php:277
+#: inc/template-tags.php:270, inc/template-tags.php:271
 msgid "Share on Twitter"
 msgstr ""
 
-#: inc/template-tags.php:282, inc/template-tags.php:283
+#: inc/template-tags.php:276, inc/template-tags.php:277
 msgid "Share on Facebook"
 msgstr ""
 
-#: inc/template-tags.php:288, inc/template-tags.php:289
+#: inc/template-tags.php:282, inc/template-tags.php:283
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: inc/template-tags.php:352, inc/template-tags.php:353
+#: inc/template-tags.php:346, inc/template-tags.php:347
 msgid "Link to %s"
 msgstr ""
 
-#: template-parts/content-issues.php:83, template-parts/content-muscles.php:32, template-parts/content-poses.php:38, template-parts/content.php:32
+#: template-parts/content-issues.php:83, template-parts/content-muscles.php:32, template-parts/content-poses.php:33, template-parts/content.php:32
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -264,6 +440,10 @@ msgid "Additional Scripts"
 msgstr ""
 
 #: inc/customizer/sections.php:27
+msgid "Social Networks"
+msgstr ""
+
+#: inc/customizer/sections.php:37
 msgid "Footer Customizations"
 msgstr ""
 
