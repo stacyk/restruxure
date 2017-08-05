@@ -86,21 +86,24 @@
 	width: 2.5rem;
 	z-index: 2;
 
+	@include above(bp-menuopen) {
+		width: $sidebar-width-large;
+		display: none;
+	}
+
 	.icon {
 		fill: $white;
 		height: $shim;
-		transform: rotate(180deg);
+		transform: rotate(0deg);
 		transition: transform $ttime ease-out;
 		width: $shim;
 	}
 
-	&:not(.closed) {
+	&.open {
 		width: $sidebar-width-large;
-	}
 
-	&.closed {
 		.icon {
-			transform: rotate(0);
+			transform: rotate(180deg);
 		}
 	}
 }

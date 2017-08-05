@@ -16,7 +16,6 @@
 		width: 100%;
 	}
 
-
 	.logged-out & > .secondary-menu:first-child {
 		padding-top: $gutter;
 	}
@@ -75,11 +74,12 @@
 
 .sidebar-vertical {
 	background-color: $sidebar-bg;
+	bottom: 0;
 	color: $white;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	position: fixed;
+	position: absolute;
 	text-align: center;
 	top: 0;
 	width: $sidebar-width-large;
@@ -100,10 +100,14 @@
 
 .sidebar-right {
 	right: $sidebar-width-large-negative;
-}
 
-.sidebar-right.sidebar-open {
-	right: 0;
+	@include above(bp-menuopen) {
+		right: 0;
+	}
+
+	&.open {
+		right: 0;
+	}
 }
 
 .sidebar-push {
@@ -112,8 +116,13 @@
 	left: 0;
 }
 
-.sidebar-push-toleft {
-	.site-content {
+.site-content {
+	@include above(bp-menuopen) {
+		margin-left: 0;
+		width: calc(100% - #{$sidebar-width-large});
+	}
+
+	.sidebar-push-toleft & {
 		margin-left: 0;
 		width: 100%;
 
@@ -126,7 +135,6 @@
 /* Transitions */
 
 .sidebar,
-.sidebar-push {
+.sidebar-right {
 	transition: all 0.3s ease;
 }
-

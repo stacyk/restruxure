@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 
-	<div id="sidebar-sliding-panel" class="sidebar sidebar-vertical sidebar-right sidebar-open sidebar-open-initial" aria-expanded="false">
+	<div id="sidebar-sliding-panel" class="sidebar sidebar-vertical sidebar-right" aria-expanded="false">
 
 		<?php	if ( is_user_logged_in() ) : ?>
 			<?php $current_user = wp_get_current_user(); ?>

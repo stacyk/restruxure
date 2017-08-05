@@ -6,14 +6,29 @@
 
 var sidebarRight = document.getElementById( 'sidebar-sliding-panel' ),
 	showRightPush = document.getElementById( 'sidebar-toggle-button' ),
-	hideRightPush = document.getElementById( 'sidebar-toggle-button-close' ),
 	body = document.body;
 
+jQuery(document).ready(function($) {
+  /* Check width on page load*/
+  if ( $(window).width() > 1280) {
+		classie.remove( body, 'sidebar-push-toleft' );
 
-showRightPush.onclick = function() {
-	classie.toggle( this, 'closed' );
-	classie.toggle( body, 'sidebar-push-toleft' );
-	classie.toggle( sidebarRight, 'sidebar-open' );
-	classie.remove( sidebarRight, 'sidebar-open-initial' );
-	classie.remove( body, 'sidebar-push-toleft-initial')
-};
+	//	classie.add( sidebarRight, 'open' );
+//		classie.add( showRightPush, 'open');
+
+		showRightPush.onclick = function() {
+			classie.toggle( body, 'sidebar-push-toleft' );
+			classie.toggle( sidebarRight, 'open' );
+			classie.toggle( showRightPush, 'open');		}
+	}
+
+	else {
+		classie.remove( body, 'sidebar-push-toleft' );
+
+		showRightPush.onclick = function() {
+			classie.toggle( body, 'sidebar-push-toleft' );
+			classie.toggle( sidebarRight, 'open' );
+			classie.toggle( showRightPush, 'open');
+		}
+  }
+});

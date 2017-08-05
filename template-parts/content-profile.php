@@ -10,14 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header">
 			<h2>Profile</h2>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header>
 
-	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
@@ -31,17 +27,24 @@
 
 				$options = array(
 					'post_id' => 'user_'.$uid,
-					'field_groups' => array(8),
+					'field_groups' => array(2, 8),
 					'form' => true,
 			    'return' => add_query_arg( 'updated', 'true', get_permalink() ),
 					'html_before_fields' => '',
 					'html_after_fields' => '',
 					'submit_value' => 'Update Profile'
-				);
+				); ?>
 
-				echo '<p>Your username is <b>' . wp_get_current_user()->user_login . '</b>. This cannot be changed.</p>';
+<?php the_field( 'website_url' ); ?>
+<?php the_field( 'facebook_url' ); ?>
+<?php the_field( 'twitter_url' ); ?>
+<?php the_field( 'linkedin_url' ); ?>
+<?php the_field( 'instagram_url' ); ?>
+<?php the_field( 'snapchat_url' ); ?>
+<?php the_field( 'youtube_url' ); ?>
+<?php the_field( 'vimeo_url' ); ?>
 
-				acf_form( $options );
+			<?php	acf_form( $options );
 			}
 
 		?>

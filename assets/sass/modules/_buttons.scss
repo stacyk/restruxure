@@ -83,7 +83,10 @@ button {
 	}
 }
 
-
+// Submit Buttons
+#wp-submit {
+	@include btn;
+}
 
 .mce-btn {
 	button {
