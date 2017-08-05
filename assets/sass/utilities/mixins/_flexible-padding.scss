@@ -17,10 +17,10 @@
 @mixin pad($positive: null) {
 
   @if $positive == null {
-    padding-left: calc(#{$shim} + 2.5vw);
-    padding-right: calc(#{$shim} + 2.5vw);
+    padding-left: calc(#{$shim} + 8vw);
+    padding-right: calc(#{$shim} + 8vw);
   } @else {
-    margin-left: calc(-#{$shim} + -2.5vw);
-    margin-right: calc(-#{$shim} + -2.5vw);
+    margin-left: calc(-#{$shim} + -8vw);
+    margin-right: calc(-#{$shim} + -8vw);
   }
 }
