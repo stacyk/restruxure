@@ -19,7 +19,7 @@ table {
 
   th,
   td {
-    padding: 0.75rem;
+    padding: $shim-half;
 
     @include above(bp-small) {
       display: table-cell;
@@ -34,7 +34,8 @@ table {
 
   tr {
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: $shim-half;
+    text-align: left;
 
     @include above(bp-small) {
       display: table-row;
@@ -60,5 +61,52 @@ table {
 
   @include above(bp-small) {
     border: 1px solid $color-border;
+  }
+
+  &.form-table,
+  &.tml-form-table {
+    td {
+      border-color: transparent;
+
+      &:last-child {
+        border-color: transparent;
+      }
+    }
+
+    tr,
+    label {
+      font-size: $type-small;
+    }
+
+    th {
+      padding: $shim 0 0 0;
+    }
+
+    td {
+      padding: 0 0 $shim 0;
+    }
+  
+    @include above(bp-small) {
+      border-color: transparent;
+    }
+
+    .pw-weak {
+      margin-top: $shim;
+    }
+  }
+}
+
+table.form-table > tbody > .acf-field > .acf-label label {
+	color: $color-text-light;
+	font-family: $font-sans;
+	font-size: $type-small;
+	font-weight: 700;
+}
+
+#your-profile {
+  p:first-of-type,
+  h3:first-of-type,
+  .tml-form-table:first-of-type {
+    display: none;
   }
 }
