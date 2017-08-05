@@ -13,9 +13,6 @@ jQuery(document).ready(function($) {
   if ( $(window).width() > 1280) {
 		classie.remove( body, 'sidebar-push-toleft' );
 
-	//	classie.add( sidebarRight, 'open' );
-//		classie.add( showRightPush, 'open');
-
 		showRightPush.onclick = function() {
 			classie.toggle( body, 'sidebar-push-toleft' );
 			classie.toggle( sidebarRight, 'open' );

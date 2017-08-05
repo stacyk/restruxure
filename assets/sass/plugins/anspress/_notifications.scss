@@ -1,6 +1,8 @@
 .ap-noti {
-	border: solid 1px $color-border;
+	border-color: $color-border;
 	border-radius: $border-radius;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
 }
 
 .ap-noti-item {
