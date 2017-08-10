@@ -3,8 +3,11 @@
 // --------------------------------------------------
 .ap-content {
 	display: flex;
-	flex-wrap: wrap;
 	position: relative;
+
+	> post-message:first-of-type {
+		display: none;
+	}
 }
 
 .ap-cell {
@@ -269,12 +272,6 @@
 		padding: 0;
 		list-style: none;
 	}
-}
-
-post-message {
-	display: flex;
-	margin: 0 auto $gutter;
-	width: 100%;
 }
 
 .ap-pmsg {
