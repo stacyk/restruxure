@@ -1,0 +1,35 @@
+//--------------------------------------------------------------
+// Pagination
+//--------------------------------------------------------------
+
+.page-numbers {
+  font-size: $type-medium;
+  font-weight: 700;
+  margin: $shim-half;
+  padding: 0 $shim-half;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.ap-pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.next {
+  font-size: $type-xsmall;
+}
+
+.prev {
+  font-size: $type-xsmall;
+}
+
+.current {
+  color: $color-link-hover;
+}
+

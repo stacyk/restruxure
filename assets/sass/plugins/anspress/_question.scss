@@ -3,6 +3,7 @@
 // --------------------------------------------------
 .ap-content {
 	display: flex;
+	flex-wrap: wrap;
 	position: relative;
 }
 
@@ -38,12 +39,9 @@
   }
 }
 
-
 .ap-questions-title {
 	@include subtitle;
 }
-
-
 
 .ap-q-metas {
 	align-items: center;
@@ -72,13 +70,13 @@
 	}
 }
 
-.ap-display-meta-item {
-	&.active,
-	&.views,
-	&.featured {
-		display: none;
-	}
-}
+// .ap-display-meta-item {
+// 	&.active,
+// 	&.views,
+// 	&.featured {
+// 		display: none;
+// 	}
+// }
 
 .question-categories,
 .question-tags {
@@ -145,16 +143,17 @@
 	}
 }
 
-.ap-content {
-	.ap-question-actions-history {
-		margin-bottom: 20px;
-	}
+//.ap-content {
 
-	.ap-posted-in {
-		margin-bottom: -20px;
-		text-transform: uppercase;
-	}
+.ap-question-actions-history {
+	margin-bottom: 20px;
 }
+
+.ap-posted-in {
+	margin-bottom: -20px;
+	text-transform: uppercase;
+}
+//}
 
 .ap-attachments {
   display: none;
@@ -272,11 +271,11 @@
 	}
 }
 
-// post-message {
-// 	align-items: center;
-// 	display: flex;
-// 	margin-left: auto;
-// }
+post-message {
+	display: flex;
+	margin: 0 auto $gutter;
+	width: 100%;
+}
 
 .ap-pmsg {
 	position: relative;
