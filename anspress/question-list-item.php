@@ -41,11 +41,6 @@ $clearfix_class = array( 'ap-questions-item clearfix' );
 								<?php _e( 'Answers', 'anspress-question-answer' ); ?>
 							</div>
 						</div><!-- end ap-list-counts -->
-
-						<!-- <span class="ap-asked-by">
-							<?php echo '<span class="meta">Asked by</span> '; ?>
-							<?php echo ap_user_display_name( [ 'html' => true ] ); ?>
-						</span> -->
 					</div><!-- end ap-q-metas -->
 				</div><!-- end questions-title-area -->
 			</div><!-- end ap-questions-head -->

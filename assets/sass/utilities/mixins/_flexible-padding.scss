@@ -17,10 +17,21 @@
 @mixin pad($positive: null) {
 
   @if $positive == null {
-    padding-left: calc(#{$shim} + 8vw);
-    padding-right: calc(#{$shim} + 8vw);
-  } @else {
-    margin-left: calc(-#{$shim} + -8vw);
-    margin-right: calc(-#{$shim} + -8vw);
+    padding-left: calc(#{$shim} + 4vw);
+    padding-right: calc(#{$shim} + 4vw);
+
+    @include above(bp-small) {
+      padding-left: calc(#{$shim} + 8vw);
+      padding-right: calc(#{$shim} + 8vw);
+    }
+  }
+  @else {
+    margin-left: calc(-#{$shim} + -4vw);
+    margin-right: calc(-#{$shim} + -4vw);
+
+    @include above(bp-small) {
+      margin-left: calc(-#{$shim} + -8vw);
+      margin-right: calc(-#{$shim} + -8vw);
+    }
   }
 }

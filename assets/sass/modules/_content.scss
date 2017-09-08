@@ -9,14 +9,22 @@
 // Entry Title
 @mixin pagetitle {
 	font-family: $font-headlines;
-	font-size: $type-h1;//calc(2.25rem + 0.25vw);
+	font-size: $type-h2;
 	line-height: 1.3;
+
+	@include above(bp-small) {
+    font-size: $type-h1;
+  }
 }
 
 @mixin subtitle {
 	font-family: $font-headlines;
-	font-size: $type-h2;
+	font-size: $type-h3;
 	line-height: 1.3;
+
+	@include above(bp-small) {
+    font-size: $type-h2;
+  }
 }
 
 .entry-title {

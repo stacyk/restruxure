@@ -25,19 +25,31 @@ a {
 h1,
 .h1 {
   font-family: $font-headlines;
-  font-size: $type-h1;
+  font-size: $type-h2;
+
+  @include above(bp-small) {
+    font-size: $type-h1;
+  }
 }
 
 h2,
 .h2 {
   font-family: $font-headlines;
-  font-size: $type-h2;
+  font-size: $type-h3;
+
+  @include above(bp-small) {
+    font-size: $type-h2;
+  }
 }
 
 h3,
 .h3 {
   font-family: $font-headlines;
-  font-size: $type-h3;
+  font-size: $type-h4;
+
+  @include above(bp-small) {
+    font-size: $type-h3;
+  }
 }
 
 h4,
