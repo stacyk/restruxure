@@ -73,62 +73,6 @@ function yoga_get_attachment_id_from_url( $attachment_url = '' ) {
 	return $attachment_id;
 }
 
-/**
- * Returns an <img> that can be used anywhere a placeholder image is needed
- * in a theme. The image is a simple colored block with the image dimensions
- * displayed in the middle.
- *
- * @author Ben Lobaugh
- * @throws Exception Details of missing parameters.
- * @param array $args {.
- *		@type int $width
- *		@type int $height
- *		@type string $background_color
- *		@type string $text_color
- * }
- * @return string
- */
-function yoga_get_placeholder_image( $args = array() ) {
-	$default_args = array(
-		'width'				=> '',
-		'height'			=> '',
-		'background_color'	=> 'dddddd',
-		'text_color'		=> '000000',
-	);
-
-	$args = wp_parse_args( $args, $default_args );
-
-	// Extract the vars we want to work with.
-	$width 				= $args['width'];
-	$height			 	= $args['height'];
-	$background_color	= $args['background_color'];
-	$text_color 		= $args['text_color'];
-
-	// Perform some quick data validation.
-	if ( ! is_numeric( $width ) ) {
-		throw new Exception( __( 'Width must be an integer', 'yoga' ) );
-	}
-
-	if ( ! is_numeric( $height ) ) {
-		throw new Exception( __( 'Height must be an integer', 'yoga' ) );
-	}
-
-	if ( ! ctype_xdigit( $background_color ) ) {
-		throw new Exception( __( 'Please provide a valid hex color value for background_color', 'yoga' ) );
-	}
-
-	if ( ! ctype_xdigit( $text_color ) ) {
-		throw new Exception( __( 'Please provide a valid hex color value for text_color', 'yoga' ) );
-	}
-
-	// Set up the url to the image.
-	$url = "http://placeholder.wdslab.com/i/{$width}x$height/$background_color/$text_color";
-
-	// Text that will be utilized by screen readers.
-	$alt = apply_filters( 'yoga_placeholder_image_alt', __( 'WebDevStudios Placeholder Image', 'yoga' ) );
-
-	return "<img src='$url' width='$width' height='$height' alt='$alt' />";
-}
 
 
 function yoga_hide_admin_bar($content) {
