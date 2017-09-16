@@ -95,7 +95,6 @@
   color: $color-text-light;
   display: flex;
   font-family: $font-sans;
-  margin-right: $shim;
 
   &.subscribe {
     color: $color-background;
@@ -123,14 +122,7 @@
   }
 
   i {
-    align-items: center;
-    display: flex;
-    font-style: normal;
-    margin-right: $shim-quarter;
-
-    &:before {
-      font-size: $type-xsmall;
-    }
+    display: none;
   }
 }
 

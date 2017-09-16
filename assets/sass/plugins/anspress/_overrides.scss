@@ -25,13 +25,16 @@
   }
 }
 
-.ap-questions-head {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 50px 1fr;
-}
+// .ap-questions-head {
+//   display: grid;
+//   grid-gap: 1rem;
+//   grid-template-columns: 50px 1fr;
+// }
 
 .questions-title-area {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: $shim;
 }
 
@@ -40,8 +43,11 @@
   flex-direction: column;
 
   .ap-avatar {
-    margin-bottom: $shim-half;
+    flex: 0 1 auto;
+    height: $avatar-height / 1.5;
+		margin-bottom: $shim-half;
     margin-right: $shim;
+    width: $avatar-height / 1.5;
   }
 }
 

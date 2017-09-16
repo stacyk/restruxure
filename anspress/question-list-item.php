@@ -19,12 +19,6 @@ $clearfix_class = array( 'ap-questions-item clearfix' );
 	<div class="ap-questions-inner">
 		<div class="ap-questions-summery">
 			<div class="ap-questions-head">
-				<div class="ap-avatar ap-pull-left">
-					<a href="<?php echo ap_user_link(); ?>">
-						<?php ap_author_avatar( ap_opt( 'avatar_size_list' ) ); ?>
-					</a>
-				</div><!-- end ap-avatar -->
-
 				<div class="questions-title-area">
 					<a class="ap-questions-hyperlink ap-questions-title" itemprop="url" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
 						<span itemprop="title">
@@ -32,6 +26,12 @@ $clearfix_class = array( 'ap-questions-item clearfix' );
 							<?php the_title(); ?>
 						</span>
 					</a>
+
+					<div class="ap-avatar">
+						<a href="<?php echo ap_user_link(); ?>">
+							<?php ap_author_avatar( ap_opt( 'avatar_size_list' ) ); ?>
+						</a>
+					</div><!-- end ap-avatar -->
 
 					<div class="ap-list-metas">
 						<div class="ap-list-counts">

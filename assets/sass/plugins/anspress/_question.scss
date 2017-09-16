@@ -44,6 +44,7 @@
 
 .ap-questions-title {
 	@include subtitle;
+	flex: 1 0 100%;
 }
 
 .ap-q-metas {
@@ -76,7 +77,11 @@
 .question-categories,
 .question-tags {
 	a {
-		margin-right: $shim;
+		margin-left: $shim-half;
+		margin-right: $shim-half;
+    padding: $shim-quarter $shim-half;
+    border: 1px solid $color-link;
+    border-radius: $shim;
 	}
 }
 
@@ -104,7 +109,6 @@
 		padding: $shim-quarter $shim;
 	}
 
-
 	.solved {
 		background-color: $color-voted-best;
 
@@ -113,6 +117,25 @@
 			color: $color-background;
 		}
 	}
+}
+
+//.ap-display-meta-item
+@mixin meta-status {
+	border-radius: $shim;
+	left: 0;
+	padding: 0;
+	position: absolute;
+	bottom: calc(100% + #{$shim-half});
+}
+
+.featured {
+	@include meta-status;
+	color: $featured;
+}
+
+.solved {
+	@include meta-status;
+	color: $solved;
 }
 
 .ap-user-meta-reputation {
@@ -242,8 +265,8 @@
 	width: $avatar-height;
 
 	@include below(bp-small) {
-		height: 35px;
-		width: 35px;
+		height: $avatar-height / 1.5;
+		width: $avatar-height / 1.5;
 	}
 }
 
