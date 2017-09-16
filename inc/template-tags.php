@@ -248,47 +248,47 @@ function yoga_get_copyright_text() {
 	return '<span class="copyright-text">' . wp_kses_post( $copyright_text ) . '</span>';
 }
 
+
 /**
- * Build social sharing icons.
+ * Get the Twitter social sharing URL for the current page.
  *
- * @return string
+ * @return string The URL.
  */
-function yoga_get_social_share() {
-
-	// Build the sharing URLs.
-	$twitter_url  = 'https://twitter.com/share?text=' . rawurlencode( html_entity_decode( get_the_title() ) ) . '&amp;url=' . rawurlencode( get_the_permalink() );
-	$facebook_url = 'https://www.facebook.com/sharer/sharer.php?u=' . rawurlencode( get_the_permalink() );
-	$linkedin_url = 'https://www.linkedin.com/shareArticle?title=' . rawurlencode( html_entity_decode( get_the_title() ) ) . '&amp;url=' . rawurlencode( get_the_permalink() );
-
-	// Start the markup.
-	ob_start(); ?>
-	<div class="social-share">
-		<h5 class="social-share-title"><?php esc_html_e( 'Share This', 'yoga' ); ?></h5>
-		<ul class="social-icons menu menu-horizontal">
-			<li class="social-icon">
-				<a href="<?php echo esc_url( $twitter_url ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
-					<?php echo yoga_get_svg( array( 'icon' => 'twitter-square', 'title' => 'Twitter', 'desc' => __( 'Share on Twitter', 'yoga' ) ) ); // WPCS: XSS ok. ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Share on Twitter', 'yoga' ); ?></span>
-				</a>
-			</li>
-			<li class="social-icon">
-				<a href="<?php echo esc_url( $facebook_url ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=600, height=300' ); return false;">
-					<?php echo yoga_get_svg( array( 'icon' => 'facebook-square', 'title' => 'Facebook', 'desc' => __( 'Share on Facebook', 'yoga' ) ) ); // WPCS: XSS ok. ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Share on Facebook', 'yoga' ); ?></span>
-				</a>
-			</li>
-			<li class="social-icon">
-				<a href="<?php echo esc_url( $linkedin_url ); ?>" onclick="window.open(this.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, top=150, left=0, width=475, height=505' ); return false;">
-					<?php echo yoga_get_svg( array( 'icon' => 'linkedin-square', 'title' => 'LinkedIn', 'desc' => __( 'Share on LinkedIn', 'yoga' ) ) ); // WPCS: XSS ok. ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Share on LinkedIn', 'yoga' ); ?></span>
-				</a>
-			</li>
-		</ul>
-	</div><!-- .social-share -->
-
-	<?php
-	return ob_get_clean();
+ function yoga_get_twitter_share_url() {
+	return add_query_arg(
+		 array(
+			 'text' => rawurlencode( html_entity_decode( get_the_title() ) ),
+			 'url'  => rawurlencode( get_the_permalink() ),
+		 ), 'https://twitter.com/share'
+		);
 }
+
+
+/**
+ * Get the Facebook social sharing URL for the current page.
+ *
+ * @return string The URL.
+ */
+function yoga_get_facebook_share_url() {
+	return add_query_arg( 'u', rawurlencode( get_the_permalink() ), 'https://www.facebook.com/sharer/sharer.php' );
+}
+
+
+/**
+ * Get the LinkedIn social sharing URL for the current page.
+ *
+ * @return string The URL.
+ */
+function yoga_get_linkedin_share_url() {
+	return add_query_arg(
+		 array(
+			 'title' => rawurlencode( html_entity_decode( get_the_title() ) ),
+			 'url'   => rawurlencode( get_the_permalink() ),
+		 ), 'https://www.linkedin.com/shareArticle'
+		);
+}
+
+
 
 /**
  * Output the mobile navigation
@@ -377,3 +377,47 @@ function yoga_archive_title( $title ) {
 }
 
 add_filter( 'get_the_archive_title', 'yoga_archive_title' );
+
+
+
+/**
+ * Display a card.
+ *
+ * @param array $args Card defaults.
+ */
+ function yoga_display_card( $args = array() ) {
+	// Setup defaults.
+	$defaults = array(
+		'title' => '',
+		'image' => '',
+		'text'  => '',
+		'url'   => '',
+		'class' => '',
+	);
+	// Parse args.
+	$args = wp_parse_args( $args, $defaults );
+	?>
+	<div class="<?php echo esc_attr( $args['class'] ); ?> card">
+
+		<?php if ( $args['image'] ) : ?>
+			<a href="<?php echo esc_url( $args['url'] ); ?>" tabindex="-1"><img class="card-image" src="<?php echo esc_url( $args['image'] ); ?>" alt="<?php echo esc_attr( $args['title'] ); ?>"></a>
+		<?php endif; ?>
+
+		<div class="card-section">
+
+		<?php if ( $args['title'] ) : ?>
+			<h3 class="card-title"><a href="<?php echo esc_url( $args['url'] ); ?>"><?php echo esc_html( $args['title'] ); ?></a></h3>
+		<?php endif; ?>
+
+		<?php if ( $args['text'] ) : ?>
+			<p class="card-text"><?php echo esc_html( $args['text'] ); ?></p>
+		<?php endif; ?>
+
+		<?php if ( $args['url'] ) : ?>
+			<button type="button" class="button button-card" onclick="location.href='<?php echo esc_url( $args['url'] ); ?>'"><?php esc_html_e( 'Read More', '_s' ); ?></button>
+		<?php endif; ?>
+
+		</div><!-- .card-section -->
+	</div><!-- .card -->
+	<?php
+}
