@@ -248,6 +248,11 @@
 	flex: 0 0 auto;
 	height: $avatar-height;
 	width: $avatar-height;
+
+	@include below(bp-small) {
+		height: 35px;
+		width: 35px;
+	}
 }
 
 .ap-single-vote {
