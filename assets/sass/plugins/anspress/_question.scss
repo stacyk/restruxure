@@ -54,7 +54,7 @@
 	font-family: $font-sans;
 	font-size: $type-meta;
 	margin-bottom: $shim;
-	padding: $shim 0;
+	padding-bottom: $shim;
 
 	> .ap-posted {
 		margin-left: $shim-half;
@@ -72,14 +72,6 @@
 		}
 	}
 }
-
-// .ap-display-meta-item {
-// 	&.active,
-// 	&.views,
-// 	&.featured {
-// 		display: none;
-// 	}
-// }
 
 .question-categories,
 .question-tags {
