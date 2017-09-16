@@ -25,6 +25,13 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+
+			<?php if ( is_front_page() || is_home() ) {
+				echo '<div class="multicol-features">';
+					dynamic_sidebar( 'homepage-modules' );
+				echo '</div>';
+			} ?>
+
 			<?php get_sidebar(); ?>
 
 		</main><!-- #main -->

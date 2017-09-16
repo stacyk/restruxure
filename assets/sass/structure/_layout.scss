@@ -58,6 +58,13 @@ body {
 	width: 100%;
 }
 
+.multicol-features {
+	display: grid;
+	grid-gap: $gutter;
+	grid-template-columns: 2fr 1fr;
+	grid-auto-flow: dense;
+}
+
 .site-footer {
 	@include pad;
   display: flex;

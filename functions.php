@@ -99,6 +99,7 @@ function yoga_widgets_init() {
 	$sidebars = array(
 		'sidebar-1'  => esc_html__( 'Sidebar 1', 'yoga' ),
 		'sidebar-menu'  => esc_html__( 'Sidebar Menu', 'yoga' ),
+		'homepage-modules'  => esc_html__( 'Home Page Modules', 'yoga' ),
 	);
 
 	// Loop through each sidebar and register.

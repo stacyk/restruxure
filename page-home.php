@@ -18,13 +18,20 @@ get_header();
 		<div class="primary content-area">
 			<main id="main" class="site-main" role="main">
 
+
 				<?php
-				while ( have_posts() ) : the_post();
+				if ( have_posts()) :
+						while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+				 	ap_get_template_part( 'question-list-item' );
 
-				endwhile; // End of the loop.
+					endwhile; // End of the loop.
 				?>
+
+				<?php //ap_questions_the_pagination(); ?>
+
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->

@@ -186,48 +186,47 @@
 //     }
 //   }
 // }
-// //--------------------------
-// // Categories widget
-// //-------------------------
-// #ap-categories-widget.ap-cat-wid {
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
 
-//   > li {
-//     border-bottom: 1px solid #f1f1f1;
-//     margin: 0;
-//     padding: 7px 0;
+//--------------------------
+// Categories widget
+//-------------------------
 
-//     &:last-child {
-//       border-bottom: none;
-//     }
+.ap-cat-wid {
+  display: flex;
+  flex-direction: column;
 
-//     a {
-//       display: block;
-//       font-size: $type-small;
-//       font-weight: 600;
-//       margin-bottom: 2px;
-//       padding: 0;
-//     }
+  /// @TODO when I get images, then display those and wrap this block
+  // flex-wrap: wrap;
 
-//     .ap-cat-count {
-//       color: #888;
-//       font-size: $type-xsmall;
+  > li {
+    /// @TODO when I get images, then add padding, remove border
+    border-bottom: 1px solid $color-border-light;
+    padding: $shim-half 0;
 
-//       span:first-child {
-//         margin-right: 5px;
-//       }
-//     }
+    a {
+      display: flex;
+      font-size: $type-small;
+      font-weight: 700;
+      //margin-bottom: $shim-quarter;
+      padding: 0;
+    }
 
-//     .ap-cat-image {
-//       float: right;
-//       position: relative;
-//       border-radius: 2px;
+    .ap-cat-count {
+      color: $color-text-light;
+      font-size: $type-xsmall;
 
-//       .ap-category-icon {
-//         display: none;
-//       }
-//     }
-//   }
-// }
+      span:first-child {
+        margin-right: $shim-half;
+      }
+    }
+
+    .ap-cat-image {
+      /// @TODO when I get images, display them
+      display: none;
+
+      .ap-category-icon {
+        display: none;
+      }
+    }
+  }
+}
