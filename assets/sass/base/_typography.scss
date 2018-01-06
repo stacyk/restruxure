@@ -170,3 +170,7 @@ big {
 .widget {
   @include word-break;
 }
+
+.meta {
+  @include meta;
+}

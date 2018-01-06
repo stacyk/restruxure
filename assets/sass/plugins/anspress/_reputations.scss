@@ -3,11 +3,20 @@
   border: none;
   border-spacing: 0;
 
-  td {
+  tr {
     border-width: 0 0 1px 0;
     border-color: $color-border;
     border-style: solid;
-    vertical-align: top;
+  }
+
+  td {
+    border-width: 0; // override base table styles
+    padding-bottom: $shim;
+    padding-top: $shim;
+
+    &:last-child {
+      border-width: 0; // override base table styles
+    }
 
     p:last-of-type {
       margin-bottom: 0;
@@ -72,8 +81,7 @@
       width: 55px;
 
       span {
-        font-family: $font-sans;
-        font-size: $type-meta;
+        @include meta;
       }
     }
   }
@@ -90,6 +98,7 @@
     display: block;
     font-family: $font-headlines;
     font-size: $type-small;
+    font-weight: 400 !important;
   }
 
   &:hover,
@@ -105,12 +114,11 @@
 }
 
 .ap-reputation-activity {
-  font-family: $font-sans;
-  font-size: $type-small;
+  @include meta;
 }
 
 .ap-reputation-date {
-  font-family: $font-sans;
-  font-size: $type-meta;
+  @include meta;
   min-width: 160px;
+  text-align: right;
 }

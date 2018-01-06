@@ -273,7 +273,6 @@
 .ap-single-vote {
 	align-items: center;
 	display: flex;
-	font-size: $type-xsmall;
 	height: $avatar-height;
 	justify-content: center;
 	padding: $shim-half;
@@ -284,6 +283,10 @@
 	a {
 		margin-right: $shim-quarter;
 	}
+}
+
+.net-vote-count {
+	@include meta;
 }
 
 .ap-question-info {

@@ -56,7 +56,6 @@
 .ap-display-question-meta {
   align-items: center;
   display: flex;
-
 }
 
 .question-excerpt,
@@ -77,9 +76,8 @@
 }
 
 .ap-questions-count {
+  @include meta;
   display: flex;
-  font-family: $font-sans;
-  font-size: $type-meta;
 
   span {
     padding: 0 $shim-quarter 0 0;
@@ -94,7 +92,6 @@
   align-items: stretch;
   color: $color-text-light;
   display: flex;
-  font-family: $font-sans;
 
   &.subscribe {
     color: $color-background;

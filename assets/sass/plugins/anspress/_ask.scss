@@ -6,7 +6,7 @@
   justify-content: space-between;
   margin-bottom: $shim;
   max-height: 200px;
-  overflow-x: auto;
+  overflow-y: auto;
 
   .ap-sqitem {
     border-bottom: 1px solid $color-border-light;
@@ -14,7 +14,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: $shim-half $shim;
+    padding-left: $shim;
+    padding-right: $shim;
 
     &:last-child {
       border-bottom: none;
@@ -27,6 +28,7 @@
   }
 
   .acount {
+    @include meta;
     order: 2;
   }
 

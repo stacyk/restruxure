@@ -25,8 +25,7 @@ $h4base: 1.25 * 0.9;
 
 $type-body: calc(0.95rem + 0.125vw);
 
-$type-meta: $type-root - 0.425rem;
-$type-xsmall: $type-root - 0.325rem;
+$type-xsmall: $type-root - 0.5rem;
 $type-small: $type-root - 0.25rem;
 $type-medium: $type-root + 0.25rem;
 $type-h1: calc(#{$h1base}rem + 0.25vw);
@@ -34,5 +33,12 @@ $type-h2: calc(#{$h2base}rem + 0.25vw);
 $type-h3: calc(#{$h3base}rem + 0.25vw);
 $type-h4: calc(#{$h4base}rem + 0.25vw);
 
+$type-meta: $type-xsmall;
 
 $size-question-title: $type-root * 1.35;
+
+@mixin meta {
+  color: $color-text-light;
+  font-family: $font-sans;
+  font-size: $type-meta;
+}

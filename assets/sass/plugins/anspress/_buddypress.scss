@@ -158,6 +158,11 @@
 // 	margin-bottom: 1.5rem;
 // }
 
+.ap-bpsingle-title {
+  @include subtitle;
+	flex: 1 0 100%;
+}
+
 .ap-bpsingle-meta {
   display: flex;
 
@@ -170,9 +175,12 @@
   }
 }
 
-// .ap-bpsingle-acount,
-// .ap-bpsingle-published,
-// .ap-bpsingle-meta span {
-// 	font-size: 13px;
-//   margin-right: .5rem;
-// }
+.ap-bpsingle-published {
+  @include meta;
+}
+
+.ap-bpsingle-acount,
+.ap-bpsingle-meta span {
+	font-size: 13px;
+  margin-right: .5rem;
+}

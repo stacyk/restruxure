@@ -201,6 +201,8 @@
   > li {
     /// @TODO when I get images, then add padding, remove border
     border-bottom: 1px solid $color-border-light;
+    display: flex;
+    justify-content: space-between;
     padding: $shim-half 0;
 
     a {
@@ -212,12 +214,7 @@
     }
 
     .ap-cat-count {
-      color: $color-text-light;
-      font-size: $type-xsmall;
-
-      span:first-child {
-        margin-right: $shim-half;
-      }
+      @include meta;
     }
 
     .ap-cat-image {
@@ -229,4 +226,8 @@
       }
     }
   }
+}
+
+.widget_anspress_category_widget {
+  grid-row: span 2;
 }
