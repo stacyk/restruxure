@@ -1,4 +1,4 @@
-# Copyright (C) 2017 yoga
+# Copyright (C) 2018 yoga
 # This file is distributed under the same license as the yoga package.
 msgid ""
 msgstr ""
@@ -68,7 +68,11 @@ msgstr ""
 msgid "Sidebar Menu"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:102
+msgid "Home Page Modules"
+msgstr ""
+
+#: functions.php:110
 msgid "Widget area for %s"
 msgstr ""
 
@@ -84,12 +88,16 @@ msgstr ""
 msgid "home"
 msgstr ""
 
-#: page-login.php:2, page-register.php:2
-msgid "login page"
-msgstr ""
-
 #: page-narrow.php:2
 msgid "Narrow content"
+msgstr ""
+
+#: page-profile.php:2
+msgid "edit profile"
+msgstr ""
+
+#: page-profile.php:64, inc/template-tags.php:65, template-parts/content-home.php:38, template-parts/content-page.php:38, template-parts/content-profile.php:60
+msgid "Edit %s"
 msgstr ""
 
 #: search.php:19
@@ -109,31 +117,11 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: inc/extras.php:109
-msgid "Width must be an integer"
-msgstr ""
-
-#: inc/extras.php:113
-msgid "Height must be an integer"
-msgstr ""
-
-#: inc/extras.php:117
-msgid "Please provide a valid hex color value for background_color"
-msgstr ""
-
-#: inc/extras.php:121
-msgid "Please provide a valid hex color value for text_color"
-msgstr ""
-
-#: inc/extras.php:128
-msgid "WebDevStudios Placeholder Image"
-msgstr ""
-
-#: inc/hooks.php:143
+#: inc/hooks.php:142
 msgid "Read More"
 msgstr ""
 
-#: inc/hooks.php:156
+#: inc/hooks.php:155
 msgid "&hellip; Read more"
 msgstr ""
 
@@ -371,10 +359,6 @@ msgstr ""
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:65, template-parts/content-page.php:38
-msgid "Edit %s"
-msgstr ""
-
 #: inc/template-tags.php:90
 msgid "Please define default parameters in the form of an array."
 msgstr ""
@@ -383,32 +367,16 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: inc/template-tags.php:266
-msgid "Share This"
-msgstr ""
-
-#: inc/template-tags.php:270, inc/template-tags.php:271
-msgid "Share on Twitter"
-msgstr ""
-
-#: inc/template-tags.php:276, inc/template-tags.php:277
-msgid "Share on Facebook"
-msgstr ""
-
-#: inc/template-tags.php:282, inc/template-tags.php:283
-msgid "Share on LinkedIn"
-msgstr ""
-
 #: inc/template-tags.php:346, inc/template-tags.php:347
 msgid "Link to %s"
 msgstr ""
 
-#: template-parts/content-issues.php:83, template-parts/content-muscles.php:32, template-parts/content-poses.php:33, template-parts/content.php:32
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+#: template-parts/content-home.php:26, template-parts/content-issues.php:88, template-parts/content-page.php:26, template-parts/content.php:42
+msgid "Pages:"
 msgstr ""
 
-#: template-parts/content-issues.php:88, template-parts/content-page.php:26, template-parts/content.php:37
-msgid "Pages:"
+#: template-parts/content-issues.php:83, template-parts/content-muscles.php:32, template-parts/content-poses.php:33, template-parts/content.php:37
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -425,6 +393,22 @@ msgstr ""
 
 #: template-parts/content-none.php:31
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/sharing-icons.php:11
+msgid "Share This"
+msgstr ""
+
+#: template-parts/sharing-icons.php:18, template-parts/sharing-icons.php:20
+msgid "Share on Twitter"
+msgstr ""
+
+#: template-parts/sharing-icons.php:28, template-parts/sharing-icons.php:30
+msgid "Share on Facebook"
+msgstr ""
+
+#: template-parts/sharing-icons.php:38, template-parts/sharing-icons.php:40
+msgid "Share on LinkedIn"
 msgstr ""
 
 #: inc/customizer/panels.php:18

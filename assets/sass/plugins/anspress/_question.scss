@@ -25,7 +25,10 @@
 
 .ap-questions-item {
 	border-bottom: 1px solid $color-border-light;
-	margin-bottom: $shim-double;
+	display: flex;
+	flex: 1 1 100%;
+	margin-bottom: $gutter;
+	padding-bottom: $gutter / 2;
 }
 
 .ap-cell-inner {

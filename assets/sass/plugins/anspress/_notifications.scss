@@ -10,6 +10,7 @@
 	padding: $shim-half $shim;
 }
 
+
 .ap-noti-icon {
 	background-color: $color-border;
 	border-radius: $border-radius;
@@ -19,6 +20,15 @@
 	padding: $shim-half;
 	text-align: center;
 	width: 40px;
+}
+
+
+.ap-noti-icon {
+	border-radius: $border-radius;
+	color: $color-text-light;
+	font-size: $shim;
+	line-height: 38px;
+	text-align: center;
 }
 
 .ap-noti-avatar {
@@ -40,14 +50,10 @@
 
 .ap-noti-inner {
 	color: $color-text;
-	display: block;
-	margin-left: 60px;
-}
-
-.ap-noti-date {
-	display: block;
-	font-size: $type-xsmall;
-	color: $color-text-light;
+	display: table;
+	line-height: 1.4;
+	margin-left: $avatar-height;
+	text-decoration: none;
 }
 
 .ap-noti-sub {
@@ -111,9 +117,9 @@
 	@include noti-circle();
 }
 
-.ap-noti-icon,
 .ap-noti-avatar,
 .ap-noti-rep {
+@mixin shared-noti-layout {
 	background-color: $color-border-light;
 	float: left;
 	height: 35px;
@@ -121,43 +127,24 @@
 }
 
 .ap-noti-rep {
+	@include shared-noti-layout;
 	background-color: $color-link;
 	border-radius: $shim;
 	color: $color-background;
 	display: block;
 	font-size: $type-small;
 	font-weight: bold;
-	height: 35px;
 	line-height: 35px;
 	text-align: center;
-	width: 35px;
 
 	&.negative {
 		background: #ef5350;
 	}
 }
 
-.ap-noti-icon {
-	border-radius: $border-radius;
-	color: $color-text-light;
-	font-size: $shim;
-	line-height: 38px;
-	text-align: center;
-}
-
-.ap-noti-inner {
-	margin-left: 50px;
-	display: table;
-	font-size: $type-xsmall;
-	line-height: 1.4;
-	color: $color-text;
-	text-decoration: none;
-}
-
 .ap-noti-date {
-	color: $color-text;
+	@include meta;
 	display: block;
-	font-size: $type-meta;
 	margin-top: 2px;
 }
 

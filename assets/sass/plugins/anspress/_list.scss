@@ -28,7 +28,7 @@
     order: 3;
     margin: 0 0 0 auto;
 
-    @include below(bp-small) {
+    @include below('bp-small') {
       margin: 0 auto;
     }
   }
@@ -39,14 +39,14 @@
   }
 
   .ap-filters {
+    flex: 1 1 100%;
     margin-bottom: $shim;
     order: 2;
-  }
-}
 
-.ap-questions-item {
-  display: flex;
-  flex: 1 1 100%;
+    @include below('bp-small') {
+      justify-content: space-between;
+    }
+  }
 }
 
 .ap-asked-by {
@@ -173,15 +173,7 @@
 }
 
 .ap-filter {
-  margin-right: $shim;
-
-  @include below(bp-small) {
-    margin-right: $shim-double;
-  }
-
-  @include below(bp-medium) {
-    margin-right: $gutter;
-  }
+  margin-right: $shim-flex;
 
   input[type="checkbox"],
   input[type="radio"] {
@@ -277,11 +269,8 @@
   background: none;
   border: none;
   color: $color-text-light;
+  letter-spacing: 0;
   padding: 0;
-
-  @include below(bp-small) {
-    display: none;
-  }
 
   &:hover,
   &:focus {
@@ -295,18 +284,6 @@
     margin-right: $shim-quarter;
   }
 }
-
-// .ap-pagging-warning {
-//   background: #fff8e1;
-//   text-align: center;
-//   font-size: $type-meta;
-//   border: 1px solid #ffe082;
-//   padding: 5px;
-//   border-radius: 2px;
-//   margin-top: 15px;
-// }
-
-
 
 // cancel toggle button
 .ap-droptogg {

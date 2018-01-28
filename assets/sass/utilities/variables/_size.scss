@@ -4,6 +4,7 @@
 
 // General Spacing
 $shim: 1rem;
+$shim-flex: calc(1rem + .15vw);
 $gutter: $shim * 3;
 $shim-double: $shim * 2;
 $shim-half: $shim / 2;
@@ -31,5 +32,5 @@ $admin-bar: 32px;
 $admin-bar-mobile: 46px;
 $header-height: 75px;
 $header-height-large: 104px;
-$sidebar-width-large: 250px;
+$sidebar-width-large: 14rem;
 $sidebar-width-large-negative: $sidebar-width-large * -1;

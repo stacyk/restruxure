@@ -10,7 +10,7 @@ var sidebarRight = document.getElementById( 'sidebar-sliding-panel' ),
 
 jQuery(document).ready(function($) {
   /* Check width on page load*/
-  if ( $(window).width() > 1280) {
+  if ( $(window).width() > 680) {
 		classie.remove( body, 'sidebar-push-toleft' );
 
 		showRightPush.onclick = function() {
