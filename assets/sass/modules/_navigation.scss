@@ -50,7 +50,7 @@ nav {
   ul {
     display: none;
 
-    @include above(bp-small) {
+    @include above('bp-small') {
       display: flex;
       justify-content: center;
     }
@@ -60,7 +60,7 @@ nav {
     display: flex;
   }
 
-  @include above(bp-small) {
+  @include above('bp-small') {
     display: flex;
   }
 }
@@ -69,7 +69,7 @@ nav {
 .menu-toggle {
   display: flex;
 
-  @include above(bp-small) {
+  @include above('bp-small') {
     display: none;
   }
 }

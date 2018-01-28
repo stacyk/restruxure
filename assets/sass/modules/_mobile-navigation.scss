@@ -19,7 +19,7 @@
   width: 0;
 
   // Don't show  above small
-  @include above(bp-small) {
+  @include above('bp-small') {
     display: none;
   }
 
@@ -48,10 +48,11 @@
     a {
       color: $color-background;
       display: block;
-      padding: $shim-half $shim;
+      padding: $shim;
       text-align: center;
 
       // incase on small window with mouse
+      &:focus,
       &:hover {
         background-color: $color-link-hover;
       }
