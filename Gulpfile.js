@@ -226,11 +226,6 @@ gulp.task( 'concat', () =>
 		// Start a sourcemap.
 		.pipe( sourcemaps.init() )
 
-		// Convert ES6+ to ES2015.
-		.pipe( babel( {
-			presets: [ 'es2015' ]
-		} ) )
-
 		// Concatenate partials into a single script.
 		.pipe( concat( 'project.js' ) )
 
