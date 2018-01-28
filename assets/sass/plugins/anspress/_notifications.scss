@@ -119,6 +119,8 @@
 
 .ap-noti-avatar,
 .ap-noti-rep {
+}
+
 @mixin shared-noti-layout {
 	background-color: $color-border-light;
 	float: left;

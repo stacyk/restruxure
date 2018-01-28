@@ -1,7 +1,6 @@
 // Require our dependencies
 const autoprefixer = require( 'autoprefixer' );
 const babel = require( 'gulp-babel' );
-const bourbon = require( 'bourbon' ).includePaths;
 const browserSync = require( 'browser-sync' );
 const cheerio = require( 'gulp-cheerio' );
 const concat = require( 'gulp-concat' );
@@ -12,7 +11,6 @@ const gulp = require( 'gulp' );
 const gutil = require( 'gulp-util' );
 const imagemin = require( 'gulp-imagemin' );
 const mqpacker = require( 'css-mqpacker' );
-const neat = require( 'bourbon-neat' ).includePaths;
 const notify = require( 'gulp-notify' );
 const plumber = require( 'gulp-plumber' );
 const postcss = require( 'gulp-postcss' );
@@ -86,7 +84,6 @@ gulp.task( 'postcss', [ 'clean:styles' ], () =>
 
 			// Compile Sass using LibSass.
 			.pipe( sass( {
-				// 'includePaths': [].concat( bourbon, neat ),
 				'errLogToConsole': true,
 				'outputStyle': 'expanded' // Options: nested, expanded, compact, compressed
 			} ) )
