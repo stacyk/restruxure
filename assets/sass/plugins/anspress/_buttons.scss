@@ -1,3 +1,12 @@
 .ap-btn-ask {
-  @include btn-link;
+  @include btn;
+  color: $color-button-text;
+  display: flex;
+  margin-top: $shim;
+
+	&:hover,
+	&:active,
+	&:focus {
+    color: $color-button-text;
+  }
 }
