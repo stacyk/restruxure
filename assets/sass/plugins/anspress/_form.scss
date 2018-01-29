@@ -34,6 +34,15 @@ label > input[type="checkbox"] {
   }
 }
 
+.ap-form-group {
+  position: relative;
+  // margin-bottom: $gutter;
+
+  &.ap-have-errors {
+    border-color: $error;
+  }
+}
+
 .ap-form-fields {
   position: relative;
   // margin-bottom: $gutter;
@@ -63,7 +72,7 @@ label > input[type="checkbox"] {
   .error {
     background-color: $error;
     color: $color-background;
-    display: table;
+    display: block;
     font-family: $font-sans;
     font-size: $type-meta;
     margin-bottom: $shim;
@@ -71,6 +80,17 @@ label > input[type="checkbox"] {
     padding: $shim-quarter $shim-half;
   }
 }
+
+.ap-field-error {
+  background-color: $error;
+  color: $color-background;
+  display: block;
+  font-family: $font-sans;
+  font-size: $type-meta;
+  margin-bottom: $shim-half;
+  padding: $shim-quarter $shim-half;
+}
+
 
 // .ap-field-description-wrap {
 //   border-bottom: 1px solid olivedrab;
