@@ -36,7 +36,7 @@ label > input[type="checkbox"] {
 
 .ap-form-group {
   position: relative;
-  // margin-bottom: $gutter;
+  margin-bottom: $shim-double;
 
   &.ap-have-errors {
     border-color: $error;
