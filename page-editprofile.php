@@ -18,8 +18,6 @@ acf_form_head();
 
 				<?php
 				while ( have_posts() ) : the_post();
-
-				// get_template_part( 'template-parts/content', 'profile' );
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
@@ -35,7 +33,9 @@ acf_form_head();
 
 			} else {
 
+			echo 'logged in';
 			$uid = get_current_user_id();
+
 
 				$options = array(
 					'post_id' => 'user_'.$uid,
@@ -45,10 +45,11 @@ acf_form_head();
 					'html_before_fields' => '<div class="form-group">',
 					'html_after_fields' => '</div>',
 					'submit_value' => 'Update Profile'
-				); ?>
+				);
 
+			echo 'user_'.$uid;
 
-			<?php	acf_form( $options );
+			acf_form( $options );
 			}
 
 		?>
