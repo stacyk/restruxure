@@ -12,17 +12,18 @@
  * @package yoga
  */
 
+acf_form_head();
 get_header(); ?>
 
 	<div class="primary content-area">
 		<main id="main" class="site-main facetwp-template" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
+		<?php while ( have_posts() ) : the_post();
+					if ( is_page( 'Edit Your Profile' )) {
+						get_template_part( 'template-parts/content-profile', 'page' );
+				} else {
+						get_template_part( 'template-parts/content', 'page' );
+				} endwhile; // End of the loop.
 			?>
 
 

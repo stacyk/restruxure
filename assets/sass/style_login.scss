@@ -35,56 +35,6 @@ body.login div#login p#nav a {
   }
 }
 
-.wp-social-login-widget {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.wp-social-login-provider-list {
-  align-items: center;
-  display: flex;
-
-  a {
-    border-radius: $border-radius;
-    color: $color-background;
-    margin: $shim $shim-half;
-
-    &:visited {
-      color: $color-background;
-    }
-  }
-
-  img {
-    display: none;
-  }
-}
-
-.wp-social-login-provider-twitter {
-  background-color: #00aced;
-}
-
-.wp-social-login-provider-twitter:hover {
-  background-color: #0087ba;
-}
-
-.wp-social-login-provider-google {
-  background-color: #dd4b39;
-}
-
-.wp-social-login-provider-google:hover {
-  background-color: #c23321;
-}
-
-.wp-social-login-provider-facebook {
-  background-color: #3b5998;
-}
-
-.wp-social-login-provider-facebook:hover {
-  background-color: #2d4373;
-}
-
-
 body.login div#login form#loginform p.submit input#wp-submit,
 body.login .button-primary {
   appearance: none;
@@ -131,3 +81,87 @@ body.login .button-primary {
     border-left-color: $pink;
   }
 }
+
+/*
+* Customize 'Connect with:' label
+*/
+.wp-social-login-connect-with {
+	text-align: center;
+	font-size: $shim;
+	margin-bottom: $shim-quarter;
+}
+
+.wp-social-login-widget {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.wp-social-login-provider-list {
+  align-items: center;
+  display: flex;
+  margin-bottom: $shim;
+
+  a {
+    border-radius: $border-radius;
+    color: $color-background;
+    margin: $shim $shim-half;
+
+    &:visited {
+      color: $color-background;
+    }
+  }
+
+  img {
+    display: none;
+  }
+}
+
+.wp-social-login-provider {
+  color: $color-background !important;
+	display: flex;
+	font-size: $shim;
+	font-weight: bold;
+	padding: 5px;
+	margin: $shim-half;
+	text-align: center;
+	text-decoration: none;
+  width: 120px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-background !important;
+  }
+}
+
+.wp-social-login-provider-twitter {
+  background-color: #00acee;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #0089bd;
+  }
+}
+
+.wp-social-login-provider-google {
+  background-color: #dd4b39;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #b03b2d;
+  }
+}
+
+.wp-social-login-provider-facebook {
+  background-color: #3b5998;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #2f4679;
+  }
+}
+

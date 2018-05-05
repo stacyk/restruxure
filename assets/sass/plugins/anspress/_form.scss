@@ -307,14 +307,15 @@ label > input[type="checkbox"] {
 
 .ap-minimal-editor {
   display: flex;
+  margin-bottom: $gutter;
+  margin-top: $gutter;
 }
 
-//   .ap-form-c .ap-minimal-placeholder {
-//     color: #888;
-//     cursor: pointer;
-//     display: block;
-//     min-height: 120px;
-//   }
+// .ap-form-c .ap-minimal-placeholder {
+//   color: #888;
+//   cursor: pointer;
+//   display: block;
+//   min-height: 120px;
 // }
 
 // .ap-attachment {

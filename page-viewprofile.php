@@ -25,6 +25,14 @@ acf_form_head();
 			<h2>Profile</h2>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+			<?php the_field( 'website_url' ); ?>
+			<?php the_field( 'facebook_url' ); ?>
+			<?php the_field( 'twitter_url' ); ?>
+			<?php the_field( 'linkedin_url' ); ?>
+			<?php the_field( 'instagram_url' ); ?>
+			<?php the_field( 'snapchat_url' ); ?>
+			<?php the_field( 'youtube_url' ); ?>
+			<?php the_field( 'vimeo_url' ); ?>
 
 	<div class="entry-content">
 

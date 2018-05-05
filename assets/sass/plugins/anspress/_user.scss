@@ -40,10 +40,9 @@ $avatar-large: $avatar-height * 1.5;
   display: flex;
   justify-content: center;
   line-height: 1;
-  padding: $shim-half $shim-half .4rem;
+  padding: $shim-quarter;
   margin-left: $shim-quarter;
   margin-right: $shim-quarter;
-  min-width: $shim-double;
 
   &:link,
   &:visited {

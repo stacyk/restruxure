@@ -84,7 +84,7 @@ msgstr ""
 msgid "Restruxure"
 msgstr ""
 
-#: page-profile.php:64, inc/template-tags.php:65, template-parts/content-home.php:38, template-parts/content-page.php:38, template-parts/content-profile.php:60
+#: page-viewprofile.php:48, inc/template-tags.php:65, template-parts/content-home.php:38, template-parts/content-page.php:38, template-parts/content-profile.php:62
 msgid "Edit %s"
 msgstr ""
 

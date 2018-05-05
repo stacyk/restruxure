@@ -66,20 +66,20 @@ button {
 
 .ap-actions-handle {
 	align-items: center;
-  background-color: $color-link;
-  border-radius: $shim;
-	border-width: 0;
-  color: $color-background;;
+	background-color: transparent;
+	border: 0;
+  color: $color-link;
   display: flex;
-	padding: $shim-half;
-	transition: border-radius 0.1s ease-in-out;
+	padding: 0;
+	text-decoration: none;
+	transition: color 0.1s ease-in-out;
 
 	&:hover {
-		background-color: $color-link-hover;
+		color: $color-link-hover;
 	}
 
 	.open & {
-		border-radius: 0;
+		color: $color-link-hover;
 	}
 }
 

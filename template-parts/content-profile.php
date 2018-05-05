@@ -11,7 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<h2>Profile</h2>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 
@@ -22,8 +21,8 @@
 				<a href="' . esc_url( get_permalink() ) . '">', '">Log In &rarr;</a>';
 
 			} else {
-
-			$uid = get_current_user_id();
+				echo 'You are logged in, yay!';
+				$uid = get_current_user_id();
 
 				$options = array(
 					'post_id' => 'user_'.$uid,
@@ -32,22 +31,25 @@
 			    'return' => add_query_arg( 'updated', 'true', get_permalink() ),
 					'html_before_fields' => '',
 					'html_after_fields' => '',
-					'submit_value' => 'Update Profile'
+					'submit_value' => 'Maybe Update Profile Button'
 				); ?>
 
-<?php the_field( 'website_url' ); ?>
-<?php the_field( 'facebook_url' ); ?>
-<?php the_field( 'twitter_url' ); ?>
-<?php the_field( 'linkedin_url' ); ?>
-<?php the_field( 'instagram_url' ); ?>
-<?php the_field( 'snapchat_url' ); ?>
-<?php the_field( 'youtube_url' ); ?>
-<?php the_field( 'vimeo_url' ); ?>
+				<?php the_field( 'website_url' ); ?>
+				<?php the_field( 'facebook_url' ); ?>
+				<?php the_field( 'twitter_url' ); ?>
+				<?php the_field( 'linkedin_url' ); ?>
+				<?php the_field( 'instagram_url' ); ?>
+				<?php the_field( 'snapchat_url' ); ?>
+				<?php the_field( 'youtube_url' ); ?>
+				<?php the_field( 'vimeo_url' ); ?>
 
 			<?php	acf_form( $options );
 			}
 
 		?>
+
+		<?php the_field( 'are_you_a_certified_yoga_instructor' ); ?>
+		<?php the_field( 'where_do_you_teach' ); ?>
 
 	</div><!-- .entry-content -->
 

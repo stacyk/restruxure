@@ -29,6 +29,7 @@
 
 .entry-title {
 	@include pagetitle;
+	margin-bottom: $shim-half;
 }
 
 .related-title {
@@ -64,13 +65,13 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5rem 0 0;
+	margin: $shim 0 0;
 }
 
 // Page links
 .page-links {
 	clear: both;
-	margin: 0 0 1.5rem 0;
+	margin: 0 0 $shim 0;
 }
 
 // Edit link
