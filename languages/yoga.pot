@@ -84,6 +84,23 @@ msgstr ""
 msgid "Restruxure"
 msgstr ""
 
+#: page-home.php:3
+msgid "home"
+msgstr ""
+
+#: page-narrow.php:3
+msgid "Narrow content"
+msgstr ""
+
+#: page-viewprofile.php:3
+msgid "view profile"
+msgstr ""
+
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
 #: page-viewprofile.php:48, inc/template-tags.php:65, template-parts/content-home.php:38, template-parts/content-page.php:38, template-parts/content-profile.php:62
 msgid "Edit %s"
 msgstr ""
@@ -334,6 +351,8 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:50, inc/template-tags.php:56
 msgid ", "
 msgstr ""
@@ -362,6 +381,10 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
+#. translators: %s: Name of current post.
+#. translators: %s: Name of current post.
+#. translators: %s: Name of current post.
+#. translators: %s: Name of current post.
 #: template-parts/content-issues.php:83, template-parts/content-muscles.php:32, template-parts/content-poses.php:33, template-parts/content.php:37
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

@@ -10,7 +10,7 @@ body.login div#login {}
 body.login div#login h1 {}
 
 body.login div#login h1 a {
-  background-image: url("http://restruxure.com/wp-content/themes/yoga/assets/images/svg-icons/logo.svg");
+  background-image: url("//restruxure.com/wp-content/themes/yoga/assets/images/svg-icons/logo.svg");
   background-size: 240px 100px;
   min-height: 100px;
   min-width: 240px;
