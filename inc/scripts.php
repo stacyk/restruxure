@@ -64,7 +64,7 @@ function yoga_scripts() {
 	/**
 	 * If we are debugging the site, use a unique version every page load so as to ensure no cache issues.
 	 */
-	$version = '0.0.5';
+	$version = '0.0.6';
 
 	/**
 	 * Should we load minified files?
