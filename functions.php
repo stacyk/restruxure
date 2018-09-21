@@ -125,6 +125,27 @@ function yoga_featured_q_images() {
 add_action('init', 'yoga_featured_q_images');
 
 
+
+
+
+/**
+ * Add SVG definitions to footer.
+ */
+// function yoga_include_svg_icons() {
+
+// 	// Define SVG sprite file.
+// 	$svg_icons = get_template_directory() . '/assets/images/svg-icons.svg';
+
+// 	// If it exists, include it.
+// 	if ( file_exists( $svg_icons ) ) {
+// 		require_once( $svg_icons );
+// 	}
+// }
+// add_action( 'wp_footer', 'yoga_include_svg_icons', 9999 );
+
+
+
+
 // add_filter('ap_question_cpt_args', 'yoga_ap_cpt_args');
 // add_filter('ap_answer_cpt_args', 'yoga_ap_cpt_args');
 // function yoga_ap_cpt_args($args) {
