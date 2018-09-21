@@ -64,7 +64,7 @@ function yoga_scripts() {
 	/**
 	 * If we are debugging the site, use a unique version every page load so as to ensure no cache issues.
 	 */
-	$version = '0.0.6';
+	$version = '0.0.7';
 
 	/**
 	 * Should we load minified files?
@@ -97,23 +97,6 @@ function yoga_scripts() {
 	wp_enqueue_script( 'yoga-mobile-nav', get_template_directory_uri() . '/assets/scripts/mobile-nav-menu' . $suffix . '.js', array( 'jquery' ), $version, true );
 }
 add_action( 'wp_enqueue_scripts', 'yoga_scripts' );
-
-
-
-/**
- * Add SVG definitions to footer.
- */
-function yoga_include_svg_icons() {
-
-	// Define SVG sprite file.
-	$svg_icons = get_template_directory() . '/assets/images/svg-icons.svg';
-
-	// If it exists, include it.
-	if ( file_exists( $svg_icons ) ) {
-		require_once( $svg_icons );
-	}
-}
-add_action( 'wp_footer', 'yoga_include_svg_icons', 9999 );
 
 
 // Custom login page styles
