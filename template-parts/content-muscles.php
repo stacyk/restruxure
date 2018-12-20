@@ -39,19 +39,25 @@
 
     <?php
     // Find connected pages
-    $connected = new WP_Query( array(
-      'connected_type' => 'muscles_to_poses',
-      'connected_items' => get_queried_object(),
-      'nopaging' => true,
-    ) );
+    $connected_poses = new WP_Query(
+      array(
+        'connected_type' => 'muscles_to_poses',
+        'connected_items' => get_queried_object(),
+        'nopaging' => true,
+      )
+    );
 
     // Display connected pages
-    if ( $connected->have_posts() ) :
+    if ( $connected_poses->have_posts() ) :
     ?>
-    <h3>Issues related to this pose:</h3>
+    <h3>Poses that use this muscle:</h3>
     <ul>
-    <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+    <?php while ( $connected_poses->have_posts() ) : $connected_poses->the_post(); ?>
+        <li>
+          <a href="<?php the_permalink(); ?>">
+            <?php the_title(); ?>
+          </a>
+        </li>
     <?php endwhile; ?>
     </ul>
 
@@ -63,19 +69,23 @@
 
     <?php
     // Find connected pages
-    $connected = new WP_Query( array(
-      'connected_type' => 'muscles_to_question',
+    $connected_question = new WP_Query( array(
+      'connected_type' => 'question_to_muscles',
       'connected_items' => get_queried_object(),
       'nopaging' => true,
     ) );
 
     // Display connected pages
-    if ( $connected->have_posts() ) :
+    if ( $connected_question->have_posts() ) :
     ?>
-    <h3>question related to this pose:</h3>
+    <h3>Question related to this pose:</h3>
     <ul>
-    <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+    <?php while ( $connected_question->have_posts() ) : $connected_question->the_post(); ?>
+        <li>
+          <a href="<?php the_permalink(); ?>">
+            <?php the_title(); ?>
+          </a>
+        </li>
     <?php endwhile; ?>
     </ul>
 
