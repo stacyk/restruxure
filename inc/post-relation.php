@@ -36,17 +36,60 @@ function restruxure_connection_types() {
         )
     );
 
-    p2p_register_connection_type( array(
-        'name' => 'question_to_muscles',
-        'from' => 'question',
-        'to' => 'muscles',
-        'reciprocal' => true,
-        'title' => 'Question to Muscles',
-        'admin_box' => array(
-            'show' => 'any',
-            'context' => 'side'
+    p2p_register_connection_type(
+        array(
+            'name' => 'question_to_muscles',
+            'from' => 'question',
+            'to' => 'muscles',
+            'reciprocal' => true,
+            'title' => 'Question to Muscles',
+            'admin_box' => array(
+                'show' => 'any',
+                'context' => 'side'
+            )
         )
-    ) );
-}
+    );
 
+    p2p_register_connection_type(
+        array(
+            'name' => 'poses_to_poses_variations',
+            'from' => 'poses',
+            'to' => 'poses',
+            'reciprocal' => true,
+            'title' => 'Poses to Pose Variations',
+            'admin_box' => array(
+                'show' => 'any',
+                'context' => 'side'
+            )
+        )
+    );
+
+    p2p_register_connection_type(
+        array(
+            'name' => 'poses_to_poses_after',
+            'from' => 'poses',
+            'to' => 'poses',
+            'reciprocal' => true,
+            'title' => 'After this Pose',
+            'admin_box' => array(
+                'show' => 'any',
+                'context' => 'side'
+            )
+        )
+    );
+
+    p2p_register_connection_type(
+        array(
+            'name' => 'poses_to_poses_before',
+            'from' => 'poses',
+            'to' => 'poses',
+            'reciprocal' => true,
+            'title' => 'Before this Pose',
+            'admin_box' => array(
+                'show' => 'any',
+                'context' => 'side'
+            )
+        )
+    );
+}
 add_action( 'p2p_init', 'restruxure_connection_types' );

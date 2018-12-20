@@ -154,3 +154,50 @@ function restruxure_pose_category() {
 
 }
 add_action( 'init', 'restruxure_pose_category', 0 );
+
+
+
+// Register Custom Taxonomy
+function restruxure_muscle_category() {
+
+	$labels = array(
+		'name'                       => _x( 'Muscle Categories', 'Taxonomy General Name', 'restruxure' ),
+		'singular_name'              => _x( 'Muscle Category', 'Taxonomy Singular Name', 'restruxure' ),
+		'menu_name'                  => __( 'Muscle Categories', 'restruxure' ),
+		'all_items'                  => __( 'All Items', 'restruxure' ),
+		'parent_item'                => __( 'Parent Item', 'restruxure' ),
+		'parent_item_colon'          => __( 'Parent Item:', 'restruxure' ),
+		'new_item_name'              => __( 'New Muscle Category', 'restruxure' ),
+		'add_new_item'               => __( 'Add New Muscle Category', 'restruxure' ),
+		'edit_item'                  => __( 'Edit Muscle Category', 'restruxure' ),
+		'update_item'                => __( 'Update Muscle Category', 'restruxure' ),
+		'view_item'                  => __( 'View Muscle Category', 'restruxure' ),
+		'separate_items_with_commas' => __( 'Separate Muscle Categories with commas', 'restruxure' ),
+		'add_or_remove_items'        => __( 'Add or remove Muscle Category', 'restruxure' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'restruxure' ),
+		'popular_items'              => __( 'Popular Muscle Categories', 'restruxure' ),
+		'search_items'               => __( 'Search Muscle Categories', 'restruxure' ),
+		'not_found'                  => __( 'Not Found', 'restruxure' ),
+		'no_terms'                   => __( 'No Muscle Categories', 'restruxure' ),
+		'items_list'                 => __( 'Muscle Category list', 'restruxure' ),
+		'items_list_navigation'      => __( 'Muscle Category list navigation', 'restruxure' ),
+	);
+	$rewrite = array(
+		'slug'                       => 'muscle-categories',
+		'with_front'                 => false,
+		'hierarchical'               => true,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+	register_taxonomy( 'muscle_category', array( 'muscles' ), $args );
+
+}
+add_action( 'init', 'restruxure_muscle_category', 0 );
