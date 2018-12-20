@@ -36,50 +36,157 @@
     ?>
 
     <?php
-    // Find connected pages
-    $connected = new WP_Query( array(
+    // Find connected muscles
+    $connected_muscles = new WP_Query( array(
       'connected_type' => 'muscles_to_poses',
       'connected_items' => get_queried_object(),
       'nopaging' => true,
     ) );
 
-    // Display connected pages
-    if ( $connected->have_posts() ) :
+    // Display connected muscles
+    if ( $connected_muscles->have_posts() ) :
     ?>
-    <h3>Muscles used in this pose:</h3>
-    <ul>
-    <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-      <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-    <?php endwhile; ?>
-    </ul>
+      <div class="connected-posts related-muscles">
+        <h3>Muscles used in this pose:</h3>
+        <ul>
+          <?php while ( $connected_muscles->have_posts() ) : $connected_muscles->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+      </div>
 
-    <?php
-    // Prevent weirdness
-    wp_reset_postdata();
+      <?php
+      // Prevent weirdness
+      wp_reset_postdata();
 
     endif; ?>
 
     <?php
-    // Find connected pages
-    $connected = new WP_Query( array(
-      'connected_type' => 'question_to_poses',
-      'connected_items' => get_queried_object(),
-      'nopaging' => true,
-    ) );
+    // Find connected questions
+    $connected_questions = new WP_Query(
+      array(
+        'connected_type' => 'question_to_poses',
+        'connected_items' => get_queried_object(),
+        'nopaging' => true,
+      )
+    );
 
-    // Display connected pages
-    if ( $connected->have_posts() ) :
+    // Display connected questions
+    if ( $connected_questions->have_posts() ) :
     ?>
-    <h3>Questions related to this pose:</h3>
-    <ul>
-    <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-    <?php endwhile; ?>
-    </ul>
+      <div class="connected-posts related-questions">
+        <h3>Questions related to this pose:</h3>
+        <ul>
+          <?php while ( $connected_questions->have_posts() ) : $connected_questions->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+      </div>
+      <?php
+      // Prevent weirdness
+      wp_reset_postdata();
+
+    endif; ?>
 
     <?php
-    // Prevent weirdness
-    wp_reset_postdata();
+    // Find connected variation poses
+    $connected_variations = new WP_Query(
+      array(
+        'connected_type' => 'poses_to_poses_variations',
+        'connected_items' => get_queried_object(),
+        'nopaging' => true,
+      )
+    );
+
+    // Display connected variation poses
+    if ( $connected_variations->have_posts() ) :
+    ?>
+      <div class="connected-posts related-variations">
+        <h3>Variations of this pose:</h3>
+        <ul>
+          <?php while ( $connected_variations->have_posts() ) : $connected_variations->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+      </div>
+      <?php
+      // Prevent weirdness
+      wp_reset_postdata();
+
+    endif; ?>
+
+
+    <?php
+    // Find connected before poses
+    $connected_before = new WP_Query(
+      array(
+        'connected_type' => 'poses_to_poses_before',
+        'connected_items' => get_queried_object(),
+        'nopaging' => true,
+      )
+    );
+
+    // Display connected before poses
+    if ( $connected_before->have_posts() ) :
+    ?>
+      <div class="connected-posts related-before">
+        <h3>Before this pose:</h3>
+        <ul>
+          <?php while ( $connected_before->have_posts() ) : $connected_before->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+      </div>
+      <?php
+      // Prevent weirdness
+      wp_reset_postdata();
+
+    endif; ?>
+
+    <?php
+    // Find connected "after" poses
+    $connected_after = new WP_Query(
+      array(
+        'connected_type' => 'poses_to_poses_after',
+        'connected_items' => get_queried_object(),
+        'nopaging' => true,
+      )
+    );
+
+    // Display connected "After" poses
+    if ( $connected_after->have_posts() ) :
+    ?>
+      <div class="connected-posts related-after">
+        <h3>After this pose:</h3>
+        <ul>
+          <?php while ( $connected_after->have_posts() ) : $connected_after->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+      </div>
+      <?php
+      // Prevent weirdness
+      wp_reset_postdata();
 
     endif; ?>
 
