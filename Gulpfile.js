@@ -255,7 +255,7 @@ gulp.task( 'uglify', [ 'concat' ], () =>
  * Delete the theme's .pot before we create a new one.
  */
 gulp.task( 'clean:pot', () =>
-	del( [ 'languages/yoga.pot' ] )
+	del( [ 'languages/restruxure.pot' ] )
 );
 
 /**
@@ -268,10 +268,10 @@ gulp.task( 'wp-pot', [ 'clean:pot' ], () =>
 		.pipe( plumber( {'errorHandler': handleErrors} ) )
 		.pipe( sort() )
 		.pipe( wpPot( {
-			'domain': 'yoga',
-			'package': 'yoga',
+			'domain': 'restruxure',
+			'package': 'restruxure',
 		} ) )
-		.pipe( gulp.dest( 'languages/yoga.pot' ) )
+		.pipe( gulp.dest( 'languages/restruxure.pot' ) )
 );
 
 
@@ -330,7 +330,7 @@ gulp.task( 'watch', function () {
 	browserSync( {
 		'open': false,             // Open project in a new tab?
 		'injectChanges': true,     // Auto inject changes instead of full reload.
-		'proxy': 'yoga.dev',    // Use yoga.dev to use BrowserSync.
+		'proxy': 'restruxure.local',    // Use restruxure.local to use BrowserSync.
 		'watchOptions': {
 			'debounceDelay': 1000  // Wait 1 second before injecting.
 		}

@@ -2,40 +2,40 @@
 /**
  * Set up the theme customizer.
  *
- * @package yoga
+ * @package restruxure
  */
 
 /**
  * Include other customizer files.
  */
-function yoga_include_custom_controls() {
+function restruxure_include_custom_controls() {
 	require get_template_directory() . '/inc/customizer/panels.php';
 	require get_template_directory() . '/inc/customizer/sections.php';
 	require get_template_directory() . '/inc/customizer/settings.php';
 	require get_template_directory() . '/inc/customizer/tinymce.php';
 }
-add_action( 'customize_register', 'yoga_include_custom_controls', -999 );
+add_action( 'customize_register', 'restruxure_include_custom_controls', -999 );
 
 /**
  * Enqueue customizer related scripts.
  */
-function yoga_customize_scripts() {
-	wp_enqueue_script( 'yoga-customize-livepreview', get_template_directory_uri() . '/inc/customizer/assets/scripts/livepreview.js', array( 'jquery', 'customize-preview' ), '1.0.0', true );
+function restruxure_customize_scripts() {
+	wp_enqueue_script( 'restruxure-customize-livepreview', get_template_directory_uri() . '/inc/customizer/assets/scripts/livepreview.js', array( 'jquery', 'customize-preview' ), '1.0.0', true );
 }
-add_action( 'customize_preview_init', 'yoga_customize_scripts' );
+add_action( 'customize_preview_init', 'restruxure_customize_scripts' );
 
 /**
  * Add support for the fancy new edit icons.
  *
  * @link https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/
  */
-function yoga_selective_refresh_support( $wp_customize ) {
+function restruxure_selective_refresh_support( $wp_customize ) {
 
 	// The <div> classname to append edit icon too.
 	$settings = array(
 		'blogname'          => '.site-title a',
 		'blogdescription'   => '.site-description',
-		'yoga_copyright_text' => '.site-info',
+		'restruxure_copyright_text' => '.site-info',
 	);
 
 	// Loop through, and add selector partials.
@@ -44,7 +44,7 @@ function yoga_selective_refresh_support( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial( $setting, $args );
 	}
 }
-add_action( 'customize_register', 'yoga_selective_refresh_support' );
+add_action( 'customize_register', 'restruxure_selective_refresh_support' );
 
 /**
  * Add live preview support via postMessage.
@@ -53,7 +53,7 @@ add_action( 'customize_register', 'yoga_selective_refresh_support' );
  *
  * @link https://codex.wordpress.org/Theme_Customization_API#Part_3:_Configure_Live_Preview_.28Optional.29
  */
-function yoga_live_preview_support( $wp_customize ) {
+function restruxure_live_preview_support( $wp_customize ) {
 
 	// Settings to apply live preview to.
 	$settings = array(
@@ -62,7 +62,7 @@ function yoga_live_preview_support( $wp_customize ) {
 		'header_textcolor',
 		'background_image',
 		'social_icons',
-		'yoga_copyright_text',
+		'restruxure_copyright_text',
 	);
 
 	// Loop through and add the live preview to each setting.
@@ -80,4 +80,4 @@ function yoga_live_preview_support( $wp_customize ) {
 		$setting->transport = 'postMessage';
 	}
 }
-add_action( 'customize_register', 'yoga_live_preview_support', 999 );
+add_action( 'customize_register', 'restruxure_live_preview_support', 999 );

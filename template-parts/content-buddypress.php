@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in buddypress.php
  *
- * @package yoga
+ * @package restruxure
  */
 
 ?>

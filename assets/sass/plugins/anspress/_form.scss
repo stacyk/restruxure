@@ -49,10 +49,10 @@ label > input[type="checkbox"] {
 
   // &.ap-field-ap_upload,
   // &.ap-field-description,
-  // &.ap-field-yoga_title_field_info,
-  // &.ap-field-yoga_category_field_info,
-  // &.ap-field-yoga_description_field_info,
-  // &.ap-field-yoga_tags_field_info {
+  // &.ap-field-restruxure_title_field_info,
+  // &.ap-field-restruxure_category_field_info,
+  // &.ap-field-restruxure_description_field_info,
+  // &.ap-field-restruxure_tags_field_info {
   //   margin-bottom: 0;
   // }
 
@@ -500,7 +500,7 @@ label > input[type="checkbox"] {
   margin-bottom: 0;
   margin-top: $shim-double;
 
-  .ap-field-yoga_title_field_info & {
+  .ap-field-restruxure_title_field_info & {
     margin-top: 0;
   }
 }

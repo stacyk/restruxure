@@ -2,7 +2,7 @@
 /**
  * AnsPress Edits
  *
- * @package yoga
+ * @package restruxure
  */
 
 /**
@@ -11,10 +11,10 @@
  * @param array $meta Default display metas.
  * @return array
  */
-function yoga_remove_question_display_meta( $meta ) {
+function restruxure_remove_question_display_meta( $meta ) {
   unset( $meta['views'] );
   unset( $meta['active'] );
 
   return $meta;
 }
-add_filter( 'ap_display_question_metas', 'yoga_remove_question_display_meta' );
+add_filter( 'ap_display_question_metas', 'restruxure_remove_question_display_meta' );

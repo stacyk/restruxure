@@ -6,7 +6,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package yoga
+ * @package restruxure
  */
 
 get_header();
@@ -45,7 +45,7 @@ acf_form_head();
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'yoga' ),
+						esc_html__( 'Edit %s', 'restruxure' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',

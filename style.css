@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /*
-Theme Name: yoga
+Theme Name: restruxure
 Theme URI: https://restruxure.com
 Author: Stacy
 Author URI: https://stacykvernmo.com
-Description: Custom Yoga Theme
+Description: Custom restruxure Theme
 Version: 0.0.7
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: yoga
+Text Domain: restruxure
 Tags: custom
 
 This theme, like WordPress, is licensed under the GPL.
@@ -459,6 +459,11 @@ body {
   width: 100%;
 }
 
+.sidebar-push-toleft .site-content {
+  margin-left: 0;
+  width: 100%;
+}
+
 .content-area {
   width: 100%;
 }
@@ -470,6 +475,21 @@ body {
   display: flex;
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
+}
+
+/* Vertical sidebar that slides from the left or right */
+.sidebar-right {
+  right: -25vw;
+}
+
+.sidebar-right.open {
+  right: 0;
+}
+
+.sidebar-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
 }
 
 .entry-content > *:not(img):not(video):not(table):not(iframe) {
@@ -2557,7 +2577,7 @@ label > input[type="checkbox"] {
   margin-top: 2rem;
 }
 
-.ap-field-yoga_title_field_info .form-help {
+.ap-field-restruxure_title_field_info .form-help {
   margin-top: 0;
 }
 

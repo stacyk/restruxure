@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package yoga
+ * @package restruxure
  */
 
 ?>
@@ -54,13 +54,13 @@
 
 	<!-- <footer class="site-footer">
 		<div class="site-info"> -->
-			<?php //echo yoga_get_social_network_links(); ?>
-			<?php //echo wp_kses_post( yoga_get_copyright_text() ); ?>
+			<?php //echo restruxure_get_social_network_links(); ?>
+			<?php //echo wp_kses_post( restruxure_get_copyright_text() ); ?>
 		<!-- </div>
 	</footer> -->
 </div><!-- #page -->
 
-<?php echo wp_kses_post( yoga_get_mobile_navigation_menu() ); ?>
+<?php echo wp_kses_post( restruxure_get_mobile_navigation_menu() ); ?>
 
 <?php wp_footer(); ?>
 

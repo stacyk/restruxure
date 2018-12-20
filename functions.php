@@ -1,13 +1,13 @@
 <?php
 /**
- * yoga functions and definitions.
+ * restruxure functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package yoga
+ * @package restruxure
  */
 
-if ( ! function_exists( 'yoga_setup' ) ) :
+if ( ! function_exists( 'restruxure_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,16 +15,16 @@ if ( ! function_exists( 'yoga_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function yoga_setup() {
+	function restruxure_setup() {
 		/**
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on yoga, use a find and replace
-		 * to change 'yoga' to the name of your theme in all the template files.
+		 * If you're building a theme based on restruxure, use a find and replace
+		 * to change 'restruxure' to the name of your theme in all the template files.
 		 * You will also need to update the Gulpfile with the new text domain
 		 * and matching destination POT file.
 		 */
-		load_theme_textdomain( 'yoga', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'restruxure', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -46,10 +46,10 @@ if ( ! function_exists( 'yoga_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary Menu', 'yoga' ),
-			'mobile'  => esc_html__( 'Optional Mobile Menu', 'yoga' ),
-			'usermeta'  => esc_html__( 'User Profile Menu', 'yoga' ),
-			'utility'  => esc_html__( 'Utility Menu', 'yoga' ),
+			'primary' => esc_html__( 'Primary Menu', 'restruxure' ),
+			'mobile'  => esc_html__( 'Optional Mobile Menu', 'restruxure' ),
+			'usermeta'  => esc_html__( 'User Profile Menu', 'restruxure' ),
+			'utility'  => esc_html__( 'Utility Menu', 'restruxure' ),
 		) );
 
 		/**
@@ -65,7 +65,7 @@ if ( ! function_exists( 'yoga_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'yoga_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'restruxure_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -73,8 +73,8 @@ if ( ! function_exists( 'yoga_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
-endif; // yoga_setup
-add_action( 'after_setup_theme', 'yoga_setup' );
+endif; // restruxure_setup
+add_action( 'after_setup_theme', 'restruxure_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -83,23 +83,23 @@ add_action( 'after_setup_theme', 'yoga_setup' );
  *
  * @global int $content_width
  */
-function yoga_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'yoga_content_width', 740 );
+function restruxure_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'restruxure_content_width', 740 );
 }
-add_action( 'after_setup_theme', 'yoga_content_width', 0 );
+add_action( 'after_setup_theme', 'restruxure_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function yoga_widgets_init() {
+function restruxure_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'sidebar-1'  => esc_html__( 'Sidebar 1', 'yoga' ),
-		'sidebar-menu'  => esc_html__( 'Sidebar Menu', 'yoga' ),
-		'homepage-modules'  => esc_html__( 'Home Page Modules', 'yoga' ),
+		'sidebar-1'  => esc_html__( 'Sidebar 1', 'restruxure' ),
+		'sidebar-menu'  => esc_html__( 'Sidebar Menu', 'restruxure' ),
+		'homepage-modules'  => esc_html__( 'Home Page Modules', 'restruxure' ),
 	);
 
 	// Loop through each sidebar and register.
@@ -107,7 +107,7 @@ function yoga_widgets_init() {
 		register_sidebar( array(
 			'name'          => $sidebar_name,
 			'id'            => $sidebar_id,
-			'description'   => sprintf( esc_html__( 'Widget area for %s', 'yoga' ), $sidebar_name ),
+			'description'   => sprintf( esc_html__( 'Widget area for %s', 'restruxure' ), $sidebar_name ),
 			'before_widget' => '<aside class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -116,13 +116,13 @@ function yoga_widgets_init() {
 	}
 
 }
-add_action( 'widgets_init', 'yoga_widgets_init' );
+add_action( 'widgets_init', 'restruxure_widgets_init' );
 
 
-function yoga_featured_q_images() {
+function restruxure_featured_q_images() {
 	add_post_type_support( 'question', 'thumbnail' );
 }
-add_action('init', 'yoga_featured_q_images');
+add_action('init', 'restruxure_featured_q_images');
 
 
 
@@ -131,7 +131,7 @@ add_action('init', 'yoga_featured_q_images');
 /**
  * Add SVG definitions to footer.
  */
-// function yoga_include_svg_icons() {
+// function restruxure_include_svg_icons() {
 
 // 	// Define SVG sprite file.
 // 	$svg_icons = get_template_directory() . '/assets/images/svg-icons.svg';
@@ -141,14 +141,14 @@ add_action('init', 'yoga_featured_q_images');
 // 		require_once( $svg_icons );
 // 	}
 // }
-// add_action( 'wp_footer', 'yoga_include_svg_icons', 9999 );
+// add_action( 'wp_footer', 'restruxure_include_svg_icons', 9999 );
 
 
 
 
-// add_filter('ap_question_cpt_args', 'yoga_ap_cpt_args');
-// add_filter('ap_answer_cpt_args', 'yoga_ap_cpt_args');
-// function yoga_ap_cpt_args($args) {
+// add_filter('ap_question_cpt_args', 'restruxure_ap_cpt_args');
+// add_filter('ap_answer_cpt_args', 'restruxure_ap_cpt_args');
+// function restruxure_ap_cpt_args($args) {
 // 	$args['exclude_from_search'] = false;
 
 // 	return $args;

@@ -2,7 +2,7 @@
 /**
  * Enable multiple WYSIWYG editors in the theme customizer.
  *
- * @package yoga
+ * @package restruxure
  */
 
 if ( class_exists( 'WP_Customize_Control' ) ) :
@@ -10,7 +10,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Class to create a custom text editor control
 	 */
-	class yoga_Text_Editor_Custom_Control extends WP_Customize_Control {
+	class restruxure_Text_Editor_Custom_Control extends WP_Customize_Control {
 
 		/**
 		 * Keep track of how many editors are added.

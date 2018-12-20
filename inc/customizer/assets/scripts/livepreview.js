@@ -51,7 +51,7 @@
 	});
 
 	// Copyright text.
-	api( 'yoga_copyright_text', function( value ) {
+	api( 'restruxure_copyright_text', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-info' ).text( to );
 		});

@@ -6,7 +6,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package yoga
+ * @package restruxure
  */
 
 get_header(); ?>

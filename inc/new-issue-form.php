@@ -2,7 +2,7 @@
 /**
  * ACF Front End Form Save as New Post
  *
- * @package yoga
+ * @package restruxure
  */
 
 /**
@@ -12,7 +12,7 @@
  */
 <?php
 
-function yoga_pre_save_post( $post_id ) {
+function restruxure_pre_save_post( $post_id ) {
 
     // check if this is to be a new post
     if( $post_id != 'new' ) {
@@ -34,6 +34,6 @@ function yoga_pre_save_post( $post_id ) {
 
 }
 
-add_filter('acf/pre_save_post' , 'yoga_pre_save_post', 10, 1 );
+add_filter('acf/pre_save_post' , 'restruxure_pre_save_post', 10, 1 );
 
 ?>

@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package yoga
+ * @package restruxure
  */
 
-if ( ! function_exists( 'yoga_posted_on' ) ) :
+if ( ! function_exists( 'restruxure_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function yoga_posted_on() {
+	function restruxure_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -25,12 +25,12 @@ if ( ! function_exists( 'yoga_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			esc_html_x( 'Posted on %s', 'post date', 'yoga' ),
+			esc_html_x( 'Posted on %s', 'post date', 'restruxure' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			esc_html_x( 'by %s', 'post author', 'yoga' ),
+			esc_html_x( 'by %s', 'post author', 'restruxure' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -39,30 +39,30 @@ if ( ! function_exists( 'yoga_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'yoga_entry_footer' ) ) :
+if ( ! function_exists( 'restruxure_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function yoga_entry_footer() {
+	function restruxure_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'yoga' ) );
-			if ( $categories_list && yoga_categorized_blog() ) {
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'yoga' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			$categories_list = get_the_category_list( esc_html__( ', ', 'restruxure' ) );
+			if ( $categories_list && restruxure_categorized_blog() ) {
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'restruxure' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'yoga' ) );
+			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'restruxure' ) );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'yoga' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'restruxure' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'yoga' ),
+				esc_html__( 'Edit %s', 'restruxure' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
 			'<span class="edit-link">',
@@ -83,16 +83,16 @@ endif;
  * }
  * @return string SVG markup.
  */
-function yoga_get_svg( $args = array() ) {
+function restruxure_get_svg( $args = array() ) {
 
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return esc_html__( 'Please define default parameters in the form of an array.', 'yoga' );
+		return esc_html__( 'Please define default parameters in the form of an array.', 'restruxure' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return esc_html__( 'Please define an SVG icon filename.', 'yoga' );
+		return esc_html__( 'Please define an SVG icon filename.', 'restruxure' );
 	}
 
 	// Set defaults.
@@ -147,7 +147,7 @@ function yoga_get_svg( $args = array() ) {
  * @param array $args Parameters include length and more.
  * @return string        The shortened excerpt.
  */
-function yoga_get_the_title( $args = array() ) {
+function restruxure_get_the_title( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
@@ -169,7 +169,7 @@ function yoga_get_the_title( $args = array() ) {
  *
  * @param string $size The image size you want to display.
  */
-function yoga_get_post_image( $size = 'thumbnail' ) {
+function restruxure_get_post_image( $size = 'thumbnail' ) {
 
 	// If featured image is present, use that.
 	if ( has_post_thumbnail() ) {
@@ -203,7 +203,7 @@ function yoga_get_post_image( $size = 'thumbnail' ) {
  * @param  string $size The image size you want to return.
  * @return string The image URI.
  */
-function yoga_get_post_image_uri( $size = 'thumbnail' ) {
+function restruxure_get_post_image_uri( $size = 'thumbnail' ) {
 
 	// If featured image is present, use that.
 	if ( has_post_thumbnail() ) {
@@ -234,10 +234,10 @@ function yoga_get_post_image_uri( $size = 'thumbnail' ) {
 /**
  * Echo the copyright text saved in the Customizer.
  */
-function yoga_get_copyright_text() {
+function restruxure_get_copyright_text() {
 
 	// Grab our customizer settings.
-	$copyright_text = get_theme_mod( 'yoga_copyright_text' );
+	$copyright_text = get_theme_mod( 'restruxure_copyright_text' );
 
 	// Stop if there's nothing to display.
 	if ( ! $copyright_text ) {
@@ -254,7 +254,7 @@ function yoga_get_copyright_text() {
  *
  * @return string The URL.
  */
- function yoga_get_twitter_share_url() {
+ function restruxure_get_twitter_share_url() {
 	return add_query_arg(
 		 array(
 			 'text' => rawurlencode( html_entity_decode( get_the_title() ) ),
@@ -269,7 +269,7 @@ function yoga_get_copyright_text() {
  *
  * @return string The URL.
  */
-function yoga_get_facebook_share_url() {
+function restruxure_get_facebook_share_url() {
 	return add_query_arg( 'u', rawurlencode( get_the_permalink() ), 'https://www.facebook.com/sharer/sharer.php' );
 }
 
@@ -279,7 +279,7 @@ function yoga_get_facebook_share_url() {
  *
  * @return string The URL.
  */
-function yoga_get_linkedin_share_url() {
+function restruxure_get_linkedin_share_url() {
 	return add_query_arg(
 		 array(
 			 'title' => rawurlencode( html_entity_decode( get_the_title() ) ),
@@ -293,7 +293,7 @@ function yoga_get_linkedin_share_url() {
 /**
  * Output the mobile navigation
  */
-function yoga_get_mobile_navigation_menu() {
+function restruxure_get_mobile_navigation_menu() {
 
 	// Figure out which menu we're pulling.
 	$mobile_menu = has_nav_menu( 'mobile' ) ? 'mobile' : 'primary';
@@ -322,7 +322,7 @@ function yoga_get_mobile_navigation_menu() {
  *
  * @return mixed HTML output of social links
  */
-function yoga_get_social_network_links() {
+function restruxure_get_social_network_links() {
 
 	// Create an array of our social links for ease of setup.
 	// Change the order of the networks in this array to change the output order.
@@ -337,14 +337,14 @@ function yoga_get_social_network_links() {
 	foreach ( $social_networks as $network ) :
 
 		// Look for the social network's URL.
-		$network_url = get_theme_mod( 'yoga_' . $network . '_link' );
+		$network_url = get_theme_mod( 'restruxure_' . $network . '_link' );
 
 		// Only display the list item if a URL is set.
 		if ( isset( $network_url ) && ! empty( $network_url ) ) : ?>
 			<li class="social-icon <?php echo esc_attr( $network ); ?>">
 				<a href="<?php echo esc_url( $network_url ); ?>">
-					<?php echo yoga_get_svg( array( 'icon' => $network . '-square', 'title' => sprintf( __( 'Link to %s', 'yoga' ), ucwords( esc_html( $network ) ) ) ) ); // WPCS: XSS ok. ?>
-					<span class="screen-reader-text"><?php echo sprintf( __( 'Link to %s', 'yoga' ), ucwords( esc_html( $network ) ) ); // WPCS: XSS ok. ?></span>
+					<?php echo restruxure_get_svg( array( 'icon' => $network . '-square', 'title' => sprintf( __( 'Link to %s', 'restruxure' ), ucwords( esc_html( $network ) ) ) ) ); // WPCS: XSS ok. ?>
+					<span class="screen-reader-text"><?php echo sprintf( __( 'Link to %s', 'restruxure' ), ucwords( esc_html( $network ) ) ); // WPCS: XSS ok. ?></span>
 				</a>
 			</li><!-- .social-icon -->
 		<?php endif;
@@ -361,7 +361,7 @@ function yoga_get_social_network_links() {
  *
  * @return title
  */
-function yoga_archive_title( $title ) {
+function restruxure_archive_title( $title ) {
     if ( is_category() ) {
         $title = single_cat_title( '', false );
     } elseif ( is_tag() ) {
@@ -376,7 +376,7 @@ function yoga_archive_title( $title ) {
     return $title;
 }
 
-add_filter( 'get_the_archive_title', 'yoga_archive_title' );
+add_filter( 'get_the_archive_title', 'restruxure_archive_title' );
 
 
 
@@ -385,7 +385,7 @@ add_filter( 'get_the_archive_title', 'yoga_archive_title' );
  *
  * @param array $args Card defaults.
  */
- function yoga_display_card( $args = array() ) {
+ function restruxure_display_card( $args = array() ) {
 	// Setup defaults.
 	$defaults = array(
 		'title' => '',
@@ -406,18 +406,25 @@ add_filter( 'get_the_archive_title', 'yoga_archive_title' );
 		<div class="card-section">
 
 		<?php if ( $args['title'] ) : ?>
-			<h3 class="card-title"><a href="<?php echo esc_url( $args['url'] ); ?>"><?php echo esc_html( $args['title'] ); ?></a></h3>
+			<h3 class="card-title">
+				<a href="<?php echo esc_url( $args['url'] ); ?>">
+					<?php echo esc_html( $args['title'] ); ?>
+				</a>
+			</h3>
 		<?php endif; ?>
 
 		<?php if ( $args['text'] ) : ?>
-			<p class="card-text"><?php echo esc_html( $args['text'] ); ?></p>
+			<p class="card-text">
+				<?php echo esc_html( $args['text'] ); ?>
+			</p>
 		<?php endif; ?>
 
 		<?php if ( $args['url'] ) : ?>
-			<button type="button" class="button button-card" onclick="location.href='<?php echo esc_url( $args['url'] ); ?>'"><?php esc_html_e( 'Read More', '_s' ); ?></button>
+			<button type="button" class="button button-card" onclick="location.href='<?php echo esc_url( $args['url'] ); ?>'">
+				<?php esc_html_e( 'Read More', 'restruxure' ); ?>
+			</button>
 		<?php endif; ?>
-
-		</div><!-- .card-section -->
-	</div><!-- .card -->
+		</div>
+	</div>
 	<?php
 }

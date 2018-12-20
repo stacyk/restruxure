@@ -5,11 +5,12 @@
  *
  * Declare which post types are related, creates meta box in editor
  *
- * @package yoga
+ * @package restruxure
  */
 
-function yoga_connection_types() {
-    p2p_register_connection_type( array(
+function restruxure_connection_types() {
+    p2p_register_connection_type(
+        array(
         'name' => 'muscles_to_poses',
         'from' => 'poses',
         'to' => 'muscles',
@@ -48,4 +49,4 @@ function yoga_connection_types() {
     ) );
 }
 
-add_action( 'p2p_init', 'yoga_connection_types' );
+add_action( 'p2p_init', 'restruxure_connection_types' );

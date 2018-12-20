@@ -1,8 +1,8 @@
-# Copyright (C) 2018 yoga
-# This file is distributed under the same license as the yoga package.
+# Copyright (C) 2018 restruxure
+# This file is distributed under the same license as the restruxure package.
 msgid ""
 msgstr ""
-"Project-Id-Version: yoga\n"
+"Project-Id-Version: restruxure\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -114,7 +114,7 @@ msgid "To search this site, enter a search term"
 msgstr ""
 
 #: searchform.php:12
-msgctxt "yoga"
+msgctxt "restruxure"
 msgid "Search"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: inc/hooks.php:142
+#: inc/hooks.php:142, inc/template-tags.php:424
 msgid "Read More"
 msgstr ""
 
@@ -144,7 +144,7 @@ msgstr ""
 msgid "Poses"
 msgstr ""
 
-#: inc/post-types.php:23, inc/post-types.php:53
+#: inc/post-types.php:23
 msgid "Pose"
 msgstr ""
 
@@ -152,7 +152,7 @@ msgstr ""
 msgid "Pose Archives"
 msgstr ""
 
-#: inc/post-types.php:25, inc/post-types.php:117
+#: inc/post-types.php:25, inc/post-types.php:122, inc/post-types.php:169
 msgid "Parent Item:"
 msgstr ""
 
@@ -236,11 +236,15 @@ msgstr ""
 msgid "Filter pose list"
 msgstr ""
 
+#: inc/post-types.php:53
+msgid "Posey"
+msgstr ""
+
 #: inc/post-types.php:54
 msgid "Pose Library"
 msgstr ""
 
-#: inc/post-types.php:81, inc/post-types.php:86
+#: inc/post-types.php:81, inc/post-types.php:90
 msgid "Muscles"
 msgstr ""
 
@@ -248,82 +252,148 @@ msgstr ""
 msgid "Muscle"
 msgstr ""
 
-#: inc/post-types.php:112
+#: inc/post-types.php:91
+msgid "Muscle Library"
+msgstr ""
+
+#: inc/post-types.php:117
 msgctxt "Taxonomy General Name"
 msgid "Pose Categories"
 msgstr ""
 
-#: inc/post-types.php:113
+#: inc/post-types.php:118
 msgctxt "Taxonomy Singular Name"
 msgid "Pose Category"
 msgstr ""
 
-#: inc/post-types.php:114
+#: inc/post-types.php:119
 msgid "Pose Categories"
 msgstr ""
 
-#: inc/post-types.php:115
+#: inc/post-types.php:120, inc/post-types.php:167
 msgid "All Items"
 msgstr ""
 
-#: inc/post-types.php:116
+#: inc/post-types.php:121, inc/post-types.php:168
 msgid "Parent Item"
 msgstr ""
 
-#: inc/post-types.php:118
+#: inc/post-types.php:123
 msgid "New Pose Category"
 msgstr ""
 
-#: inc/post-types.php:119
+#: inc/post-types.php:124
 msgid "Add New Pose Category"
 msgstr ""
 
-#: inc/post-types.php:120
+#: inc/post-types.php:125
 msgid "Edit Pose Category"
 msgstr ""
 
-#: inc/post-types.php:121
+#: inc/post-types.php:126
 msgid "Update Pose Category"
 msgstr ""
 
-#: inc/post-types.php:122
+#: inc/post-types.php:127
 msgid "View Pose Category"
 msgstr ""
 
-#: inc/post-types.php:123
+#: inc/post-types.php:128
 msgid "Separate Pose Categories with commas"
 msgstr ""
 
-#: inc/post-types.php:124
+#: inc/post-types.php:129
 msgid "Add or remove Pose Category"
 msgstr ""
 
-#: inc/post-types.php:125
+#: inc/post-types.php:130, inc/post-types.php:177
 msgid "Choose from the most used"
 msgstr ""
 
-#: inc/post-types.php:126
+#: inc/post-types.php:131
 msgid "Popular Pose Categories"
 msgstr ""
 
-#: inc/post-types.php:127
+#: inc/post-types.php:132
 msgid "Search Pose Categories"
 msgstr ""
 
-#: inc/post-types.php:128
+#: inc/post-types.php:133, inc/post-types.php:180
 msgid "Not Found"
 msgstr ""
 
-#: inc/post-types.php:129
+#: inc/post-types.php:134
 msgid "No Pose Categories"
 msgstr ""
 
-#: inc/post-types.php:130
+#: inc/post-types.php:135
 msgid "Pose Category list"
 msgstr ""
 
-#: inc/post-types.php:131
+#: inc/post-types.php:136
 msgid "Pose Category list navigation"
+msgstr ""
+
+#: inc/post-types.php:164
+msgctxt "Taxonomy General Name"
+msgid "Muscle Categories"
+msgstr ""
+
+#: inc/post-types.php:165
+msgctxt "Taxonomy Singular Name"
+msgid "Muscle Category"
+msgstr ""
+
+#: inc/post-types.php:166
+msgid "Muscle Categories"
+msgstr ""
+
+#: inc/post-types.php:170
+msgid "New Muscle Category"
+msgstr ""
+
+#: inc/post-types.php:171
+msgid "Add New Muscle Category"
+msgstr ""
+
+#: inc/post-types.php:172
+msgid "Edit Muscle Category"
+msgstr ""
+
+#: inc/post-types.php:173
+msgid "Update Muscle Category"
+msgstr ""
+
+#: inc/post-types.php:174
+msgid "View Muscle Category"
+msgstr ""
+
+#: inc/post-types.php:175
+msgid "Separate Muscle Categories with commas"
+msgstr ""
+
+#: inc/post-types.php:176
+msgid "Add or remove Muscle Category"
+msgstr ""
+
+#: inc/post-types.php:178
+msgid "Popular Muscle Categories"
+msgstr ""
+
+#: inc/post-types.php:179
+msgid "Search Muscle Categories"
+msgstr ""
+
+#: inc/post-types.php:181
+msgid "No Muscle Categories"
+msgstr ""
+
+#: inc/post-types.php:182
+msgid "Muscle Category list"
+msgstr ""
+
+#: inc/post-types.php:183
+msgid "Muscle Category list navigation"
 msgstr ""
 
 #: inc/scripts.php:23
@@ -377,7 +447,7 @@ msgstr ""
 msgid "Link to %s"
 msgstr ""
 
-#: template-parts/content-home.php:26, template-parts/content-issues.php:88, template-parts/content-page.php:26, template-parts/content.php:42
+#: template-parts/content-home.php:26, template-parts/content-issues.php:88, template-parts/content-page.php:26, template-parts/content.php:43
 msgid "Pages:"
 msgstr ""
 
@@ -385,7 +455,7 @@ msgstr ""
 #. translators: %s: Name of current post.
 #. translators: %s: Name of current post.
 #. translators: %s: Name of current post.
-#: template-parts/content-issues.php:83, template-parts/content-muscles.php:32, template-parts/content-poses.php:33, template-parts/content.php:37
+#: template-parts/content-issues.php:83, template-parts/content-muscles.php:34, template-parts/content-poses.php:33, template-parts/content.php:38
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 

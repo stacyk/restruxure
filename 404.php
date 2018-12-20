@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package yoga
+ * @package restruxure
  */
 
 get_header(); ?>
@@ -14,12 +14,12 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Sorry, this page doesn\'t exist.', 'yoga' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Sorry, this page doesn\'t exist.', 'restruxure' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
 
-					<p><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching can help.', 'yoga' ); ?></p>
+					<p><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching can help.', 'restruxure' ); ?></p>
 
 					<?php get_search_form(); ?>
 

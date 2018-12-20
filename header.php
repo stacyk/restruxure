@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package yoga
+ * @package restruxure
  */
 
 ?>
@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-  <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'yoga' ); ?></a>
+  <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'restruxure' ); ?></a>
 
   <header class="site-header">
     <nav id="site-navigation" class="main-navigation">
@@ -38,11 +38,11 @@
 
     <div class="site-branding">
       <?php if ( is_front_page() && is_home() ) : ?>
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo yoga_get_svg( array( 'icon' => 'logo', 'title' => 'Re:Struxure' ) ); // WPCS: XSS ok. ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Restruxure', 'yoga' ); ?></span></a></h1>
+        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo restruxure_get_svg( array( 'icon' => 'logo', 'title' => 'Re:Struxure' ) ); // WPCS: XSS ok. ?>
+					<span class="screen-reader-text"><?php esc_html_e( 'Restruxure', 'restruxure' ); ?></span></a></h1>
       <?php else : ?>
-        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo yoga_get_svg( array( 'icon' => 'logo', 'title' => 'Re:Struxure' ) ); // WPCS: XSS ok. ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Restruxure', 'yoga' ); ?></span></a></p>
+        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo restruxure_get_svg( array( 'icon' => 'logo', 'title' => 'Re:Struxure' ) ); // WPCS: XSS ok. ?>
+					<span class="screen-reader-text"><?php esc_html_e( 'Restruxure', 'restruxure' ); ?></span></a></p>
       <?php endif; ?>
 
       <?php $description = get_bloginfo( 'description', 'display' ); ?>
@@ -52,7 +52,7 @@
     </div><!-- .site-branding -->
 
     <button id="sidebar-toggle-button" class="sidebar-menu">
-      <?php echo yoga_get_svg( array( 'icon' => 'chevron-left', 'title' => 'menu') ); // WPCS: XSS ok. ?>
+      <?php echo restruxure_get_svg( array( 'icon' => 'chevron-left', 'title' => 'menu') ); // WPCS: XSS ok. ?>
     </button>
 
 </header><!-- .site-header -->

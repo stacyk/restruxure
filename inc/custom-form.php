@@ -4,7 +4,7 @@
  *
  * @return array
  */
-function yoga_custom_form_in_ap() {
+function restruxure_custom_form_in_ap() {
   $form = array(
     'fields' => array(
       'input_field_1' => array( // This is a unique key for field.
@@ -42,4 +42,4 @@ function yoga_custom_form_in_ap() {
   return $form;
 }
 // ap_form_ followed by form name.
-add_filter('ap_form_sample_form', 'yoga_custom_form_in_ap');
+add_filter('ap_form_sample_form', 'restruxure_custom_form_in_ap');

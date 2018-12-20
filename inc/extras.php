@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package yoga
+ * @package restruxure
  */
 
 /**
@@ -12,8 +12,8 @@
  *
  * @return bool
  */
-function yoga_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'yoga_categories' ) ) ) {
+function restruxure_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'restruxure_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -25,14 +25,14 @@ function yoga_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'yoga_categories', $all_the_cool_cats );
+		set_transient( 'restruxure_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so yoga_categorized_blog should return true.
+		// This blog has more than 1 category so restruxure_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so yoga_categorized_blog should return false.
+		// This blog has only 1 category so restruxure_categorized_blog should return false.
 		return false;
 	}
 }
@@ -43,7 +43,7 @@ function yoga_categorized_blog() {
  * @param string $attachment_url The URL of the attachment.
  * @return int The attachment ID.
  */
-function yoga_get_attachment_id_from_url( $attachment_url = '' ) {
+function restruxure_get_attachment_id_from_url( $attachment_url = '' ) {
 
 	global $wpdb;
 
@@ -75,7 +75,7 @@ function yoga_get_attachment_id_from_url( $attachment_url = '' ) {
 
 
 
-function yoga_hide_admin_bar($content) {
+function restruxure_hide_admin_bar($content) {
 	return ( current_user_can( 'administrator' ) ) ? $content : false;
 }
-add_filter( 'show_admin_bar' , 'yoga_hide_admin_bar');
+add_filter( 'show_admin_bar' , 'restruxure_hide_admin_bar');

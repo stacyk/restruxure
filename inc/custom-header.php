@@ -10,37 +10,37 @@
  *
  * @link http://codex.wordpress.org/Custom_Headers
  *
- * @package yoga
+ * @package restruxure
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses yoga_header_style()
- * @uses yoga_admin_header_style()
- * @uses yoga_admin_header_image()
+ * @uses restruxure_header_style()
+ * @uses restruxure_admin_header_style()
+ * @uses restruxure_admin_header_image()
  */
-function yoga_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'yoga_custom_header_args', array(
+function restruxure_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'restruxure_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1400,
 		'height'                 => 325,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'yoga_header_style',
-		'admin-head-callback'    => 'yoga_admin_header_style',
-		'admin-preview-callback' => 'yoga_admin_header_image',
+		'wp-head-callback'       => 'restruxure_header_style',
+		'admin-head-callback'    => 'restruxure_admin_header_style',
+		'admin-preview-callback' => 'restruxure_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'yoga_custom_header_setup' );
+add_action( 'after_setup_theme', 'restruxure_custom_header_setup' );
 
-if ( ! function_exists( 'yoga_header_style' ) ) :
+if ( ! function_exists( 'restruxure_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see yoga_custom_header_setup().
+	 * @see restruxure_custom_header_setup().
 	 */
-	function yoga_header_style() {
+	function restruxure_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		// If no custom options for text are set, let's bail.
@@ -72,15 +72,15 @@ if ( ! function_exists( 'yoga_header_style' ) ) :
 		</style>
 		<?php
 	}
-endif; // yoga_header_style
+endif; // restruxure_header_style
 
-if ( ! function_exists( 'yoga_admin_header_style' ) ) :
+if ( ! function_exists( 'restruxure_admin_header_style' ) ) :
 	/**
 	 * Styles the header image displayed on the Appearance > Header admin panel.
 	 *
-	 * @see yoga_custom_header_setup().
+	 * @see restruxure_custom_header_setup().
 	 */
-	function yoga_admin_header_style() {
+	function restruxure_admin_header_style() {
 	?>
 		<style type="text/css">
 			.appearance_page_custom-header #headimg {
@@ -100,15 +100,15 @@ if ( ! function_exists( 'yoga_admin_header_style' ) ) :
 		</style>
 	<?php
 	}
-endif; // yoga_admin_header_style
+endif; // restruxure_admin_header_style
 
-if ( ! function_exists( 'yoga_admin_header_image' ) ) :
+if ( ! function_exists( 'restruxure_admin_header_image' ) ) :
 	/**
 	 * Custom header image markup displayed on the Appearance > Header admin panel.
 	 *
-	 * @see yoga_custom_header_setup().
+	 * @see restruxure_custom_header_setup().
 	 */
-	function yoga_admin_header_image() {
+	function restruxure_admin_header_image() {
 	?>
 		<div id="headimg">
 			<h1 class="displaying-header-text">
@@ -121,4 +121,4 @@ if ( ! function_exists( 'yoga_admin_header_image' ) ) :
 		</div>
 	<?php
 	}
-endif; // yoga_admin_header_image
+endif; // restruxure_admin_header_image

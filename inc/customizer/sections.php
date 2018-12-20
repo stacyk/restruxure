@@ -2,19 +2,19 @@
 /**
  * Customizer sections.
  *
- * @package yoga
+ * @package restruxure
  */
 
 /**
  * Register the section sections.
  */
-function yoga_customize_sections( $wp_customize ) {
+function restruxure_customize_sections( $wp_customize ) {
 
 	// Register additional scripts section.
 	$wp_customize->add_section(
-		'yoga_additional_scripts_section',
+		'restruxure_additional_scripts_section',
 		array(
-			'title'    => esc_html__( 'Additional Scripts', 'yoga' ),
+			'title'    => esc_html__( 'Additional Scripts', 'restruxure' ),
 			'priority' => 10,
 			'panel'    => 'site-options',
 		)
@@ -22,9 +22,9 @@ function yoga_customize_sections( $wp_customize ) {
 
 	// Register social network section.
 	$wp_customize->add_section(
-		'yoga_social_links_section',
+		'restruxure_social_links_section',
 		array(
-			'title'    => esc_html__( 'Social Networks', 'yoga' ),
+			'title'    => esc_html__( 'Social Networks', 'restruxure' ),
 			'priority' => 50,
 			'panel'    => 'site-options',
 		)
@@ -32,12 +32,12 @@ function yoga_customize_sections( $wp_customize ) {
 
 	// Register a footer section.
 	$wp_customize->add_section(
-		'yoga_footer_section',
+		'restruxure_footer_section',
 		array(
-			'title'    => esc_html__( 'Footer Customizations', 'yoga' ),
+			'title'    => esc_html__( 'Footer Customizations', 'restruxure' ),
 			'priority' => 90,
 			'panel'    => 'site-options',
 		)
 	);
 }
-add_action( 'customize_register', 'yoga_customize_sections' );
+add_action( 'customize_register', 'restruxure_customize_sections' );
