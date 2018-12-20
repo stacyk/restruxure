@@ -6,8 +6,6 @@
 body.login {
   background-color: #fff;
 }
-body.login div#login {}
-body.login div#login h1 {}
 
 body.login div#login h1 a {
   background-image: url("//restruxure.com/wp-content/themes/restruxure/assets/images/svg-icons/logo.svg");
@@ -17,16 +15,6 @@ body.login div#login h1 a {
   text-decoration: none;
 }
 
-body.login div#login form#loginform {}
-body.login div#login form#loginform p {}
-body.login div#login form#loginform p label {}
-body.login div#login form#loginform input {}
-body.login div#login form#loginform input#user_login {}
-body.login div#login form#loginform input#user_pass {}
-body.login div#login form#loginform p.forgetmenot {}
-body.login div#login form#loginform p.forgetmenot input#rememberme {}
-body.login div#login form#loginform p.submit {}
-body.login div#login form#loginform p.submit input#wp-submit {}
 body.login div#login p#nav {
   display: flex;
 	justify-content: space-around;
@@ -42,10 +30,6 @@ body.login div#login p#backtoblog a,
 body.login div#login p#nav a:hover {
   color: hsl(182, 58%, 33%);
 }
-
-body.login div#login p#backtoblog {}
-
-
 
 .wp-social-login-widget {
   align-items: center;
@@ -111,7 +95,6 @@ body.login div#login form#loginform p.submit input#wp-submit {
   padding: 0.25rem 1rem;
   text-transform: uppercase;
   transition: all 300ms;
-  border-width: 0;
   border-radius: 2px;
   transform: translateY(0);
   text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;

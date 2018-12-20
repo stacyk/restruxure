@@ -9,8 +9,8 @@ body.login {
   background-color: $color-background;
 }
 
-body.login div#login {}
-body.login div#login h1 {}
+// body.login div#login {}
+// body.login div#login h1 {}
 
 body.login div#login h1 a {
   background-image: url("//restruxure.com/wp-content/themes/restruxure/assets/images/svg-icons/logo.svg");
@@ -40,6 +40,7 @@ body.login .button-primary {
   appearance: none;
   background: $color-link;
   border: none;
+  border-radius: $border-radius;
   border-width: 0;
   box-shadow: 0 0 0 0 transparent;
   color: $color-background;
@@ -49,8 +50,6 @@ body.login .button-primary {
   padding: $shim-quarter $shim;
   text-transform: uppercase;
   transition: all 300ms;
-  border-width: 0;
-  border-radius: $border-radius;
   transform: translateY(0);
   text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
 
