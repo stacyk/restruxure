@@ -26,6 +26,8 @@
 
 
   <div class="entry-content">
+  <p>I am entry content in content-muscles.php</p>
+
     <?php
       the_content( sprintf(
         /* translators: %s: Name of current post. */
