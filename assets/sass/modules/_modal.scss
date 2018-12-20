@@ -13,7 +13,7 @@
 		display: block;
 		overflow-x: hidden;
 		overflow-y: auto;
-	} // &.modal-open
+	}
 
 	// Center the modal container.
 	.modal-dialog {
@@ -21,7 +21,7 @@
 
 		transform: translate(-50%, -50%);
 		width: auto;
-	} // .modal-dialog
+	}
 
 	// The modal content container.
 	.modal-content {
@@ -40,9 +40,6 @@
 			// Close "X" button.
 			.close {
 				@include margin-padding-reset;
-				// @include position(absolute, rem(-15) rem(-15) null null);
-				// @include size(rem(30) rem(30));
-
 				background: $color-text;
 				border: 3px solid $color-background;
 				border-radius: 50%;
@@ -54,17 +51,13 @@
 
 				&::after {
 					@include clearfix;
-				} // &::after
-			} // .close
-		} // .modal-header
+				}
+			}
+		}
 
 		// The modal body container.
 		.modal-body {
 			position: relative;
-		}
-
-		// The modal footer container.
-		.modal-footer {
 		}
 	}
 
