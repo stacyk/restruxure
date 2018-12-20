@@ -45,13 +45,27 @@ body {
 }
 
 .site-content {
-  @include wrap;
+	@include wrap;
   align-items: stretch;
   display: flex;
 	flex: 1 1 auto;
 	height: auto;
 	overflow: hidden;
 	width: 100%;
+
+	@include above('bp-menuopen') {
+		margin-left: 0;
+		max-width: calc(100% - #{$sidebar-width-large});
+	}
+
+	.sidebar-push-toleft & {
+		margin-left: 0;
+		width: 100%;
+
+		@include above('bp-small') {
+			width: calc(100% - #{$sidebar-width-large});
+		}
+	}
 }
 
 .content-area {
@@ -76,6 +90,29 @@ body {
 		padding-bottom: $gutter;
 	}
 }
+
+
+
+/* Vertical sidebar that slides from the left or right */
+
+.sidebar-right {
+	right: $sidebar-width-large-negative;
+
+	@include above('bp-menuopen') {
+		right: 0;
+	}
+
+	&.open {
+		right: 0;
+	}
+}
+
+.sidebar-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
 
 .entry-content > *:not(img):not(video):not(table):not(iframe) {
 	margin-left: auto;

@@ -99,45 +99,7 @@
 	}
 }
 
-
-/* Vertical sidebar that slides from the left or right */
-
-.sidebar-right {
-	right: $sidebar-width-large-negative;
-
-	@include above('bp-menuopen') {
-		right: 0;
-	}
-
-	&.open {
-		right: 0;
-	}
-}
-
-.sidebar-push {
-	overflow-x: hidden;
-	position: relative;
-	left: 0;
-}
-
-.site-content {
-	@include above('bp-menuopen') {
-		margin-left: 0;
-		width: calc(100% - #{$sidebar-width-large});
-	}
-
-	.sidebar-push-toleft & {
-		margin-left: 0;
-		width: 100%;
-
-		@include above('bp-small') {
-			width: calc(100% - #{$sidebar-width-large});
-		}
-	}
-}
-
 /* Transitions */
-
 .sidebar,
 .sidebar-right {
 	transition: all 0.3s ease;
