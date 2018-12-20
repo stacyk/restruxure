@@ -32,6 +32,7 @@
 	margin-bottom: $shim-half;
 }
 
+.entry-subtitle,
 .related-title {
 	@include subtitle;
 	font-weight: 300;
