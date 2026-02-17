@@ -36,7 +36,7 @@ $pink: hsl(331, 35%, 44%);
 $pink-dark:  hsl(327, 61%, 26%);
 
 $white:  hsl(0, 0%, 100%);
-$gray: hsl(281, 9%, 35%);
+$gray: oklch(45.154% 0.02912 315.32);
 $gray-light: lighten($gray, 50%);
 
 

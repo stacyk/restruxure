@@ -22,7 +22,7 @@ button,
 input,
 select,
 textarea {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   font-size: calc(0.95rem + 0.125vw);
   font-family: Rasa, Georgia, serif;
   line-height: 1.5;
@@ -555,7 +555,7 @@ body {
 }
 
 .edit-link a {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
 }
 
 .blog .format-aside .entry-title,
@@ -643,7 +643,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   border-color: #5ca5ad;
   outline: 0;
 }
@@ -1615,7 +1615,7 @@ div.mce-panel {
 }
 
 .mce-toolbar .mce-ico {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
 }
 
 .mce-toolbar .mce-btn-group .mce-btn button {
@@ -1627,7 +1627,7 @@ div.mce-panel {
 }
 
 .mce-toolbar .mce-ico {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
 }
 
 .ap-editor {
@@ -1644,7 +1644,7 @@ div.mce-panel {
 }
 
 #mceu_26 body#tinymce.mce-content-body.description.post-type-page.post-status-publish.page-template-page-ask.locale-en-us.mceContentBody.webkit.wp-editor.wp-autoresize.html5-captions {
-  color: #5c5161 !important;
+  color: oklch(45.154% 0.02912 315.32) !important;
 }
 
 .ap-row {
@@ -1815,7 +1815,7 @@ button[type="submit"] .ap-search-btn {
 
 .ap-answers-tab li.active a,
 .ap-tab-nav li.active a {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   font-weight: 700;
 }
 
@@ -2482,7 +2482,7 @@ label > input[type="checkbox"] {
 
 .ap-upload-item .insert-to-post {
   border-radius: 1px;
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   display: none;
   margin-left: 0.5rem;
   padding: 2px 0.25rem;
@@ -2733,7 +2733,7 @@ label > input[type="checkbox"] {
 }
 
 .ap-filter-toggle {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   padding: 0;
@@ -2767,7 +2767,7 @@ label > input[type="checkbox"] {
 }
 
 .ap-filter .active label {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   font-weight: normal;
 }
 
@@ -2871,7 +2871,7 @@ label > input[type="checkbox"] {
 .ap-droptogg {
   background: transparent;
   border: none;
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   display: none;
   margin-right: 0.5rem;
   padding: 0.5rem;
@@ -2929,7 +2929,7 @@ label > input[type="checkbox"] {
 }
 
 .ap-noti-inner {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   display: table;
   line-height: 1.4;
   margin-left: 50px;
@@ -3601,7 +3601,7 @@ i.noti-count {
 }
 
 .ap-reputation-ref {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
   display: block;
   font-size: 0.75rem;
   margin-top: 5px;
@@ -3620,7 +3620,7 @@ i.noti-count {
 }
 
 .ap-reputation-ref:hover p, .ap-reputation-ref:focus p {
-  color: #5c5161;
+  color: oklch(45.154% 0.02912 315.32);
 }
 
 .ap-reputation-activity {
